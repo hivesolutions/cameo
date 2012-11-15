@@ -37,29 +37,25 @@ CAMEO_SDK_BUILD_PACKAGE_FRAMEWORK=$CAMEO_SDK_BUILD_PACKAGE/$CAMEO_SDK_BUILD_PACK
 CAMEO_SDK_BUILD_PACKAGE_SAMPLES=$CAMEO_SDK_BUILD_PACKAGE/Documents/Cameo/Samples
 CAMEO_SDK_BUILD_PACKAGE_DOCS=$CAMEO_SDK_BUILD_PACKAGE/Library/Developer/Shared/Documentation/DocSets/$CAMEO_SDK_DOCSET_NAME
 
-# -----------------------------------------------------------------------------
-# Call out to build prerequisites.
-#
+# checks for the required execution and executes
+# but only in case it's not the outermost build
 if is_outermost_build; then
     . $CAMEO_SDK_SCRIPT/build_framework.sh
     . $CAMEO_SDK_SCRIPT/build_documentation.sh
 fi
 echo Building Distribution.
 
-# -----------------------------------------------------------------------------
-# Compress framework for standalone distribution
-#
+# compress framework for standalone distribution
 progress_message "Compressing framework for standalone distribution."
 \rm -rf ${CAMEO_SDK_FRAMEWORK_TGZ}
 
-# Current directory matters to tar.
+# must change to the build directory for the tar
+# execution (only executes in the current directory)
 cd $CAMEO_SDK_BUILD || die "Could not cd to $CAMEO_SDK_BUILD"
 tar -c -z $CAMEO_SDK_FRAMEWORK_NAME >  $CAMEO_SDK_FRAMEWORK_TGZ \
   || die "tar failed to create ${CAMEO_SDK_FRAMEWORK_NAME}.tgz"
 
-# -----------------------------------------------------------------------------
-# Build package directory structure
-#
+# builds the complete package directory structure
 progress_message "Building package directory structure."
 \rm -rf $CAMEO_SDK_BUILD_PACKAGE
 mkdir $CAMEO_SDK_BUILD_PACKAGE \
@@ -72,24 +68,21 @@ mkdir -p $CAMEO_SDK_BUILD_PACKAGE_DOCS
   || die "Could not copy $CAMEO_SDK_FRAMEWORK"
 #\cp -R $CAMEO_SDK_SAMPLES/ $CAMEO_SDK_BUILD_PACKAGE_SAMPLES \
 #  || die "Could not copy $CAMEO_SDK_BUILD_PACKAGE_SAMPLES"
-#\cp -R $CAMEO_SDK_FRAMEWORK_DOCS/docset/Contents $CAMEO_SDK_BUILD_PACKAGE_DOCS \
-#  || die "Could not copy $$CAMEO_SDK_FRAMEWORK_DOCS/docset/Contents"
+\cp -R $CAMEO_SDK_FRAMEWORK_DOCS/docset/Contents $CAMEO_SDK_BUILD_PACKAGE_DOCS \
+  || die "Could not copy $$CAMEO_SDK_FRAMEWORK_DOCS/docset/Contents"
 #\cp $CAMEO_SDK_ROOT/README $CAMEO_SDK_BUILD_PACKAGE/Documents/FacebookSDK \
 #  || die "Could not copy README"
 #\cp $CAMEO_SDK_ROOT/LICENSE $CAMEO_SDK_BUILD_PACKAGE/Documents/FacebookSDK \
 #  || die "Could not copy LICENSE"
 
-# -----------------------------------------------------------------------------
-# Fixup projects to point to the SDK framework
-#
+# runs the fixup projects to point to the framework
 for fname in $(find $CAMEO_SDK_BUILD_PACKAGE_SAMPLES -name "project.pbxproj" -print); do \
   sed "s|../../build|../../../../${CAMEO_SDK_BUILD_PACKAGE_FRAMEWORK_SUBDIR}|g" \
     ${fname} > ${fname}.tmpfile  && mv ${fname}.tmpfile ${fname}; \
 done
 
-# -----------------------------------------------------------------------------
-# Build .pkg from package directory
-#
+# builds the package using the currently defined
+# configuration file for the cameo
 progress_message "Building .pkg from package directory."
 \rm -rf $CAMEO_SDK_PKG
 $PACKAGEMAKER \
@@ -101,10 +94,6 @@ $PACKAGEMAKER \
   --title 'Cameo Framework 0.1.0 for iOS' \
   || die "PackageMaker reported error"
 
-
-# -----------------------------------------------------------------------------
-# Done
-#
 progress_message "Successfully built SDK distribution:"
 progress_message "  $CAMEO_SDK_FRAMEWORK_TGZ"
 progress_message "  $CAMEO_SDK_PKG"
