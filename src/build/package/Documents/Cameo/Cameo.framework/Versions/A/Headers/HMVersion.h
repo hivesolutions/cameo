@@ -1,0 +1,2 @@
+#define HM_IOS_SDK_VERSION_STRING @"0.0.1"
+#define HM_IOS_SDK_MIGRATION_BUNDLE @"hmframework:20121003"
