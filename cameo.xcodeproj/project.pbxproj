@@ -11,10 +11,11 @@
 		C30D40D116553F6E003AA670 /* UIViewController+HMControllerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30D40CD16553F6E003AA670 /* UIViewController+HMControllerUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C33384731655084800F64AC8 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C333844D1654203800F64AC8 /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C333847C16550C6700F64AC8 /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C333847B16550C6700F64AC8 /* HMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3408B2F1655533C009AEBB1 /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C3408B2D165552D7009AEBB1 /* Cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C37910A01655417B005D3B7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D41131655411A003AA670 /* CoreGraphics.framework */; };
 		C37910A21655417F005D3B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A11655417F005D3B7B /* Foundation.framework */; };
 		C37910A416554184005D3B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A316554184005D3B7B /* UIKit.framework */; };
-		C3BBF9331655438800E8E4A5 /* Tobias.h in Headers */ = {isa = PBXBuildFile; fileRef = C3BBF9311655438800E8E4A5 /* Tobias.h */; };
+		C3BBF9331655438800E8E4A5 /* Tobias.h in Headers */ = {isa = PBXBuildFile; fileRef = C3BBF9311655438800E8E4A5 /* Tobias.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3BBF9341655438800E8E4A5 /* Tobias.m in Sources */ = {isa = PBXBuildFile; fileRef = C3BBF9321655438800E8E4A5 /* Tobias.m */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		C33384691655044B00F64AC8 /* label_version_number.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = label_version_number.sh; path = scripts/label_version_number.sh; sourceTree = "<group>"; };
 		C333846A1655044B00F64AC8 /* rm_test_users.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = rm_test_users.py; path = scripts/rm_test_users.py; sourceTree = "<group>"; };
 		C333847B16550C6700F64AC8 /* HMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HMVersion.h; path = classes/HMVersion.h; sourceTree = "<group>"; };
+		C3408B2D165552D7009AEBB1 /* Cameo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Cameo.h; path = classes/Cameo.h; sourceTree = "<group>"; };
 		C37910A11655417F005D3B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C37910A316554184005D3B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3B4200A1652CBB400005DC5 /* libcameo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcameo.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,7 @@
 				C30D40CD16553F6E003AA670 /* UIViewController+HMControllerUtil.h */,
 				C3BBF9311655438800E8E4A5 /* Tobias.h */,
 				C3BBF9321655438800E8E4A5 /* Tobias.m */,
+				C3408B2D165552D7009AEBB1 /* Cameo.h */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				C30D40CF16553F6E003AA670 /* UIImage+HMImageUtil.h in Headers */,
 				C30D40D116553F6E003AA670 /* UIViewController+HMControllerUtil.h in Headers */,
 				C3BBF9331655438800E8E4A5 /* Tobias.h in Headers */,
+				C3408B2F1655533C009AEBB1 /* Cameo.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
