@@ -1,4 +1,5 @@
 .DS_Store
 
+/cameo/build/
 /cameo.xcodeproj/project.xcworkspace/xcuserdata/
 /cameo.xcodeproj/xcuserdata/

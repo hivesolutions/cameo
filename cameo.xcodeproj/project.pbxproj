@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C28CF5B91652EDC300E8272F /* cameo.m in Sources */ = {isa = PBXBuildFile; fileRef = C28CF5B81652EDC300E8272F /* cameo.m */; };
 		C33384731655084800F64AC8 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C333844D1654203800F64AC8 /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C33384741655084800F64AC8 /* cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C28CF5B71652EDC300E8272F /* cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C333847C16550C6700F64AC8 /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C333847B16550C6700F64AC8 /* HMVersion.h */; };
 		C3B4200E1652CBB400005DC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4200D1652CBB400005DC5 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -28,8 +26,6 @@
 
 /* Begin PBXFileReference section */
 		C28CF5B51652EDB900E8272F /* cameo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "cameo-Prefix.pch"; path = "support/cameo-Prefix.pch"; sourceTree = "<group>"; };
-		C28CF5B71652EDC300E8272F /* cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cameo.h; path = classes/cameo.h; sourceTree = "<group>"; };
-		C28CF5B81652EDC300E8272F /* cameo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cameo.m; path = classes/cameo.m; sourceTree = "<group>"; };
 		C31B0EAC165528710097E274 /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMBaseResources.bundle; sourceTree = "<group>"; };
 		C31B0EAE1655299C0097E274 /* 01package-contents.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "01package-contents.xml"; sourceTree = "<group>"; };
 		C31B0EAF1655299C0097E274 /* 01package.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 01package.xml; sourceTree = "<group>"; };
@@ -67,8 +63,6 @@
 		C28CF5B61652EDBB00E8272F /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				C28CF5B71652EDC300E8272F /* cameo.h */,
-				C28CF5B81652EDC300E8272F /* cameo.m */,
 				C333844D1654203800F64AC8 /* Dependencies.h */,
 				C333847B16550C6700F64AC8 /* HMVersion.h */,
 			);
@@ -181,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C33384731655084800F64AC8 /* Dependencies.h in Headers */,
-				C33384741655084800F64AC8 /* cameo.h in Headers */,
 				C333847C16550C6700F64AC8 /* HMVersion.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -238,7 +231,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C28CF5B91652EDC300E8272F /* cameo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

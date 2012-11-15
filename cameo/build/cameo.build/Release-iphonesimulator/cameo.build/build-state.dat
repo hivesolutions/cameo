@@ -1,130 +1,0 @@
-Tcameo
-v5
-r1
-cCheck dependencies
-cProcessPCH /var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch.pth cameo/support/cameo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.o /Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLibtool /Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/libcameo.a normal i386
-cCpHeader cameo/classes/Dependencies.h cameo/build/Release-iphonesimulator/cameo/Dependencies.h
-cCpHeader cameo/classes/cameo.h cameo/build/Release-iphonesimulator/cameo/cameo.h
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk
-c000000005097D8380000000000000110
-t1352128568
-s272
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Foundation
-c000000005091492D00000000003DCEF0
-t1351698733
-s4050672
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
-c000000005091492C00000000000015F7
-t1351698732
-s5623
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/cameo/Dependencies.h
-t2
-s0
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/cameo/cameo.h
-t2
-s0
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/libcameo.a
-t2
-s0
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.LinkFileList
-c0000000050A4F5710000000000000086
-t1352988017
-s134
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.o
-t2
-s0
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/classes/Dependencies.h
-c0000000050A3E8E300000000000004D0
-t1352919267
-s1232
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.h
-c0000000050A3E9090000000000000473
-t1352919305
-s1139
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.m
-c0000000050A3909E0000000000000462
-t1352896670
-s1122
-
-N/Users/administrator/Desktop/repo_extra/cameo/cameo/support/cameo-Prefix.pch
-c0000000050A3909E0000000000000470
-t1352896670
-s1136
-i<Foundation/Foundation.h>
-
-N/var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch.pth
-t2
-s0
-
-CCheck dependencies
-r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies7c4749f12c55b641^4e0c4df12c55b641^---0#1#0#--18"Check dependencies36"30DF3576-146E-42B9-9E00-3C5AB1C0B2BE-
-
-CCompileC cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.o /Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s374680817.541493
-e374680817.753464
-r1
-xCompileC
-xcameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.o
-x/Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection75"Compile /Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.mbebe8af12c55b641^0af5c0f12c55b641^---0#0#0#-19%DVTDocumentLocation2@83"file://localhost/Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.m0000000000000000^3650"CompileC cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.o cameo/classes/cameo.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Desktop/repo_extra/cameo    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/cameo-generated-files.hmap -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/cameo-own-target-headers.hmap -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/cameo-all-target-headers.hmap -iquote /Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/cameo-project-headers.hmap -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/DerivedSources/i386 -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/DerivedSources -F/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator -include /var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch -MMD -MT dependencies -MF /Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.d --serialize-diagnostics /Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.dia -c /Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.m -o /Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.o36"75D4C3A6-FF36-4667-8542-427C2AEC71CA-
-
-CCpHeader cameo/classes/Dependencies.h cameo/build/Release-iphonesimulator/cameo/Dependencies.h
-s374680817.784873
-e374680817.787674
-r1
-xCpHeader
-xcameo/classes/Dependencies.h
-xcameo/build/Release-iphonesimulator/cameo/Dependencies.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy cameo/build/Release-iphonesimulator/cameo/Dependencies.h4207c9f12c55b641^fca5c9f12c55b641^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/cameo/Dependencies.h000000000080d041^772"CpHeader cameo/classes/Dependencies.h cameo/build/Release-iphonesimulator/cameo/Dependencies.h    cd /Users/administrator/Desktop/repo_extra/cameo    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/administrator/Desktop/repo_extra/cameo/cameo/classes/Dependencies.h /Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/cameo36"977C99C0-60CE-467A-9C84-037D81516BF2-
-
-CCpHeader cameo/classes/cameo.h cameo/build/Release-iphonesimulator/cameo/cameo.h
-s374680817.785460
-e374680817.788733
-r1
-xCpHeader
-xcameo/classes/cameo.h
-xcameo/build/Release-iphonesimulator/cameo/cameo.h
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection54"Copy cameo/build/Release-iphonesimulator/cameo/cameo.h202ac9f12c55b641^20ebc9f12c55b641^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/cameo/cameo.h000000000080d041^751"CpHeader cameo/classes/cameo.h cameo/build/Release-iphonesimulator/cameo/cameo.h    cd /Users/administrator/Desktop/repo_extra/cameo    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/administrator/Desktop/repo_extra/cameo/cameo/classes/cameo.h /Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/cameo36"0CFC7EA5-901B-4853-A3A2-791B754EEBE7-
-
-CLibtool /Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/libcameo.a normal i386
-s374680817.761025
-e374680817.776620
-r1
-xLibtool
-x/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/libcameo.a
-xnormal
-xi386
-o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC 
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection66"Libtool cameo/build/Release-iphonesimulator/libcameo.a normal i386b7eec2f12c55b641^24d2c6f12c55b641^-159"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: -dynamic not specified the following flags are invalid: -ObjC -0#0#0#--999"Libtool cameo/build/Release-iphonesimulator/libcameo.a normal i386    cd /Users/administrator/Desktop/repo_extra/cameo    setenv IPHONEOS_DEPLOYMENT_TARGET 6.0    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -L/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator -filelist /Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/Objects-normal/i386/cameo.LinkFileList -ObjC -framework Foundation -o /Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/libcameo.a36"43CAB5CC-D760-462C-995B-6B8C95EA10F7-
-
-CProcessPCH /var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch.pth cameo/support/cameo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s374680817.303944
-e374680817.534699
-r1
-xProcessPCH
-x/var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch.pth
-xcameo/support/cameo-Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Precompile cameo/support/cameo-Prefix.pchecfa4df12c55b641^e3e288f12c55b641^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/administrator/Desktop/repo_extra/cameo/cameo/support/cameo-Prefix.pch0000000000000000^3649"ProcessPCH /var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch.pth cameo/support/cameo-Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/administrator/Desktop/repo_extra/cameo    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -std=gnu99 -fobjc-arc -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wduplicate-method-match -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wno-undeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.0.sdk -fexceptions -fasm-blocks -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch "-DIBOutlet=__attribute__((iboutlet))" "-DIBOutletCollection(ClassName)=__attribute__((iboutletcollection(ClassName)))" "-DIBAction=void)__attribute__((ibaction)" -mios-simulator-version-min=6.0 -iquote /Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/cameo-generated-files.hmap -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/cameo-own-target-headers.hmap -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/cameo-all-target-headers.hmap -iquote /Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/cameo-project-headers.hmap -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/DerivedSources/i386 -I/Users/administrator/Desktop/repo_extra/cameo/cameo/build/cameo.build/Release-iphonesimulator/cameo.build/DerivedSources -F/Users/administrator/Desktop/repo_extra/cameo/cameo/build/Release-iphonesimulator --serialize-diagnostics /var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch.dia -c /Users/administrator/Desktop/repo_extra/cameo/cameo/support/cameo-Prefix.pch -o /var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/jm/dzjqjhhd1j16ch348n_5nd7w0000gp/C/com.apple.Xcode.502/SharedPrecompiledHeaders/cameo-Prefix-fyhndzfvdgdozldmxavjfyyzucuo/cameo-Prefix.pch.d36"F6B2B2B0-D688-4735-9745-5BC76D07AB8B-
-
