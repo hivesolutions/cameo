@@ -28,18 +28,13 @@
 # run the set up paths for a specific clone of
 # the sdk source
 if [ -z "$CAMEO_SDK_SCRIPT" ]; then
-  # ---------------------------------------------------------------------------
-  # Versioning for the SDK
-  #
+  # creates the various variables related with versioning
+  # of the software for the current project
   CAMEO_SDK_VERSION_MAJOR=0
   CAMEO_SDK_VERSION_MINOR=1
   test -n "$CAMEO_SDK_VERSION_BUILD" || CAMEO_SDK_VERSION_BUILD=$(date '+%Y%m%d')
   CAMEO_SDK_VERSION=${CAMEO_SDK_VERSION_MAJOR}.${CAMEO_SDK_VERSION_MINOR}
   CAMEO_SDK_VERSION_FULL=${CAMEO_SDK_VERSION}.${CAMEO_SDK_VERSION_BUILD}
-
-  # ---------------------------------------------------------------------------
-  # Set up paths
-  #
 
   # the directory containing this script, need to go
   # there and use pwd so these are all absolute paths
@@ -47,32 +42,23 @@ if [ -z "$CAMEO_SDK_SCRIPT" ]; then
   CAMEO_SDK_SCRIPT=$(pwd)
   popd >/dev/null
 
-  # the root directory where the cameo is stored
+  # creates the various path related variables for the
+  # project, note that most of then are relative based
   CAMEO_SDK_ROOT=$(dirname $CAMEO_SDK_SCRIPT)
-
-  # path to source files for cameo
   CAMEO_SDK_SRC=$CAMEO_SDK_ROOT/..
-
-  # path to sample files for cameo
   CAMEO_SDK_SAMPLES=$CAMEO_SDK_SRC/samples
-
-  # the directory where the target is built
   CAMEO_SDK_BUILD=$CAMEO_SDK_ROOT/build
   CAMEO_SDK_BUILD_LOG=$CAMEO_SDK_BUILD/build.log
 
-  # the name of the cameo for ios
+  # creates and sets the various variables related with
+  # naming for the current project
   CAMEO_SDK_BINARY_NAME=Cameo
-
-  # the name of the cameo for ios
   CAMEO_SDK_FRAMEWORK_NAME=${CAMEO_SDK_BINARY_NAME}.framework
-
-  # the path to the built cameo for ios .framework
   CAMEO_SDK_FRAMEWORK=$CAMEO_SDK_BUILD/$CAMEO_SDK_FRAMEWORK_NAME
 
-  # the name of the docset
+  # creates the variables associated with documentation
+  # for the project
   CAMEO_SDK_DOCSET_NAME=pt.hive.Cameo-0_1-for-iOS.docset
-
-  # the path to the framework docs
   CAMEO_SDK_FRAMEWORK_DOCS=$CAMEO_SDK_BUILD/$CAMEO_SDK_DOCSET_NAME
 
 fi
