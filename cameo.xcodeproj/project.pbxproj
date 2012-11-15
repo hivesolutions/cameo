@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C28CF5B91652EDC300E8272F /* cameo.m in Sources */ = {isa = PBXBuildFile; fileRef = C28CF5B81652EDC300E8272F /* cameo.m */; };
+		C33384731655084800F64AC8 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C333844D1654203800F64AC8 /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C33384741655084800F64AC8 /* cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C28CF5B71652EDC300E8272F /* cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C333847C16550C6700F64AC8 /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C333847B16550C6700F64AC8 /* HMVersion.h */; };
 		C3B4200E1652CBB400005DC5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4200D1652CBB400005DC5 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +30,24 @@
 		C28CF5B51652EDB900E8272F /* cameo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "cameo-Prefix.pch"; path = "support/cameo-Prefix.pch"; sourceTree = "<group>"; };
 		C28CF5B71652EDC300E8272F /* cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cameo.h; path = classes/cameo.h; sourceTree = "<group>"; };
 		C28CF5B81652EDC300E8272F /* cameo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = cameo.m; path = classes/cameo.m; sourceTree = "<group>"; };
+		C31B0EAC165528710097E274 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		C31B0EAE1655299C0097E274 /* 01package-contents.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "01package-contents.xml"; sourceTree = "<group>"; };
+		C31B0EAF1655299C0097E274 /* 01package.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 01package.xml; sourceTree = "<group>"; };
+		C31B0EB01655299C0097E274 /* index.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = index.xml; sourceTree = "<group>"; };
 		C333844D1654203800F64AC8 /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Dependencies.h; path = classes/Dependencies.h; sourceTree = "<group>"; };
+		C33384611655044B00F64AC8 /* build_all.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = build_all.sh; path = scripts/build_all.sh; sourceTree = "<group>"; };
+		C33384621655044B00F64AC8 /* build_distribution.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = build_distribution.sh; path = scripts/build_distribution.sh; sourceTree = "<group>"; };
+		C33384631655044B00F64AC8 /* build_documentation.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = build_documentation.sh; path = scripts/build_documentation.sh; sourceTree = "<group>"; };
+		C33384641655044B00F64AC8 /* build_framework.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = build_framework.sh; path = scripts/build_framework.sh; sourceTree = "<group>"; };
+		C33384651655044B00F64AC8 /* build_samples.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = build_samples.sh; path = scripts/build_samples.sh; sourceTree = "<group>"; };
+		C33384661655044B00F64AC8 /* build_scrumptious_distribution.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = build_scrumptious_distribution.sh; path = scripts/build_scrumptious_distribution.sh; sourceTree = "<group>"; };
+		C33384671655044B00F64AC8 /* common.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = common.sh; path = scripts/common.sh; sourceTree = "<group>"; };
+		C33384681655044B00F64AC8 /* configure_simulator_for_unit_tests.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = configure_simulator_for_unit_tests.sh; path = scripts/configure_simulator_for_unit_tests.sh; sourceTree = "<group>"; };
+		C33384691655044B00F64AC8 /* label_version_number.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = label_version_number.sh; path = scripts/label_version_number.sh; sourceTree = "<group>"; };
+		C333846A1655044B00F64AC8 /* rm_test_users.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = rm_test_users.py; path = scripts/rm_test_users.py; sourceTree = "<group>"; };
+		C333847B16550C6700F64AC8 /* HMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HMVersion.h; path = classes/HMVersion.h; sourceTree = "<group>"; };
+		C3338493165512BF00F64AC8 /* icon-sets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sets.png"; sourceTree = "<group>"; };
+		C3338494165512BF00F64AC8 /* icon-sets@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sets@2x.png"; sourceTree = "<group>"; };
 		C3B4200A1652CBB400005DC5 /* libcameo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcameo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3B4200D1652CBB400005DC5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -47,11 +67,64 @@
 		C28CF5B61652EDBB00E8272F /* classes */ = {
 			isa = PBXGroup;
 			children = (
-				C333844D1654203800F64AC8 /* Dependencies.h */,
 				C28CF5B71652EDC300E8272F /* cameo.h */,
 				C28CF5B81652EDC300E8272F /* cameo.m */,
+				C333844D1654203800F64AC8 /* Dependencies.h */,
+				C333847B16550C6700F64AC8 /* HMVersion.h */,
 			);
 			name = classes;
+			sourceTree = "<group>";
+		};
+		C31B0EA61655286D0097E274 /* package */ = {
+			isa = PBXGroup;
+			children = (
+				C31B0EAD1655299C0097E274 /* Cameo.pmdoc */,
+			);
+			path = package;
+			sourceTree = "<group>";
+		};
+		C31B0EAB165528710097E274 /* bundles */ = {
+			isa = PBXGroup;
+			children = (
+				C31B0EAC165528710097E274 /* FBUserSettingsViewResources.bundle */,
+			);
+			path = bundles;
+			sourceTree = "<group>";
+		};
+		C31B0EAD1655299C0097E274 /* Cameo.pmdoc */ = {
+			isa = PBXGroup;
+			children = (
+				C31B0EAE1655299C0097E274 /* 01package-contents.xml */,
+				C31B0EAF1655299C0097E274 /* 01package.xml */,
+				C31B0EB01655299C0097E274 /* index.xml */,
+			);
+			path = Cameo.pmdoc;
+			sourceTree = "<group>";
+		};
+		C33384601655042A00F64AC8 /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				C33384611655044B00F64AC8 /* build_all.sh */,
+				C33384621655044B00F64AC8 /* build_distribution.sh */,
+				C33384631655044B00F64AC8 /* build_documentation.sh */,
+				C33384641655044B00F64AC8 /* build_framework.sh */,
+				C33384651655044B00F64AC8 /* build_samples.sh */,
+				C33384661655044B00F64AC8 /* build_scrumptious_distribution.sh */,
+				C33384671655044B00F64AC8 /* common.sh */,
+				C33384681655044B00F64AC8 /* configure_simulator_for_unit_tests.sh */,
+				C33384691655044B00F64AC8 /* label_version_number.sh */,
+				C333846A1655044B00F64AC8 /* rm_test_users.py */,
+			);
+			name = scripts;
+			sourceTree = "<group>";
+		};
+		C3338492165512BF00F64AC8 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				C3338493165512BF00F64AC8 /* icon-sets.png */,
+				C3338494165512BF00F64AC8 /* icon-sets@2x.png */,
+			);
+			path = static;
 			sourceTree = "<group>";
 		};
 		C3B41FFF1652CBB400005DC5 = {
@@ -82,7 +155,11 @@
 		C3B4200F1652CBB400005DC5 /* cameo */ = {
 			isa = PBXGroup;
 			children = (
+				C31B0EAB165528710097E274 /* bundles */,
 				C28CF5B61652EDBB00E8272F /* classes */,
+				C31B0EA61655286D0097E274 /* package */,
+				C33384601655042A00F64AC8 /* scripts */,
+				C3338492165512BF00F64AC8 /* static */,
 				C3B420101652CBB400005DC5 /* support */,
 			);
 			path = cameo;
@@ -98,6 +175,19 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C33384721655083400F64AC8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C33384731655084800F64AC8 /* Dependencies.h in Headers */,
+				C33384741655084800F64AC8 /* cameo.h in Headers */,
+				C333847C16550C6700F64AC8 /* HMVersion.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		C3B420091652CBB400005DC5 /* cameo */ = {
 			isa = PBXNativeTarget;
@@ -106,6 +196,7 @@
 				C3B420061652CBB400005DC5 /* Sources */,
 				C3B420071652CBB400005DC5 /* Frameworks */,
 				C3B420081652CBB400005DC5 /* CopyFiles */,
+				C33384721655083400F64AC8 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -209,6 +300,7 @@
 				GCC_PREFIX_HEADER = "cameo/support/cameo-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -221,6 +313,7 @@
 				GCC_PREFIX_HEADER = "cameo/support/cameo-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
