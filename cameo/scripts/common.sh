@@ -62,7 +62,7 @@ if [ -z "$CAMEO_SDK_SCRIPT" ]; then
   CAMEO_SDK_BUILD_LOG=$CAMEO_SDK_BUILD/build.log
 
   # The name of the Facebook SDK for iOS
-  CAMEO_SDK_BINARY_NAME=CameoSDK
+  CAMEO_SDK_BINARY_NAME=Cameo
 
   # The name of the Facebook SDK for iOS framework
   CAMEO_SDK_FRAMEWORK_NAME=${CAMEO_SDK_BINARY_NAME}.framework
