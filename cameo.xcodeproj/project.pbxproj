@@ -55,7 +55,6 @@
 		C30DBA65165573F7002B678E /* build_framework.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_framework.sh; sourceTree = "<group>"; };
 		C30DBA66165573F7002B678E /* build_samples.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_samples.sh; sourceTree = "<group>"; };
 		C30DBA68165573F7002B678E /* common.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = common.sh; sourceTree = "<group>"; };
-		C30DBA69165573F7002B678E /* configure_simulator_for_unit_tests.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = configure_simulator_for_unit_tests.sh; sourceTree = "<group>"; };
 		C30DBA6A165573F7002B678E /* label_version_number.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = label_version_number.sh; sourceTree = "<group>"; };
 		C30DBA6D165573F7002B678E /* icon-sets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sets.png"; sourceTree = "<group>"; };
 		C30DBA6E165573F7002B678E /* icon-sets@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sets@2x.png"; sourceTree = "<group>"; };
@@ -133,7 +132,6 @@
 				C30DBA65165573F7002B678E /* build_framework.sh */,
 				C30DBA66165573F7002B678E /* build_samples.sh */,
 				C30DBA68165573F7002B678E /* common.sh */,
-				C30DBA69165573F7002B678E /* configure_simulator_for_unit_tests.sh */,
 				C30DBA6A165573F7002B678E /* label_version_number.sh */,
 			);
 			name = scripts;

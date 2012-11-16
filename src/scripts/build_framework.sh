@@ -152,7 +152,7 @@ if [ ${NOEXTRAS:-0} -eq 1 ]; then
 else
   progress_message "Running unit tests."
   cd $CAMEO_SDK_SRC
-  $XCODEBUILD -sdk iphonesimulator -configuration Debug -scheme facebook-ios-sdk-tests build
+  $XCODEBUILD -sdk iphonesimulator -configuration Debug -scheme cameo-tests build
 fi
 
 progress_message "Framework version info:" `perl -pe "s/.*@//" < $CAMEO_SDK_SRC/cameo/classes/HMVersion.h`

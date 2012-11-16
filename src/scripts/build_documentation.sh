@@ -50,8 +50,8 @@ hash $APPLEDOC &>/dev/null
 if [ "$?" -eq "0" ]; then
     APPLEDOC_DOCSET_NAME="Cameo Framework 0.1.0 for iOS"
     $APPLEDOC --project-name "$APPLEDOC_DOCSET_NAME" \
-	--project-company "Facebook" \
-	--company-id "com.facebook" \
+	--project-company "Cameo" \
+	--company-id "pt.hive" \
 	--output "$DOCSET" \
 	--preprocess-headerdoc \
 	--docset-bundle-name "$APPLEDOC_DOCSET_NAME" \
