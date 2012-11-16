@@ -25,8 +25,6 @@
 # __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 # __license__   = GNU General Public License (GPL), Version 3
 
-# This script builds all of the samples in the samples subdirectory.
-
 . ${CAMEO_SDK_SCRIPT:-$(dirname $0)}/common.sh
 
 # valid arguments are: no-value, "Debug" and "Release" (default)
@@ -34,21 +32,15 @@ BUILDCONFIGURATION=${1:-Release}
 
 test -x "$XCODEBUILD" || die 'Could not find xcodebuild in $PATH'
 
-# -----------------------------------------------------------------------------
 progress_message Building samples.
 
-# -----------------------------------------------------------------------------
-# Call out to build .framework
-#
+# calls out to build .framework
 if is_outermost_build; then
   . $CAMEO_SDK_SCRIPT/build_framework.sh
 fi
 
-# -----------------------------------------------------------------------------
-# Determine which samples to build.
-#
-
-# Certain subdirs of samples are not samples to be built, exclude them from the find query
+# certain subdirs of samples are not samples to be built,
+# excludes them from the find query
 FB_SAMPLES_EXCLUDED=(FBConnect.bundle)
 for excluded in "${FB_SAMPLES_EXCLUDED[@]}"; do
   if [ -n "$FB_FIND_ARGS" ]; then
@@ -59,9 +51,8 @@ done
 
 FB_FIND_SAMPLES_CMD="find $CAMEO_SDK_SAMPLES -type d -depth 1 ! ( $FB_FIND_ARGS )"
 
-# -----------------------------------------------------------------------------
-# Build each sample
-#
+# builds each of the sample project into
+# the defined directories
 function xcode_build_sample() {
   cd $CAMEO_SDK_SAMPLES/$1
   progress_message "Compiling '${1}' for platform '${2}' using configuration '${3}'."
@@ -79,7 +70,4 @@ for sampledir in `$FB_FIND_SAMPLES_CMD`; do
   xcode_build_sample `basename $sampledir` "iphonesimulator" "$BUILDCONFIGURATION"
 done
 
-# -----------------------------------------------------------------------------
-# Done
-#
 common_success

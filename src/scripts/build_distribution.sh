@@ -66,14 +66,10 @@ mkdir -p $CAMEO_SDK_BUILD_PACKAGE_DOCS
 
 \cp -R $CAMEO_SDK_FRAMEWORK $CAMEO_SDK_BUILD_PACKAGE_FRAMEWORK \
   || die "Could not copy $CAMEO_SDK_FRAMEWORK"
-#\cp -R $CAMEO_SDK_SAMPLES/ $CAMEO_SDK_BUILD_PACKAGE_SAMPLES \
-#  || die "Could not copy $CAMEO_SDK_BUILD_PACKAGE_SAMPLES"
+\cp -R $CAMEO_SDK_SAMPLES/ $CAMEO_SDK_BUILD_PACKAGE_SAMPLES \
+  || echo "Could not copy $CAMEO_SDK_BUILD_PACKAGE_SAMPLES"
 \cp -R $CAMEO_SDK_FRAMEWORK_DOCS/docset/Contents $CAMEO_SDK_BUILD_PACKAGE_DOCS \
-  || die "Could not copy $$CAMEO_SDK_FRAMEWORK_DOCS/docset/Contents"
-#\cp $CAMEO_SDK_ROOT/README $CAMEO_SDK_BUILD_PACKAGE/Documents/FacebookSDK \
-#  || die "Could not copy README"
-#\cp $CAMEO_SDK_ROOT/LICENSE $CAMEO_SDK_BUILD_PACKAGE/Documents/FacebookSDK \
-#  || die "Could not copy LICENSE"
+  || echo "Could not copy $$CAMEO_SDK_FRAMEWORK_DOCS/docset/Contents"
 
 # runs the fixup projects to point to the framework
 for fname in $(find $CAMEO_SDK_BUILD_PACKAGE_SAMPLES -name "project.pbxproj" -print); do \

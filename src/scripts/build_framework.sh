@@ -27,7 +27,7 @@
 
 . ${CAMEO_SDK_SCRIPT:-$(dirname $0)}/common.sh
 
-# process options, valid arguments -c [Debug|Release] -n 
+# process options, valid arguments -c [Debug|Release] -n
 BUILDCONFIGURATION=Release
 while getopts ":nc:" OPTNAME
 do
@@ -49,7 +49,6 @@ do
       die
       ;;
     *)
-    # Should not occur
       echo "Unknown error while processing options"
       die
       ;;
@@ -61,13 +60,10 @@ test -x "$LIPO" || die 'Could not find lipo in $PATH'
 
 CAMEO_SDK_UNIVERSAL_BINARY=$CAMEO_SDK_BUILD/${BUILDCONFIGURATION}-universal/$CAMEO_SDK_BINARY_NAME
 
-# -----------------------------------------------------------------------------
-
 progress_message Building Framework.
 
-# -----------------------------------------------------------------------------
-# Compile binaries 
-#
+# runs the compilation operation by calling the
+# xcode build command
 test -d $CAMEO_SDK_BUILD \
   || mkdir -p $CAMEO_SDK_BUILD \
   || die "Could not create directory $CAMEO_SDK_BUILD"
@@ -88,9 +84,7 @@ function xcode_build_target() {
 xcode_build_target "iphonesimulator" "$BUILDCONFIGURATION"
 xcode_build_target "iphoneos" "$BUILDCONFIGURATION"
 
-# -----------------------------------------------------------------------------
-# Merge lib files for different platforms into universal binary
-#
+# merge slib files for different platforms into universal binary
 progress_message "Building $CAMEO_SDK_BINARY_NAME library using lipo."
 
 mkdir -p $(dirname $CAMEO_SDK_UNIVERSAL_BINARY)
@@ -102,9 +96,7 @@ $LIPO \
   -output $CAMEO_SDK_UNIVERSAL_BINARY \
   || die "lipo failed - could not create universal static library"
 
-# -----------------------------------------------------------------------------
-# Build .framework out of binaries
-#
+# builds .framework out of binaries
 progress_message "Building $CAMEO_SDK_FRAMEWORK_NAME."
 
 \rm -rf $CAMEO_SDK_FRAMEWORK
@@ -144,7 +136,8 @@ done
   $CAMEO_SDK_FRAMEWORK/Versions/A/Cameo \
   || die "Error building framework while copying Cameria Framework"
 
-# Current directory matters to ln.
+# must change the current directory for the
+# creation of the symbolic link
 cd $CAMEO_SDK_FRAMEWORK
 ln -s ./Versions/A/Headers ./Headers
 ln -s ./Versions/A/Resources ./Resources
@@ -152,21 +145,15 @@ ln -s ./Versions/A/Cameo ./Cameo
 cd $CAMEO_SDK_FRAMEWORK/Versions
 ln -s ./A ./Current
 
-# -----------------------------------------------------------------------------
-# Run unit tests 
-#
-
-#if [ ${NOEXTRAS:-0} -eq  1 ];then
-#  progress_message "Skipping unit tests."
-#else
-#  progress_message "Running unit tests."
-#  cd $CAMEO_SDK_SRC
-#  $XCODEBUILD -sdk iphonesimulator -configuration Debug -scheme facebook-ios-sdk-tests build
-#fi
-
-# -----------------------------------------------------------------------------
-# Done
-#
+# runs the various unit tests, taking into account
+# the value of th no extras flag
+if [ ${NOEXTRAS:-0} -eq 1 ]; then
+  progress_message "Skipping unit tests."
+else
+  progress_message "Running unit tests."
+  cd $CAMEO_SDK_SRC
+  $XCODEBUILD -sdk iphonesimulator -configuration Debug -scheme facebook-ios-sdk-tests build
+fi
 
 progress_message "Framework version info:" `perl -pe "s/.*@//" < $CAMEO_SDK_SRC/cameo/classes/HMVersion.h`
 common_success

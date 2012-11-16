@@ -44,7 +44,6 @@ if [ "$3" != "" ]; then
     VERSION_STRING="$VERSION_STRING"."$3"
 fi
 if [ "$4" != "" ]; then
-    # We actually append 'b' regardless of what was passed.
     VERSION_STRING="$VERSION_STRING".b
 fi
 

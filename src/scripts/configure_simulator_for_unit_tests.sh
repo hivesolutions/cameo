@@ -25,10 +25,6 @@
 # __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 # __license__   = GNU General Public License (GPL), Version 3
 
-# this script configures your iOS simulator for unit tests
-# Note: On Mac OS X, an easy way to generate a MACHINE_UNIQUE_USER_TAG is with the following:
-#   system_profiler SPHardwareDataType | grep -i "Serial Number (system):" | awk '{print $4}'
-
 . ${CAMEO_SDK_SCRIPT:-$(dirname $0)}/common.sh
 
 if [ "$#" -lt 2 ]; then
@@ -47,7 +43,6 @@ function write_plist {
             mkdir "$SIMULATOR_CONFIG_DIR"
       fi
 
-      # use heredoc syntax to output the plist
       cat > "$SIMULATOR_CONFIG_FILE" \
 <<DELIMIT
 <?xml version="1.0" encoding="UTF-8"?>
@@ -63,7 +58,6 @@ function write_plist {
 </dict>
 </plist>
 DELIMIT
-# end heredoc
 
       echo "wrote unit test config file at $SIMULATOR_CONFIG_FILE" 
 }

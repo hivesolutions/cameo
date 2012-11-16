@@ -27,17 +27,14 @@
 
 . ${CAMEO_SDK_SCRIPT:-$(dirname $0)}/common.sh
 
-# -----------------------------------------------------------------------------
-# Build pre-requisites
-#
+# checks for the required execution and executes
+# but only in case it's not the outermost build
 if is_outermost_build; then
     . $CAMEO_SDK_SCRIPT/build_framework.sh -n
 fi
 progress_message Building Documentation.
 
-# -----------------------------------------------------------------------------
-# Build docs
-#
+# runs the building of the documentation
 test -d $CAMEO_SDK_BUILD \
   || mkdir -p $CAMEO_SDK_BUILD \
   || die "Could not create directory $CAMEO_SDK_BUILD"
@@ -78,7 +75,4 @@ function replace_string() {
 
 DOCSDIR="$DOCSET"/docset/Contents/Resources/Documents
 
-# -----------------------------------------------------------------------------
-# Done
-#
 common_success
