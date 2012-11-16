@@ -23,11 +23,20 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#include "Dependencies.h"
+#import "UIViewController+HMControllerUtil.h"
 
-@interface UIImage(HMImageUtil)
+@implementation UIViewController(HMControllerUtil)
 
-- (UIImage *)roundWithRadius:(NSUInteger)radius;
-- (UIImage *)roundWithWidth:(NSUInteger)ovalWidth height:(NSUInteger)ovalHeight;
+- (void)setNavigationTitle:(NSString *)title {
+    // checks if the view associated with the current view
+    // controller is already visible in such case changes the
+    // navigation bar item directly, otherwise uses the "traditional"
+    // title access method for the change
+    if(self.isViewLoaded && self.view.window) {
+        self.navigationController.navigationBar.topItem.title = title;
+    } else {
+        self.title = title;
+    }
+}
 
 @end

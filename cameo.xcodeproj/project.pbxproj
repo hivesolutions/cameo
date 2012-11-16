@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
+		C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
 		C30DBA71165573F7002B678E /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA55165573F7002B678E /* Cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA72165573F7002B678E /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA56165573F7002B678E /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA73165573F7002B678E /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA57165573F7002B678E /* HMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HMControllerUtil.m"; sourceTree = "<group>"; };
+		C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HMImageUtil.m"; sourceTree = "<group>"; };
 		C30D41131655411A003AA670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C30DBA53165573F7002B678E /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMBaseResources.bundle; sourceTree = "<group>"; };
 		C30DBA55165573F7002B678E /* Cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameo.h; sourceTree = "<group>"; };
@@ -95,7 +99,9 @@
 				C30DBA58165573F7002B678E /* Tobias.h */,
 				C30DBA59165573F7002B678E /* Tobias.m */,
 				C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */,
+				C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */,
 				C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */,
+				C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */,
 			);
 			name = classes;
 			path = src/classes;
@@ -267,6 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C30DBA75165573F7002B678E /* Tobias.m in Sources */,
+				C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */,
+				C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
