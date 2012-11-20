@@ -23,5 +23,11 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
+#import "HMJsonRequest.h"
+#import "HMJsonRequestDelegate.h"
+#import "HMVersion.h"
+#import "LoginViewController.h"
+#import "ProxyRequest.h"
+#import "ProxyRequestDelegate.h"
 #import "UIImage+HMImageUtil.h"
 #import "UIViewController+HMControllerUtil.h"
