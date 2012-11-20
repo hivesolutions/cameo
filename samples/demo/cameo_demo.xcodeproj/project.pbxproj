@@ -62,7 +62,6 @@
 			children = (
 				C3715E10165BE391006BB277 /* Cameo Demo */,
 				C3715E09165BE391006BB277 /* Frameworks */,
-				C3ED1BE6165BEAFA00D81B85 /* libcameo.a */,
 				C3715E07165BE391006BB277 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +80,7 @@
 				C3715E0A165BE391006BB277 /* UIKit.framework */,
 				C3715E0C165BE391006BB277 /* Foundation.framework */,
 				C3715E0E165BE391006BB277 /* CoreGraphics.framework */,
+				C3ED1BE6165BEAFA00D81B85 /* libcameo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
