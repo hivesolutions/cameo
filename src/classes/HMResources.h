@@ -30,5 +30,6 @@
 + (NSBundle *)getBundle;
 + (NSString *)imagePath:(NSString *)name type:(NSString *)type;
 + (UIImage *)image:(NSString *)name type:(NSString *)type;
++ (NSString *)localizedString:(NSString *)key withDefault:(NSString *)value;
 
 @end

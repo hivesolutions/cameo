@@ -55,4 +55,10 @@ static NSBundle *bundle = nil;
     return image;
 }
 
++ (NSString *)localizedString:(NSString *)key withDefault:(NSString *)value {
+    NSBundle *bundle = [HMResources getBundle];
+    NSString *result = [bundle localizedStringForKey:key value:value table:nil];
+    return result;
+}
+
 @end
