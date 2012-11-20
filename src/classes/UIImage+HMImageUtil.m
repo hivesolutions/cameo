@@ -45,8 +45,8 @@
     // a new bitmap context for drawing of the new image
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	CGContextRef context = CGBitmapContextCreate(
-                                                 NULL, width, height, 8, width * 4, colorSpace, kCGImageAlphaPremultipliedFirst
-                                                 );
+        NULL, width, height, 8, width * 4, colorSpace, kCGImageAlphaPremultipliedFirst
+    );
     
     // creates a new path in the context and a rectangle with
     // the same size
@@ -98,6 +98,39 @@
     // returns the "transformed" round image to the
     // caller method
 	return roundImage;
+}
+
++ (UIImageView *)animationFromSprite:(UIImage *)sprite width:(NSUInteger)width height:(NSUInteger)height {
+    // creates the "base" animation image view to be used for the
+    // placing of the sprite animation and then allocated a new array
+    // for the holding of the various images for the animation
+    UIImageView *animation = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
+    NSMutableArray *images = [[NSMutableArray alloc] init];
+    
+    // regtrieves the "underlying" core graphics image structure
+    // from the provided sprite image
+    CGImageRef spriteImage = sprite.CGImage;
+    
+    // calculates the number of (partial) images contained in the sprite
+    // an then iterates to extract them from it and populate the images
+    // array to be used in the animation
+    int numberImages = (int) floor(sprite.size.height / (CGFloat) height);
+    for(int index = 0; index < numberImages; index++) {
+        CGImageRef partialImage = CGImageCreateWithImageInRect(spriteImage, CGRectMake(0, index * height, width, height));
+        UIImage *partial = [UIImage imageWithCGImage:partialImage];
+        CGImageRelease(partialImage);
+        [images addObject:partial];
+    }
+    
+    // populates the various attributes of the animation with the
+    // images an the duration of the animation
+	animation.animationImages = images;
+	animation.animationDuration = 5.0f;
+    
+    // returns the constructed animation image to the caller
+    // function so that it can be used and placed in the correct
+    // position
+    return animation;
 }
 
 @end

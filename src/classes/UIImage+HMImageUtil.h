@@ -29,5 +29,6 @@
 
 - (UIImage *)roundWithRadius:(NSUInteger)radius;
 - (UIImage *)roundWithWidth:(NSUInteger)ovalWidth height:(NSUInteger)ovalHeight;
++ (UIImageView *)animationFromSprite:(UIImage *)sprite width:(NSUInteger)width height:(NSUInteger)height;
 
 @end
