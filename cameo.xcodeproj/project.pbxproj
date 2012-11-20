@@ -12,8 +12,6 @@
 		C30DBA71165573F7002B678E /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA55165573F7002B678E /* Cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA72165573F7002B678E /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA56165573F7002B678E /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA73165573F7002B678E /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA57165573F7002B678E /* HMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C30DBA74165573F7002B678E /* Tobias.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA58165573F7002B678E /* Tobias.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C30DBA75165573F7002B678E /* Tobias.m in Sources */ = {isa = PBXBuildFile; fileRef = C30DBA59165573F7002B678E /* Tobias.m */; };
 		C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA78165573F7002B678E /* cameo-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA70165573F7002B678E /* cameo-Prefix.pch */; };
@@ -60,8 +58,6 @@
 		C30DBA55165573F7002B678E /* Cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameo.h; sourceTree = "<group>"; };
 		C30DBA56165573F7002B678E /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 		C30DBA57165573F7002B678E /* HMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVersion.h; sourceTree = "<group>"; };
-		C30DBA58165573F7002B678E /* Tobias.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tobias.h; sourceTree = "<group>"; };
-		C30DBA59165573F7002B678E /* Tobias.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tobias.m; sourceTree = "<group>"; };
 		C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HMImageUtil.h"; sourceTree = "<group>"; };
 		C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HMControllerUtil.h"; sourceTree = "<group>"; };
 		C30DBA5E165573F7002B678E /* 01package-contents.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "01package-contents.xml"; sourceTree = "<group>"; };
@@ -128,8 +124,6 @@
 				C3ED1C22165BEFD500D81B85 /* ProxyRequest.h */,
 				C3ED1C23165BEFD500D81B85 /* ProxyRequest.m */,
 				C3ED1C24165BEFD500D81B85 /* ProxyRequestDelegate.h */,
-				C30DBA58165573F7002B678E /* Tobias.h */,
-				C30DBA59165573F7002B678E /* Tobias.m */,
 				C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */,
 				C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */,
 				C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */,
@@ -252,7 +246,6 @@
 				C30DBA71165573F7002B678E /* Cameo.h in Headers */,
 				C30DBA72165573F7002B678E /* Dependencies.h in Headers */,
 				C30DBA73165573F7002B678E /* HMVersion.h in Headers */,
-				C30DBA74165573F7002B678E /* Tobias.h in Headers */,
 				C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */,
 				C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */,
 				C30DBA78165573F7002B678E /* cameo-Prefix.pch in Headers */,
@@ -332,7 +325,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C30DBA75165573F7002B678E /* Tobias.m in Sources */,
 				C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */,
 				C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */,
 				C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */,
