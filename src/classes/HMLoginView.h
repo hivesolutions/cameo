@@ -28,6 +28,8 @@
 #import "HMResources.h"
 
 @interface HMLoginView : UIView {
+    @private
+    bool _layout;
 }
 
 @end

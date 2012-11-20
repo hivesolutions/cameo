@@ -38,18 +38,8 @@
     
     // retrieves the references for both the username and the password
     // text field element to be used for behavior change
-    UITextField *usernameField = (UITextField *) [self.view viewWithTag:1];
+ /*   UITextField *usernameField = (UITextField *) [self.view viewWithTag:1];
     UITextField *passwordField = (UITextField *) [self.view viewWithTag:2];
-    
-    // disables the auto correctio option on both of the text fields, this
-    // should avoid possible problems
-    usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
-    passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
-    
-    // updates the localization string on both the username field and
-    // the password field
-    usernameField.placeholder = NSLocalizedString(@"UsernamePlaceholderText", @"Username");
-    passwordField.placeholder = NSLocalizedString(@"PasswordPlaceholderText", @"Password");
     
     // retrieves the reference to both the signin button and the forgor label and
     // updates their text values to the appropriate localizable labels
@@ -74,18 +64,7 @@
             forControlEvents:UIControlEventEditingDidEndOnExit];
     [passwordField addTarget:self
                       action:@selector(textFieldFinished:)
-            forControlEvents:UIControlEventEditingDidEndOnExit];
-    
-    // retrieves the image view associated with the user settings
-    // and sets the text field image to so that the corners are not
-    // changed by the resizing operation
-    UIImageView *imageView = (UIImageView *) [self.view viewWithTag:3];
-    imageView.image = [[UIImage imageNamed:@"textfields.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 20)];
-    
-    // retrieves the pattern image to be used and sets it in
-    // the current view (should be able to change the background)
-    UIImage *patternImage = [UIImage imageNamed:@"main-background-dark.png"];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
+            forControlEvents:UIControlEventEditingDidEndOnExit];*/
 }
 
 - (void)didReceiveMemoryWarning {

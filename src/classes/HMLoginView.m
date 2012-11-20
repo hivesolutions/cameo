@@ -52,122 +52,83 @@
 }
 
 - (void)doLayout {
+    if(_layout) { return; }
+    _layout = YES;
+    
+    self.frame = CGRectMake(0, 0, 320, 568);
     self.contentMode = UIViewContentModeCenter;
     self.autoresizesSubviews = YES;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     
     // retrieves the pattern image to be used and sets it in
     // the current view (should be able to change the background)
-    UIImage *patternImage = [HMResources image:@"main-background-dark" type:@"png"];;
+    UIImage *patternImage = [HMResources image:@"main-background-dark" type:@"png"];
     self.backgroundColor = [UIColor colorWithPatternImage:patternImage];
+
+    CGFloat width = self.frame.size.width;
+    CGFloat widthH = self.frame.size.width / 2.0f;
     
-    /*
-    UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 460)];
-    backgroundView.image = [[UIImage imageNamed:@"dashboard-background.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 20)];
-    backgroundView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 48, 17, 96, 64)];
+    logoView.image = [HMResources image:@"logo" type:@"png"];
+    logoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     
-    UIImageView *directionView = [[UIImageView alloc] initWithFrame:CGRectMake(128, 8, 64, 64)];
-    directionView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    UIImageView *textFieldsView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 100, width - 20, 80)];
+    textFieldsView.image = [[HMResources image:@"text-fields" type:@"png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 20)];
+    textFieldsView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
-    UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [refreshButton setBackgroundImage:[UIImage imageNamed:@"refresh-gray.png"] forState:UIControlStateNormal];
-    refreshButton.frame = CGRectMake(276, 39, 36, 36);
-    refreshButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
-    [refreshButton addTarget:self action:@selector(refresh) forControlEvents:UIControlEventTouchUpInside];
+    UITextField *usernameField = [[UITextField alloc] initWithFrame:CGRectMake(20, 105, width - 40, 30)];
+    usernameField.font = [UIFont fontWithName:@"Helvetica" size:14];
+    usernameField.textColor = [UIColor whiteColor];
+    usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
+    usernameField.placeholder = NSLocalizedString(@"UsernamePlaceholderText", @"Username");
+    usernameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    usernameField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    usernameField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
-    UILabel *storeLabel = [[UILabel alloc] initWithFrame:CGRectMake(14, 79, 170, 21)];
-    storeLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
-    storeLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-    storeLabel.backgroundColor = [UIColor clearColor];
-    storeLabel.textColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:1.0];
-    storeLabel.shadowColor = [UIColor whiteColor];
-    storeLabel.shadowOffset = CGSizeMake(1, 1);
+    UITextField *passwordField = [[UITextField alloc] initWithFrame:CGRectMake(20, 145, width - 40, 30)];
+    passwordField.font = [UIFont fontWithName:@"Helvetica" size:14];
+    passwordField.textColor = [UIColor whiteColor];
+    passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
+    passwordField.placeholder = NSLocalizedString(@"PasswordPlaceholderText", @"Password");
+    passwordField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+    passwordField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    passwordField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
-    UILabel *todayLabel = [[UILabel alloc] initWithFrame:CGRectMake(14, 96, 170, 21)];
-    todayLabel.font = [UIFont fontWithName:@"Helvetica" size:10];
-    todayLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-    todayLabel.backgroundColor = [UIColor clearColor];
-    todayLabel.text = NSLocalizedString(@"TODAY'S SALES", @"TODAY'S SALES");
-    todayLabel.textColor = [UIColor colorWithRed:0.48 green:0.48 blue:0.48 alpha:1.0];
-    todayLabel.shadowColor = [UIColor whiteColor];
-    todayLabel.shadowOffset = CGSizeMake(1, 1);
+    UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192, 81, 41)];
+    signinButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
+    signinButton.titleLabel.textColor = [UIColor whiteColor];
+    signinButton.titleLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
+    signinButton.titleLabel.shadowOffset = CGSizeMake(1, 1);
+    signinButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    [signinButton setTitle:NSLocalizedString(@"Sign In", @"Sign In") forState:UIControlStateNormal];
+    [signinButton setBackgroundImage:[HMResources image:@"button" type:@"png"] forState:UIControlStateNormal];
     
-    UILabel *amountLabel = [[UILabel alloc] initWithFrame:CGRectMake(159, 93, 119, 21)];
-    amountLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:20];
-    amountLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
-    amountLabel.backgroundColor = [UIColor clearColor];
-    amountLabel.textColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:1.0];
-    amountLabel.shadowColor = [UIColor whiteColor];
-    amountLabel.shadowOffset = CGSizeMake(1, 1);
-    amountLabel.textAlignment = UITextAlignmentRight;
+    UILabel *forgotLabel = [[UILabel alloc] initWithFrame:CGRectMake(99, 202, width - 109, 21)];
+    forgotLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
+    forgotLabel.textColor = [UIColor whiteColor];
+    forgotLabel.backgroundColor = [UIColor clearColor];
+    forgotLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
+    forgotLabel.shadowOffset = CGSizeMake(1, 1);
+    forgotLabel.text = NSLocalizedString(@"Forgot your password ?", @"Forgot your password ?");
+    forgotLabel.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
-    UILabel *currencyLabel = [[UILabel alloc] initWithFrame:CGRectMake(281, 96, 27, 21)];
-    currencyLabel.font = [UIFont fontWithName:@"Helvetica" size:10];
-    currencyLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
-    currencyLabel.backgroundColor = [UIColor clearColor];
-    currencyLabel.text = NSLocalizedString(@"EUR", @"EUR");
-    currencyLabel.textColor = [UIColor colorWithRed:0.48 green:0.48 blue:0.48 alpha:1.0];
-    currencyLabel.shadowColor = [UIColor whiteColor];
-    currencyLabel.shadowOffset = CGSizeMake(1, 1);
-    
-    self.backgroundColor = [UIColor whiteColor];
-    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    self.autoresizesSubviews = YES;
-    
-    [self addSubview:backgroundView];
-    [self addSubview:directionView];
-    [self addSubview:refreshButton];
-    [self addSubview:storeLabel];
-    [self addSubview:todayLabel];
-    [self addSubview:amountLabel];
-    [self addSubview:currencyLabel];
-    
-    int yOffset = 143;
-    
-    NSMutableArray *days = [[NSMutableArray alloc] init];
-    
-    for(int index = 0; index < 5; index++) {
-        UILabel *dayLabel = [[UILabel alloc] initWithFrame:CGRectMake(14, yOffset, 170, 23)];
-        dayLabel.font = [UIFont fontWithName:@"Helvetica" size:10];
-        dayLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-        dayLabel.backgroundColor = [UIColor clearColor];
-        dayLabel.textColor = [UIColor colorWithRed:0.48 green:0.48 blue:0.48 alpha:1.0];
-        dayLabel.shadowColor = [UIColor whiteColor];
-        dayLabel.shadowOffset = CGSizeMake(1, 1);
-        
-        UILabel *amountLabel = [[UILabel alloc] initWithFrame:CGRectMake(159, yOffset, 119, 23)];
-        amountLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:18];
-        amountLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
-        amountLabel.backgroundColor = [UIColor clearColor];
-        amountLabel.textColor = [UIColor colorWithRed:0.19 green:0.19 blue:0.19 alpha:1.0];
-        amountLabel.shadowColor = [UIColor whiteColor];
-        amountLabel.shadowOffset = CGSizeMake(1, 1);
-        amountLabel.textAlignment = UITextAlignmentRight;
-        
-        UILabel *currencyLabel = [[UILabel alloc] initWithFrame:CGRectMake(281, yOffset + 4, 27, 21)];
-        currencyLabel.font = [UIFont fontWithName:@"Helvetica" size:10];
-        currencyLabel.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleBottomMargin;
-        currencyLabel.backgroundColor = [UIColor clearColor];
-        currencyLabel.text = NSLocalizedString(@"EUR", @"EUR");
-        currencyLabel.textColor = [UIColor colorWithRed:0.48 green:0.48 blue:0.48 alpha:1.0];
-        currencyLabel.shadowColor = [UIColor whiteColor];
-        currencyLabel.shadowOffset = CGSizeMake(1, 1);
-        
-        [self addSubview:dayLabel];
-        [self addSubview:amountLabel];
-        [self addSubview:currencyLabel];
-        
-        NSArray *day = [[NSArray alloc] initWithObjects:dayLabel, amountLabel, currencyLabel, nil];
-        [days addObject:day];
-        
-        yOffset += 56;
-    }
-    
-    self.directionView = directionView;
-    self.storeLabel = storeLabel;
-    self.amountLabel = amountLabel;
-    self.curencyLabel = currencyLabel;
-    self.days = days;*/
+    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 527, width - 47, 21)];
+    copyrightLabel.font = [UIFont fontWithName:@"Helvetica" size:11];
+    copyrightLabel.textColor = [UIColor whiteColor];
+    copyrightLabel.backgroundColor = [UIColor clearColor];
+    copyrightLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
+    copyrightLabel.shadowOffset = CGSizeMake(1, 1);
+    copyrightLabel.text = @"Copyright Hive Solutions 2008-2012";
+    copyrightLabel.textAlignment = NSTextAlignmentCenter ;
+    copyrightLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
+
+    [self addSubview:logoView];
+    [self addSubview:textFieldsView];
+    [self addSubview:usernameField];
+    [self addSubview:passwordField];
+    [self addSubview:signinButton];
+    [self addSubview:forgotLabel];
+    [self addSubview:copyrightLabel];
 }
 
 @end
