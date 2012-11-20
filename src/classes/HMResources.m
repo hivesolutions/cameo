@@ -23,13 +23,36 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import "HMJsonRequest.h"
-#import "HMJsonRequestDelegate.h"
-#import "HMLoginView.h"
-#import "HMLoginViewController.h"
-#import "HMProxyRequest.h"
-#import "HMProxyRequestDelegate.h"
 #import "HMResources.h"
-#import "HMVersion.h"
-#import "UIImage+HMImageUtil.h"
-#import "UIViewController+HMControllerUtil.h"
+
+@implementation HMResources
+
+static NSBundle *bundle = nil;
+
++ (NSBundle *)getBundle {
+    // in case the bundle satic reference is already defined
+    // must return it immediately
+    if(bundle != nil) { return bundle; }
+    
+    // creates the path to the base resources bundle and then
+    // uses it to retrieve the bundle reference, returning it
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"HMBaseResources"
+                                                     ofType:@"bundle"];
+    bundle = [NSBundle bundleWithPath:path];
+    return bundle;
+}
+
++ (NSString *)imagePath:(NSString *)name type:(NSString *)type {
+    NSBundle *bundle = [HMResources getBundle];
+    NSString *imagePath = [NSString stringWithFormat:@"static/images/%@", name];
+    NSString *path =[bundle pathForResource:imagePath ofType:type];
+    return path;
+}
+
++ (UIImage *)image:(NSString *)name type:(NSString *)type {
+    NSString *path = [HMResources imagePath:name type:type];
+    UIImage *image = [UIImage imageWithContentsOfFile:path];
+    return image;
+}
+
+@end

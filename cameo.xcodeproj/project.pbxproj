@@ -26,6 +26,10 @@
 		C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */; };
 		C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */; };
 		C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */; };
+		C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C43165BFDB000D81B85 /* HMLoginView.h */; };
+		C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C44165BFDB100D81B85 /* HMLoginView.m */; };
+		C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C4B165BFF6500D81B85 /* HMResources.h */; };
+		C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C4C165BFF6500D81B85 /* HMResources.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,10 @@
 		C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyRequest.h; sourceTree = "<group>"; };
 		C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMProxyRequest.m; sourceTree = "<group>"; };
 		C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyRequestDelegate.h; sourceTree = "<group>"; };
+		C3ED1C43165BFDB000D81B85 /* HMLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLoginView.h; sourceTree = "<group>"; };
+		C3ED1C44165BFDB100D81B85 /* HMLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLoginView.m; sourceTree = "<group>"; };
+		C3ED1C4B165BFF6500D81B85 /* HMResources.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMResources.h; sourceTree = "<group>"; };
+		C3ED1C4C165BFF6500D81B85 /* HMResources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMResources.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +126,15 @@
 				C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */,
 				C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */,
 				C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */,
+				C3ED1C43165BFDB000D81B85 /* HMLoginView.h */,
+				C3ED1C44165BFDB100D81B85 /* HMLoginView.m */,
 				C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */,
 				C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */,
 				C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */,
 				C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */,
 				C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */,
+				C3ED1C4B165BFF6500D81B85 /* HMResources.h */,
+				C3ED1C4C165BFF6500D81B85 /* HMResources.m */,
 				C30DBA57165573F7002B678E /* HMVersion.h */,
 				C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */,
 				C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */,
@@ -254,6 +266,8 @@
 				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
 				C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */,
 				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
+				C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */,
+				C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +344,8 @@
 				C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */,
 				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
 				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
+				C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */,
+				C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

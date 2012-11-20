@@ -23,13 +23,12 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import "HMJsonRequest.h"
-#import "HMJsonRequestDelegate.h"
-#import "HMLoginView.h"
-#import "HMLoginViewController.h"
-#import "HMProxyRequest.h"
-#import "HMProxyRequestDelegate.h"
-#import "HMResources.h"
-#import "HMVersion.h"
-#import "UIImage+HMImageUtil.h"
-#import "UIViewController+HMControllerUtil.h"
+#import "Dependencies.h"
+
+@interface HMResources : NSObject
+
++ (NSBundle *)getBundle;
++ (NSString *)imagePath:(NSString *)name type:(NSString *)type;
++ (UIImage *)image:(NSString *)name type:(NSString *)type;
+
+@end

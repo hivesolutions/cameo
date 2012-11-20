@@ -77,7 +77,8 @@
 - (void)showLogin {
     // presents the login view controller in a modal fashion
     // this should slide the view from bottom to the top
-    HMLoginViewController *loginViewController = [[HMLoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    HMLoginViewController *loginViewController = [[HMLoginViewController alloc] init];
+    loginViewController.view = [[HMLoginView alloc] init];
     [self.controller presentModalViewController:loginViewController animated:YES];
 }
 
