@@ -22,16 +22,6 @@
 		C37910A416554184005D3B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A316554184005D3B7B /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C3715E2B165BE397006BB277 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C3715E27165BE391006BB277 /* cameo-demo.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C3715E06165BE391006BB277;
-			remoteInfo = "cameo-demo";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXCopyFilesBuildPhase section */
 		C3B420081652CBB400005DC5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -69,7 +59,6 @@
 		C30DBA6D165573F7002B678E /* icon-sets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sets.png"; sourceTree = "<group>"; };
 		C30DBA6E165573F7002B678E /* icon-sets@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sets@2x.png"; sourceTree = "<group>"; };
 		C30DBA70165573F7002B678E /* cameo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cameo-Prefix.pch"; sourceTree = "<group>"; };
-		C3715E27165BE391006BB277 /* cameo-demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cameo-demo.xcodeproj"; path = "cameo-demo/cameo-demo.xcodeproj"; sourceTree = "<group>"; };
 		C37910A11655417F005D3B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C37910A316554184005D3B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C3B4200A1652CBB400005DC5 /* libcameo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcameo.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,18 +157,9 @@
 			path = src/support;
 			sourceTree = SOURCE_ROOT;
 		};
-		C3715E28165BE391006BB277 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C3715E2C165BE397006BB277 /* cameo-demo.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		C3B41FFF1652CBB400005DC5 = {
 			isa = PBXGroup;
 			children = (
-				C3715E27165BE391006BB277 /* cameo-demo.xcodeproj */,
 				C3B4200F1652CBB400005DC5 /* Cameo */,
 				C3B4200C1652CBB400005DC5 /* Frameworks */,
 				C3B4200B1652CBB400005DC5 /* Products */,
@@ -275,28 +255,12 @@
 			mainGroup = C3B41FFF1652CBB400005DC5;
 			productRefGroup = C3B4200B1652CBB400005DC5 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = C3715E28165BE391006BB277 /* Products */;
-					ProjectRef = C3715E27165BE391006BB277 /* cameo-demo.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				C3B420091652CBB400005DC5 /* cameo */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		C3715E2C165BE397006BB277 /* cameo-demo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = "cameo-demo.app";
-			remoteRef = C3715E2B165BE397006BB277 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3B420061652CBB400005DC5 /* Sources */ = {
