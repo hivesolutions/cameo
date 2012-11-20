@@ -16,6 +16,9 @@
 		C3715E46165BE4D5006BB277 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C3715E3C165BE4D5006BB277 /* Default.png */; };
 		C3715E47165BE4D5006BB277 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3715E3D165BE4D5006BB277 /* Default@2x.png */; };
 		C3715E49165BE4D5006BB277 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3715E41165BE4D5006BB277 /* InfoPlist.strings */; };
+		C3ED1BE7165BEAFA00D81B85 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ED1BE6165BEAFA00D81B85 /* libcameo.a */; };
+		C3ED1BF7165BECB100D81B85 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */; };
+		C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1BF9165BECD400D81B85 /* ImageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,11 @@
 		C3715E3F165BE4D5006BB277 /* cameo_demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cameo_demo-Info.plist"; sourceTree = "<group>"; };
 		C3715E40165BE4D5006BB277 /* cameo_demo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cameo_demo-Prefix.pch"; sourceTree = "<group>"; };
 		C3715E42165BE4D5006BB277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C3ED1BE6165BEAFA00D81B85 /* libcameo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcameo.a; path = "../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos/libcameo.a"; sourceTree = "<group>"; };
+		C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
+		C3ED1BF8165BECD400D81B85 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		C3ED1BF9165BECD400D81B85 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		C3ED1BFB165BED0D00D81B85 /* Dependencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,7 @@
 				C3715E0B165BE391006BB277 /* UIKit.framework in Frameworks */,
 				C3715E0D165BE391006BB277 /* Foundation.framework in Frameworks */,
 				C3715E0F165BE391006BB277 /* CoreGraphics.framework in Frameworks */,
+				C3ED1BE7165BEAFA00D81B85 /* libcameo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +62,7 @@
 			children = (
 				C3715E10165BE391006BB277 /* Cameo Demo */,
 				C3715E09165BE391006BB277 /* Frameworks */,
+				C3ED1BE6165BEAFA00D81B85 /* libcameo.a */,
 				C3715E07165BE391006BB277 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +88,7 @@
 		C3715E10165BE391006BB277 /* Cameo Demo */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED1BF2165BEC9D00D81B85 /* views */,
 				C3715E35165BE4D5006BB277 /* classes */,
 				C3715E39165BE4D5006BB277 /* static */,
 				C3715E3E165BE4D5006BB277 /* support */,
@@ -91,6 +102,9 @@
 			children = (
 				C3715E36165BE4D5006BB277 /* AppDelegate.h */,
 				C3715E37165BE4D5006BB277 /* AppDelegate.m */,
+				C3ED1BFB165BED0D00D81B85 /* Dependencies.h */,
+				C3ED1BF8165BECD400D81B85 /* ImageViewController.h */,
+				C3ED1BF9165BECD400D81B85 /* ImageViewController.m */,
 				C3715E38165BE4D5006BB277 /* main.m */,
 			);
 			name = classes;
@@ -125,6 +139,15 @@
 			);
 			name = support;
 			path = src/support;
+			sourceTree = SOURCE_ROOT;
+		};
+		C3ED1BF2165BEC9D00D81B85 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */,
+			);
+			name = views;
+			path = src/views;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -182,6 +205,7 @@
 				C3715E46165BE4D5006BB277 /* Default.png in Resources */,
 				C3715E47165BE4D5006BB277 /* Default@2x.png in Resources */,
 				C3715E49165BE4D5006BB277 /* InfoPlist.strings in Resources */,
+				C3ED1BF7165BECB100D81B85 /* ImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +218,7 @@
 			files = (
 				C3715E43165BE4D5006BB277 /* AppDelegate.m in Sources */,
 				C3715E44165BE4D5006BB277 /* main.m in Sources */,
+				C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +294,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/support/cameo_demo-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/src/support/cameo_demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -280,6 +310,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/support/cameo_demo-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/src/support/cameo_demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

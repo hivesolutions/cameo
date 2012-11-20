@@ -23,30 +23,33 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import "AppDelegate.h"
+#import "ImageViewController.h"
 
-@implementation AppDelegate
+@implementation ImageViewController
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[ImageViewController alloc] initWithNibName:@"ImageViewController" bundle:nil];
-    [self.window makeKeyAndVisible];
-    return YES;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+    }
+    return self;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self createRound];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
+- (void)createRound {
+    /* TODO MUST CHANGE IMAGE AND POSITION */
+    UIImage *roundImage = [[UIImage imageNamed:@"Default.png"] roundWithRadius:40];
+    UIImageView *roundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, roundImage.size.width, roundImage.size.height)];
+    roundImageView.image = roundImage;
+    [self.view addSubview:roundImageView];
 }
 
 @end

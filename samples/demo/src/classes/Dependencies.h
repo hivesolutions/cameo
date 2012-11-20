@@ -23,30 +23,10 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import "AppDelegate.h"
+// framework dependency includes
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Foundation/Foundation.h>
 
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[ImageViewController alloc] initWithNibName:@"ImageViewController" bundle:nil];
-    [self.window makeKeyAndVisible];
-    return YES;
-}
-
-- (void)applicationWillResignActive:(UIApplication *)application {
-}
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-}
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-}
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-}
-
-@end
+// library dependency includes
+#import "../../../../src/classes/Cameo.h"

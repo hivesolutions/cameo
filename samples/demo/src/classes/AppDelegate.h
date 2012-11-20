@@ -23,7 +23,9 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import <UIKit/UIKit.h>
+#import "Dependencies.h"
+
+#import "ImageViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
