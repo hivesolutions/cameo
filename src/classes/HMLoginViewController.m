@@ -23,9 +23,9 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import "LoginViewController.h"
+#import "HMLoginViewController.h"
 
-@implementation LoginViewController
+@implementation HMLoginViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -120,7 +120,7 @@
     
     // creates a new proxy request to be used in the authentication procedure
     // note that this is an asynchronous call and may take some time
-    _proxyRequest = [[ProxyRequest alloc] initWithPath:self path:path];
+    _proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:path];
     _proxyRequest.delegate = self;
     _proxyRequest.useSession = NO;
     [_proxyRequest load];

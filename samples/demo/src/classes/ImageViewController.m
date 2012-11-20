@@ -40,6 +40,15 @@
     [self createRound];
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    HMProxyRequest *_proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:@"cameras.json"];
+    //    _proxyRequest.delegate = self;
+    _proxyRequest.parameters = [NSArray arrayWithObjects: nil];
+    [_proxyRequest load];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

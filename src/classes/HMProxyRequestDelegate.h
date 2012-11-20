@@ -25,7 +25,7 @@
 
 #import "Dependencies.h"
 
-@protocol ProxyRequestDelegate<NSObject>
+@protocol HMProxyRequestDelegate<NSObject>
 
 @optional
 

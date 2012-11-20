@@ -25,9 +25,9 @@
 
 #import "HMJsonRequest.h"
 #import "HMJsonRequestDelegate.h"
+#import "HMLoginViewController.h"
+#import "HMProxyRequest.h"
+#import "HMProxyRequestDelegate.h"
 #import "HMVersion.h"
-#import "LoginViewController.h"
-#import "ProxyRequest.h"
-#import "ProxyRequestDelegate.h"
 #import "UIImage+HMImageUtil.h"
 #import "UIViewController+HMControllerUtil.h"

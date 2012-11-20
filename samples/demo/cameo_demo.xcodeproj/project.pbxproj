@@ -19,6 +19,7 @@
 		C3ED1BE7165BEAFA00D81B85 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ED1BE6165BEAFA00D81B85 /* libcameo.a */; };
 		C3ED1BF7165BECB100D81B85 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */; };
 		C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1BF9165BECD400D81B85 /* ImageViewController.m */; };
+		C3ED1C3C165BF3B900D81B85 /* HMBaseResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C3ED1C3B165BF3B900D81B85 /* HMBaseResources.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C3ED1BF8165BECD400D81B85 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		C3ED1BF9165BECD400D81B85 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		C3ED1BFB165BED0D00D81B85 /* Dependencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
+		C3ED1C3B165BF3B900D81B85 /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = HMBaseResources.bundle; path = ../../src/bundles/HMBaseResources.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		C3715DFB165BE390006BB277 = {
 			isa = PBXGroup;
 			children = (
+				C3ED1C3B165BF3B900D81B85 /* HMBaseResources.bundle */,
 				C3715E10165BE391006BB277 /* Cameo Demo */,
 				C3715E09165BE391006BB277 /* Frameworks */,
 				C3715E07165BE391006BB277 /* Products */,
@@ -88,6 +91,7 @@
 		C3715E10165BE391006BB277 /* Cameo Demo */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED1C2D165BF1F700D81B85 /* bundles */,
 				C3ED1BF2165BEC9D00D81B85 /* views */,
 				C3715E35165BE4D5006BB277 /* classes */,
 				C3715E39165BE4D5006BB277 /* static */,
@@ -150,6 +154,13 @@
 			path = src/views;
 			sourceTree = SOURCE_ROOT;
 		};
+		C3ED1C2D165BF1F700D81B85 /* bundles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = bundles;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -206,6 +217,7 @@
 				C3715E47165BE4D5006BB277 /* Default@2x.png in Resources */,
 				C3715E49165BE4D5006BB277 /* InfoPlist.strings in Resources */,
 				C3ED1BF7165BECB100D81B85 /* ImageViewController.xib in Resources */,
+				C3ED1C3C165BF3B900D81B85 /* HMBaseResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

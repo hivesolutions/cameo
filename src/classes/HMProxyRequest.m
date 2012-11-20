@@ -23,9 +23,9 @@
 // __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import "ProxyRequest.h"
+#import "HMProxyRequest.h"
 
-@implementation ProxyRequest
+@implementation HMProxyRequest
 
 - initWithPath:(UIViewController *)controller path:(NSString *)path {
     self = [super init];
@@ -77,7 +77,7 @@
 - (void)showLogin {
     // presents the login view controller in a modal fashion
     // this should slide the view from bottom to the top
-    LoginViewController *loginViewController = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
+    HMLoginViewController *loginViewController = [[HMLoginViewController alloc] initWithNibName:@"LoginViewController" bundle:nil];
     [self.controller presentModalViewController:loginViewController animated:YES];
 }
 

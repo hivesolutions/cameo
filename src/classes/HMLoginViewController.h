@@ -25,29 +25,16 @@
 
 #import "Dependencies.h"
 
-#import "HMJsonRequest.h"
-#import "HMJsonRequestDelegate.h"
-#import "ProxyRequestDelegate.h"
-#import "LoginViewController.h"
+#import "HMProxyRequest.h"
+#import "HMProxyRequestDelegate.h"
 
-/**
- * Responsible for the coordination of the remote calls
- * with the proper visual changes (loading mask settings).
- */
-@interface ProxyRequest : NSObject<HMJsonRequestDelegate> {
+@class HMProxyRequest;
+
+@interface HMLoginViewController : UIViewController<UITextFieldDelegate, HMProxyRequestDelegate> {
+    HMProxyRequest *_proxyRequest;
 }
 
-@property (nonatomic, weak) NSObject<ProxyRequestDelegate> *delegate;
-@property (nonatomic) UIViewController *controller;
-@property (nonatomic) NSString *path;
-@property (nonatomic) NSArray *parameters;
-@property (nonatomic) UIView *mask;
-@property (nonatomic) UIActivityIndicatorView *maskIndicator;
-@property (nonatomic) HMJsonRequest *jsonRequest;
-@property (nonatomic) bool loading;
-@property (nonatomic) bool useSession;
-
-- initWithPath:(UIViewController *)controller path:(NSString *)path;
-- (void)load;
+- (IBAction)textFieldFinished:(id)sender;
+- (void)handleException:(NSDictionary *)exception;
 
 @end

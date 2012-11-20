@@ -21,11 +21,11 @@
 		C3ED1C25165BEFD500D81B85 /* HMJsonRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */; };
 		C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */; };
 		C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */; };
-		C3ED1C28165BEFD500D81B85 /* LoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C20165BEFD500D81B85 /* LoginViewController.h */; };
-		C3ED1C29165BEFD500D81B85 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C21165BEFD500D81B85 /* LoginViewController.m */; };
-		C3ED1C2A165BEFD500D81B85 /* ProxyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C22165BEFD500D81B85 /* ProxyRequest.h */; };
-		C3ED1C2B165BEFD500D81B85 /* ProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C23165BEFD500D81B85 /* ProxyRequest.m */; };
-		C3ED1C2C165BEFD500D81B85 /* ProxyRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C24165BEFD500D81B85 /* ProxyRequestDelegate.h */; };
+		C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */; };
+		C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */; };
+		C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */; };
+		C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */; };
+		C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,11 +80,11 @@
 		C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJsonRequest.h; sourceTree = "<group>"; };
 		C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMJsonRequest.m; sourceTree = "<group>"; };
 		C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJsonRequestDelegate.h; sourceTree = "<group>"; };
-		C3ED1C20165BEFD500D81B85 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		C3ED1C21165BEFD500D81B85 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		C3ED1C22165BEFD500D81B85 /* ProxyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProxyRequest.h; sourceTree = "<group>"; };
-		C3ED1C23165BEFD500D81B85 /* ProxyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProxyRequest.m; sourceTree = "<group>"; };
-		C3ED1C24165BEFD500D81B85 /* ProxyRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProxyRequestDelegate.h; sourceTree = "<group>"; };
+		C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLoginViewController.h; sourceTree = "<group>"; };
+		C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLoginViewController.m; sourceTree = "<group>"; };
+		C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyRequest.h; sourceTree = "<group>"; };
+		C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMProxyRequest.m; sourceTree = "<group>"; };
+		C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyRequestDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,12 +118,12 @@
 				C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */,
 				C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */,
 				C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */,
+				C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */,
+				C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */,
+				C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */,
+				C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */,
+				C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */,
 				C30DBA57165573F7002B678E /* HMVersion.h */,
-				C3ED1C20165BEFD500D81B85 /* LoginViewController.h */,
-				C3ED1C21165BEFD500D81B85 /* LoginViewController.m */,
-				C3ED1C22165BEFD500D81B85 /* ProxyRequest.h */,
-				C3ED1C23165BEFD500D81B85 /* ProxyRequest.m */,
-				C3ED1C24165BEFD500D81B85 /* ProxyRequestDelegate.h */,
 				C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */,
 				C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */,
 				C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */,
@@ -251,9 +251,9 @@
 				C30DBA78165573F7002B678E /* cameo-Prefix.pch in Headers */,
 				C3ED1C25165BEFD500D81B85 /* HMJsonRequest.h in Headers */,
 				C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */,
-				C3ED1C28165BEFD500D81B85 /* LoginViewController.h in Headers */,
-				C3ED1C2A165BEFD500D81B85 /* ProxyRequest.h in Headers */,
-				C3ED1C2C165BEFD500D81B85 /* ProxyRequestDelegate.h in Headers */,
+				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
+				C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */,
+				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,8 +328,8 @@
 				C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */,
 				C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */,
 				C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */,
-				C3ED1C29165BEFD500D81B85 /* LoginViewController.m in Sources */,
-				C3ED1C2B165BEFD500D81B85 /* ProxyRequest.m in Sources */,
+				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
+				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
