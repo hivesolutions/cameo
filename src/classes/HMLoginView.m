@@ -62,25 +62,25 @@
     
     // retrieves the pattern image to be used and sets it in
     // the current view (should be able to change the background)
-    UIImage *patternImage = [HMResources image:@"main-background-dark" type:@"png"];
+    UIImage *patternImage = [HMResources imageNamed:@"main-background-dark.png"];
     self.backgroundColor = [UIColor colorWithPatternImage:patternImage];
 
     CGFloat width = self.frame.size.width;
     CGFloat widthH = self.frame.size.width / 2.0f;
     
     UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 48, 17, 96, 64)];
-    logoView.image = [HMResources image:@"logo" type:@"png"];
+    logoView.image = [HMResources imageNamed:@"logo.png"];
     logoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     
     UIImageView *textFieldsView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 100, width - 20, 80)];
-    textFieldsView.image = [[HMResources image:@"text-fields" type:@"png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 20)];
+    textFieldsView.image = [[HMResources imageNamed:@"text-fields.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 20)];
     textFieldsView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
     UITextField *usernameField = [[UITextField alloc] initWithFrame:CGRectMake(20, 105, width - 40, 30)];
     usernameField.font = [UIFont fontWithName:@"Helvetica" size:14];
     usernameField.textColor = [UIColor whiteColor];
     usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
-    usernameField.placeholder = NSLocalizedString(@"UsernamePlaceholderText", @"Username");
+    usernameField.placeholder = [HMResources localizedString:@"UsernamePlaceholderText" withDefault:@"Username"];
     usernameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     usernameField.clearButtonMode = UITextFieldViewModeWhileEditing;
     usernameField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
@@ -89,7 +89,7 @@
     passwordField.font = [UIFont fontWithName:@"Helvetica" size:14];
     passwordField.textColor = [UIColor whiteColor];
     passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
-    passwordField.placeholder = NSLocalizedString(@"PasswordPlaceholderText", @"Password");
+    passwordField.placeholder = [HMResources localizedString:@"PasswordPlaceholderText" withDefault:@"Password"];
     passwordField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     passwordField.clearButtonMode = UITextFieldViewModeWhileEditing;
     passwordField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
@@ -100,8 +100,8 @@
     signinButton.titleLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
     signinButton.titleLabel.shadowOffset = CGSizeMake(1, 1);
     signinButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
-    [signinButton setTitle:NSLocalizedString(@"Sign In", @"Sign In") forState:UIControlStateNormal];
-    [signinButton setBackgroundImage:[HMResources image:@"button" type:@"png"] forState:UIControlStateNormal];
+    [signinButton setTitle:[HMResources localizedString:@"Sign In" withDefault:@"Sign In"] forState:UIControlStateNormal];
+    [signinButton setBackgroundImage:[HMResources imageNamed:@"button.png"] forState:UIControlStateNormal];
     
     UILabel *forgotLabel = [[UILabel alloc] initWithFrame:CGRectMake(99, 202, width - 109, 21)];
     forgotLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
@@ -109,7 +109,7 @@
     forgotLabel.backgroundColor = [UIColor clearColor];
     forgotLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
     forgotLabel.shadowOffset = CGSizeMake(1, 1);
-    forgotLabel.text = NSLocalizedString(@"Forgot your password ?", @"Forgot your password ?");
+    forgotLabel.text = [HMResources localizedString:@"Forgot your password ?" withDefault:@"Forgot your password ?"];
     forgotLabel.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
     UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 527, width - 47, 21)];
@@ -118,7 +118,7 @@
     copyrightLabel.backgroundColor = [UIColor clearColor];
     copyrightLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
     copyrightLabel.shadowOffset = CGSizeMake(1, 1);
-    copyrightLabel.text = @"Copyright Hive Solutions 2008-2012";
+    copyrightLabel.text = [HMResources localizedString:@"Copyright Hive Solutions 2008-2012" withDefault:@"Copyright Hive Solutions 2008-2012"];
     copyrightLabel.textAlignment = NSTextAlignmentCenter ;
     copyrightLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 
