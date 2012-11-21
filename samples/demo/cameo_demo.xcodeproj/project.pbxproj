@@ -92,7 +92,6 @@
 		C3715E10165BE391006BB277 /* Cameo Demo */ = {
 			isa = PBXGroup;
 			children = (
-				C3ED1C2D165BF1F700D81B85 /* bundles */,
 				C3ED1BF2165BEC9D00D81B85 /* views */,
 				C3715E35165BE4D5006BB277 /* classes */,
 				C3715E39165BE4D5006BB277 /* static */,
@@ -154,13 +153,6 @@
 			name = views;
 			path = src/views;
 			sourceTree = SOURCE_ROOT;
-		};
-		C3ED1C2D165BF1F700D81B85 /* bundles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = bundles;
-			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -309,6 +301,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/support/cameo_demo-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/src/support/cameo_demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"../../src/build/Cameo.framework/**",
+					"../../src/build/Release-iphonesimulator",
+					"../../src/build/Release-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -321,6 +318,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/support/cameo_demo-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/src/support/cameo_demo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"../../src/build/Cameo.framework/**",
+					"../../src/build/Release-iphonesimulator",
+					"../../src/build/Release-iphoneos",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
