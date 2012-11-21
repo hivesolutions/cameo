@@ -37,12 +37,12 @@
 		C3715E3F165BE4D5006BB277 /* cameo_demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cameo_demo-Info.plist"; sourceTree = "<group>"; };
 		C3715E40165BE4D5006BB277 /* cameo_demo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cameo_demo-Prefix.pch"; sourceTree = "<group>"; };
 		C3715E42165BE4D5006BB277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		C3ED1BE6165BEAFA00D81B85 /* libcameo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcameo.a; path = "../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos/libcameo.a"; sourceTree = "<group>"; };
+		C3ED1BE6165BEAFA00D81B85 /* libcameo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcameo.a; path = "../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos/libcameo.a"; sourceTree = SOURCE_ROOT; };
 		C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		C3ED1BF8165BECD400D81B85 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		C3ED1BF9165BECD400D81B85 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		C3ED1BFB165BED0D00D81B85 /* Dependencies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
-		C3ED1C3B165BF3B900D81B85 /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = HMBaseResources.bundle; path = ../../src/bundles/HMBaseResources.bundle; sourceTree = "<group>"; };
+		C3ED1C3B165BF3B900D81B85 /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = HMBaseResources.bundle; path = ../../src/bundles/HMBaseResources.bundle; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,10 +50,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3ED1BE7165BEAFA00D81B85 /* libcameo.a in Frameworks */,
 				C3715E0B165BE391006BB277 /* UIKit.framework in Frameworks */,
 				C3715E0D165BE391006BB277 /* Foundation.framework in Frameworks */,
 				C3715E0F165BE391006BB277 /* CoreGraphics.framework in Frameworks */,
-				C3ED1BE7165BEAFA00D81B85 /* libcameo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,7 +63,6 @@
 		C3715DFB165BE390006BB277 = {
 			isa = PBXGroup;
 			children = (
-				C3ED1C3B165BF3B900D81B85 /* HMBaseResources.bundle */,
 				C3715E10165BE391006BB277 /* Cameo Demo */,
 				C3715E09165BE391006BB277 /* Frameworks */,
 				C3715E07165BE391006BB277 /* Products */,
@@ -81,10 +80,10 @@
 		C3715E09165BE391006BB277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3ED1BE6165BEAFA00D81B85 /* libcameo.a */,
 				C3715E0A165BE391006BB277 /* UIKit.framework */,
 				C3715E0C165BE391006BB277 /* Foundation.framework */,
 				C3715E0E165BE391006BB277 /* CoreGraphics.framework */,
-				C3ED1BE6165BEAFA00D81B85 /* libcameo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -92,6 +91,7 @@
 		C3715E10165BE391006BB277 /* Cameo Demo */ = {
 			isa = PBXGroup;
 			children = (
+				C3B5A7C0165CEE9300EEE8D1 /* bundles */,
 				C3ED1BF2165BEC9D00D81B85 /* views */,
 				C3715E35165BE4D5006BB277 /* classes */,
 				C3715E39165BE4D5006BB277 /* static */,
@@ -144,6 +144,14 @@
 			name = support;
 			path = src/support;
 			sourceTree = SOURCE_ROOT;
+		};
+		C3B5A7C0165CEE9300EEE8D1 /* bundles */ = {
+			isa = PBXGroup;
+			children = (
+				C3ED1C3B165BF3B900D81B85 /* HMBaseResources.bundle */,
+			);
+			name = bundles;
+			sourceTree = "<group>";
 		};
 		C3ED1BF2165BEC9D00D81B85 /* views */ = {
 			isa = PBXGroup;
@@ -305,6 +313,7 @@
 					"../../src/build/Cameo.framework/**",
 					"../../src/build/Release-iphonesimulator",
 					"../../src/build/Release-iphoneos",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -322,6 +331,7 @@
 					"../../src/build/Cameo.framework/**",
 					"../../src/build/Release-iphonesimulator",
 					"../../src/build/Release-iphoneos",
+					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
