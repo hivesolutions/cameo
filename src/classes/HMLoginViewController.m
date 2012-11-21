@@ -87,12 +87,14 @@
 }
 
 - (IBAction)textFieldFinished:(id)sender {
+    // retrieves the current view, casting it as a login view
+    // this is an unsafe operation
+    HMLoginView *loginView = (HMLoginView *) self.view;
+    
     // retrieves both the username and the password text field and uses
     // them to retrieve these values to be used in the authentication
-    UITextField *usernameField = (UITextField *) [self.view viewWithTag:1];
-    UITextField *passwordField = (UITextField *) [self.view viewWithTag:2];
-    NSString *username = usernameField.text;
-    NSString *password = passwordField.text;
+    NSString *username = loginView.usernameField.text;
+    NSString *password = loginView.passwordField.text;
     
     // creates the base path template containing both the username and
     // the password values than formats the value using these values
