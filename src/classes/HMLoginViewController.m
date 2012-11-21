@@ -35,36 +35,38 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     
-    // retrieves the references for both the username and the password
-    // text field element to be used for behavior change
- /*   UITextField *usernameField = (UITextField *) [self.view viewWithTag:1];
-    UITextField *passwordField = (UITextField *) [self.view viewWithTag:2];
-    
-    // retrieves the reference to both the signin button and the forgor label and
-    // updates their text values to the appropriate localizable labels
-    UIButton *signinButton = (UIButton *) [self.view viewWithTag:4];
-    UILabel *forgotLabel = (UILabel *) [self.view viewWithTag:5];
-    [signinButton setTitle:NSLocalizedString(@"Sign In", @"Sign In") forState:UIControlStateNormal];
-    forgotLabel.text = NSLocalizedString(@"Forgot your password ?", @"Forgot your password ?");
+    // retrieves the current view, casting it as a login view
+    // this is an unsafe operation
+    HMLoginView *loginView = (HMLoginView *) self.view;
     
     // forces the username field to become the first
     // responder (focus on the text field element)
-    [usernameField becomeFirstResponder];
+    [loginView.usernameField becomeFirstResponder];
     
     // sets the current view controller as the delagate for both text
     // fields and then sets the return key as the done key and the text
     // field finished as the handler of such behavior
-    [usernameField setDelegate:self];
-    [passwordField setDelegate:self];
-    [usernameField setReturnKeyType:UIReturnKeyDone];
-    [passwordField setReturnKeyType:UIReturnKeyDone];
-    [usernameField addTarget:self
-                      action:@selector(textFieldFinished:)
-            forControlEvents:UIControlEventEditingDidEndOnExit];
-    [passwordField addTarget:self
-                      action:@selector(textFieldFinished:)
-            forControlEvents:UIControlEventEditingDidEndOnExit];*/
+    [loginView.usernameField setDelegate:self];
+    [loginView.passwordField setDelegate:self];
+    [loginView.usernameField setReturnKeyType:UIReturnKeyDone];
+    [loginView.passwordField setReturnKeyType:UIReturnKeyDone];
+    [loginView.usernameField addTarget:self
+                                action:@selector(textFieldFinished:)
+                      forControlEvents:UIControlEventEditingDidEndOnExit];
+    [loginView.passwordField addTarget:self
+                                action:@selector(textFieldFinished:)
+                      forControlEvents:UIControlEventEditingDidEndOnExit];
+    
+    // registers the signin button fot the "tap" event so that the
+    // text field finished action is triggered
+    [loginView.signinButton addTarget:self
+                    action:@selector(textFieldFinished:)
+          forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning {

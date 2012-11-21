@@ -86,6 +86,7 @@
     usernameField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
     UITextField *passwordField = [[UITextField alloc] initWithFrame:CGRectMake(20, 145, width - 40, 30)];
+    passwordField.secureTextEntry = YES;
     passwordField.font = [UIFont fontWithName:@"Helvetica" size:14];
     passwordField.textColor = [UIColor whiteColor];
     passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -129,6 +130,11 @@
     [self addSubview:signinButton];
     [self addSubview:forgotLabel];
     [self addSubview:copyrightLabel];
+    
+    self.usernameField = usernameField;
+    self.passwordField = passwordField;
+    self.signinButton = signinButton;
+    self.forgotLabel = forgotLabel;
 }
 
 @end

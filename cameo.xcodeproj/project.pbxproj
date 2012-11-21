@@ -32,6 +32,16 @@
 		C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C4C165BFF6500D81B85 /* HMResources.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C2F73443165C5B9000E4B56A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C39CF94C165BEA7400AA687F /* cameo_demo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C3715E06165BE391006BB277;
+			remoteInfo = cameo_demo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C3B420081652CBB400005DC5 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -99,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C2F73440165C5B9000E4B56A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2F73444165C5B9000E4B56A /* cameo_demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		C30DBA52165573F7002B678E /* bundles */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,12 +311,28 @@
 			mainGroup = C3B41FFF1652CBB400005DC5;
 			productRefGroup = C3B4200B1652CBB400005DC5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C2F73440165C5B9000E4B56A /* Products */;
+					ProjectRef = C39CF94C165BEA7400AA687F /* cameo_demo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C3B420091652CBB400005DC5 /* cameo */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C2F73444165C5B9000E4B56A /* cameo_demo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = cameo_demo.app;
+			remoteRef = C2F73443165C5B9000E4B56A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C3B420061652CBB400005DC5 /* Sources */ = {

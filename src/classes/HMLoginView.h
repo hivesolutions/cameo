@@ -32,4 +32,9 @@
     bool _layout;
 }
 
+@property (nonatomic) UITextField *usernameField;
+@property (nonatomic) UITextField *passwordField;
+@property (nonatomic) UIButton *signinButton;
+@property (nonatomic) UILabel *forgotLabel;
+
 @end
