@@ -220,10 +220,10 @@
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ConnectionError", @"Connection Error")
-                                                    message:NSLocalizedString(message, message)
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[HMResources localizedString:@"ConnectionError" withDefault:@"Connection Error"]
+                                                    message:[HMResources localizedString:message withDefault:message]
                                                    delegate:nil
-                                          cancelButtonTitle:NSLocalizedString(@"Confirm", @"Confirm")
+                                          cancelButtonTitle:[HMResources localizedString:@"Confirm" withDefault:@"Confirm"]
                                           otherButtonTitles:nil];
     [alert show];
 
