@@ -18,17 +18,17 @@
 		C37910A01655417B005D3B7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D41131655411A003AA670 /* CoreGraphics.framework */; };
 		C37910A21655417F005D3B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A11655417F005D3B7B /* Foundation.framework */; };
 		C37910A416554184005D3B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A316554184005D3B7B /* UIKit.framework */; };
-		C3ED1C25165BEFD500D81B85 /* HMJsonRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */; };
+		C3ED1C25165BEFD500D81B85 /* HMJsonRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */; };
-		C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */; };
-		C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */; };
+		C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */; };
-		C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */; };
+		C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */; };
-		C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */; };
-		C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C43165BFDB000D81B85 /* HMLoginView.h */; };
+		C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C43165BFDB000D81B85 /* HMLoginView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C44165BFDB100D81B85 /* HMLoginView.m */; };
-		C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C4B165BFF6500D81B85 /* HMResources.h */; };
+		C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C4B165BFF6500D81B85 /* HMResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C4C165BFF6500D81B85 /* HMResources.m */; };
 /* End PBXBuildFile section */
 
@@ -260,7 +260,6 @@
 				C30DBA73165573F7002B678E /* HMVersion.h in Headers */,
 				C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */,
 				C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */,
-				C30DBA78165573F7002B678E /* cameo-Prefix.pch in Headers */,
 				C3ED1C25165BEFD500D81B85 /* HMJsonRequest.h in Headers */,
 				C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */,
 				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
@@ -268,6 +267,7 @@
 				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
 				C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */,
 				C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */,
+				C30DBA78165573F7002B678E /* cameo-Prefix.pch in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
