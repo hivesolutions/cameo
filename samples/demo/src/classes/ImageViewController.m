@@ -47,7 +47,7 @@
     // @TODO: structure this in the correct manner to allow "dummy login"
     // _proxyRequest.delegate = self;
     _proxyRequest.parameters = [NSArray arrayWithObjects: nil];
-    [_proxyRequest load];
+    //[_proxyRequest load];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,6 +61,7 @@
     UIImage *roundImage = [[UIImage imageNamed:@"logo-square.png"] roundWithRadius:8];
     UIImageView *roundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - roundImage.size.width / 2, 80, roundImage.size.width, roundImage.size.height)];
     roundImageView.image = roundImage;
+    roundImageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:roundImageView];
     
     // retrieves the sprite image and then uses it to create the animation
@@ -69,6 +70,7 @@
     UIImageView *animation = [UIImage animationFromSprite:sprite width:96 height:96];
     animation.frame = CGRectMake(widthH - 48, 200, 96, 96);
     animation.animationDuration = 2.0f;
+    animation.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:animation];
     [animation startAnimating];
 }
