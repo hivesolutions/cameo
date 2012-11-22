@@ -36,22 +36,30 @@
     // must return immediately (invalid values)
 	if(ovalWidth == 0 || ovalHeight == 0) { return self; }
     
+    // retrieves the scale factor currently in use from
+    // the image object (scale in object)
+    float scaleFactor = self.scale;
+    
     // retrieves both dimensions of the current image
     // object, to be used in the new context
 	int width = self.size.width;
 	int height = self.size.height;
+    int widthS = width * scaleFactor;
+    int heightS = height * scaleFactor;
     
     // creates a new color space object and uses it to create
-    // a new bitmap context for drawing of the new image
+    // a new bitmap context for drawing of the new image then
+    // sets the correct scale for the creeated context
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	CGContextRef context = CGBitmapContextCreate(
-        NULL, width, height, 8, width * 4, colorSpace, kCGImageAlphaPremultipliedFirst
+        NULL, widthS, heightS, 8, widthS * 4, colorSpace, kCGImageAlphaPremultipliedFirst
     );
+    CGContextScaleCTM(context, scaleFactor, scaleFactor);
     
     // creates a new path in the context and a rectangle with
     // the same size
 	CGContextBeginPath(context);
-	CGRect rect = CGRectMake(0, 0, self.size.width, self.size.height);
+	CGRect rect = CGRectMake(0, 0, width, height);
     
     // allocates space for the "scaled" oval width and
     // height values to be calculated and used
@@ -92,7 +100,7 @@
     
     // retrives the image file from the image reference and
     // then releases the image reference (direct control)
-	UIImage *roundImage = [UIImage imageWithCGImage:imageMasked];
+	UIImage *roundImage = [UIImage imageWithCGImage:imageMasked scale:scaleFactor orientation:UIImageOrientationUp];
 	CGImageRelease(imageMasked);
     
     // returns the "transformed" round image to the
@@ -107,6 +115,16 @@
     UIImageView *animation = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, width, height)];
     NSMutableArray *images = [[NSMutableArray alloc] init];
     
+    // retrieves the scale factor currently in use from
+    // the sprite object (scale in object)
+    float scaleFactor = sprite.scale;
+    
+    // runs the scale operation ob both the width and the height
+    // of the base image size so tatht the cut operation is corerctly
+    // applied (according to the scale factor)
+    NSUInteger widthS = width * scaleFactor;
+    NSUInteger heightS = height * scaleFactor;
+    
     // regtrieves the "underlying" core graphics image structure
     // from the provided sprite image
     CGImageRef spriteImage = sprite.CGImage;
@@ -116,8 +134,8 @@
     // array to be used in the animation
     int numberImages = (int) floor(sprite.size.height / (CGFloat) height);
     for(int index = 0; index < numberImages; index++) {
-        CGImageRef partialImage = CGImageCreateWithImageInRect(spriteImage, CGRectMake(0, index * height, width, height));
-        UIImage *partial = [UIImage imageWithCGImage:partialImage];
+        CGImageRef partialImage = CGImageCreateWithImageInRect(spriteImage, CGRectMake(0, index * heightS, widthS, heightS));
+        UIImage *partial = [UIImage imageWithCGImage:partialImage scale:scaleFactor orientation:UIImageOrientationUp];
         CGImageRelease(partialImage);
         [images addObject:partial];
     }

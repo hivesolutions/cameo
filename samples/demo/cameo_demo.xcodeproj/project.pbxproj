@@ -30,6 +30,8 @@
 		C3715E49165BE4D5006BB277 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C3715E41165BE4D5006BB277 /* InfoPlist.strings */; };
 		C375DF3B165E89460065B06A /* logo-sprite.png in Resources */ = {isa = PBXBuildFile; fileRef = C375DF39165E89460065B06A /* logo-sprite.png */; };
 		C375DF3C165E89460065B06A /* logo-square.png in Resources */ = {isa = PBXBuildFile; fileRef = C375DF3A165E89460065B06A /* logo-square.png */; };
+		C375DF44165E93F00065B06A /* logo-sprite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C375DF42165E93F00065B06A /* logo-sprite@2x.png */; };
+		C375DF45165E93F00065B06A /* logo-square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C375DF43165E93F00065B06A /* logo-square@2x.png */; };
 		C3ED1BE7165BEAFA00D81B85 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ED1BE6165BEAFA00D81B85 /* libcameo.a */; };
 		C3ED1BF7165BECB100D81B85 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */; };
 		C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1BF9165BECD400D81B85 /* ImageViewController.m */; };
@@ -65,6 +67,8 @@
 		C3715E42165BE4D5006BB277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C375DF39165E89460065B06A /* logo-sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-sprite.png"; path = "images/logo-sprite.png"; sourceTree = "<group>"; };
 		C375DF3A165E89460065B06A /* logo-square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-square.png"; path = "images/logo-square.png"; sourceTree = "<group>"; };
+		C375DF42165E93F00065B06A /* logo-sprite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-sprite@2x.png"; path = "images/logo-sprite@2x.png"; sourceTree = "<group>"; };
+		C375DF43165E93F00065B06A /* logo-square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-square@2x.png"; path = "images/logo-square@2x.png"; sourceTree = "<group>"; };
 		C3ED1BE6165BEAFA00D81B85 /* libcameo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcameo.a; path = "../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos/libcameo.a"; sourceTree = SOURCE_ROOT; };
 		C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageViewController.xib; sourceTree = "<group>"; };
 		C3ED1BF8165BECD400D81B85 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
@@ -92,7 +96,9 @@
 			isa = PBXGroup;
 			children = (
 				C375DF39165E89460065B06A /* logo-sprite.png */,
+				C375DF42165E93F00065B06A /* logo-sprite@2x.png */,
 				C375DF3A165E89460065B06A /* logo-square.png */,
+				C375DF43165E93F00065B06A /* logo-square@2x.png */,
 				C3391582165E641E00DB2413 /* logo.png */,
 				C3391583165E641E00DB2413 /* logo@2x.png */,
 			);
@@ -292,6 +298,8 @@
 				C339159C165E697E00DB2413 /* iTunesArtwork@2x.png in Resources */,
 				C375DF3B165E89460065B06A /* logo-sprite.png in Resources */,
 				C375DF3C165E89460065B06A /* logo-square.png in Resources */,
+				C375DF44165E93F00065B06A /* logo-sprite@2x.png in Resources */,
+				C375DF45165E93F00065B06A /* logo-square@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
