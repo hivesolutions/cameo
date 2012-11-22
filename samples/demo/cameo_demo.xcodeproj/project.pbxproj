@@ -393,7 +393,6 @@
 					"../../src/build/Cameo.framework/**",
 					"../../src/build/Release-iphonesimulator",
 					"../../src/build/Release-iphoneos",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,7 +410,6 @@
 					"../../src/build/Cameo.framework/**",
 					"../../src/build/Release-iphonesimulator",
 					"../../src/build/Release-iphoneos",
-					"\"$(SRCROOT)/../../../../../Library/Developer/Xcode/DerivedData/cameo-desgrwsbageccfgiikyxkcpvsldn/Build/Products/Debug-iphoneos\"",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
