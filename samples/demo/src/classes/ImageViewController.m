@@ -44,7 +44,8 @@
     [super viewDidAppear:animated];
     
     HMProxyRequest *_proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:@"cameras.json"];
-    //    _proxyRequest.delegate = self;
+    // @TODO: structure this in the correct manner to allow "dummy login"
+    // _proxyRequest.delegate = self;
     _proxyRequest.parameters = [NSArray arrayWithObjects: nil];
     [_proxyRequest load];
 }
@@ -54,11 +55,22 @@
 }
 
 - (void)createRound {
-    /* TODO MUST CHANGE IMAGE AND POSITION */
-    UIImage *roundImage = [[UIImage imageNamed:@"Default.png"] roundWithRadius:40];
-    UIImageView *roundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, roundImage.size.width, roundImage.size.height)];
+    CGFloat width = self.view.frame.size.width;
+    CGFloat widthH = width / 2;
+    
+    UIImage *roundImage = [[UIImage imageNamed:@"logo-square.png"] roundWithRadius:8];
+    UIImageView *roundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - roundImage.size.width / 2, 80, roundImage.size.width, roundImage.size.height)];
     roundImageView.image = roundImage;
     [self.view addSubview:roundImageView];
+    
+    // retrieves the sprite image and then uses it to create the animation
+    // and then adds it to the current view
+    UIImage *sprite = [UIImage imageNamed:@"logo-sprite.png"];
+    UIImageView *animation = [UIImage animationFromSprite:sprite width:96 height:96];
+    animation.frame = CGRectMake(widthH - 48, 200, 96, 96);
+    animation.animationDuration = 2.0f;
+    [self.view addSubview:animation];
+    [animation startAnimating];
 }
 
 @end
