@@ -37,6 +37,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // retrieves the pattern image to be used and sets it in
+    // the current view (should be able to change the background)
+    UIImage *patternImage = [HMResources imageNamed:@"main-background-black.png"];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
+    
     [self createRound];
 }
 
@@ -46,7 +51,7 @@
     HMProxyRequest *_proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:@"cameras.json"];
     // @TODO: structure this in the correct manner to allow "dummy login"
     // _proxyRequest.delegate = self;
-    _proxyRequest.parameters = [NSArray arrayWithObjects: nil];
+    //_proxyRequest.parameters = [NSArray arrayWithObjects: nil];
     //[_proxyRequest load];
 }
 
@@ -55,9 +60,13 @@
 }
 
 - (void)createRound {
+    // retrieves the width of the current view's frame
+    // and divides it 
     CGFloat width = self.view.frame.size.width;
     CGFloat widthH = width / 2;
     
+    // creates a new round image with the current logo and presents it
+    // centered in the screeen
     UIImage *roundImage = [[UIImage imageNamed:@"logo-square.png"] roundWithRadius:8];
     UIImageView *roundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - roundImage.size.width / 2, 80, roundImage.size.width, roundImage.size.height)];
     roundImageView.image = roundImage;
