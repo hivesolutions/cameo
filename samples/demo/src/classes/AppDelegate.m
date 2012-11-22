@@ -28,6 +28,8 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [self setDefaults];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[ImageViewController alloc] initWithNibName:@"ImageViewController" bundle:nil];
     [self.window makeKeyAndVisible];
@@ -47,6 +49,12 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
+}
+
+- (void)setDefaults {
+    // sets the logo in the proxy request so that all the components
+    // to generated from it use this logo
+    [HMProxyRequest setLogo:[UIImage imageNamed:@"logo.png"]];
 }
 
 @end
