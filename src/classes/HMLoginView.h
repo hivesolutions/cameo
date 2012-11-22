@@ -30,8 +30,11 @@
 @interface HMLoginView : UIView {
     @private
     bool _layout;
+    UIImage *_logo;
 }
 
+@property (nonatomic) UIImage *logo;
+@property (nonatomic) UIImageView *logoView;
 @property (nonatomic) UITextField *usernameField;
 @property (nonatomic) UITextField *passwordField;
 @property (nonatomic) UIButton *signinButton;

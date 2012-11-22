@@ -50,5 +50,6 @@
 
 - initWithPath:(UIViewController *)controller path:(NSString *)path;
 - (void)load;
++ (void)setLogo:(UIImage *)logo;
 
 @end

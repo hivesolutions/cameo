@@ -45,7 +45,7 @@ static NSBundle *bundle = nil;
 + (NSString *)imagePath:(NSString *)name type:(NSString *)type {
     NSBundle *bundle = [HMResources getBundle];
     NSString *imagePath = [NSString stringWithFormat:@"static/images/%@", name];
-    NSString *path =[bundle pathForResource:imagePath ofType:type];
+    NSString *path = [bundle pathForResource:imagePath ofType:type];
     return path;
 }
 

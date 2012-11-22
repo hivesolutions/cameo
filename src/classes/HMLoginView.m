@@ -68,7 +68,7 @@
     CGFloat width = self.frame.size.width;
     CGFloat widthH = self.frame.size.width / 2.0f;
     
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 48, 17, 96, 64)];
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 150, 0, 300, 100)];
     logoView.image = [HMResources imageNamed:@"logo.png"];
     logoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     
@@ -131,10 +131,16 @@
     [self addSubview:forgotLabel];
     [self addSubview:copyrightLabel];
     
+    self.logoView = logoView;
     self.usernameField = usernameField;
     self.passwordField = passwordField;
     self.signinButton = signinButton;
     self.forgotLabel = forgotLabel;
+}
+
+- (void)setLogo:(UIImage *)logo {
+    _logo = logo;
+    self.logoView.image = logo;
 }
 
 @end

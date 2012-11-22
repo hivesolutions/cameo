@@ -27,6 +27,8 @@
 
 @implementation HMProxyRequest
 
+static UIImage *_logo = nil;
+
 - initWithPath:(UIViewController *)controller path:(NSString *)path {
     self = [super init];
     if(self) {
@@ -79,6 +81,8 @@
     // this should slide the view from bottom to the top
     HMLoginViewController *loginViewController = [[HMLoginViewController alloc] init];
     loginViewController.view = [[HMLoginView alloc] init];
+    HMLoginView *loginView = (HMLoginView *) loginViewController.view;
+    loginView.logo = _logo;
     [self.controller presentModalViewController:loginViewController animated:YES];
 }
 
@@ -228,6 +232,10 @@
     [alert show];
 
     if(self.delegate) { [self.delegate didReceiveError:error]; }
+}
+
++ (void)setLogo:(UIImage *)logo {
+    _logo = logo;
 }
 
 @end
