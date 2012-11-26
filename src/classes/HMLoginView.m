@@ -83,6 +83,7 @@
     usernameField.placeholder = [HMResources localizedString:@"UsernamePlaceholderText" withDefault:@"Username"];
     usernameField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     usernameField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
     usernameField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
     UITextField *passwordField = [[UITextField alloc] initWithFrame:CGRectMake(20, 145, width - 40, 30)];
@@ -93,6 +94,7 @@
     passwordField.placeholder = [HMResources localizedString:@"PasswordPlaceholderText" withDefault:@"Password"];
     passwordField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     passwordField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
     passwordField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
     UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192, 81, 42)];
