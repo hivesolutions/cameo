@@ -95,7 +95,7 @@
     passwordField.clearButtonMode = UITextFieldViewModeWhileEditing;
     passwordField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
     
-    UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192, 81, 41)];
+    UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192, 81, 42)];
     signinButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
     signinButton.titleLabel.textColor = [UIColor whiteColor];
     signinButton.titleLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
@@ -103,6 +103,7 @@
     signinButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [signinButton setTitle:[HMResources localizedString:@"Sign In" withDefault:@"Sign In"] forState:UIControlStateNormal];
     [signinButton setBackgroundImage:[HMResources imageNamed:@"button.png"] forState:UIControlStateNormal];
+    [signinButton setBackgroundImage:[HMResources imageNamed:@"button-pressed.png"] forState:UIControlStateHighlighted];
     
     UILabel *forgotLabel = [[UILabel alloc] initWithFrame:CGRectMake(99, 202, width - 109, 21)];
     forgotLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
