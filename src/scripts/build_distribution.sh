@@ -83,7 +83,9 @@ progress_message "Building .pkg from package directory."
 \rm -rf $CAMEO_SDK_PKG
 $PACKAGEMAKER \
   --doc $CAMEO_SDK_SRC/src/package/Cameo.pmdoc \
+  --domain system \
   --domain user \
+  --domain anywhere \
   --target 10.5 \
   --version $CAMEO_SDK_VERSION \
   --out $CAMEO_SDK_PKG \
