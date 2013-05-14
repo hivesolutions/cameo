@@ -37,6 +37,20 @@ static UIImage *_logo = nil;
 
         self.controller = controller;
         self.path = path;
+        self.loginPath = @"login.json";
+    }
+    return self;
+}
+
+- initWithPath:(UIViewController *)controller path:(NSString *)path loginPath:(NSString *)loginPath {
+    self = [super init];
+    if(self) {
+        self.loading = NO;
+        self.useSession = YES;
+        
+        self.controller = controller;
+        self.path = path;
+        self.loginPath = loginPath;
     }
     return self;
 }
@@ -80,6 +94,7 @@ static UIImage *_logo = nil;
     // presents the login view controller in a modal fashion
     // this should slide the view from bottom to the top
     HMLoginViewController *loginViewController = [[HMLoginViewController alloc] init];
+    loginViewController.loginPath = self.loginPath;
     loginViewController.view = [[HMLoginView alloc] init];
     HMLoginView *loginView = (HMLoginView *) loginViewController.view;
     loginView.logo = _logo;

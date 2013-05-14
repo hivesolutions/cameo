@@ -99,8 +99,8 @@
     
     // creates the base path template containing both the username and
     // the password values than formats the value using these values
-    NSString *basePath = @"login.json?username=%@&password=%@";
-    NSString *path = [NSString stringWithFormat:basePath, username, password];
+    NSString *basePath = @"%@?username=%@&password=%@";
+    NSString *path = [NSString stringWithFormat:basePath, self.loginPath, username, password];
     
     // creates a new proxy request to be used in the authentication procedure
     // note that this is an asynchronous call and may take some time

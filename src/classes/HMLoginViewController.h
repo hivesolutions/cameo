@@ -34,6 +34,8 @@
     HMProxyRequest *_proxyRequest;
 }
 
+@property (nonatomic) NSString *loginPath;
+
 - (IBAction)textFieldFinished:(id)sender;
 - (void)handleException:(NSDictionary *)exception;
 

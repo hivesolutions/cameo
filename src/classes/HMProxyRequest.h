@@ -45,6 +45,7 @@
 @property (nonatomic) UIView *mask;
 @property (nonatomic) UIActivityIndicatorView *maskIndicator;
 @property (nonatomic) HMJsonRequest *jsonRequest;
+@property (nonatomic) NSString *loginPath;
 @property (nonatomic) bool loading;
 @property (nonatomic) bool useSession;
 
