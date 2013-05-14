@@ -50,6 +50,7 @@
 @property (nonatomic) bool useSession;
 
 - initWithPath:(UIViewController *)controller path:(NSString *)path;
+- initWithPath:(UIViewController *)controller path:(NSString *)path loginPath:(NSString *)loginPath;
 - (void)load;
 + (void)setLogo:(UIImage *)logo;
 
