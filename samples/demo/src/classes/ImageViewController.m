@@ -36,18 +36,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // retrieves the pattern image to be used and sets it in
     // the current view (should be able to change the background)
     UIImage *patternImage = [HMResources imageNamed:@"main-background-black.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
-    
+
     [self createRound];
 }
 
 - (void) viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+
     HMProxyRequest *_proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:@"cameras.json"];
     // @TODO: structure this in the correct manner to allow "dummy login"
     // _proxyRequest.delegate = self;
@@ -61,10 +61,10 @@
 
 - (void)createRound {
     // retrieves the width of the current view's frame
-    // and divides it 
+    // and divides it
     CGFloat width = self.view.frame.size.width;
     CGFloat widthH = width / 2;
-    
+
     // creates a new round image with the current logo and presents it
     // centered in the screeen
     UIImage *roundImage = [[UIImage imageNamed:@"logo-square.png"] roundWithRadius:8];
@@ -72,7 +72,7 @@
     roundImageView.image = roundImage;
     roundImageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:roundImageView];
-    
+
     // retrieves the sprite image and then uses it to create the animation
     // and then adds it to the current view
     UIImage *sprite = [UIImage imageNamed:@"logo-sprite.png"];
