@@ -33,7 +33,7 @@ static NSBundle *bundle = nil;
     // in case the bundle satic reference is already defined
     // must return it immediately
     if(bundle != nil) { return bundle; }
-    
+
     // creates the path to the base resources bundle and then
     // uses it to retrieve the bundle reference, returning it
     NSString *path = [[NSBundle mainBundle] pathForResource:@"HMBaseResources"

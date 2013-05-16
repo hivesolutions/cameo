@@ -47,7 +47,7 @@ static UIImage *_logo = nil;
     if(self) {
         self.loading = NO;
         self.useSession = YES;
-        
+
         self.controller = controller;
         self.path = path;
         self.loginPath = loginPath;

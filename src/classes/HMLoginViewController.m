@@ -40,15 +40,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
+
     // retrieves the current view, casting it as a login view
     // this is an unsafe operation
     HMLoginView *loginView = (HMLoginView *) self.view;
-    
+
     // forces the username field to become the first
     // responder (focus on the text field element)
     [loginView.usernameField becomeFirstResponder];
-    
+
     // sets the current view controller as the delagate for both text
     // fields and then sets the return key as the done key and the text
     // field finished as the handler of such behavior
@@ -62,7 +62,7 @@
     [loginView.passwordField addTarget:self
                                 action:@selector(textFieldFinished:)
                       forControlEvents:UIControlEventEditingDidEndOnExit];
-    
+
     // registers the signin button fot the "tap" event so that the
     // text field finished action is triggered
     [loginView.signinButton addTarget:self
@@ -81,7 +81,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) { return YES; }
-    
+
     if(interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
         interfaceOrientation == UIInterfaceOrientationLandscapeRight) { return NO; }
     return YES;
@@ -91,24 +91,24 @@
     // retrieves the current view, casting it as a login view
     // this is an unsafe operation
     HMLoginView *loginView = (HMLoginView *) self.view;
-    
+
     // retrieves both the username and the password text field and uses
     // them to retrieve these values to be used in the authentication
     NSString *username = loginView.usernameField.text;
     NSString *password = loginView.passwordField.text;
-    
+
     // creates the base path template containing both the username and
     // the password values than formats the value using these values
     NSString *basePath = @"%@?username=%@&password=%@";
     NSString *path = [NSString stringWithFormat:basePath, self.loginPath, username, password];
-    
+
     // creates a new proxy request to be used in the authentication procedure
     // note that this is an asynchronous call and may take some time
     _proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:path];
     _proxyRequest.delegate = self;
     _proxyRequest.useSession = NO;
     [_proxyRequest load];
-    
+
     // sends the resign as first responder to the "broadcast" application
     // this should hide the currently present keyboard
     [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder)
@@ -121,7 +121,7 @@
     // retrieves the message contained in the exception structure
     // to be able to display it in a window
     NSString *message = [exception objectForKey:@"message"];
-    
+
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
@@ -141,14 +141,14 @@
     // in such case handles it and returns immediately
     NSDictionary *exception = [data valueForKey:@"exception"];
     if(exception) { [self handleException:exception]; return; }
-    
+
     // retrieves the username, the object id and the session id
     // values from the authentication structure to be used in the
     // current persistent storage
     NSString *username = [data valueForKey:@"username"];
     NSString *objectId = [data valueForKey:@"object_id"];
     NSString *sessionId = [data valueForKey:@"session_id"];
-    
+
     // retrieves the preferences object and uses it to set the "new"
     // session identifier value in it
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
@@ -156,7 +156,7 @@
     [preferences setValue:objectId forKey:@"objectId"];
     [preferences setValue:sessionId forKey:@"sessionId"];
     [preferences synchronize];
-    
+
     // closes the current modal window triggering the pop of the
     // previous panel (will show it again)
     [self dismissModalViewControllerAnimated:YES];
