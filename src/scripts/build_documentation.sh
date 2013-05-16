@@ -50,19 +50,19 @@ hash $APPLEDOC &>/dev/null
 if [ "$?" -eq "0" ]; then
     APPLEDOC_DOCSET_NAME="Cameo Framework 0.1.0 for iOS"
     $APPLEDOC --project-name "$APPLEDOC_DOCSET_NAME" \
-	--project-company "Cameo" \
-	--company-id "pt.hive" \
-	--output "$DOCSET" \
-	--preprocess-headerdoc \
-	--docset-bundle-name "$APPLEDOC_DOCSET_NAME" \
-	--docset-feed-name "$APPLEDOC_DOCSET_NAME" \
-	--exit-threshold 2 \
-	--no-install-docset \
-	--search-undocumented-doc \
-	--keep-undocumented-members \
-	--keep-undocumented-objects \
-	--explicit-crossref \
-	$CAMEO_SDK_FRAMEWORK/Headers \
+    --project-company "Cameo" \
+    --company-id "pt.hive" \
+    --output "$DOCSET" \
+    --preprocess-headerdoc \
+    --docset-bundle-name "$APPLEDOC_DOCSET_NAME" \
+    --docset-feed-name "$APPLEDOC_DOCSET_NAME" \
+    --exit-threshold 2 \
+    --no-install-docset \
+    --search-undocumented-doc \
+    --keep-undocumented-members \
+    --keep-undocumented-objects \
+    --explicit-crossref \
+    $CAMEO_SDK_FRAMEWORK/Headers \
     || die 'appledoc execution failed'
 else
     die "appledoc not installed, unable to build documentation"

@@ -100,7 +100,7 @@ if [ -z $CAMEO_SDK_ENV ]; then
 
   # any script that includes common.sh must call this once if it finishes
   # successfully
-  function common_success() { 
+  function common_success() {
       pop_common
       return 0
   }

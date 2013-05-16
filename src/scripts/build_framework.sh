@@ -116,8 +116,8 @@ mkdir $CAMEO_SDK_FRAMEWORK/Versions/A/Resources
   $CAMEO_SDK_BUILD/${BUILDCONFIGURATION}-iphoneos/cameo/*.h \
   $CAMEO_SDK_FRAMEWORK/Versions/A/DeprecatedHeaders \
   || die "Error building framework while copying SDK headers to deprecated folder"
-for HEADER in 
-do 
+for HEADER in
+do
   \cp \
     $CAMEO_SDK_SRC/$HEADER \
     $CAMEO_SDK_FRAMEWORK/Versions/A/DeprecatedHeaders \
