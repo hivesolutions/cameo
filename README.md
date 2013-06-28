@@ -8,6 +8,8 @@ Install dependencies **appledoc** and **packagemaker**:
 
     brew install appledoc
 
+The packagemaker must be installed with the XCode Auxiliary Tools from [Apple](https://developer.apple.com/downloads).
+
 Clone the repository with:
 
     git clone https://github.com/hivesolutions/cameo.git
