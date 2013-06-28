@@ -12,7 +12,7 @@ for the correct execution of the `build_all.sh` script:
 The packagemaker must be installed with the **Auxiliary Tools** for Xcode from
 [Downloads for Apple Developers](https://developer.apple.com/downloads).
 
-Clone the repository with:
+Clone the current cameo repository to get its source data with:
 
     git clone https://github.com/hivesolutions/cameo.git
 
