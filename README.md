@@ -4,7 +4,8 @@ A generic framework for ios interaction that provides a series of utilities.
 
 ## Installation
 
-Install dependencies **appledoc** and **packagemaker**:
+Install build dependencies **appledoc** and **packagemaker**, this are required
+for the correct execution of the `build_all.sh` script:
 
     brew install appledoc
 
