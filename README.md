@@ -2,7 +2,7 @@
 
 A generic framework for ios interaction that provides a series of utilities.
 
-## Installation
+## Build & Installation
 
 Install build dependencies **appledoc** and **packagemaker**, this are required
 for the correct execution of the `build_all.sh` script:
