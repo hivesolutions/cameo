@@ -8,7 +8,7 @@ Install dependencies **appledoc** and **packagemaker**:
 
     brew install appledoc
 
-The packagemaker must be installed with the Auxiliary Tools for Xcode from
+The packagemaker must be installed with the *Auxiliary Tools* for Xcode from
 [Downloads for Apple Developers](https://developer.apple.com/downloads).
 
 Clone the repository with:
