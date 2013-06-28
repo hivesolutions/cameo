@@ -10,8 +10,9 @@ for the correct execution of the `build_all.sh` script:
     brew install appledoc
 
 The packagemaker must be installed with the **Auxiliary Tools** for Xcode from
-[Downloads for Apple Developers](https://developer.apple.com/downloads). Then use
-the following command to create a valid symbolic link to the package maker.
+[Downloads for Apple Developers](https://developer.apple.com/downloads).
+
+Then use the following command to create a valid symbolic link to the package maker.
 
     ln -s /Applications/XcodeTools/PackageMaker.app/Contents/MacOS/PackageMaker /usr/bin/packagemaker
 
