@@ -4,6 +4,10 @@ A generic framework for ios interaction that provides a series of utilities.
 
 ## Installation
 
+Install dependencies:
+
+    brew install appledoc
+
 Clone the repository with:
 
     git clone https://github.com/hivesolutions/cameo.git
