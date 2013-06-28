@@ -4,7 +4,7 @@ A generic framework for ios interaction that provides a series of utilities.
 
 ## Installation
 
-Install dependencies:
+Install dependencies **appledoc** and **packagemaker**:
 
     brew install appledoc
 
