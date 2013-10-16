@@ -54,8 +54,23 @@
 - (void)doLayout {
     if(_layout) { return; }
     _layout = YES;
+    
+    // starts the variable that will hold the vertical padding of the
+    // contents in the login view
+    CGFloat padding = 0;
 
+    // initializes the frame size for the login view so that it
+    // fills the entire screen as in accordance with the specification
     self.frame = CGRectMake(0, 0, 320, 568);
+    
+    // in case the current device is running ios 7 or above
+    // need to apply the padding fix to the view (avoids overflow)
+    if([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+        padding = 20;
+    }
+    
+    // updates the basic values for the login view so that the
+    // autoresizing mask enables it to be flexible in the width
     self.contentMode = UIViewContentModeCenter;
     self.autoresizesSubviews = YES;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -65,18 +80,20 @@
     UIImage *patternImage = [HMResources imageNamed:@"main-background-dark.png"];
     self.backgroundColor = [UIColor colorWithPatternImage:patternImage];
 
+    // retrieves the current view's with and thn devides it by two
+    // to get half of the width (horizontal center)
     CGFloat width = self.frame.size.width;
     CGFloat widthH = self.frame.size.width / 2.0f;
 
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 150, 0, 300, 100)];
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 150, padding, 300, 100)];
     logoView.image = [HMResources imageNamed:@"logo.png"];
     logoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
 
-    UIImageView *textFieldsView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 100, width - 20, 80)];
+    UIImageView *textFieldsView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 100 + padding, width - 20, 80)];
     textFieldsView.image = [[HMResources imageNamed:@"text-fields.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 20)];
     textFieldsView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
 
-    UITextField *usernameField = [[UITextField alloc] initWithFrame:CGRectMake(20, 105, width - 40, 30)];
+    UITextField *usernameField = [[UITextField alloc] initWithFrame:CGRectMake(20, 105 + padding, width - 40, 30)];
     usernameField.font = [UIFont fontWithName:@"Helvetica" size:14];
     usernameField.textColor = [UIColor whiteColor];
     usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -86,8 +103,9 @@
     usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
     usernameField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     usernameField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
+    [usernameField setValue:[UIColor lightTextColor] forKeyPath:@"_placeholderLabel.textColor"];
 
-    UITextField *passwordField = [[UITextField alloc] initWithFrame:CGRectMake(20, 145, width - 40, 30)];
+    UITextField *passwordField = [[UITextField alloc] initWithFrame:CGRectMake(20, 145 + padding, width - 40, 30)];
     passwordField.secureTextEntry = YES;
     passwordField.font = [UIFont fontWithName:@"Helvetica" size:14];
     passwordField.textColor = [UIColor whiteColor];
@@ -98,8 +116,9 @@
     passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
     passwordField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     passwordField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
+    [passwordField setValue:[UIColor lightTextColor] forKeyPath:@"_placeholderLabel.textColor"];
 
-    UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192, 81, 42)];
+    UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192 + padding, 81, 42)];
     signinButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
     signinButton.titleLabel.textColor = [UIColor whiteColor];
     signinButton.titleLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
@@ -109,7 +128,7 @@
     [signinButton setBackgroundImage:[HMResources imageNamed:@"button.png"] forState:UIControlStateNormal];
     [signinButton setBackgroundImage:[HMResources imageNamed:@"button-pressed.png"] forState:UIControlStateHighlighted];
 
-    UILabel *forgotLabel = [[UILabel alloc] initWithFrame:CGRectMake(99, 202, width - 109, 21)];
+    UILabel *forgotLabel = [[UILabel alloc] initWithFrame:CGRectMake(99, 202 + padding, width - 109, 21)];
     forgotLabel.font = [UIFont fontWithName:@"Helvetica" size:13];
     forgotLabel.textColor = [UIColor whiteColor];
     forgotLabel.backgroundColor = [UIColor clearColor];
@@ -118,7 +137,7 @@
     forgotLabel.text = [HMResources localizedString:@"Forgot your password ?" withDefault:@"Forgot your password ?"];
     forgotLabel.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
 
-    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 527, width - 47, 21)];
+    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 527 + padding, width - 47, 21)];
     copyrightLabel.font = [UIFont fontWithName:@"Helvetica" size:11];
     copyrightLabel.textColor = [UIColor whiteColor];
     copyrightLabel.backgroundColor = [UIColor clearColor];
