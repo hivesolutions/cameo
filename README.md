@@ -12,6 +12,10 @@ for the correct execution of the `build_all.sh` script:
 The packagemaker must be installed with the **Auxiliary Tools** for Xcode from
 [Downloads for Apple Developers](https://developer.apple.com/downloads).
 
+Deploy the PackageMaker app to the `XcodeTools` folder.
+
+    cp -rp * /Applications/XcodeTools
+
 Then use the following command to create a valid symbolic link to the package maker.
 
     ln -s /Applications/XcodeTools/PackageMaker.app/Contents/MacOS/PackageMaker /usr/bin/packagemaker
