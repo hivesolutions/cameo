@@ -97,7 +97,7 @@
     
     // creates the logout button initializing the click
     // handlers and setting the proper image in it
-    UIButton *logoutButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    UIButton *logoutButton = [UIButton buttonWithType:UIButtonTypeCustom];
     logoutButton.frame = CGRectMake(widthH - 48, 320, 96, 48);
     logoutButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [logoutButton addTarget:self

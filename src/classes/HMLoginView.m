@@ -137,7 +137,7 @@
     forgotLabel.text = [HMResources localizedString:@"Forgot your password ?" withDefault:@"Forgot your password ?"];
     forgotLabel.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
 
-    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 527 + padding, width - 47, 21)];
+    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 527, width - 47, 21)];
     copyrightLabel.font = [UIFont fontWithName:@"Helvetica" size:11];
     copyrightLabel.textColor = [UIColor whiteColor];
     copyrightLabel.backgroundColor = [UIColor clearColor];
