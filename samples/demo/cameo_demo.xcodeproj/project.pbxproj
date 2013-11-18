@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C208E45B183A6D27007AB31B /* logout-button.png in Resources */ = {isa = PBXBuildFile; fileRef = C208E459183A6D27007AB31B /* logout-button.png */; };
+		C208E45C183A6D27007AB31B /* logout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C208E45A183A6D27007AB31B /* logout@2x.png */; };
 		C3391584165E641E00DB2413 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391582165E641E00DB2413 /* logo.png */; };
 		C3391585165E641E00DB2413 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391583165E641E00DB2413 /* logo@2x.png */; };
 		C3391593165E697E00DB2413 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391589165E697E00DB2413 /* Icon-72.png */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C208E459183A6D27007AB31B /* logout-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logout-button.png"; path = "images/logout-button.png"; sourceTree = "<group>"; };
+		C208E45A183A6D27007AB31B /* logout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logout@2x.png"; path = "images/logout@2x.png"; sourceTree = "<group>"; };
 		C222A86B165C51030086B7E2 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C3391582165E641E00DB2413 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
 		C3391583165E641E00DB2413 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "images/logo@2x.png"; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 		C3391580165E63E800DB2413 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C208E459183A6D27007AB31B /* logout-button.png */,
+				C208E45A183A6D27007AB31B /* logout@2x.png */,
 				C375DF39165E89460065B06A /* logo-sprite.png */,
 				C375DF42165E93F00065B06A /* logo-sprite@2x.png */,
 				C375DF3A165E89460065B06A /* logo-square.png */,
@@ -298,6 +304,8 @@
 				C339159C165E697E00DB2413 /* iTunesArtwork@2x.png in Resources */,
 				C375DF3B165E89460065B06A /* logo-sprite.png in Resources */,
 				C375DF3C165E89460065B06A /* logo-square.png in Resources */,
+				C208E45C183A6D27007AB31B /* logout@2x.png in Resources */,
+				C208E45B183A6D27007AB31B /* logout-button.png in Resources */,
 				C375DF44165E93F00065B06A /* logo-sprite@2x.png in Resources */,
 				C375DF45165E93F00065B06A /* logo-square@2x.png in Resources */,
 			);
