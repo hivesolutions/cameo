@@ -42,17 +42,15 @@
     UIImage *patternImage = [HMResources imageNamed:@"main-background-black.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
 
+    // creates the various layout elements that are part of the
+    // current panel and adds them to the current view
     [self createRound];
+    [self createAnimation];
+    [self createLogout];
 }
 
-- (void) viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-
-    HMProxyRequest *_proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:@"cameras.json"];
-    // @TODO: structure this in the correct manner to allow "dummy login"
-    // _proxyRequest.delegate = self;
-    //_proxyRequest.parameters = [NSArray arrayWithObjects: nil];
-    //[_proxyRequest load];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -66,13 +64,20 @@
     CGFloat widthH = width / 2;
 
     // creates a new round image with the current logo and presents it
-    // centered in the screeen
+    // centered in the screeen, this demonstrates the round
     UIImage *roundImage = [[UIImage imageNamed:@"logo-square.png"] roundWithRadius:8];
     UIImageView *roundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - roundImage.size.width / 2, 80, roundImage.size.width, roundImage.size.height)];
     roundImageView.image = roundImage;
     roundImageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:roundImageView];
+}
 
+- (void)createAnimation {
+    // retrieves the width of the current view's frame
+    // and divides it
+    CGFloat width = self.view.frame.size.width;
+    CGFloat widthH = width / 2;
+    
     // retrieves the sprite image and then uses it to create the animation
     // and then adds it to the current view
     UIImage *sprite = [UIImage imageNamed:@"logo-sprite.png"];
@@ -82,6 +87,30 @@
     animation.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:animation];
     [animation startAnimating];
+}
+
+-(void)createLogout {
+    // retrieves the width of the current view's frame
+    // and divides it
+    CGFloat width = self.view.frame.size.width;
+    CGFloat widthH = width / 2;
+    
+    // creates the logout button initializing the click
+    // handlers and setting the proper image in it
+    UIButton *logoutButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    logoutButton.frame = CGRectMake(widthH - 48, 320, 96, 48);
+    logoutButton.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    [logoutButton addTarget:self
+                     action:@selector(logout)
+           forControlEvents:UIControlEventTouchUpInside];
+    UIImage *logoutButtonImage = [UIImage imageNamed:@"logout-button.png"];
+    [logoutButton setImage:logoutButtonImage forState:UIControlStateNormal];
+    [self.view addSubview:logoutButton];
+}
+
+- (void)logout {
+    HMProxyRequest *_proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:nil];
+    [_proxyRequest showLogin];
 }
 
 @end

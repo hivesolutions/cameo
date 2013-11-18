@@ -52,6 +52,7 @@
 - initWithPath:(UIViewController *)controller path:(NSString *)path;
 - initWithPath:(UIViewController *)controller path:(NSString *)path loginPath:(NSString *)loginPath;
 - (void)load;
+- (void)showLogin;
 + (void)setLogo:(UIImage *)logo;
 
 @end
