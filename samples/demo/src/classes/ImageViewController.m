@@ -109,6 +109,8 @@
 }
 
 - (void)logout {
+    // creates a new proxy request object and immediatly
+    // triggers the show of the login page (forced)
     HMProxyRequest *_proxyRequest = [[HMProxyRequest alloc] initWithPath:self path:nil];
     [_proxyRequest showLogin];
 }
