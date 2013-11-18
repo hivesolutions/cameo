@@ -57,6 +57,7 @@
 /* Begin PBXFileReference section */
 		C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HMControllerUtil.m"; sourceTree = "<group>"; };
 		C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HMImageUtil.m"; sourceTree = "<group>"; };
+		C2E1FA8C183A801C00F43959 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		C30D41131655411A003AA670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C30DBA53165573F7002B678E /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMBaseResources.bundle; sourceTree = "<group>"; };
 		C30DBA55165573F7002B678E /* Cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameo.h; sourceTree = "<group>"; };
@@ -74,8 +75,6 @@
 		C30DBA66165573F7002B678E /* build_samples.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_samples.sh; sourceTree = "<group>"; };
 		C30DBA68165573F7002B678E /* common.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = common.sh; sourceTree = "<group>"; };
 		C30DBA6A165573F7002B678E /* label_version_number.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = label_version_number.sh; sourceTree = "<group>"; };
-		C30DBA6D165573F7002B678E /* icon-sets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sets.png"; sourceTree = "<group>"; };
-		C30DBA6E165573F7002B678E /* icon-sets@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sets@2x.png"; sourceTree = "<group>"; };
 		C30DBA70165573F7002B678E /* cameo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cameo-Prefix.pch"; sourceTree = "<group>"; };
 		C37910A11655417F005D3B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C37910A316554184005D3B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -190,8 +189,7 @@
 		C30DBA6C165573F7002B678E /* static */ = {
 			isa = PBXGroup;
 			children = (
-				C30DBA6D165573F7002B678E /* icon-sets.png */,
-				C30DBA6E165573F7002B678E /* icon-sets@2x.png */,
+				C2E1FA8C183A801C00F43959 /* readme.md */,
 			);
 			name = static;
 			path = src/static;
