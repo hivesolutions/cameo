@@ -77,7 +77,7 @@
     // and divides it
     CGFloat width = self.view.frame.size.width;
     CGFloat widthH = width / 2;
-    
+
     // retrieves the sprite image and then uses it to create the animation
     // and then adds it to the current view
     UIImage *sprite = [UIImage imageNamed:@"logo-sprite.png"];
@@ -94,7 +94,7 @@
     // and divides it
     CGFloat width = self.view.frame.size.width;
     CGFloat widthH = width / 2;
-    
+
     // creates the logout button initializing the click
     // handlers and setting the proper image in it
     UIButton *logoutButton = [UIButton buttonWithType:UIButtonTypeCustom];

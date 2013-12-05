@@ -54,7 +54,7 @@
 - (void)doLayout {
     if(_layout) { return; }
     _layout = YES;
-    
+
     // starts the variable that will hold the vertical padding of the
     // contents in the login view
     CGFloat padding = 0;
@@ -62,13 +62,13 @@
     // initializes the frame size for the login view so that it
     // fills the entire screen as in accordance with the specification
     self.frame = CGRectMake(0, 0, 320, 568);
-    
+
     // in case the current device is running ios 7 or above
     // need to apply the padding fix to the view (avoids overflow)
     if([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
         padding = 20;
     }
-    
+
     // updates the basic values for the login view so that the
     // autoresizing mask enables it to be flexible in the width
     self.contentMode = UIViewContentModeCenter;
