@@ -77,7 +77,7 @@ NSString * const HMLevels[] = {
 
 + (void)emit:(int)level value:(NSString *)value {
     NSString *levelS = HMLevels[level - 1];
-    NSString *logMessage = [NSString stringWithFormat:@"[%@] - %@", levelS, value];
+    NSString *logMessage = [NSString stringWithFormat:@"[%@] %@", levelS, value];
     NSLog(@"%@", logMessage);
 }
 
