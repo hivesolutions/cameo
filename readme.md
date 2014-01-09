@@ -2,6 +2,11 @@
 
 A generic framework for ios interaction that provides a series of utilities.
 
+## Adding header file
+
+In order to add an header file to the project and still be able to run the build
+scripts correctly one must set the target membership of the header file as **public**.
+
 ## Build & Installation
 
 Install build dependencies **appledoc** and **packagemaker**, this are required
