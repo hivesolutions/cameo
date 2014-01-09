@@ -35,24 +35,44 @@ NSString * const HMLevels[] = {
 
 @implementation HMLog
 
-+ (void)critical:(NSString *)value {
-    [HMLog emit:HM_CRITICAL value:value];
++ (void)critical:(NSString *)value, ... {
+    va_list args;
+    va_start(args, value);
+    NSString *valueF = [[NSString alloc] initWithFormat:value arguments:args];
+    va_end(args);
+    [HMLog emit:HM_CRITICAL value:valueF];
 }
 
-+ (void)error:(NSString *)value {
-    [HMLog emit:HM_ERROR value:value];
++ (void)error:(NSString *)value, ... {
+    va_list args;
+    va_start(args, value);
+    NSString *valueF = [[NSString alloc] initWithFormat:value arguments:args];
+    va_end(args);
+    [HMLog emit:HM_ERROR value:valueF];
 }
 
-+ (void)warning:(NSString *)value {
-    [HMLog emit:HM_ERROR value:value];
++ (void)warning:(NSString *)value, ... {
+    va_list args;
+    va_start(args, value);
+    NSString *valueF = [[NSString alloc] initWithFormat:value arguments:args];
+    va_end(args);
+    [HMLog emit:HM_ERROR value:valueF];
 }
 
-+ (void)info:(NSString *)value {
-    [HMLog emit:HM_INFO value:value];
++ (void)info:(NSString *)value, ... {
+    va_list args;
+    va_start(args, value);
+    NSString *valueF = [[NSString alloc] initWithFormat:value arguments:args];
+    va_end(args);
+    [HMLog emit:HM_INFO value:valueF];
 }
 
-+ (void)debug:(NSString *)value {
-    [HMLog emit:HM_DEBUG value:value];
++ (void)debug:(NSString *)value, ... {
+    va_list args;
+    va_start(args, value);
+    NSString *valueF = [[NSString alloc] initWithFormat:value arguments:args];
+    va_end(args);
+    [HMLog emit:HM_DEBUG value:valueF];
 }
 
 + (void)emit:(int)level value:(NSString *)value {

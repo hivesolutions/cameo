@@ -33,11 +33,11 @@
 
 @interface HMLog : NSObject
 
-+ (void)critical:(NSString *)value;
-+ (void)error:(NSString *)value;
-+ (void)warning:(NSString *)value;
-+ (void)info:(NSString *)value;
-+ (void)debug:(NSString *)value;
++ (void)critical:(NSString *)value, ...;
++ (void)error:(NSString *)value, ...;
++ (void)warning:(NSString *)value, ...;
++ (void)info:(NSString *)value, ...;
++ (void)debug:(NSString *)value, ...;
 + (void)emit:(int)level value:(NSString *)value;
 
 @end
