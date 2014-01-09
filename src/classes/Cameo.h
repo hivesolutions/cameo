@@ -25,6 +25,7 @@
 
 #import "HMJsonRequest.h"
 #import "HMJsonRequestDelegate.h"
+#import "HMLog.h"
 #import "HMLoginView.h"
 #import "HMLoginViewController.h"
 #import "HMProxyRequest.h"
