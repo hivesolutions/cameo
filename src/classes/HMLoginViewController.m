@@ -127,7 +127,6 @@
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
-    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[HMResources localizedString:@"LoginError" withDefault:@"Login Error"]
                                                     message:message
                                                    delegate:nil
