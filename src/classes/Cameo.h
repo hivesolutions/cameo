@@ -31,6 +31,7 @@
 #import "HMProxyRequest.h"
 #import "HMProxyRequestDelegate.h"
 #import "HMResources.h"
+#import "HMString.h"
 #import "HMVersion.h"
 #import "UIImage+HMImageUtil.h"
 #import "UIViewController+HMControllerUtil.h"
