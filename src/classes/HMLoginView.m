@@ -80,12 +80,13 @@
     UIImage *patternImage = [HMResources imageNamed:@"main-background-dark.png"];
     self.backgroundColor = [UIColor colorWithPatternImage:patternImage];
 
-    // retrieves the current view's with and thn devides it by two
+    // retrieves the current view's width, height and then devides it by two
     // to get half of the width (horizontal center)
     CGFloat width = self.frame.size.width;
+    CGFloat height = self.frame.size.height;
     CGFloat widthH = self.frame.size.width / 2.0f;
 
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 150, padding, 300, 100)];
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 150, padding, width - 20, 100)];
     logoView.image = [HMResources imageNamed:@"logo.png"];
     logoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
 
@@ -137,7 +138,7 @@
     forgotLabel.text = [HMResources localizedString:@"Forgot your password ?" withDefault:@"Forgot your password ?"];
     forgotLabel.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
 
-    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 527, width - 47, 21)];
+    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, height - 41, width - 47, 21)];
     copyrightLabel.font = [UIFont fontWithName:@"Helvetica" size:11];
     copyrightLabel.textColor = [UIColor whiteColor];
     copyrightLabel.backgroundColor = [UIColor clearColor];
