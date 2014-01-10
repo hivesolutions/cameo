@@ -121,10 +121,10 @@
     UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192 + padding, 81, 42)];
     signinButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
     signinButton.titleLabel.textColor = [UIColor whiteColor];
-    signinButton.titleLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
     signinButton.titleLabel.shadowOffset = CGSizeMake(1, 1);
     signinButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [signinButton setTitle:[HMResources localizedString:@"Sign In" withDefault:@"Sign In"] forState:UIControlStateNormal];
+    [signinButton setTitleShadowColor:[UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0] forState:UIControlStateNormal];
     [signinButton setBackgroundImage:[HMResources imageNamed:@"button.png"] forState:UIControlStateNormal];
     [signinButton setBackgroundImage:[HMResources imageNamed:@"button-pressed.png"] forState:UIControlStateHighlighted];
 
