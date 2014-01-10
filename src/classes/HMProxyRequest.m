@@ -235,12 +235,14 @@ static UIImage *_logo = nil;
     // retrieves the localized error description, this is considered
     // to be the message to be presented
     NSString *message = [error localizedDescription];
-
+    message = [HMResources localizedString:message withDefault:message];
+    message = [HMString capitalizedString:message];
+    
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[HMResources localizedString:@"ConnectionError" withDefault:@"Connection Error"]
-                                                    message:[HMResources localizedString:message withDefault:message]
+                                                    message:message
                                                    delegate:nil
                                           cancelButtonTitle:[HMResources localizedString:@"Confirm" withDefault:@"Confirm"]
                                           otherButtonTitles:nil];
