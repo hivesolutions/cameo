@@ -25,6 +25,7 @@
 
 #import "Dependencies.h"
 
+#import "HMString.h"
 #import "HMProxyRequest.h"
 #import "HMProxyRequestDelegate.h"
 
