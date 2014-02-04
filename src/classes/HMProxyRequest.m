@@ -237,7 +237,7 @@ static UIImage *_logo = nil;
     NSString *message = [error localizedDescription];
     message = [HMResources localizedString:message withDefault:message];
     message = [HMString capitalizedString:message];
-    
+
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
