@@ -1,3 +1,3 @@
 platform :ios
 
-podspec :path => "cameo.podspec"
+podspec :path => "Cameo.podspec"
