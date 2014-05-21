@@ -1,11 +1,12 @@
 Pod::Spec.new do |s|
-  s.name             = "Cameo"
+  s.name             = "cameo"
   s.version          = "0.1.0"
   s.summary          = "A generic framework for ios interaction that provides a series of utilities."
   s.description      = <<-DESC
                        A generic framework for ios interaction that provides a series of utilities.
+                       Use the framrwork to avoid extra repetitive work.
                        DESC
-  s.homepage         = "http://cameo.hive.pt"
+  s.homepage         = "http://cameo.hive.pt/"
   s.license          = 'GPL'
   s.author           = { "hivesolutions" => "development@hive.pt" }
   s.source           = { :git => "https://github.com/hivesolutions/cameo.git", :tag => s.version.to_s }
