@@ -27,6 +27,8 @@
 
 #import "HMJsonRequestDelegate.h"
 
+typedef void (^JsonBlock)(NSDictionary *, NSError *);
+
 @interface HMJsonRequest : NSObject {
 }
 
@@ -75,9 +77,20 @@
  */
 @property (nonatomic, weak) NSObject<HMJsonRequestDelegate> *delegate;
 
+/**
+ * The callback block that is going to be called for
+ * both the success and error situations, note that
+ * even if this callback is defined the delegate will
+ * be called the same way.
+ */
+@property (readwrite, copy) JsonBlock callback;
+
 - initWithUrl:(NSURL *)url;
 - initWithUrlString:(NSString *)urlString;
+- initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
 - initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters;
 - (void)load;
+
++ jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
 
 @end
