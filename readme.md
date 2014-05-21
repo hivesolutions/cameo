@@ -35,7 +35,7 @@ Execute the build script with:
 
 ## Cocoa Pods usage
 
-To publish the Camo Framework to the trunk repo of Cocoa Pods use:
+To publish the Cameo Framework to the trunk repo of Cocoa Pods use:
 
     pod push cameo.podspec
     
