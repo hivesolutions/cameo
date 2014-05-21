@@ -37,6 +37,13 @@
 @property (nonatomic) NSURL *url;
 
 /**
+ * The name of the http emthod that is going
+ * to be used for the request operation, by default
+ * this value is always considered to be get.
+ */
+@property (nonatomic) NSString *method;
+
+/**
  * The sequence of tuples containing the various
  * parameters to be sent to the server.
  *
@@ -70,7 +77,7 @@
 
 - initWithUrl:(NSURL *)url;
 - initWithUrlString:(NSString *)urlString;
-- initWithUrlString:(NSString *)urlString parameters:(NSDictionary *)parameters;
+- initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters;
 - (void)load;
 
 @end

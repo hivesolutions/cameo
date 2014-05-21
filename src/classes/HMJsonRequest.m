@@ -31,6 +31,7 @@
     self = [super init];
     if(self) {
         self.url = url;
+        self.method = @"GET";
     }
     return self;
 }
@@ -39,14 +40,16 @@
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
+        self.method = @"GET";
     }
     return self;
 }
 
-- initWithUrlString:(NSString *)urlString parameters:(NSDictionary *)parameters {
+- initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
+        self.parameters = parameters;
     }
     return self;
 }
