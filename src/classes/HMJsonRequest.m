@@ -66,8 +66,10 @@
 
     // creates a request using the current url and then uses it
     // to create the connection to be used setting the current instace
-    // as the delegate object for it
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    // as the delegate object for it, note that the request's method
+    // is changed according to the defined in the json request
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = self.method;
     self.connection = [[NSURLConnection alloc] initWithRequest:request
                                                       delegate:self];
 
