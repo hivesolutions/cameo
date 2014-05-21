@@ -32,3 +32,14 @@ Clone the current cameo repository to get its source data with:
 Execute the build script with:
 
     sh src/scripts/build_all.sh
+
+## Cocoa Pods usage
+
+To publish the Camo Framework to the trunk repo of Cocoa Pods use:
+
+    pod push cameo.podspec
+    
+If the "private" Hive Solutions repo is the target use instead:
+
+    pod push hive cameo.podspe
+    
