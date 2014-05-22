@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Cameo"
-  s.version          = "0.1.2"
+  s.version          = "0.1.3"
   s.summary          = "A generic framework for ios interaction that provides a series of utilities."
   s.description      = <<-DESC
                        A generic framework for ios interaction that provides a series of utilities.
@@ -17,6 +17,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'src/classes'
   s.resources = 'src/bundles/HMBaseResources.bundle/**'
+  s.resource_bundle = { 'HMBaseResources' => ['src/bundles/HMBaseResources.bundle/**'] }
 
   s.public_header_files = 'src/classes/*.h'
 end
