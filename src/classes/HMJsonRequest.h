@@ -25,6 +25,7 @@
 
 #import "Dependencies.h"
 
+#import "HMString.h"
 #import "HMJsonRequestDelegate.h"
 
 typedef void (^JsonBlock)(NSDictionary *, NSError *);
