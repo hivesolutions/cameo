@@ -43,5 +43,7 @@
 "UsernamePlaceholderText" = "Username";
 "PasswordPlaceholderText" = "Password";
 
+"User not found" = "User not found";
+"An username and a password must be provided" = "An username and a password must be provided";
 "Both username and password must be provided" = "Both username and password must be provided";
 "Invalid username and/or password" = "Invalid user name and/or password";
