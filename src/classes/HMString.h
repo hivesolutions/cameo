@@ -28,5 +28,6 @@
 @interface HMString : NSObject
 
 + (NSString *)capitalizedString:(NSString *)value;
++ (NSString *)quoteString:(NSString *)value;
 
 @end

@@ -34,4 +34,10 @@
     return capitalized;
 }
 
++ (NSString *)quoteString:(NSString *)value {
+    NSString *quoted = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    quoted = [quoted stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
+    return quoted;
+}
+
 @end
