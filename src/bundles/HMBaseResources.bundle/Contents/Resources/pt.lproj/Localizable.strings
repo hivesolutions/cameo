@@ -47,3 +47,4 @@
 "An username and a password must be provided" = "Um utilizado e uma palavra-passe têm de ser fornecidos";
 "Both username and password must be provided" = "Tanto utilizador como palavra-passe têm de ser fornecidos";
 "Invalid username and/or password" = "Utilizador e/ou palavra-passe errados";
+"Username and password combination does not match" = "Combinação de utilizador e palavra-passe inválida";

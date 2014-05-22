@@ -47,3 +47,4 @@
 "An username and a password must be provided" = "An username and a password must be provided";
 "Both username and password must be provided" = "Both username and password must be provided";
 "Invalid username and/or password" = "Invalid user name and/or password";
+"Username and password combination does not match" = "Username and password combination does not match";
