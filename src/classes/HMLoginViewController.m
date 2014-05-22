@@ -159,7 +159,7 @@
 
     // closes the current modal window triggering the pop of the
     // previous panel (will show it again)
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveError:(NSError *)error {

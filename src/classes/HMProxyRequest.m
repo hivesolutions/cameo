@@ -98,7 +98,7 @@ static UIImage *_logo = nil;
     loginViewController.view = [[HMLoginView alloc] init];
     HMLoginView *loginView = (HMLoginView *) loginViewController.view;
     loginView.logo = _logo;
-    [self.controller presentModalViewController:loginViewController animated:YES];
+    [self.controller presentViewController:loginViewController animated:YES completion:nil];
 }
 
 - (void)showLightMask {
