@@ -421,11 +421,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/support/cameo_demo-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/src/support/cameo_demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"../../src/build/Cameo.framework/**",
-					"../../src/build/Release-iphonesimulator",
-					"../../src/build/Release-iphoneos",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -438,11 +433,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/support/cameo_demo-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/src/support/cameo_demo-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"../../src/build/Cameo.framework/**",
-					"../../src/build/Release-iphonesimulator",
-					"../../src/build/Release-iphoneos",
-				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
