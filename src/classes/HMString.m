@@ -23,14 +23,15 @@
 // __copyright__ = Copyright (c) 2008-2014 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import "Dependencies.h"
+#import "HMString.h"
 
-@interface HMResources : NSObject
+@implementation HMString
 
-+ (NSBundle *)getBundle;
-+ (NSString *)imagePath:(NSString *)name type:(NSString *)type;
-+ (UIImage *)image:(NSString *)name type:(NSString *)type;
-+ (UIImage *)imageNamed:(NSString *)name;
-+ (NSString *)localizedString:(NSString *)key withDefault:(NSString *)value;
++ (NSString *)capitalizedString:(NSString *)value {
+    NSString *first = [[value substringToIndex:1] uppercaseString];
+    NSString *capitalized = [value stringByReplacingCharactersInRange:NSMakeRange(0,1)
+                                                           withString:first];
+    return capitalized;
+}
 
 @end

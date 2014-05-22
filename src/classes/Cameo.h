@@ -1,5 +1,5 @@
 // Hive Cameo Framework
-// Copyright (C) 2008-2012 Hive Solutions Lda.
+// Copyright (C) 2008-2014 Hive Solutions Lda.
 //
 // This file is part of Hive Cameo Framework.
 //
@@ -20,7 +20,7 @@
 // __version__   = 1.0.0
 // __revision__  = $LastChangedRevision$
 // __date__      = $LastChangedDate$
-// __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
+// __copyright__ = Copyright (c) 2008-2014 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
 #import "HMJsonRequest.h"
@@ -31,6 +31,7 @@
 #import "HMProxyRequest.h"
 #import "HMProxyRequestDelegate.h"
 #import "HMResources.h"
+#import "HMString.h"
 #import "HMVersion.h"
 #import "UIImage+HMImageUtil.h"
 #import "UIViewController+HMControllerUtil.h"

@@ -1,5 +1,5 @@
 // Hive Cameo Framework
-// Copyright (C) 2008-2012 Hive Solutions Lda.
+// Copyright (C) 2008-2014 Hive Solutions Lda.
 //
 // This file is part of Hive Cameo Framework.
 //
@@ -20,7 +20,7 @@
 // __version__   = 1.0.0
 // __revision__  = $LastChangedRevision$
 // __date__      = $LastChangedDate$
-// __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
+// __copyright__ = Copyright (c) 2008-2014 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
 #import "HMJsonRequest.h"
@@ -31,6 +31,8 @@
     self = [super init];
     if(self) {
         self.url = url;
+        self.method = @"GET";
+        self.callback = nil;
     }
     return self;
 }
@@ -39,14 +41,28 @@
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
+        self.method = @"GET";
+        self.callback = nil;
     }
     return self;
 }
 
-- initWithUrlString:(NSString *)urlString parameters:(NSDictionary *)parameters {
+- initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
+        self.method = @"GET";
+        self.callback = callback;
+    }
+    return self;
+}
+
+- initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters {
+    self = [super init];
+    if(self) {
+        self.url = [NSURL URLWithString:urlString];
+        self.parameters = parameters;
+        self.callback = nil;
     }
     return self;
 }
@@ -63,8 +79,10 @@
 
     // creates a request using the current url and then uses it
     // to create the connection to be used setting the current instace
-    // as the delegate object for it
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    // as the delegate object for it, note that the request's method
+    // is changed according to the defined in the json request
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    request.HTTPMethod = self.method;
     self.connection = [[NSURLConnection alloc] initWithRequest:request
                                                       delegate:self];
 
@@ -163,6 +181,10 @@
         [self.delegate didReceive];
     }
 
+    // in case the callback is defined for the current request
+    // it must be called with the raised error
+    if(self.callback) { self.callback(nil, error); }
+
     // notifies the delegate about the receival of the error
     // value from the remote connection
     if(self.delegate) { [self.delegate didReceiveError:error]; }
@@ -204,9 +226,19 @@
         [self.delegate didReceive];
     }
 
+    // in case the callback is defined for the current request
+    // it must be called with the recieved and processed data
+    if(self.callback) { self.callback(data, nil); }
+
     // notifies the delegate about the receival of the json
     // value from the remote connection
     if(self.delegate) { [self.delegate didReceiveJson:data]; }
+}
+
++ jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback {
+    HMJsonRequest *request = [[HMJsonRequest alloc] initWithUrlString:urlString callback:callback];
+    [request load];
+    return request;
 }
 
 @end

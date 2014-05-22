@@ -1,5 +1,5 @@
 // Hive Cameo Framework
-// Copyright (C) 2008-2012 Hive Solutions Lda.
+// Copyright (C) 2008-2014 Hive Solutions Lda.
 //
 // This file is part of Hive Cameo Framework.
 //
@@ -20,7 +20,7 @@
 // __version__   = 1.0.0
 // __revision__  = $LastChangedRevision$
 // __date__      = $LastChangedDate$
-// __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
+// __copyright__ = Copyright (c) 2008-2014 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
 #import "HMLoginView.h"
@@ -80,12 +80,13 @@
     UIImage *patternImage = [HMResources imageNamed:@"main-background-dark.png"];
     self.backgroundColor = [UIColor colorWithPatternImage:patternImage];
 
-    // retrieves the current view's with and thn devides it by two
+    // retrieves the current view's width, height and then devides it by two
     // to get half of the width (horizontal center)
     CGFloat width = self.frame.size.width;
+    CGFloat height = self.frame.size.height;
     CGFloat widthH = self.frame.size.width / 2.0f;
 
-    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 150, padding, 300, 100)];
+    UIImageView *logoView = [[UIImageView alloc] initWithFrame:CGRectMake(widthH - 150, padding, width - 20, 100)];
     logoView.image = [HMResources imageNamed:@"logo.png"];
     logoView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
 
@@ -121,10 +122,10 @@
     UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192 + padding, 81, 42)];
     signinButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
     signinButton.titleLabel.textColor = [UIColor whiteColor];
-    signinButton.titleLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
     signinButton.titleLabel.shadowOffset = CGSizeMake(1, 1);
     signinButton.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [signinButton setTitle:[HMResources localizedString:@"Sign In" withDefault:@"Sign In"] forState:UIControlStateNormal];
+    [signinButton setTitleShadowColor:[UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0] forState:UIControlStateNormal];
     [signinButton setBackgroundImage:[HMResources imageNamed:@"button.png"] forState:UIControlStateNormal];
     [signinButton setBackgroundImage:[HMResources imageNamed:@"button-pressed.png"] forState:UIControlStateHighlighted];
 
@@ -137,13 +138,13 @@
     forgotLabel.text = [HMResources localizedString:@"Forgot your password ?" withDefault:@"Forgot your password ?"];
     forgotLabel.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
 
-    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, 527, width - 47, 21)];
+    UILabel *copyrightLabel = [[UILabel alloc] initWithFrame:CGRectMake(24, height - 41, width - 47, 21)];
     copyrightLabel.font = [UIFont fontWithName:@"Helvetica" size:11];
     copyrightLabel.textColor = [UIColor whiteColor];
     copyrightLabel.backgroundColor = [UIColor clearColor];
     copyrightLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
     copyrightLabel.shadowOffset = CGSizeMake(1, 1);
-    copyrightLabel.text = [HMResources localizedString:@"Copyright Hive Solutions 2008-2012" withDefault:@"Copyright Hive Solutions 2008-2012"];
+    copyrightLabel.text = [HMResources localizedString:@"Copyright Hive Solutions 2008-2014" withDefault:@"Copyright Hive Solutions 2008-2014"];
     copyrightLabel.textAlignment = NSTextAlignmentCenter ;
     copyrightLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 

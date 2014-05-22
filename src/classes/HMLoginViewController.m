@@ -1,5 +1,5 @@
 // Hive Cameo Framework
-// Copyright (C) 2008-2012 Hive Solutions Lda.
+// Copyright (C) 2008-2014 Hive Solutions Lda.
 //
 // This file is part of Hive Cameo Framework.
 //
@@ -20,7 +20,7 @@
 // __version__   = 1.0.0
 // __revision__  = $LastChangedRevision$
 // __date__      = $LastChangedDate$
-// __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
+// __copyright__ = Copyright (c) 2008-2014 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
 #import "HMLoginViewController.h"
@@ -121,12 +121,14 @@
     // retrieves the message contained in the exception structure
     // to be able to display it in a window
     NSString *message = [exception objectForKey:@"message"];
+    message = [HMResources localizedString:message withDefault:message];
+    message = [HMString capitalizedString:message];
 
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[HMResources localizedString:@"LoginError" withDefault:@"Login Error"]
-                                                    message:[HMResources localizedString:message withDefault:message]
+                                                    message:message
                                                    delegate:nil
                                           cancelButtonTitle:[HMResources localizedString:@"Confirm" withDefault:@"Confirm"]
                                           otherButtonTitles:nil];

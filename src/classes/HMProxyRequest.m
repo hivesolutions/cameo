@@ -1,5 +1,5 @@
 // Hive Cameo Framework
-// Copyright (C) 2008-2012 Hive Solutions Lda.
+// Copyright (C) 2008-2014 Hive Solutions Lda.
 //
 // This file is part of Hive Cameo Framework.
 //
@@ -20,7 +20,7 @@
 // __version__   = 1.0.0
 // __revision__  = $LastChangedRevision$
 // __date__      = $LastChangedDate$
-// __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
+// __copyright__ = Copyright (c) 2008-2014 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
 #import "HMProxyRequest.h"
@@ -235,12 +235,14 @@ static UIImage *_logo = nil;
     // retrieves the localized error description, this is considered
     // to be the message to be presented
     NSString *message = [error localizedDescription];
+    message = [HMResources localizedString:message withDefault:message];
+    message = [HMString capitalizedString:message];
 
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[HMResources localizedString:@"ConnectionError" withDefault:@"Connection Error"]
-                                                    message:[HMResources localizedString:message withDefault:message]
+                                                    message:message
                                                    delegate:nil
                                           cancelButtonTitle:[HMResources localizedString:@"Confirm" withDefault:@"Confirm"]
                                           otherButtonTitles:nil];

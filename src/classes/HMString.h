@@ -25,12 +25,8 @@
 
 #import "Dependencies.h"
 
-@interface HMResources : NSObject
+@interface HMString : NSObject
 
-+ (NSBundle *)getBundle;
-+ (NSString *)imagePath:(NSString *)name type:(NSString *)type;
-+ (UIImage *)image:(NSString *)name type:(NSString *)type;
-+ (UIImage *)imageNamed:(NSString *)name;
-+ (NSString *)localizedString:(NSString *)key withDefault:(NSString *)value;
++ (NSString *)capitalizedString:(NSString *)value;
 
 @end

@@ -1,5 +1,5 @@
 // Hive Cameo Framework
-// Copyright (C) 2008-2012 Hive Solutions Lda.
+// Copyright (C) 2008-2014 Hive Solutions Lda.
 //
 // This file is part of Hive Cameo Framework.
 //
@@ -20,12 +20,14 @@
 // __version__   = 1.0.0
 // __revision__  = $LastChangedRevision$
 // __date__      = $LastChangedDate$
-// __copyright__ = Copyright (c) 2008-2012 Hive Solutions Lda.
+// __copyright__ = Copyright (c) 2008-2014 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
 #import "Dependencies.h"
 
 #import "HMJsonRequestDelegate.h"
+
+typedef void (^JsonBlock)(NSDictionary *, NSError *);
 
 @interface HMJsonRequest : NSObject {
 }
@@ -35,6 +37,13 @@
  * by the json request.
  */
 @property (nonatomic) NSURL *url;
+
+/**
+ * The name of the http emthod that is going
+ * to be used for the request operation, by default
+ * this value is always considered to be get.
+ */
+@property (nonatomic) NSString *method;
 
 /**
  * The sequence of tuples containing the various
@@ -68,9 +77,20 @@
  */
 @property (nonatomic, weak) NSObject<HMJsonRequestDelegate> *delegate;
 
+/**
+ * The callback block that is going to be called for
+ * both the success and error situations, note that
+ * even if this callback is defined the delegate will
+ * be called the same way.
+ */
+@property (readwrite, copy) JsonBlock callback;
+
 - initWithUrl:(NSURL *)url;
 - initWithUrlString:(NSString *)urlString;
-- initWithUrlString:(NSString *)urlString parameters:(NSDictionary *)parameters;
+- initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
+- initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters;
 - (void)load;
+
++ jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
 
 @end
