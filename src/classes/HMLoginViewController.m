@@ -123,7 +123,7 @@
     NSString *message = [exception objectForKey:@"message"];
     message = [HMString capitalizedString:message];
     message = [HMResources localizedString:message withDefault:message];
-    
+
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
