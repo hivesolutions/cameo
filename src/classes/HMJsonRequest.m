@@ -166,7 +166,7 @@
 
     // escapes the http string unsing the correct escaping
     // characters to archieve the purpose
-    escapedHttpString = [HMString quoteString:httpString];
+    NSString *escapedHttpString = [HMString quoteString:httpString];
 
     // returns the escaped http string with the encoded values
     // to the caller function (encoded parameters)
