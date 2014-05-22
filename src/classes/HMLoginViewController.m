@@ -75,16 +75,13 @@
 }
 
 - (BOOL)shouldAutorotate {
-    UIInterfaceOrientation orientation = [[UIDevice currentDevice] orientation];
-    return [self shouldAutorotateToInterfaceOrientation:orientation];
+    if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) { return YES; }
+    return NO;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) { return YES; }
-
-    if(interfaceOrientation == UIInterfaceOrientationLandscapeLeft ||
-        interfaceOrientation == UIInterfaceOrientationLandscapeRight) { return NO; }
-    return YES;
+    return NO;
 }
 
 - (IBAction)textFieldFinished:(id)sender {
