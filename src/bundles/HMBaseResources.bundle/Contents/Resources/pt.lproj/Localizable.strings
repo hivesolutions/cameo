@@ -31,6 +31,8 @@
 "LoginError" = "Erro de Login";
 "ConnectionError" = "Erro de Conexão";
 
+"ConfirmLogout" = "Confirmação de Saída";
+
 "CredentialAlertTitle" = "Autorização Necessária";
 "CancelButtonTitle" = "Cancelar";
 "LoginButtonTitle" = "Entrar";
