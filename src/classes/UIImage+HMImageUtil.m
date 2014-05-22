@@ -52,7 +52,7 @@
     // sets the correct scale for the creeated context
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     CGContextRef context = CGBitmapContextCreate(
-        NULL, widthS, heightS, 8, widthS * 4, colorSpace, kCGImageAlphaPremultipliedFirst
+        NULL, widthS, heightS, 8, widthS * 4, colorSpace, (CGBitmapInfo) kCGImageAlphaPremultipliedFirst
     );
     CGContextScaleCTM(context, scaleFactor, scaleFactor);
 
