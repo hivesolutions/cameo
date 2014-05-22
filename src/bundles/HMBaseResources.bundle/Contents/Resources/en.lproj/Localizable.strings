@@ -27,6 +27,7 @@
 "Confirm" = "Confirm";
 "Sign In" = "Sign In";
 "Forgot your password ?" = "Forgot your password ?";
+"Do you want to logout ?" = "Do you want to logout ?";
 
 "LoginError" = "Login Error";
 "ConnectionError" = "Connection Error";

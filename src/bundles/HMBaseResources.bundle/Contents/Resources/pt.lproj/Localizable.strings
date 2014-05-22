@@ -27,6 +27,7 @@
 "Confirm" = "Confirmar";
 "Sign In" = "Entrar";
 "Forgot your password ?" = "Esqueceu a sua palavra-passe ?";
+"Do you want to logout ?" = "Quer sair da sua conta ?";
 
 "LoginError" = "Erro de Login";
 "ConnectionError" = "Erro de Conexão";
