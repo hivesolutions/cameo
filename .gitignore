@@ -5,8 +5,8 @@ Manifest.lock
 
 .DS_Store
 
-/src/build/
-/cameo.xcodeproj/project.xcworkspace/xcuserdata/
-/cameo.xcodeproj/xcuserdata/
-/samples/demo/cameo_demo.xcodeproj/project.xcworkspace/xcuserdata/
-/samples/demo/cameo_demo.xcodeproj/xcuserdata/
+/src/build
+/cameo.xcodeproj/project.xcworkspace/xcuserdata
+/cameo.xcodeproj/xcuserdata
+/samples/demo/cameo_demo.xcodeproj/project.xcworkspace/xcuserdata
+/samples/demo/cameo_demo.xcodeproj/xcuserdata
