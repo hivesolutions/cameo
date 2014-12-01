@@ -38,8 +38,7 @@ Execute the build script with:
 To publish the Cameo Framework to the trunk repo of Cocoa Pods use:
 
     pod trunk push Cameo.podspec
-    
+
 If the "private" Hive Solutions repo is the target use instead:
 
     pod repo push hive cameo.podspe
-    
