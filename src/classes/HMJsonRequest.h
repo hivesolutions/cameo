@@ -87,7 +87,7 @@ The callback block that is going to be called for both the success and error sit
  
  @param urlString: The string containing the url that is going to be called.
  @param callback: The block to be called for the various state changes (including completion).
- @return 
+ @return The request object that was created for the handling of this call.
  */
 + (HMJsonRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
 
