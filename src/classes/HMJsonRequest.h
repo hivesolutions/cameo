@@ -76,6 +76,10 @@ The callback block that is going to be called for both the success and error sit
 - initWithUrlString:(NSString *)urlString;
 - initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
 - initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters;
+
+/**
+ Starts the loading process fot the json request from this moment on some network activity may be created and the proper/associated delegate will be called for each of the state changes (as expected).
+ */
 - (void)load;
 
 + jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
