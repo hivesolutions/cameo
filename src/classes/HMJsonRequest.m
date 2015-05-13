@@ -27,7 +27,7 @@
 
 @implementation HMJsonRequest
 
-- initWithUrl:(NSURL *)url {
+- (id)initWithUrl:(NSURL *)url {
     self = [super init];
     if(self) {
         self.url = url;
@@ -37,7 +37,7 @@
     return self;
 }
 
-- initWithUrlString:(NSString *)urlString {
+- (id)initWithUrlString:(NSString *)urlString {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
@@ -47,7 +47,7 @@
     return self;
 }
 
-- initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback {
+- (id)initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
@@ -57,7 +57,7 @@
     return self;
 }
 
-- initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters {
+- (id)initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
@@ -234,7 +234,7 @@
     if(self.delegate) { [self.delegate didReceiveJson:data]; }
 }
 
-+ jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback {
++ (HMJsonRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback {
     HMJsonRequest *request = [[HMJsonRequest alloc] initWithUrlString:urlString callback:callback];
     [request load];
     return request;

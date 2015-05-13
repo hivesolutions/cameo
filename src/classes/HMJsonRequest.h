@@ -72,10 +72,10 @@ The callback block that is going to be called for both the success and error sit
  */
 @property (readwrite, copy) JsonBlock callback;
 
-- initWithUrl:(NSURL *)url;
-- initWithUrlString:(NSString *)urlString;
-- initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
-- initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters;
+- (id)initWithUrl:(NSURL *)url;
+- (id)initWithUrlString:(NSString *)urlString;
+- (id)initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
+- (id)initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters;
 
 /**
  Starts the loading process fot the json request from this moment on some network activity may be created and the proper/associated delegate will be called for each of the state changes (as expected).
@@ -87,7 +87,8 @@ The callback block that is going to be called for both the success and error sit
  
  @param urlString: The string containing the url that is going to be called.
  @param callback: The block to be called for the various state changes (including completion).
+ @return 
  */
-+ jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
++ (HMJsonRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
 
 @end

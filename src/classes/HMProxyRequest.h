@@ -48,8 +48,8 @@
 @property (nonatomic) bool loading;
 @property (nonatomic) bool useSession;
 
-- initWithPath:(UIViewController *)controller path:(NSString *)path;
-- initWithPath:(UIViewController *)controller path:(NSString *)path loginPath:(NSString *)loginPath;
+- (id)initWithPath:(UIViewController *)controller path:(NSString *)path;
+- (id)initWithPath:(UIViewController *)controller path:(NSString *)path loginPath:(NSString *)loginPath;
 - (void)load;
 - (void)showLogin;
 + (void)setLogo:(UIImage *)logo;

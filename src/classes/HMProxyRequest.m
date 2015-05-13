@@ -29,7 +29,7 @@
 
 static UIImage *_logo = nil;
 
-- initWithPath:(UIViewController *)controller path:(NSString *)path {
+- (id)initWithPath:(UIViewController *)controller path:(NSString *)path {
     self = [super init];
     if(self) {
         self.loading = NO;
@@ -42,7 +42,7 @@ static UIImage *_logo = nil;
     return self;
 }
 
-- initWithPath:(UIViewController *)controller path:(NSString *)path loginPath:(NSString *)loginPath {
+- (id)initWithPath:(UIViewController *)controller path:(NSString *)path loginPath:(NSString *)loginPath {
     self = [super init];
     if(self) {
         self.loading = NO;
