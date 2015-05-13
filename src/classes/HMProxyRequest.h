@@ -32,9 +32,9 @@
 #import "HMLoginViewController.h"
 
 /**
- Responsible for the coordination of the remote calls
- with the proper visual changes (loading mask settings).
- */
+Responsible for the coordination of the remote calls
+with the proper visual changes (loading mask settings).
+*/
 @interface HMProxyRequest : NSObject<HMJsonRequestDelegate> {
 }
 

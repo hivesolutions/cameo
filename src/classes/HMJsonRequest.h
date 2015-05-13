@@ -34,55 +34,55 @@ typedef void (^JsonBlock)(NSDictionary *, NSError *);
 }
 
 /**
- The url of the resource to be retrieved
- by the json request.
- */
+The url of the resource to be retrieved
+by the json request.
+*/
 @property (nonatomic) NSURL *url;
 
 /**
- The name of the http emthod that is going
- to be used for the request operation, by default
- this value is always considered to be get.
- */
+The name of the http emthod that is going
+to be used for the request operation, by default
+this value is always considered to be get.
+*/
 @property (nonatomic) NSString *method;
 
 /**
- The sequence of tuples containing the various
- parameters to be sent to the server.
+The sequence of tuples containing the various
+parameters to be sent to the server.
 
- These parameters will be encoded into get parameters
- (under the url) in case the current request is of
- type get.
- */
+These parameters will be encoded into get parameters
+(under the url) in case the current request is of
+type get.
+*/
 @property (nonatomic) NSArray *parameters;
 
 /**
- The connection to be used for the retrieval
- of the resources.
- */
+The connection to be used for the retrieval
+of the resources.
+*/
 @property (nonatomic) NSURLConnection *connection;
 
 /**
- The buffer to be used to store the received
- data while the data transfer is not complete.
- */
+The buffer to be used to store the received
+data while the data transfer is not complete.
+*/
 @property (nonatomic) NSMutableData *receivedData;
 
 /**
- The delegate object that will be notified about
- the changes in the connection from a json point
- of view.
+The delegate object that will be notified about
+the changes in the connection from a json point
+of view.
 
- In case this value is set notifications will be sent
- for both errors and data receivals.
- */
+In case this value is set notifications will be sent
+for both errors and data receivals.
+*/
 @property (nonatomic, weak) NSObject<HMJsonRequestDelegate> *delegate;
 
 /**
- The callback block that is going to be called for
- both the success and error situations, note that
- even if this callback is defined the delegate will
- be called the same way.
+The callback block that is going to be called for
+both the success and error situations, note that
+even if this callback is defined the delegate will
+be called the same way.
 */
 @property (readwrite, copy) JsonBlock callback;
 
