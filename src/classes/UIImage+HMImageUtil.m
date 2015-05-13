@@ -31,19 +31,19 @@
     // calulates the scale factor value, taking into account
     // the with of the current image instance
     float scaleFactor = size.width / self.size.width;
-    
+
     // re-calculates the new width and height values using the
     // scale factor that has just been calculated
     float width = self.size.width * scaleFactor;
     float height = self.size.height * scaleFactor;
-    
+
     // creates a new graphic context for the (new) scaled image
     // and then draws the current image to the created context
     UIGraphicsBeginImageContext(CGSizeMake(width, height));
     [self drawInRect:CGRectMake(0, 0, width, height)];
     UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
+
     // returns the (final) scaled image object to the caller
     // method so that it may be used for operations
     return scaledImage;
