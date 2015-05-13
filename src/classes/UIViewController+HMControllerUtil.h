@@ -25,7 +25,8 @@
 
 #import "Dependencies.h"
 
-@interface UIViewController(HMControllerUtil)
+@interface UIViewController(HMControllerUtil) {
+}
 
 - (void)setNavigationTitle:(NSString *)title;
 

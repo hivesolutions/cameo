@@ -25,7 +25,8 @@
 
 #import "Dependencies.h"
 
-@interface HMResources : NSObject
+@interface HMResources : NSObject {
+}
 
 + (NSBundle *)getBundle;
 + (NSString *)imagePath:(NSString *)name type:(NSString *)type;

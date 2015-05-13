@@ -31,7 +31,8 @@
 #define HM_INFO 2
 #define HM_DEBUG 1
 
-@interface HMLog : NSObject
+@interface HMLog : NSObject {
+}
 
 + (void)critical:(NSString *)value, ...;
 + (void)error:(NSString *)value, ...;

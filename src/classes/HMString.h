@@ -25,7 +25,8 @@
 
 #import "Dependencies.h"
 
-@interface HMString : NSObject
+@interface HMString : NSObject {
+}
 
 + (NSString *)capitalizedString:(NSString *)value;
 + (NSString *)quoteString:(NSString *)value;

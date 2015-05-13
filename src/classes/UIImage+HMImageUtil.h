@@ -25,7 +25,8 @@
 
 #include "Dependencies.h"
 
-@interface UIImage(HMImageUtil)
+@interface UIImage(HMImageUtil) {
+}
 
 - (UIImage *)scaleImage:(CGSize)size;
 - (UIImage *)roundWithRadius:(NSUInteger)radius;
