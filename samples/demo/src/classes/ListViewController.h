@@ -25,10 +25,9 @@
 
 #import "Dependencies.h"
 
-#import "ListViewController.h"
+#import "ImageViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
+}
 
 @end

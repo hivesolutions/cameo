@@ -32,8 +32,11 @@
 
     [HMLog debug:@"Starting application"];
 
+    UIViewController *rootViewController = [[ListViewController alloc] initWithNibName:@"ListViewController" bundle:nil];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[ImageViewController alloc] initWithNibName:@"ImageViewController" bundle:nil];
+    self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
     return YES;
 }

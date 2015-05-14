@@ -23,12 +23,36 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = GNU General Public License (GPL), Version 3
 
-#import "Dependencies.h"
-
 #import "ListViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@implementation ListViewController
 
-@property (strong, nonatomic) UIWindow *window;
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self) {
+        self.navigationItem.title = @"Cameo";
+    }
+    return self;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UItableViewCell"];
+    if(cell == nil) {
+        cell = [[UITableViewCell alloc] init];
+    }
+    
+    cell.textLabel.text = @"Images";
+    
+    return cell;
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ImageViewController *controller = [[ImageViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 @end
