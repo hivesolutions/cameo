@@ -55,9 +55,9 @@
         cell = [[UITableViewCell alloc] init];
         cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     }
-    
+
     cell.textLabel.text = self.items[indexPath.row][@"name"];
-    
+
     return cell;
 }
 

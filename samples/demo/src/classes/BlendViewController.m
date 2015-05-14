@@ -37,12 +37,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     // retrieves the pattern image to be used and sets it in
     // the current view (should be able to change the background)
     UIImage *patternImage = [HMResources imageNamed:@"main-background-black.png"];
     self.view.backgroundColor = [UIColor colorWithPatternImage:patternImage];
-    
+
     // creates the various layout elements that are part of the
     // current panel and adds them to the current view
     [self createBlend];
@@ -61,11 +61,32 @@
     // then runs the belding with the proper algorithm
     UIImage *sole = [UIImage imageNamed:@"shoe-sole.png"];
     UIImage *back = [UIImage imageNamed:@"shoe-back.png"];
-    UIImage *result = [sole blendImage:back operation:@"disjoint_under"];
+    UIImage *result = [sole blendImage:back algorithm:@"disjoint_under"];
     UIImage *front = [UIImage imageNamed:@"shoe-front.png"];
-    result = [result blendImage:front operation:@"disjoint_under"];
+    result = [result blendImage:front algorithm:@"disjoint_under"];
     UIImage *shoelace = [UIImage imageNamed:@"shoe-front.png"];
-    result = [result blendImage:shoelace operation:@"disjoint_under"];
+    result = [result blendImage:shoelace algorithm:@"disjoint_under"];
+
+    // creates the blend image view to be used and runs the resize
+    // mask for it in order to display it properly
+    UIImageView *blend = [[UIImageView alloc] init];
+    blend.image = result;
+    blend.contentMode = UIViewContentModeScaleAspectFit;
+    blend.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    blend.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
+    [self.view addSubview:blend];
+}
+
+- (void)createBlendFast {
+    // retrieves the reference to the various image to blend and
+    // then runs the belding with the proper algorithm
+    UIImage *sole = [UIImage imageNamed:@"shoe-sole.png"];
+    UIImage *back = [UIImage imageNamed:@"shoe-back.png"];
+    UIImage *result = [sole blendImageFast:back algorithm:kCGBlendModeNormal];
+    UIImage *front = [UIImage imageNamed:@"shoe-front.png"];
+    result = [result blendImageFast:front algorithm:kCGBlendModeNormal];
+    UIImage *shoelace = [UIImage imageNamed:@"shoe-front.png"];
+    result = [result blendImageFast:shoelace algorithm:kCGBlendModeNormal];
 
     // creates the blend image view to be used and runs the resize
     // mask for it in order to display it properly

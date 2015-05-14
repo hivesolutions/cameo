@@ -130,7 +130,7 @@
     return roundImage;
 }
 
-- (UIImage *)blendImage:(UIImage *)top operation:(NSString *)algorithm {
+- (UIImage *)blendImage:(UIImage *)top algorithm:(NSString *)algorithm {
     // defines the initial values for both the bytes per pixel to be used
     // and the number of bits per chanel component
     NSInteger bytesPerPixel = 4;
@@ -151,7 +151,7 @@
         kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
     );
     CGContextDrawImage(context, CGRectMake(0, 0, bottomW, bottomH), bottomImageCG);
-    
+
     // loads the top image, this is considered to be the image that was provided
     // as an argument to the current function/method
     CGImageRef topImageCG = top.CGImage;
@@ -165,20 +165,20 @@
          kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
     );
     CGContextDrawImage(topContext, CGRectMake(0, 0, topSize.width, topSize.height), topImageCG);
-    
+
     // tries to retrieve the proper selector for the currently selected
     // algorithm and in case it's not valid returns an invalid picture
     SEL operation = [HMBlend getBlendAlgorithm:algorithm];
     if(![[HMBlend class] respondsToSelector:operation]) {
         return nil;
     }
-    
+
     // creates a new invocation that will be used for every iteration of
     // the blending operation in order to perform the blend in a pixel basis
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[[HMBlend class] methodSignatureForSelector:operation]];
     [invocation setSelector:operation];
     [invocation setTarget:[HMBlend class]];
-    
+
     // iterates over the complete set of pixels from the current context
     // in order to blend them according to the selected algorithm
     for(NSUInteger y = 0; y < topSize.height; y++) {
@@ -187,12 +187,12 @@
             // bottom image for the current coordinates
             UInt32 *bottomPixel = bottomPixels + y * bottomW + x;
             UInt32 bottomColor = *bottomPixel;
-            
+
             // retrieves the pixel color from the
             // top image for the current coordinates
             UInt32 *topPixel = topPixels + y * (int) topSize.width + x;
             UInt32 topColor = *topPixel;
-            
+
             // populates the invocation for the current pixel blending
             // iteration and then updates the proper value for the bottom
             [invocation setArgument:&topColor atIndex:2];
@@ -201,11 +201,22 @@
             [invocation getReturnValue:bottomPixel];
         }
     }
-    
+
     // creates an image with the blended result and returns it to
     // the caller function so that it may be used in raster contexts
     CGImageRef blendedImageCG = CGBitmapContextCreateImage(context);
     UIImage *blendedImage = [UIImage imageWithCGImage:blendedImageCG];
+    return blendedImage;
+}
+
+- (UIImage *)blendImageFast:(UIImage *)top algorithm:(CGBlendMode)algorithm {
+    algorithm = algorithm == 0 ? kCGBlendModeMultiply : algorithm;
+    CGSize size = self.size;
+    UIGraphicsBeginImageContext(size);
+    [self drawAtPoint:CGPointZero blendMode:algorithm alpha:1.0];
+    [top drawAtPoint:CGPointZero blendMode:algorithm alpha:1.0];
+    UIImage *blendedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
     return blendedImage;
 }
 

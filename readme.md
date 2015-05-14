@@ -42,7 +42,7 @@ To publish the Cameo Framework to the trunk repo of Cocoa Pods use:
 If the "private" Hive Solutions repo is the target use instead:
 
     pod repo push hive cameo.podspe
-    
+
 ## License
 
 Appier is currently licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/).

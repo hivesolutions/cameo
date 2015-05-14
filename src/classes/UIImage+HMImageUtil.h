@@ -32,15 +32,15 @@
 
 /**
  Scales the current image to the provided size, note that a proper mechanism is going to be selected to determine the dimension to be used as pivot for scaling.
- 
+
  @param size: The target size for the resulting image, a proper dimension will be selected for resizing.
- @return The resulting sacled image ready to be used in raster contexts.
+ @return The resulting scaled image ready to be used in raster contexts.
  */
 - (UIImage *)scaleImage:(CGSize)size;
 
 /**
  Creates rounded corners for the current image using a radius based approach, meaning that the radius of round circle will be provided an all of the corners will have such rounding value.
- 
+
  @param radius The radius of the circle to be applied to each of the image's corners.
  @return The resulting "rounded" imager eady to be used in raster contexts.
  */
@@ -48,7 +48,7 @@
 
 /**
  Creates rounded corners for the current image using a oval dimensions based approach, meaning that the proper dimensions of the round circle are provided explicitly and used accordingly.
- 
+
  @param ovalWidth: The width of the oval/circle value for the round corners of the image.
  @param ovalHeight: The height of the oval/circle value for the round corners of the image.
  @return The resulting "rounded" imager eady to be used in raster contexts.
@@ -57,16 +57,18 @@
 
 /**
  Blends the current image with a provided (top) image using the provided algorithm, all of the operations are performed using software base strategies.
- 
+
  @param top The image to be blended on top of the current image in scope.
  @param algorithm The name of the belding algorithm to be used in the operation.
  @return The resulting blended image that that may be used in a raster context.
  */
-- (UIImage *)blendImage:(UIImage *)top operation:(NSString *)algorithm;
+- (UIImage *)blendImage:(UIImage *)top algorithm:(NSString *)algorithm;
+
+- (UIImage *)blendImageFast:(UIImage *)top algorithm:(CGBlendMode)algorithm;
 
 /**
  Generates an image view with the animation defined with the provided sprite.
- 
+
  @param sprite The (vertical) based sprite image that is going to be used as the basis for the animation.
  @param width The width in pixels of the provided sprite image.
  @param height The height in pixels of the provided sprite image.
