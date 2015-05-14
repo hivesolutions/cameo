@@ -28,9 +28,32 @@
 @interface UIImage(HMImageUtil) {
 }
 
+/**
+ Scales the current image to the provided size, note that a proper mechanism is going to be selected to determine the dimension to be used as pivot for scaling.
+ 
+ @param size: The target size for the resulting image, a proper dimension will be selected for resizing.
+ @return The resulting sacled image ready to be used in raster contexts.
+ */
 - (UIImage *)scaleImage:(CGSize)size;
+
+/**
+ Creates rounded corners for the current image using a radius based approach, meaning that the radius of round circle will be provided an all of the corners will have such rounding value.
+ 
+ @param radius The radius of the circle to be applied to each of the image's corners.
+ @return The resulting "rounded" imager eady to be used in raster contexts.
+ */
 - (UIImage *)roundWithRadius:(NSUInteger)radius;
+
 - (UIImage *)roundWithWidth:(NSUInteger)ovalWidth height:(NSUInteger)ovalHeight;
+
+/**
+ Generates an image view with the animation defined with the provided sprite.
+ 
+ @param sprite The (vertical) based sprite image that is going to be used as the basis for the animation.
+ @param width The width in pixels of the provided sprite image.
+ @param height The height in pixels of the provided sprite image.
+ @return The resulting image view component with the proper associated animation.
+ */
 + (UIImageView *)animationFromSprite:(UIImage *)sprite width:(NSUInteger)width height:(NSUInteger)height;
 
 @end

@@ -85,8 +85,8 @@ The callback block that is going to be called for both the success and error sit
 /**
  Utility method meant to be used for quick/easy creation of json based remote call, the response should be "returned" as an argument to the provided callback block.
  
- @param urlString: The string containing the url that is going to be called.
- @param callback: The block to be called for the various state changes (including completion).
+ @param urlString The string containing the url that is going to be called.
+ @param callback The block to be called for the various state changes (including completion).
  @return The request object that was created for the handling of this call.
  */
 + (HMJsonRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
