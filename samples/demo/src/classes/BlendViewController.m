@@ -59,17 +59,21 @@
 - (void)createBlend {
     // retrieves the reference to the various image to blend and
     // then runs the belding with the proper algorithm
-    UIImage *bottom = [UIImage imageNamed:@"top.png"];
-    UIImage *top = [UIImage imageNamed:@"bottom.png"];
-    UIImage *result = [bottom blendImage:top operation:@"disjoint_under"];
-    
+    UIImage *sole = [UIImage imageNamed:@"shoe-sole.png"];
+    UIImage *back = [UIImage imageNamed:@"shoe-back.png"];
+    UIImage *result = [sole blendImage:back operation:@"disjoint_under"];
+    UIImage *front = [UIImage imageNamed:@"shoe-front.png"];
+    result = [result blendImage:front operation:@"disjoint_under"];
+    UIImage *shoelace = [UIImage imageNamed:@"shoe-front.png"];
+    result = [result blendImage:shoelace operation:@"disjoint_under"];
+
     // creates the blend image view to be used and runs the resize
     // mask for it in order to display it properly
     UIImageView *blend = [[UIImageView alloc] init];
     blend.image = result;
     blend.contentMode = UIViewContentModeScaleAspectFit;
     blend.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    blend.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    blend.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
     [self.view addSubview:blend];
 }
 
