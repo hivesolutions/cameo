@@ -119,7 +119,7 @@
     
     UIImageView *blend = [[UIImageView alloc] init];
     blend.image = result;
-    blend.frame = CGRectMake(widthH - 48, 200, 96, 96);
+    blend.frame = CGRectMake(widthH - 128, 392, 256, 256);
     blend.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
     [self.view addSubview:blend];
 }
