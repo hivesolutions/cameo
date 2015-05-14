@@ -31,12 +31,18 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if(self) {
         self.navigationItem.title = @"Cameo";
+        self.items = @[
+            @{
+                @"name" : @"Images",
+                @"view" : [ImageViewController class],
+            }
+        ];
     }
     return self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.items.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -45,13 +51,14 @@
         cell = [[UITableViewCell alloc] init];
     }
     
-    cell.textLabel.text = @"Images";
+    cell.textLabel.text = self.items[indexPath.row][@"name"];
     
     return cell;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ImageViewController *controller = [[ImageViewController alloc] init];
+    Class view = self.items[indexPath.row][@"view"];
+    UIViewController *controller = [[view alloc] init];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

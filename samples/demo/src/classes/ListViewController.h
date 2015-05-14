@@ -30,4 +30,6 @@
 @interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
 }
 
+@property NSArray *items;
+
 @end
