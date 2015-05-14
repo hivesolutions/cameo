@@ -27,6 +27,14 @@
 
 @implementation HMBlend
 
++ (SEL)getBlendAlgorithm:(NSString *)algorithm {
+    if([algorithm isEqualToString:@"disjointDebug"]) return @selector(blendMultiplicative:onTopOfColor:);
+    else if([algorithm isEqualToString:@"disjointUnder"]) return @selector(blendDisjointDebug:onTopOfColor:);
+    else if([algorithm isEqualToString:@"disjointOver"]) return @selector(blendDisjointUnder:onTopOfColor:);
+    else if([algorithm isEqualToString:@"multiplicative"]) return @selector(blendDisjointOver:onTopOfColor:);
+    return nil;
+}
+
 + (UInt32)blendMultiplicative:(UInt32)bottom onTopOfColor:(UInt32)top {
     CGFloat at = 1.0f * (A(top) / 255.0f);
     UInt8 r = R(bottom) * (1 - at) + R(top) * at;

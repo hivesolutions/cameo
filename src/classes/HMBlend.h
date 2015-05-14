@@ -35,6 +35,7 @@
 @interface HMBlend : NSObject {
 }
 
++ (SEL)getBlendAlgorithm:(NSString *)algorithm;
 + (UInt32)blendMultiplicative:(UInt32)bottom onTopOfColor:(UInt32)top;
 + (UInt32)blendDisjointDebug:(UInt32)top onTopOfColor:(UInt32)bottom;
 + (UInt32)blendDisjointUnder:(UInt32)bottom onTopOfColor:(UInt32)top;
