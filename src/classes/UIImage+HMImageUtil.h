@@ -25,6 +25,8 @@
 
 #include "Dependencies.h"
 
+#import "HMBlend.h"
+
 @interface UIImage(HMImageUtil) {
 }
 
