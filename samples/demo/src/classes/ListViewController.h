@@ -30,6 +30,4 @@
 @interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
 }
 
-asd
-
 @end
