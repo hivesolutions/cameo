@@ -56,6 +56,15 @@
 - (UIImage *)roundWithWidth:(NSUInteger)ovalWidth height:(NSUInteger)ovalHeight;
 
 /**
+ Blends the current image with a provided (top) image using the provided algorithm, all of the operations are performed using software base strategies.
+ 
+ @param top The image to be blended on top of the current image in scope.
+ @param algorithm The name of the belding algorithm to be used in the operation.
+ @return The resulting blended image that that may be used in a raster context.
+ */
+- (UIImage *)blendImage:(UIImage *)top operation:(NSString *)algorithm;
+
+/**
  Generates an image view with the animation defined with the provided sprite.
  
  @param sprite The (vertical) based sprite image that is going to be used as the basis for the animation.
@@ -64,7 +73,5 @@
  @return The resulting image view component with the proper associated animation.
  */
 + (UIImageView *)animationFromSprite:(UIImage *)sprite width:(NSUInteger)width height:(NSUInteger)height;
-
-- (UIImage *)blendImage:(UIImage *)top operation:(NSString *)algorithm;
 
 @end

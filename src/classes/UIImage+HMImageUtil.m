@@ -130,6 +130,85 @@
     return roundImage;
 }
 
+- (UIImage *)blendImage:(UIImage *)top operation:(NSString *)algorithm {
+    // defines the initial values for both the bytes per pixel to be used
+    // and the number of bits per chanel component
+    NSInteger bytesPerPixel = 4;
+    NSInteger bitsPerComponents = 8;
+
+    // loads the bottom image, this is considered to be the current image in
+    // context as expected by the current specification
+    CGImageRef bottomImageCG = self.CGImage;
+    NSUInteger bottomW = CGImageGetWidth(bottomImageCG);
+    NSUInteger bottomH = CGImageGetHeight(bottomImageCG);
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    NSUInteger bottomBytesPerRow = bytesPerPixel * bottomW;
+    UInt32 *bottomPixels = (UInt32 *)calloc(bottomH * bottomW, sizeof(UInt32));
+    CGContextRef context = CGBitmapContextCreate(
+        bottomPixels,
+        bottomW, bottomH,
+        bitsPerComponents, bottomBytesPerRow, colorSpace,
+        kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
+    );
+    CGContextDrawImage(context, CGRectMake(0, 0, bottomW, bottomH), bottomImageCG);
+    
+    // loads the top image, this is considered to be the image that was provided
+    // as an argument to the current function/method
+    CGImageRef topImageCG = top.CGImage;
+    CGSize topSize = top.size;
+    NSUInteger topBytesPerRow = bytesPerPixel * topSize.width;
+    UInt32 *topPixels = (UInt32 *)calloc(topSize.width * topSize.height, sizeof(UInt32));
+    CGContextRef topContext = CGBitmapContextCreate(
+         topPixels,
+         topSize.width, topSize.height,
+         bitsPerComponents, topBytesPerRow, colorSpace,
+         kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
+    );
+    CGContextDrawImage(topContext, CGRectMake(0, 0, topSize.width, topSize.height), topImageCG);
+    
+    // tries to retrieve the proper selector for the currently selected
+    // algorithm and in case it's not valid returns an invalid picture
+    SEL operation = [HMBlend getBlendAlgorithm:algorithm];
+    if(![[HMBlend class] respondsToSelector:operation]) {
+        return nil;
+    }
+    
+    // creates a new invocation that will be used for every iteration of
+    // the blending operation in order to perform the blend in a pixel basis
+    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[[HMBlend class] methodSignatureForSelector:operation]];
+    [invocation setSelector:operation];
+    [invocation setTarget:[HMBlend class]];
+    
+    // iterates over the complete set of pixels from the current context
+    // in order to blend them according to the selected algorithm
+    for(NSUInteger y = 0; y < topSize.height; y++) {
+        for(NSUInteger x = 0; x < topSize.width; x++) {
+            // retrieves the pixel color from the
+            // bottom image for the current coordinates
+            UInt32 *bottomPixel = bottomPixels + y * bottomW + x;
+            UInt32 bottomColor = *bottomPixel;
+            
+            // retrieves the pixel color from the
+            // top image for the current coordinates
+            UInt32 *topPixel = topPixels + y * (int) topSize.width + x;
+            UInt32 topColor = *topPixel;
+            
+            // populates the invocation for the current pixel blending
+            // iteration and then updates the proper value for the bottom
+            [invocation setArgument:&topColor atIndex:2];
+            [invocation setArgument:&bottomColor atIndex:3];
+            [invocation invoke];
+            [invocation getReturnValue:bottomPixel];
+        }
+    }
+    
+    // creates an image with the blended result and returns it to
+    // the caller function so that it may be used in raster contexts
+    CGImageRef blendedImageCG = CGBitmapContextCreateImage(context);
+    UIImage *blendedImage = [UIImage imageWithCGImage:blendedImageCG];
+    return blendedImage;
+}
+
 + (UIImageView *)animationFromSprite:(UIImage *)sprite width:(NSUInteger)width height:(NSUInteger)height {
     // creates the "base" animation image view to be used for the
     // placing of the sprite animation and then allocated a new array
@@ -171,82 +250,6 @@
     // function so that it can be used and placed in the correct
     // position
     return animation;
-}
-
-- (UIImage *)blendImage:(UIImage *)top operation:(NSString *)algorithm {
-    // defines the initial values for both the bytes per pixel to be used
-    // and the number of bits per chanel component
-    NSInteger bytesPerPixel = 4;
-    NSInteger bitsPerComponents = 8;
-    
-    // loads the bottom image, this is considered to be the current image in
-    // context as expected by the current specification
-    CGImageRef bottomImageCG = self.CGImage;
-    NSUInteger bottomW = CGImageGetWidth(bottomImageCG);
-    NSUInteger bottomH = CGImageGetHeight(bottomImageCG);
-    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    NSUInteger bottomBytesPerRow = bytesPerPixel * bottomW;
-    UInt32 *bottomPixels = (UInt32 *)calloc(bottomH * bottomW, sizeof(UInt32));
-    CGContextRef context = CGBitmapContextCreate(
-        bottomPixels,
-        bottomW, bottomH,
-        bitsPerComponents, bottomBytesPerRow, colorSpace,
-        kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
-    );
-    CGContextDrawImage(context, CGRectMake(0, 0, bottomW, bottomH), bottomImageCG);
-    
-    // loads the top image
-    CGImageRef topImageCG = top.CGImage;
-    CGSize topSize = top.size;
-    NSUInteger topBytesPerRow = bytesPerPixel * topSize.width;
-    UInt32 *topPixels = (UInt32 *)calloc(topSize.width * topSize.height, sizeof(UInt32));
-    CGContextRef topContext = CGBitmapContextCreate(
-        topPixels,
-        topSize.width, topSize.height,
-        bitsPerComponents, topBytesPerRow, colorSpace,
-        kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
-    );
-    CGContextDrawImage(topContext, CGRectMake(0, 0, topSize.width, topSize.height), topImageCG);
-
-    // tries to retrieve the proper selector for the currently selected
-    // algorithm and in case it's not valid returns an invalid picture
-    SEL operation = [HMBlend getBlendAlgorithm:algorithm];
-    if(![[HMBlend class] respondsToSelector:operation]) {
-        return nil;
-    }
-    
-    // creates a new invocation that will be used for every iteration of
-    // the blending operation in order to perform the blend in a pixel basis
-    NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[[HMBlend class] methodSignatureForSelector:operation]];
-    [invocation setSelector:operation];
-    [invocation setTarget:[HMBlend class]];
-
-    // iterates over the complete set of pixels from the current context
-    // in order to blend them according to the selected algorithm
-    for(NSUInteger y = 0; y < topSize.height; y++) {
-        for(NSUInteger x = 0; x < topSize.width; x++) {
-            // retrieves the pixel color from the
-            // bottom image for the current coordinates
-            UInt32 *bottomPixel = bottomPixels + y * bottomW + x;
-            UInt32 bottomColor = *bottomPixel;
-            
-            // retrieves the pixel color from the
-            // top image for the current coordinates
-            UInt32 *topPixel = topPixels + y * (int) topSize.width + x;
-            UInt32 topColor = *topPixel;
-            
-            [invocation setArgument:&topColor atIndex:1];
-            [invocation setArgument:&bottomColor atIndex:2];
-            [invocation invoke];
-            [invocation getReturnValue:bottomPixel];
-        }
-    }
-    
-    // creates an image with the blended result and returns it to
-    // the caller function so that it may be used in raster contexts
-    CGImageRef blendedImageCG = CGBitmapContextCreateImage(context);
-    UIImage *blendedImage = [UIImage imageWithCGImage:blendedImageCG];
-    return blendedImage;
 }
 
 @end
