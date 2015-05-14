@@ -227,12 +227,12 @@
         for(NSUInteger x = 0; x < topSize.width; x++) {
             // retrieves the pixel color from the
             // bottom image for the current coordinates
-            UInt32 *bottomPixel = *(bottomPixels + y * bottomW + x);
+            UInt32 *bottomPixel = bottomPixels + y * bottomW + x;
             UInt32 bottomColor = *bottomPixel;
             
             // retrieves the pixel color from the
             // top image for the current coordinates
-            UInt32 *topPixel = topPixels + y * (int)topSize.width + x;
+            UInt32 *topPixel = topPixels + y * (int) topSize.width + x;
             UInt32 topColor = *topPixel;
             
             [invocation setArgument:&topColor atIndex:1];

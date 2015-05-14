@@ -65,4 +65,6 @@
  */
 + (UIImageView *)animationFromSprite:(UIImage *)sprite width:(NSUInteger)width height:(NSUInteger)height;
 
+- (UIImage *)blendImage:(UIImage *)top operation:(NSString *)algorithm;
+
 @end

@@ -47,6 +47,7 @@
     [self createRound];
     [self createAnimation];
     [self createLogout];
+    [self createBlend];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -89,7 +90,7 @@
     [animation startAnimating];
 }
 
--(void)createLogout {
+- (void)createLogout {
     // retrieves the width of the current view's frame
     // and divides it
     CGFloat width = self.view.frame.size.width;
@@ -106,6 +107,21 @@
     UIImage *logoutButtonImage = [UIImage imageNamed:@"logout-button.png"];
     [logoutButton setImage:logoutButtonImage forState:UIControlStateNormal];
     [self.view addSubview:logoutButton];
+}
+
+- (void)createBlend {
+    CGFloat width = self.view.frame.size.width;
+    CGFloat widthH = width / 2;
+    
+    UIImage *bottom = [UIImage imageNamed:@"top.png"];
+    UIImage *top = [UIImage imageNamed:@"bottom.png"];
+    UIImage *result = [bottom blendImage:top operation:@"disjoint_under"];
+    
+    UIImageView *blend = [[UIImageView alloc] init];
+    blend.image = result;
+    blend.frame = CGRectMake(widthH - 48, 200, 96, 96);
+    blend.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+    [self.view addSubview:blend];
 }
 
 - (void)logout {

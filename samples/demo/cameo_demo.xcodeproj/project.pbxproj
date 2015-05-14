@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C208E45B183A6D27007AB31B /* logout-button.png in Resources */ = {isa = PBXBuildFile; fileRef = C208E459183A6D27007AB31B /* logout-button.png */; };
 		C208E45C183A6D27007AB31B /* logout-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C208E45A183A6D27007AB31B /* logout-button@2x.png */; };
+		C2432B6B1B04D5A5002876D0 /* top.png in Resources */ = {isa = PBXBuildFile; fileRef = C2432B691B04D5A5002876D0 /* top.png */; };
+		C2432B6C1B04D5A5002876D0 /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = C2432B6A1B04D5A5002876D0 /* bottom.png */; };
 		C2E1FA9B183A80DF00F43959 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */; };
 		C2E1FA9C183A80DF00F43959 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */; };
 		C2E1FA9D183A80DF00F43959 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */; };
@@ -50,6 +52,8 @@
 		C208E459183A6D27007AB31B /* logout-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logout-button.png"; path = "images/logout-button.png"; sourceTree = "<group>"; };
 		C208E45A183A6D27007AB31B /* logout-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logout-button@2x.png"; path = "images/logout-button@2x.png"; sourceTree = "<group>"; };
 		C222A86B165C51030086B7E2 /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C2432B691B04D5A5002876D0 /* top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = top.png; path = images/top.png; sourceTree = "<group>"; };
+		C2432B6A1B04D5A5002876D0 /* bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bottom.png; path = images/bottom.png; sourceTree = "<group>"; };
 		C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 		C3391580165E63E800DB2413 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C2432B691B04D5A5002876D0 /* top.png */,
+				C2432B6A1B04D5A5002876D0 /* bottom.png */,
 				C208E459183A6D27007AB31B /* logout-button.png */,
 				C208E45A183A6D27007AB31B /* logout-button@2x.png */,
 				C375DF39165E89460065B06A /* logo-sprite.png */,
@@ -307,6 +313,7 @@
 				C2E1FAA8183A80DF00F43959 /* AppIcon76x76@2x.png in Resources */,
 				C3715E46165BE4D5006BB277 /* Default.png in Resources */,
 				C3715E47165BE4D5006BB277 /* Default@2x.png in Resources */,
+				C2432B6C1B04D5A5002876D0 /* bottom.png in Resources */,
 				C3715E49165BE4D5006BB277 /* InfoPlist.strings in Resources */,
 				C2E1FA9C183A80DF00F43959 /* AppIcon29x29@2x.png in Resources */,
 				C2E1FAA7183A80DF00F43959 /* AppIcon76x76.png in Resources */,
@@ -329,6 +336,7 @@
 				C208E45B183A6D27007AB31B /* logout-button.png in Resources */,
 				C2E1FA9F183A80DF00F43959 /* AppIcon50x50.png in Resources */,
 				C375DF44165E93F00065B06A /* logo-sprite@2x.png in Resources */,
+				C2432B6B1B04D5A5002876D0 /* top.png in Resources */,
 				C2E1FA9B183A80DF00F43959 /* AppIcon29x29.png in Resources */,
 				C375DF45165E93F00065B06A /* logo-square@2x.png in Resources */,
 				C2E1FAA3183A80DF00F43959 /* AppIcon60x60.png in Resources */,
