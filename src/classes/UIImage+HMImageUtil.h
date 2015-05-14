@@ -44,6 +44,13 @@
  */
 - (UIImage *)roundWithRadius:(NSUInteger)radius;
 
+/**
+ Creates rounded corners for the current image using a oval dimensions based approach, meaning that the proper dimensions of the round circle are provided explicitly and used accordingly.
+ 
+ @param ovalWidth: The width of the oval/circle value for the round corners of the image.
+ @param ovalHeight: The height of the oval/circle value for the round corners of the image.
+ @return The resulting "rounded" imager eady to be used in raster contexts.
+ */
 - (UIImage *)roundWithWidth:(NSUInteger)ovalWidth height:(NSUInteger)ovalHeight;
 
 /**
