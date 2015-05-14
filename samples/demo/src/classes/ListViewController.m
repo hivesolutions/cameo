@@ -35,6 +35,10 @@
             @{
                 @"name" : @"Images",
                 @"view" : [ImageViewController class],
+            },
+            @{
+                @"name" : @"Blend",
+                @"view" : [BlendViewController class],
             }
         ];
     }
@@ -49,11 +53,18 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UItableViewCell"];
     if(cell == nil) {
         cell = [[UITableViewCell alloc] init];
+        cell.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     }
     
     cell.textLabel.text = self.items[indexPath.row][@"name"];
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if([tableView respondsToSelector:@selector(setSeparatorInset:)]) tableView.separatorInset = UIEdgeInsetsZero;
+    if([tableView respondsToSelector:@selector(setLayoutMargins:)]) tableView.layoutMargins = UIEdgeInsetsZero;
+    if([cell respondsToSelector:@selector(setLayoutMargins:)]) cell.layoutMargins = UIEdgeInsetsZero;
 }
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -13,6 +13,8 @@
 		C2432B6C1B04D5A5002876D0 /* bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = C2432B6A1B04D5A5002876D0 /* bottom.png */; };
 		C2432B6E1B04D967002876D0 /* ListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2432B6D1B04D967002876D0 /* ListViewController.xib */; };
 		C2432B711B04EB24002876D0 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2432B701B04EB24002876D0 /* ListViewController.m */; };
+		C2432B741B04F3D0002876D0 /* BlendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2432B731B04F3D0002876D0 /* BlendViewController.m */; };
+		C2432B761B04F70D002876D0 /* BlendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2432B751B04F70D002876D0 /* BlendViewController.xib */; };
 		C2E1FA9B183A80DF00F43959 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */; };
 		C2E1FA9C183A80DF00F43959 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */; };
 		C2E1FA9D183A80DF00F43959 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */; };
@@ -59,6 +61,9 @@
 		C2432B6D1B04D967002876D0 /* ListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewController.xib; sourceTree = "<group>"; };
 		C2432B6F1B04EB24002876D0 /* ListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
 		C2432B701B04EB24002876D0 /* ListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
+		C2432B721B04F3D0002876D0 /* BlendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlendViewController.h; sourceTree = "<group>"; };
+		C2432B731B04F3D0002876D0 /* BlendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlendViewController.m; sourceTree = "<group>"; };
+		C2432B751B04F70D002876D0 /* BlendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BlendViewController.xib; sourceTree = "<group>"; };
 		C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
@@ -203,6 +208,8 @@
 			children = (
 				C3715E36165BE4D5006BB277 /* AppDelegate.h */,
 				C3715E37165BE4D5006BB277 /* AppDelegate.m */,
+				C2432B721B04F3D0002876D0 /* BlendViewController.h */,
+				C2432B731B04F3D0002876D0 /* BlendViewController.m */,
 				C3ED1BFB165BED0D00D81B85 /* Dependencies.h */,
 				C3ED1BF8165BECD400D81B85 /* ImageViewController.h */,
 				C3ED1BF9165BECD400D81B85 /* ImageViewController.m */,
@@ -259,6 +266,7 @@
 			children = (
 				C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */,
 				C2432B6D1B04D967002876D0 /* ListViewController.xib */,
+				C2432B751B04F70D002876D0 /* BlendViewController.xib */,
 			);
 			name = views;
 			path = src/views;
@@ -324,6 +332,7 @@
 				C2432B6C1B04D5A5002876D0 /* bottom.png in Resources */,
 				C3715E49165BE4D5006BB277 /* InfoPlist.strings in Resources */,
 				C2E1FA9C183A80DF00F43959 /* AppIcon29x29@2x.png in Resources */,
+				C2432B761B04F70D002876D0 /* BlendViewController.xib in Resources */,
 				C2E1FAA7183A80DF00F43959 /* AppIcon76x76.png in Resources */,
 				C3ED1BF7165BECB100D81B85 /* ImageViewController.xib in Resources */,
 				C2E1FA9E183A80DF00F43959 /* AppIcon40x40@2x.png in Resources */,
@@ -360,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3715E43165BE4D5006BB277 /* AppDelegate.m in Sources */,
+				C2432B741B04F3D0002876D0 /* BlendViewController.m in Sources */,
 				C3715E44165BE4D5006BB277 /* main.m in Sources */,
 				C2432B711B04EB24002876D0 /* ListViewController.m in Sources */,
 				C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */,

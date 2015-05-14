@@ -25,12 +25,7 @@
 
 #import "Dependencies.h"
 
-#import "ImageViewController.h"
-#import "BlendViewController.h"
-
-@interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
+@interface BlendViewController : UIViewController {
 }
-
-@property NSArray *items;
 
 @end
