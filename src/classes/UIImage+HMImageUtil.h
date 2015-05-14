@@ -66,7 +66,7 @@
 
 /**
  Faster version of the blending operation that uses the "native" infra-structure to provide the best performance in bleanding.
- 
+
  @param top The image to be blended on top of the current image in scope.
  @param algorithm The name of the belding algorithm to be used in the operation.
  @return The resulting blended image that that may be used in a raster context.
