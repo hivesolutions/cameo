@@ -94,11 +94,11 @@
     // then runs the belding with the proper algorithm
     UIImage *sole = [UIImage imageNamed:@"shoe-sole.png"];
     UIImage *back = [UIImage imageNamed:@"shoe-back.png"];
-    UIImage *result = [sole blendImageFast:back algorithm:kCGBlendModeNormal];
+    UIImage *result = [sole blendImageFast:back algorithm:kCGBlendModeLighten];
     UIImage *front = [UIImage imageNamed:@"shoe-front.png"];
-    result = [result blendImageFast:front algorithm:kCGBlendModeNormal];
+    result = [result blendImageFast:front algorithm:kCGBlendModeLighten];
     UIImage *shoelace = [UIImage imageNamed:@"shoe-shoelace.png"];
-    result = [result blendImageFast:shoelace algorithm:kCGBlendModeNormal];
+    result = [result blendImageFast:shoelace algorithm:kCGBlendModeLighten];
 
     // creates the blend image view to be used and runs the resize
     // mask for it in order to display it properly
