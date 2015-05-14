@@ -70,11 +70,12 @@
     // creates the blend image view to be used and runs the resize
     // mask for it in order to display it properly
     UIImageView *blend = [[UIImageView alloc] init];
+    blend.backgroundColor = [UIColor clearColor];
     blend.image = result;
     blend.contentMode = UIViewContentModeScaleAspectFit;
-    blend.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    blend.frame = CGRectMake(0, 0, self.mainView.frame.size.width, self.mainView.frame.size.height);
     blend.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
-    [self.view addSubview:blend];
+    [self.mainView addSubview:blend];
 }
 
 - (void)createBlendFast {
@@ -91,11 +92,12 @@
     // creates the blend image view to be used and runs the resize
     // mask for it in order to display it properly
     UIImageView *blend = [[UIImageView alloc] init];
+    blend.backgroundColor = [UIColor clearColor];
     blend.image = result;
     blend.contentMode = UIViewContentModeScaleAspectFit;
-    blend.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    blend.frame = CGRectMake(0, 0, self.mainView.frame.size.width, self.mainView.frame.size.height);
     blend.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
-    [self.view addSubview:blend];
+    [self.mainView addSubview:blend];
 }
 
 @end

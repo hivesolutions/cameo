@@ -28,4 +28,7 @@
 @interface BlendViewController : UIViewController {
 }
 
+@property IBOutlet UIView *mainView;
+@property IBOutlet UISwitch *switchView;
+
 @end

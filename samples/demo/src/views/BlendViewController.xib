@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BlendViewController">
             <connections>
+                <outlet property="mainView" destination="btG-mb-OdC" id="pCa-RH-ZKy"/>
+                <outlet property="switchView" destination="Eya-0y-NXz" id="G04-i8-qSs"/>
                 <outlet property="view" destination="iN0-l3-epB" id="M2r-pW-3Kw"/>
             </connections>
         </placeholder>
@@ -14,6 +16,17 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="Eya-0y-NXz">
+                    <rect key="frame" x="136" y="529" width="51" height="31"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                </switch>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" id="btG-mb-OdC">
+                    <rect key="frame" x="0.0" y="0.0" width="328" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <point key="canvasLocation" x="586" y="397"/>
         </view>
