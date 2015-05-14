@@ -31,4 +31,6 @@
 @property IBOutlet UIView *mainView;
 @property IBOutlet UISwitch *switchView;
 
+- (IBAction)switchChanged:(id)sender;
+
 @end

@@ -56,6 +56,17 @@
     [super didReceiveMemoryWarning];
 }
 
+- (void)updateBlend {
+    for (UIView *subView in self.mainView.subviews) {
+        [subView removeFromSuperview];
+    }
+    if(self.switchView.on) {
+        [self createBlendFast];
+    } else {
+        [self createBlend];
+    }
+}
+
 - (void)createBlend {
     // retrieves the reference to the various image to blend and
     // then runs the belding with the proper algorithm
@@ -64,7 +75,7 @@
     UIImage *result = [sole blendImage:back algorithm:@"disjoint_under"];
     UIImage *front = [UIImage imageNamed:@"shoe-front.png"];
     result = [result blendImage:front algorithm:@"disjoint_under"];
-    UIImage *shoelace = [UIImage imageNamed:@"shoe-front.png"];
+    UIImage *shoelace = [UIImage imageNamed:@"shoe-shoelace.png"];
     result = [result blendImage:shoelace algorithm:@"disjoint_under"];
 
     // creates the blend image view to be used and runs the resize
@@ -86,7 +97,7 @@
     UIImage *result = [sole blendImageFast:back algorithm:kCGBlendModeNormal];
     UIImage *front = [UIImage imageNamed:@"shoe-front.png"];
     result = [result blendImageFast:front algorithm:kCGBlendModeNormal];
-    UIImage *shoelace = [UIImage imageNamed:@"shoe-front.png"];
+    UIImage *shoelace = [UIImage imageNamed:@"shoe-shoelace.png"];
     result = [result blendImageFast:shoelace algorithm:kCGBlendModeNormal];
 
     // creates the blend image view to be used and runs the resize
@@ -98,6 +109,10 @@
     blend.frame = CGRectMake(0, 0, self.mainView.frame.size.width, self.mainView.frame.size.height);
     blend.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleTopMargin;
     [self.mainView addSubview:blend];
+}
+
+- (IBAction)switchChanged:(id)sender {
+    [self updateBlend];
 }
 
 @end
