@@ -110,13 +110,19 @@
 }
 
 - (void)createBlend {
+    // retrieves the current view width and devides the value
+    // by two in order to "find" the current center
     CGFloat width = self.view.frame.size.width;
     CGFloat widthH = width / 2;
     
+    // retrieves the reference to the various image to blend and
+    // then runs the belding with the proper algorithm
     UIImage *bottom = [UIImage imageNamed:@"top.png"];
     UIImage *top = [UIImage imageNamed:@"bottom.png"];
     UIImage *result = [bottom blendImage:top operation:@"disjoint_under"];
     
+    // creates the blend image view to be used and runs the resize
+    // mask for it in order to display it properly
     UIImageView *blend = [[UIImageView alloc] init];
     blend.image = result;
     blend.frame = CGRectMake(widthH - 128, 392, 256, 256);
