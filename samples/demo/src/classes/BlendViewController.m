@@ -45,7 +45,7 @@
 
     // creates the various layout elements that are part of the
     // current panel and adds them to the current view
-    [self createBlend];
+    [self updateBlend];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
