@@ -35,7 +35,7 @@
     return nil;
 }
 
-+ (UInt32)blendMultiplicative:(UInt32)bottom onTopOfColor:(UInt32)top {
++ (UInt32)blendMultiplicative:(UInt32)bottom belowColor:(UInt32)top {
     CGFloat at = 1.0f * (A(top) / 255.0f);
     UInt8 r = R(bottom) * (1 - at) + R(top) * at;
     UInt8 g = G(bottom) * (1 - at) + G(top) * at;
@@ -48,7 +48,7 @@
     return pixel;
 }
 
-+ (UInt32)blendDisjointDebug:(UInt32)top onTopOfColor:(UInt32)bottom {
++ (UInt32)blendDisjointDebug:(UInt32)bottom belowColor:(UInt32)top {
     CGFloat at =  1.0f * (A(top) / 255.0f);
     CGFloat ab = 1.0f * (A(bottom) / 255.0f);
     UInt8 r = at + ab < 1.0f ? 0 : 255;
@@ -59,7 +59,7 @@
     return pixel;
 }
 
-+ (UInt32)blendDisjointUnder:(UInt32)bottom onTopOfColor:(UInt32)top {
++ (UInt32)blendDisjointUnder:(UInt32)bottom belowColor:(UInt32)top {
     CGFloat at =  1.0f * (A(top) / 255.0f);
     CGFloat ab = 1.0f * (A(bottom) / 255.0f);
     UInt8 r = at * ab > 0.0f ? (float) R(top) / at * (1.0f - ab) + R(bottom) : R(top) * (1.0f - ab) + R(bottom);
@@ -73,7 +73,7 @@
     return pixel;
 }
 
-+ (UInt32)blendDisjointOver:(UInt32)top onTopOfColor:(UInt32)bottom {
++ (UInt32)blendDisjointOver:(UInt32)bottom belowColor:(UInt32)top {
     CGFloat at =  1.0f * (A(top) / 255.0f);
     CGFloat ab = 1.0f * (A(bottom) / 255.0f);
     UInt8 r = at + ab < 1.0f ? R(top) + R(bottom) * (1.0f - at) / ab : R(top) + R(bottom);
