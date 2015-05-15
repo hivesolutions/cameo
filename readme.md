@@ -41,7 +41,7 @@ To publish the Cameo Framework to the trunk repo of Cocoa Pods use:
 
 If the "private" Hive Solutions repo is the target use instead:
 
-    pod repo push hive cameo.podspe
+    pod repo push hive Cameo.podspec
 
 ## License
 
