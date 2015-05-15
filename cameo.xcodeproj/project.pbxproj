@@ -17,16 +17,6 @@
 		C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
 		C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4200A1652CBB400005DC5 /* libcameo.a */; };
 		C2E4A7761B06095200603947 /* HMStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B9D321B0604A30072529A /* HMStringTest.m */; };
-		C2E4A7771B06097400603947 /* HMLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C44165BFDB100D81B85 /* HMLoginView.m */; };
-		C2E4A7781B06097B00603947 /* HMBlend.m in Sources */ = {isa = PBXBuildFile; fileRef = C202B4921B04CDAF00F4078C /* HMBlend.m */; };
-		C2E4A7791B06097F00603947 /* HMJsonRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */; };
-		C2E4A77A1B06098100603947 /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
-		C2E4A77B1B06098600603947 /* HMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */; };
-		C2E4A77C1B06098800603947 /* HMProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */; };
-		C2E4A77D1B06098C00603947 /* HMResources.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C4C165BFF6500D81B85 /* HMResources.m */; };
-		C2E4A77E1B06098F00603947 /* HMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C21BA6FD18801B82000ED62E /* HMString.m */; };
-		C2E4A77F1B06099300603947 /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
-		C2E4A7801B06099500603947 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
 		C2E4A7811B0609BE00603947 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25B9D381B0605F20072529A /* SenTestingKit.framework */; };
 		C30DBA71165573F7002B678E /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA55165573F7002B678E /* Cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA72165573F7002B678E /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA56165573F7002B678E /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -444,17 +434,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E4A77D1B06098C00603947 /* HMResources.m in Sources */,
-				C2E4A77F1B06099300603947 /* UIImage+HMImageUtil.m in Sources */,
-				C2E4A7771B06097400603947 /* HMLoginView.m in Sources */,
-				C2E4A77B1B06098600603947 /* HMLoginViewController.m in Sources */,
-				C2E4A77C1B06098800603947 /* HMProxyRequest.m in Sources */,
-				C2E4A77E1B06098F00603947 /* HMString.m in Sources */,
-				C2E4A7781B06097B00603947 /* HMBlend.m in Sources */,
-				C2E4A77A1B06098100603947 /* HMLog.m in Sources */,
-				C2E4A7801B06099500603947 /* UIViewController+HMControllerUtil.m in Sources */,
 				C2E4A7761B06095200603947 /* HMStringTest.m in Sources */,
-				C2E4A7791B06097F00603947 /* HMJsonRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +627,7 @@
 				C2E4A7721B06094500603947 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3B420041652CBB400005DC5 /* Build configuration list for PBXProject "cameo" */ = {
 			isa = XCConfigurationList;
