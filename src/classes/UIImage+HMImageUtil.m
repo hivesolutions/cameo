@@ -131,6 +131,13 @@
 }
 
 - (UIImage *)blendImage:(UIImage *)top algorithm:(NSString *)algorithm {
+    // tries to retrieve the proper selector for the currently selected
+    // algorithm and in case it's not valid returns an invalid picture
+    SEL operation = [HMBlend getBlendAlgorithm:algorithm];
+    if(![[HMBlend class] respondsToSelector:operation]) {
+        return nil;
+    }
+
     // defines the initial values for both the bytes per pixel to be used
     // and the number of bits per chanel component
     NSInteger bytesPerPixel = 4;
@@ -166,13 +173,6 @@
     );
     CGContextDrawImage(topContext, CGRectMake(0, 0, topSize.width, topSize.height), topImageCG);
 
-    // tries to retrieve the proper selector for the currently selected
-    // algorithm and in case it's not valid returns an invalid picture
-    SEL operation = [HMBlend getBlendAlgorithm:algorithm];
-    if(![[HMBlend class] respondsToSelector:operation]) {
-        return nil;
-    }
-
     // creates a new invocation that will be used for every iteration of
     // the blending operation in order to perform the blend in a pixel basis
     NSInvocation *invocation = [NSInvocation invocationWithMethodSignature:[[HMBlend class] methodSignatureForSelector:operation]];
@@ -202,10 +202,20 @@
         }
     }
 
-    // creates an image with the blended result and returns it to
-    // the caller function so that it may be used in raster contexts
+    // creates an image with the blended result using the context that
+    // has just been used for the transformation operations
     CGImageRef blendedImageCG = CGBitmapContextCreateImage(context);
     UIImage *blendedImage = [UIImage imageWithCGImage:blendedImageCG];
+
+    // releases the various data structures that have been used for the
+    // transformation operations involved in the blending operation
+    CGColorSpaceRelease(colorSpace);
+    CGContextRelease(context);
+    CGContextRelease(topContext);
+    CGImageRelease(blendedImageCG);
+
+    // returns the "final" blended image to the caller function so that
+    // it may be used in raster operations/contexts
     return blendedImage;
 }
 
