@@ -28,8 +28,8 @@
 @interface BlendViewController : UIViewController {
 }
 
-@property IBOutlet UIView *mainView;
-@property IBOutlet UISwitch *switchView;
+@property (nonatomic) IBOutlet UIView *mainView;
+@property (nonatomic) IBOutlet UISwitch *switchView;
 
 - (IBAction)switchChanged:(id)sender;
 
