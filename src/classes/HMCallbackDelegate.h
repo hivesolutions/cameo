@@ -30,12 +30,13 @@
 #include "HMProxyRequestDelegate.h"
 
 @interface HMCallbackDelegate : NSObject<HMProxyRequestDelegate> {
-    @private
+@private
     JsonBlock _callback;
 }
 
-@property (nonatomic) NSObject<HMCleanup> *owner;
+@property (nonatomic, weak) NSObject<HMCleanup> *owner;
 
 - (id)initWithCallback:(JsonBlock)callback;
+- (id)initWithCallback:(JsonBlock)callback owner:(NSObject<HMCleanup> *)owner;
 
 @end

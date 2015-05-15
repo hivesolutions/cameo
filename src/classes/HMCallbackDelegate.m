@@ -35,16 +35,23 @@
     return self;
 }
 
+- (id)initWithCallback:(JsonBlock)callback owner:(NSObject<HMCleanup> *)owner {
+    self = [super init];
+    if(self) {
+        _callback = callback;
+        self.owner = owner;
+    }
+    return self;
+}
+
 - (void)didReceiveData:(NSDictionary *)data {
+    if(_callback) { _callback(data, nil); }
     if(self.owner) { [self.owner cleanup:self]; }
-    if(_callback == nil) { return; }
-    _callback(data, nil);
 }
 
 - (void)didReceiveError:(NSError *)error {
+    if(_callback) { _callback(nil, error); }
     if(self.owner) { [self.owner cleanup:self]; }
-    if(_callback == nil) { return; }
-    _callback(nil, error);
 }
 
 @end

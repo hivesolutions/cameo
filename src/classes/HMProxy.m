@@ -101,10 +101,10 @@
 }
 
 - (void)cleanup:(id)item {
-    HMProxyRequest *request = (HMProxyRequest *) item;
-    if([self.requests containsObject:request] == NO) { return; }
-    [self.requests removeObject:request];
-    if(request.delegate) { [self.delegates removeObject:request.delegate]; }
+    if([self.delegates containsObject:item] == NO) { return; }
+    NSUInteger index = [self.delegates indexOfObject:item];
+    [self.requests removeObjectAtIndex:index];
+    [self.delegates removeObjectAtIndex:index];
 }
 
 - (HMProxyRequest *)buildRequest:(NSString *)method
@@ -112,7 +112,8 @@
                             data:(NSData *)data
                       parameters:(NSDictionary *)parameters
                         callback:(JsonBlock)callback {
-    HMCallbackDelegate *delegate =[[HMCallbackDelegate alloc] initWithCallback:callback];
+    HMCallbackDelegate *delegate =[[HMCallbackDelegate alloc] initWithCallback:callback
+                                                                         owner:self];
     HMProxyRequest *request = [[HMProxyRequest alloc] init];
     request.baseUrl = @"";
     request.sessionId = self.sessionId;
@@ -121,7 +122,7 @@
     request.parameters = [self toParametersArray:parameters];
     request.delegate = delegate;
     [self.requests addObject:request];
-    [self.delegates addObject:request];
+    [self.delegates addObject:delegate];
     [request load];
     return request;
 }
