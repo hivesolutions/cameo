@@ -10,6 +10,8 @@
 		C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */ = {isa = PBXBuildFile; fileRef = C202B4921B04CDAF00F4078C /* HMBlend.m */; };
 		C2076A001B062500005B5FE4 /* HMProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C20769FE1B062500005B5FE4 /* HMProxy.h */; };
 		C2076A011B062500005B5FE4 /* HMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C20769FF1B062500005B5FE4 /* HMProxy.m */; };
+		C2076A041B063DE3005B5FE4 /* HMCallbackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C2076A031B063DE3005B5FE4 /* HMCallbackDelegate.h */; };
+		C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2076A051B063DF4005B5FE4 /* HMCallbackDelegate.m */; };
 		C21BA6FE18801B82000ED62E /* HMString.h in Headers */ = {isa = PBXBuildFile; fileRef = C21BA6FC18801B82000ED62E /* HMString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C21BA6FF18801B82000ED62E /* HMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C21BA6FD18801B82000ED62E /* HMString.m */; };
 		C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
@@ -76,6 +78,8 @@
 		C202B4921B04CDAF00F4078C /* HMBlend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMBlend.m; sourceTree = "<group>"; };
 		C20769FE1B062500005B5FE4 /* HMProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxy.h; sourceTree = "<group>"; };
 		C20769FF1B062500005B5FE4 /* HMProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMProxy.m; sourceTree = "<group>"; };
+		C2076A031B063DE3005B5FE4 /* HMCallbackDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMCallbackDelegate.h; sourceTree = "<group>"; };
+		C2076A051B063DF4005B5FE4 /* HMCallbackDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMCallbackDelegate.m; sourceTree = "<group>"; };
 		C21BA6FC18801B82000ED62E /* HMString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMString.h; sourceTree = "<group>"; };
 		C21BA6FD18801B82000ED62E /* HMString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMString.m; sourceTree = "<group>"; };
 		C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HMControllerUtil.m"; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				C30DBA56165573F7002B678E /* Dependencies.h */,
 				C2432B671B04CE0E002876D0 /* HMBlend.h */,
 				C202B4921B04CDAF00F4078C /* HMBlend.m */,
+				C2076A031B063DE3005B5FE4 /* HMCallbackDelegate.h */,
+				C2076A051B063DF4005B5FE4 /* HMCallbackDelegate.m */,
 				C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */,
 				C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */,
 				C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */,
@@ -326,6 +332,7 @@
 				C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */,
 				C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */,
 				C3ED1C25165BEFD500D81B85 /* HMJsonRequest.h in Headers */,
+				C2076A041B063DE3005B5FE4 /* HMCallbackDelegate.h in Headers */,
 				C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */,
 				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
 				C2A2C088187F30BD009A052B /* HMLog.h in Headers */,
@@ -457,6 +464,7 @@
 				C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */,
 				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
 				C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */,
+				C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */,
 				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
 				C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */,
 				C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */,
