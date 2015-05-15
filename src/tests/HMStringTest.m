@@ -30,6 +30,12 @@
 - (void)testCapitalized {
     NSString *result = [HMString capitalizedString:@"joao"];
     XCTAssert(result, @"Joao", nil);
+
+    result = [HMString capitalizedString:@"joao magalhaes"];
+    XCTAssert(result, @"Joao Magalhaes", nil);
+
+    result = [HMString capitalizedString:@"joão magalhães"];
+    XCTAssert(result, @"João Magalhães", nil);
 }
 
 @end
