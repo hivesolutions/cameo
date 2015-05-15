@@ -28,10 +28,10 @@
 @implementation HMBlend
 
 + (SEL)getBlendAlgorithm:(NSString *)algorithm {
-    if([algorithm isEqualToString:@"multiplicative"]) return @selector(blendMultiplicative:onTopOfColor:);
-    else if([algorithm isEqualToString:@"disjoint_debug"]) return @selector(blendDisjointDebug:onTopOfColor:);
-    else if([algorithm isEqualToString:@"disjoint_under"]) return @selector(blendDisjointUnder:onTopOfColor:);
-    else if([algorithm isEqualToString:@"disjoint_over"]) return @selector(blendDisjointOver:onTopOfColor:);
+    if([algorithm isEqualToString:@"multiplicative"]) return @selector(blendMultiplicative:belowColor:);
+    else if([algorithm isEqualToString:@"disjoint_debug"]) return @selector(blendDisjointDebug:belowColor:);
+    else if([algorithm isEqualToString:@"disjoint_under"]) return @selector(blendDisjointUnder:belowColor:);
+    else if([algorithm isEqualToString:@"disjoint_over"]) return @selector(blendDisjointOver:belowColor:);
     return nil;
 }
 
