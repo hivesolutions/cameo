@@ -23,12 +23,22 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import <UIKit/UIKit.h>
+#import "Dependencies.h"
 
-#import "AppDelegate.h"
+#define MASK8(x) ((x) & 0xff)
+#define R(x) (MASK8(x))
+#define G(x) (MASK8(x >> 8 ))
+#define B(x) (MASK8(x >> 16))
+#define A(x) (MASK8(x >> 24))
+#define RGBA(r, g, b, a) (MASK8(r) | MASK8(g) << 8 | MASK8(b) << 16 | MASK8(a) << 24)
 
-int main(int argc, char *argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
+@interface HMBlend : NSObject {
 }
+
++ (SEL)getBlendAlgorithm:(NSString *)algorithm;
++ (UInt32)blendMultiplicative:(UInt32)bottom belowColor:(UInt32)top;
++ (UInt32)blendDisjointDebug:(UInt32)bottom belowColor:(UInt32)top;
++ (UInt32)blendDisjointUnder:(UInt32)bottom belowColor:(UInt32)top;
++ (UInt32)blendDisjointOver:(UInt32)bottom belowColor:(UInt32)top;
+
+@end

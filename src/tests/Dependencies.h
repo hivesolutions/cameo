@@ -23,12 +23,13 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
+// unit test dependency includes
+#import <XCTest/XCTest.h>
+
+// framework dependency includes
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Foundation/Foundation.h>
 
-#import "AppDelegate.h"
-
-int main(int argc, char *argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
-}
+// library dependency includes
+#import <Cameo/Cameo.h>

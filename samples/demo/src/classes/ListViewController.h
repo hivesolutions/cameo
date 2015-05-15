@@ -23,12 +23,14 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import <UIKit/UIKit.h>
+#import "Dependencies.h"
 
-#import "AppDelegate.h"
+#import "ImageViewController.h"
+#import "BlendViewController.h"
 
-int main(int argc, char *argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
+@interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
 }
+
+@property NSArray *items;
+
+@end

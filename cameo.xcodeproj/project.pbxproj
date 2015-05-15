@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */ = {isa = PBXBuildFile; fileRef = C202B4921B04CDAF00F4078C /* HMBlend.m */; };
 		C21BA6FE18801B82000ED62E /* HMString.h in Headers */ = {isa = PBXBuildFile; fileRef = C21BA6FC18801B82000ED62E /* HMString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C21BA6FF18801B82000ED62E /* HMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C21BA6FD18801B82000ED62E /* HMString.m */; };
 		C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
+		C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */ = {isa = PBXBuildFile; fileRef = C2432B671B04CE0E002876D0 /* HMBlend.h */; };
 		C2A2C088187F30BD009A052B /* HMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2C086187F30BD009A052B /* HMLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A2C089187F30BD009A052B /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
 		C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
+		C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4200A1652CBB400005DC5 /* libcameo.a */; };
+		C2E4A7761B06095200603947 /* HMStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B9D321B0604A30072529A /* HMStringTest.m */; };
+		C2E4A7811B0609BE00603947 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25B9D381B0605F20072529A /* SenTestingKit.framework */; };
 		C30DBA71165573F7002B678E /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA55165573F7002B678E /* Cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA72165573F7002B678E /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA56165573F7002B678E /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA73165573F7002B678E /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA57165573F7002B678E /* HMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,6 +42,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C2E4A76E1B06094500603947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B420011652CBB400005DC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3B420091652CBB400005DC5;
+			remoteInfo = cameo;
+		};
 		C2F73443165C5B9000E4B56A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C39CF94C165BEA7400AA687F /* cameo_demo.xcodeproj */;
@@ -59,13 +71,22 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C202B4921B04CDAF00F4078C /* HMBlend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMBlend.m; sourceTree = "<group>"; };
 		C21BA6FC18801B82000ED62E /* HMString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMString.h; sourceTree = "<group>"; };
 		C21BA6FD18801B82000ED62E /* HMString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMString.m; sourceTree = "<group>"; };
 		C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HMControllerUtil.m"; sourceTree = "<group>"; };
+		C2432B671B04CE0E002876D0 /* HMBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMBlend.h; sourceTree = "<group>"; };
+		C25B9D321B0604A30072529A /* HMStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStringTest.m; sourceTree = "<group>"; };
+		C25B9D341B0604BE0072529A /* HMStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStringTest.h; sourceTree = "<group>"; };
+		C25B9D361B0605120072529A /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
+		C25B9D381B0605F20072529A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C2A2C086187F30BD009A052B /* HMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLog.h; sourceTree = "<group>"; };
 		C2A2C087187F30BD009A052B /* HMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLog.m; sourceTree = "<group>"; };
 		C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HMImageUtil.m"; sourceTree = "<group>"; };
 		C2E1FA8C183A801C00F43959 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		C2E4A7671B06094500603947 /* cameo_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameo_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2E4A7821B060B1600603947 /* Cameo.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cameo.podspec; sourceTree = "<group>"; };
+		C2E4A7831B060B1600603947 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		C30D41131655411A003AA670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C30DBA53165573F7002B678E /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMBaseResources.bundle; sourceTree = "<group>"; };
 		C30DBA55165573F7002B678E /* Cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameo.h; sourceTree = "<group>"; };
@@ -103,6 +124,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C2E4A7641B06094500603947 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E4A7811B0609BE00603947 /* SenTestingKit.framework in Frameworks */,
+				C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3B420071652CBB400005DC5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,6 +146,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C25B9D301B06047A0072529A /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				C25B9D361B0605120072529A /* Dependencies.h */,
+				C25B9D341B0604BE0072529A /* HMStringTest.h */,
+				C25B9D321B0604A30072529A /* HMStringTest.m */,
+			);
+			name = tests;
+			path = src/tests;
+			sourceTree = SOURCE_ROOT;
+		};
 		C2F73440165C5B9000E4B56A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +179,8 @@
 			children = (
 				C30DBA55165573F7002B678E /* Cameo.h */,
 				C30DBA56165573F7002B678E /* Dependencies.h */,
+				C2432B671B04CE0E002876D0 /* HMBlend.h */,
+				C202B4921B04CDAF00F4078C /* HMBlend.m */,
 				C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */,
 				C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */,
 				C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */,
@@ -223,6 +266,8 @@
 				C3B4200F1652CBB400005DC5 /* Cameo */,
 				C3B4200C1652CBB400005DC5 /* Frameworks */,
 				C3B4200B1652CBB400005DC5 /* Products */,
+				C2E4A7831B060B1600603947 /* Podfile */,
+				C2E4A7821B060B1600603947 /* Cameo.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				C3B4200A1652CBB400005DC5 /* libcameo.a */,
+				C2E4A7671B06094500603947 /* cameo_test.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,9 +283,10 @@
 		C3B4200C1652CBB400005DC5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C37910A316554184005D3B7B /* UIKit.framework */,
-				C37910A11655417F005D3B7B /* Foundation.framework */,
 				C30D41131655411A003AA670 /* CoreGraphics.framework */,
+				C37910A11655417F005D3B7B /* Foundation.framework */,
+				C25B9D381B0605F20072529A /* SenTestingKit.framework */,
+				C37910A316554184005D3B7B /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -253,6 +300,7 @@
 				C30DBA61165573F7002B678E /* scripts */,
 				C30DBA6C165573F7002B678E /* static */,
 				C30DBA6F165573F7002B678E /* support */,
+				C25B9D301B06047A0072529A /* tests */,
 			);
 			name = Cameo;
 			path = cameo;
@@ -274,6 +322,7 @@
 				C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */,
 				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
 				C2A2C088187F30BD009A052B /* HMLog.h in Headers */,
+				C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */,
 				C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */,
 				C21BA6FE18801B82000ED62E /* HMString.h in Headers */,
 				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
@@ -286,6 +335,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		C2E4A7661B06094500603947 /* cameo_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2E4A7701B06094500603947 /* Build configuration list for PBXNativeTarget "cameo_test" */;
+			buildPhases = (
+				C2E4A7631B06094500603947 /* Sources */,
+				C2E4A7641B06094500603947 /* Frameworks */,
+				C2E4A7651B06094500603947 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2E4A76F1B06094500603947 /* PBXTargetDependency */,
+			);
+			name = cameo_test;
+			productName = cameo_test;
+			productReference = C2E4A7671B06094500603947 /* cameo_test.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C3B420091652CBB400005DC5 /* cameo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C3B420181652CBB400005DC5 /* Build configuration list for PBXNativeTarget "cameo" */;
@@ -312,6 +379,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Hive Solutions";
+				TargetAttributes = {
+					C2E4A7661B06094500603947 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
 			};
 			buildConfigurationList = C3B420041652CBB400005DC5 /* Build configuration list for PBXProject "cameo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -332,6 +404,7 @@
 			projectRoot = "";
 			targets = (
 				C3B420091652CBB400005DC5 /* cameo */,
+				C2E4A7661B06094500603947 /* cameo_test */,
 			);
 		};
 /* End PBXProject section */
@@ -346,7 +419,25 @@
 		};
 /* End PBXReferenceProxy section */
 
+/* Begin PBXResourcesBuildPhase section */
+		C2E4A7651B06094500603947 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		C2E4A7631B06094500603947 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2E4A7761B06095200603947 /* HMStringTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C3B420061652CBB400005DC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,6 +448,7 @@
 				C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */,
 				C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */,
 				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
+				C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */,
 				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
 				C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */,
 				C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */,
@@ -365,7 +457,85 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C2E4A76F1B06094500603947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3B420091652CBB400005DC5 /* cameo */;
+			targetProxy = C2E4A76E1B06094500603947 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C2E4A7711B06094500603947 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = src/support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C2E4A7721B06094500603947 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = src/support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		C3B420161652CBB400005DC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -417,6 +587,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/cameo.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/support/cameo-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -430,6 +604,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DSTROOT = /tmp/cameo.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/support/cameo-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
@@ -442,6 +620,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C2E4A7701B06094500603947 /* Build configuration list for PBXNativeTarget "cameo_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2E4A7711B06094500603947 /* Debug */,
+				C2E4A7721B06094500603947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C3B420041652CBB400005DC5 /* Build configuration list for PBXProject "cameo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

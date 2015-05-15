@@ -23,12 +23,14 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import <UIKit/UIKit.h>
+#import "Dependencies.h"
 
-#import "AppDelegate.h"
-
-int main(int argc, char *argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
+@interface BlendViewController : UIViewController {
 }
+
+@property IBOutlet UIView *mainView;
+@property IBOutlet UISwitch *switchView;
+
+- (IBAction)switchChanged:(id)sender;
+
+@end

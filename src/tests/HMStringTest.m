@@ -23,12 +23,19 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import <UIKit/UIKit.h>
+#import "HMStringTest.h"
 
-#import "AppDelegate.h"
+@implementation TestString
 
-int main(int argc, char *argv[]) {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-    }
+- (void)testCapitalized {
+    NSString *result = [HMString capitalizedString:@"joao"];
+    XCTAssert(result, @"Joao", nil);
+
+    result = [HMString capitalizedString:@"joao magalhaes"];
+    XCTAssert(result, @"Joao Magalhaes", nil);
+
+    result = [HMString capitalizedString:@"joão magalhães"];
+    XCTAssert(result, @"João Magalhães", nil);
 }
+
+@end
