@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
                        Use the framrwork to avoid extra repetitive work.
                        DESC
   s.homepage         = "http://cameo.hive.pt/"
-  s.license          = 'GPL'
+  s.license          = { :type => 'Apache' }
   s.author           = { "hivesolutions" => "development@hive.pt" }
   s.source           = { :git => "https://github.com/hivesolutions/cameo.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/hivesolutions'
