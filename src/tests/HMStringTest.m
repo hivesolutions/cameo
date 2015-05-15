@@ -29,7 +29,7 @@
 
 - (void)testCapitalized {
     NSString *result = [HMString capitalizedString:@"joao"];
-    STAssertEqualObjects(result, @"Joao", nil);
+    XCTAssert(result, @"Joao", nil);
 }
 
 @end

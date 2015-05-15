@@ -24,7 +24,7 @@
 // __license__   = GNU General Public License (GPL), Version 3
 
 // unite test dependency includes
-#import <SenTestingKit/SenTestingKit.h>
+#import <XCTest/XCTest.h>
 
 // framework dependency includes
 #import <UIKit/UIKit.h>

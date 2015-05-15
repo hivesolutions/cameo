@@ -1,4 +1,4 @@
 sudo: false
 language: objective-c
 xcode_project: cameo.xcodeproj
-xcode_scheme: cameo
+xcode_scheme: cameo_test
