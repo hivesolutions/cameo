@@ -25,22 +25,25 @@
 
 #import "Dependencies.h"
 
+#import "HMJsonRequest.h"
 #import "HMProxyRequest.h"
+#import "HMCallbackDelegate.h"
 
 @interface HMProxy : NSObject {
 }
 
 @property (nonatomic) NSString *baseUrl;
 @property (nonatomic) NSString *sessionId;
+@property (nonatomic) NSMutableArray *requests;
 
 - (id)initWithBaseUrl:(NSString *)baseUrl sessionId:(NSString *)sessionId;
-- (HMProxyRequest *)get:(NSString *)url;
-- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters;
-- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data;
-- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters;
-- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data;
-- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters;
-- (HMProxyRequest *)_delete:(NSString *)url;
-- (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters;
+- (HMProxyRequest *)get:(NSString *)url callback:(JsonBlock)callback;
+- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(JsonBlock)callback;
+- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(JsonBlock)callback;
+- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters callback:(JsonBlock)callback;
+- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data callback:(JsonBlock)callback;
+- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters callback:(JsonBlock)callback;
+- (HMProxyRequest *)_delete:(NSString *)url callback:(JsonBlock)callback;
+- (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters callback:(JsonBlock)callback;
 
 @end

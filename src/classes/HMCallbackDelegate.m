@@ -36,10 +36,12 @@
 }
 
 - (void)didReceiveData:(NSDictionary *)data {
+    if(_callback == nil) { return; }
     _callback(data, nil);
 }
 
 - (void)didReceiveError:(NSError *)error {
+    if(_callback == nil) { return; }
     _callback(nil, error);
 }
 

@@ -27,72 +27,92 @@
 
 @implementation HMProxy
 
+- (id)init {
+    self = [super init];
+    if(self) {
+        self.baseUrl = nil;
+        self.sessionId = nil;
+        self.requests = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (id)initWithBaseUrl:(NSString *)baseUrl sessionId:(NSString *)sessionId {
     self = [super init];
     if(self) {
         self.baseUrl = baseUrl;
         self.sessionId = sessionId;
+        self.requests = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (HMProxyRequest *)get:(NSString *)url {
-    return [self get:url parameters:nil];
+- (HMProxyRequest *)get:(NSString *)url callback:(JsonBlock)callback {
+    return [self get:url parameters:nil callback:callback];
 }
 
-- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters {
+- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(JsonBlock)callback {
     url = [self getAbsoluteUrl:url];
+    return [self buildRequest:@"GET"
+                          url:url
+                         data:nil
+                   parameters:parameters
+                     callback:callback];}
+
+- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(JsonBlock)callback {
+    return [self post:url data:data parameters:nil callback:callback];
+}
+
+- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters callback:(JsonBlock)callback {
+    url = [self getAbsoluteUrl:url];
+    return [self buildRequest:@"POST"
+                          url:url
+                         data:data
+                   parameters:parameters
+                     callback:callback];
+}
+
+- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data callback:(JsonBlock)callback {
+    return [self put:url data:data parameters:nil callback:callback];
+}
+
+- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters callback:(JsonBlock)callback {
+    url = [self getAbsoluteUrl:url];
+    return [self buildRequest:@"PUT"
+                          url:url
+                         data:data
+                   parameters:parameters
+                     callback:callback];
+}
+
+- (HMProxyRequest *)_delete:(NSString *)url callback:(JsonBlock)callback {
+    return [self _delete:url parameters:nil callback:callback];
+}
+
+- (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters callback:(JsonBlock)callback {
+    url = [self getAbsoluteUrl:url];
+    return [self buildRequest:@"DELETE"
+                          url:url
+                         data:nil
+                   parameters:parameters
+                     callback:callback];
+}
+
+- (HMProxyRequest *)buildRequest:(NSString *)method
+                             url:(NSString *)url
+                            data:(NSData *)data
+                      parameters:(NSDictionary *)parameters
+                        callback:(JsonBlock)callback {
+    HMCallbackDelegate *delegate =[[HMCallbackDelegate alloc] initWithCallback:callback];
     HMProxyRequest *request = [[HMProxyRequest alloc] init];
     request.baseUrl = @"";
     request.sessionId = self.sessionId;
     request.path = url;
-    request.method = @"GET";
+    request.method = method;
     request.parameters = [self toParametersArray:parameters];
-    return request;
-}
-
-- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data {
-    return [self post:url data:data parameters:nil];
-}
-
-- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters {
-    url = [self getAbsoluteUrl:url];
-    HMProxyRequest *request = [[HMProxyRequest alloc] init];
-    request.baseUrl = @"";
-    request.sessionId = self.sessionId;
-    request.path = url;
-    request.method = @"POST";
-    request.parameters = [self toParametersArray:parameters];
-    return request;
-}
-
-- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data {
-    return [self put:url data:data parameters:nil];
-}
-
-- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters {
-    url = [self getAbsoluteUrl:url];
-    HMProxyRequest *request = [[HMProxyRequest alloc] init];
-    request.baseUrl = @"";
-    request.sessionId = self.sessionId;
-    request.path = url;
-    request.method = @"PUT";
-    request.parameters = [self toParametersArray:parameters];
-    return request;
-}
-
-- (HMProxyRequest *)_delete:(NSString *)url {
-    return [self _delete:url parameters:nil];
-}
-
-- (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters {
-    url = [self getAbsoluteUrl:url];
-    HMProxyRequest *request = [[HMProxyRequest alloc] init];
-    request.baseUrl = @"";
-    request.sessionId = self.sessionId;
-    request.path = url;
-    request.method = @"DELETE";
-    request.parameters = [self toParametersArray:parameters];
+    request.delegate = delegate;
+    [self.requests addObject:request];
+    [request load];
     return request;
 }
 
