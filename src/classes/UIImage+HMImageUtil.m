@@ -195,8 +195,8 @@
 
             // populates the invocation for the current pixel blending
             // iteration and then updates the proper value for the bottom
-            [invocation setArgument:&topColor atIndex:2];
-            [invocation setArgument:&bottomColor atIndex:3];
+            [invocation setArgument:&bottomColor atIndex:2];
+            [invocation setArgument:&topColor atIndex:3];
             [invocation invoke];
             [invocation getReturnValue:bottomPixel];
         }
