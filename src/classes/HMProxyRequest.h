@@ -39,7 +39,10 @@
 
 @property (nonatomic, weak) NSObject<HMProxyRequestDelegate> *delegate;
 @property (nonatomic) UIViewController *controller;
+@property (nonatomic) NSString *baseUrl;
+@property (nonatomic) NSString *sessionId;
 @property (nonatomic) NSString *path;
+@property (nonatomic) NSString *method;
 @property (nonatomic) NSArray *parameters;
 @property (nonatomic) UIView *mask;
 @property (nonatomic) UIActivityIndicatorView *maskIndicator;

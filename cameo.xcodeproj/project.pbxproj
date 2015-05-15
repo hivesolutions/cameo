@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */ = {isa = PBXBuildFile; fileRef = C202B4921B04CDAF00F4078C /* HMBlend.m */; };
+		C2076A001B062500005B5FE4 /* HMProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C20769FE1B062500005B5FE4 /* HMProxy.h */; };
+		C2076A011B062500005B5FE4 /* HMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C20769FF1B062500005B5FE4 /* HMProxy.m */; };
 		C21BA6FE18801B82000ED62E /* HMString.h in Headers */ = {isa = PBXBuildFile; fileRef = C21BA6FC18801B82000ED62E /* HMString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C21BA6FF18801B82000ED62E /* HMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C21BA6FD18801B82000ED62E /* HMString.m */; };
 		C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
@@ -72,6 +74,8 @@
 
 /* Begin PBXFileReference section */
 		C202B4921B04CDAF00F4078C /* HMBlend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMBlend.m; sourceTree = "<group>"; };
+		C20769FE1B062500005B5FE4 /* HMProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxy.h; sourceTree = "<group>"; };
+		C20769FF1B062500005B5FE4 /* HMProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMProxy.m; sourceTree = "<group>"; };
 		C21BA6FC18801B82000ED62E /* HMString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMString.h; sourceTree = "<group>"; };
 		C21BA6FD18801B82000ED62E /* HMString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMString.m; sourceTree = "<group>"; };
 		C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HMControllerUtil.m"; sourceTree = "<group>"; };
@@ -190,6 +194,8 @@
 				C3ED1C44165BFDB100D81B85 /* HMLoginView.m */,
 				C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */,
 				C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */,
+				C20769FE1B062500005B5FE4 /* HMProxy.h */,
+				C20769FF1B062500005B5FE4 /* HMProxy.m */,
 				C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */,
 				C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */,
 				C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */,
@@ -314,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C30DBA71165573F7002B678E /* Cameo.h in Headers */,
+				C2076A001B062500005B5FE4 /* HMProxy.h in Headers */,
 				C30DBA72165573F7002B678E /* Dependencies.h in Headers */,
 				C30DBA73165573F7002B678E /* HMVersion.h in Headers */,
 				C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */,
@@ -443,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */,
+				C2076A011B062500005B5FE4 /* HMProxy.m in Sources */,
 				C2A2C089187F30BD009A052B /* HMLog.m in Sources */,
 				C21BA6FF18801B82000ED62E /* HMString.m in Sources */,
 				C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */,

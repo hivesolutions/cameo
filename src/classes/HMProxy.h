@@ -23,17 +23,24 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HMBlend.h"
-#import "HMJsonRequest.h"
-#import "HMJsonRequestDelegate.h"
-#import "HMLog.h"
-#import "HMLoginView.h"
-#import "HMLoginViewController.h"
-#import "HMProxy.h"
+#import "Dependencies.h"
+
 #import "HMProxyRequest.h"
-#import "HMProxyRequestDelegate.h"
-#import "HMResources.h"
-#import "HMString.h"
-#import "HMVersion.h"
-#import "UIImage+HMImageUtil.h"
-#import "UIViewController+HMControllerUtil.h"
+
+@interface HMProxy : NSObject {
+}
+
+@property (nonatomic) NSString *baseUrl;
+@property (nonatomic) NSString *sessionId;
+
+- (id)initWithBaseUrl:(NSString *)baseUrl sessionId:(NSString *)sessionId;
+- (HMProxyRequest *)get:(NSString *)url;
+- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters;
+- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data;
+- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters;
+- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data;
+- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters;
+- (HMProxyRequest *)_delete:(NSString *)url;
+- (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters;
+
+@end

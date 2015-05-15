@@ -37,6 +37,7 @@ static UIImage *_logo = nil;
 
         self.controller = controller;
         self.path = path;
+        self.method = @"GET";
         self.loginPath = @"login.json";
     }
     return self;
@@ -50,6 +51,7 @@ static UIImage *_logo = nil;
 
         self.controller = controller;
         self.path = path;
+        self.method = @"GET";
         self.loginPath = loginPath;
     }
     return self;
@@ -60,6 +62,7 @@ static UIImage *_logo = nil;
     // and in case it fails shows the login (default behavior)
     NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
     NSString *sessionId = [preferences valueForKey:@"sessionId"];
+    sessionId = self.sessionId ? self.sessionId : sessionId;
     if(!sessionId && self.useSession == YES) { [self showLogin]; return; }
 
     // allocates space for the array that will contain the various
@@ -69,6 +72,7 @@ static UIImage *_logo = nil;
     // retrieves the value for the base url from the preferences and
     // uses it together with the path value to construct the url string
     NSString *baseUrl = [preferences valueForKey:@"baseUrl"];
+    baseUrl = self.baseUrl ? self.baseUrl : baseUrl;
     NSString *urlString = [NSString stringWithFormat:@"%@%@", baseUrl, self.path];
 
     // in case there are already parameters defined in the structure
@@ -85,6 +89,7 @@ static UIImage *_logo = nil;
     // parameters structure in it together with the setting of the
     // delegate reference and then triggers the loading of it
     self.jsonRequest = [[HMJsonRequest alloc] initWithUrlString:urlString];
+    self.jsonRequest.method = self.method;
     self.jsonRequest.parameters = parameters;
     self.jsonRequest.delegate = self;
     [self.jsonRequest load];
