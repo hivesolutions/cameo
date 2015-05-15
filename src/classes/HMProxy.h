@@ -42,9 +42,15 @@
 - (HMProxyRequest *)get:(NSString *)url callback:(JsonBlock)callback;
 - (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(JsonBlock)callback;
 - (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(JsonBlock)callback;
-- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters callback:(JsonBlock)callback;
+- (HMProxyRequest *)post:(NSString *)url
+                    data:(NSData *)data
+              parameters:(NSDictionary *)parameters
+                callback:(JsonBlock)callback;
 - (HMProxyRequest *)put:(NSString *)url data:(NSData *)data callback:(JsonBlock)callback;
-- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters callback:(JsonBlock)callback;
+- (HMProxyRequest *)put:(NSString *)url
+                   data:(NSData *)data
+             parameters:(NSDictionary *)parameters
+               callback:(JsonBlock)callback;
 - (HMProxyRequest *)_delete:(NSString *)url callback:(JsonBlock)callback;
 - (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters callback:(JsonBlock)callback;
 

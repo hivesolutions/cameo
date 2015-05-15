@@ -65,7 +65,10 @@
     return [self post:url data:data parameters:nil callback:callback];
 }
 
-- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters callback:(JsonBlock)callback {
+- (HMProxyRequest *)post:(NSString *)url
+                    data:(NSData *)data
+              parameters:(NSDictionary *)parameters
+                callback:(JsonBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"POST"
                           url:url
@@ -78,7 +81,10 @@
     return [self put:url data:data parameters:nil callback:callback];
 }
 
-- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data parameters:(NSDictionary *)parameters callback:(JsonBlock)callback {
+- (HMProxyRequest *)put:(NSString *)url
+                   data:(NSData *)data
+             parameters:(NSDictionary *)parameters
+               callback:(JsonBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"PUT"
                           url:url
