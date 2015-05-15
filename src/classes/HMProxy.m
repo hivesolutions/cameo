@@ -33,6 +33,7 @@
         self.baseUrl = nil;
         self.sessionId = nil;
         self.requests = [[NSMutableArray alloc] init];
+        self.delegates = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -43,6 +44,7 @@
         self.baseUrl = baseUrl;
         self.sessionId = sessionId;
         self.requests = [[NSMutableArray alloc] init];
+        self.delegates = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -112,6 +114,7 @@
     request.parameters = [self toParametersArray:parameters];
     request.delegate = delegate;
     [self.requests addObject:request];
+    [self.delegates addObject:request];
     [request load];
     return request;
 }

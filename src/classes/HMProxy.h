@@ -35,6 +35,7 @@
 @property (nonatomic) NSString *baseUrl;
 @property (nonatomic) NSString *sessionId;
 @property (nonatomic) NSMutableArray *requests;
+@property (nonatomic) NSMutableArray *delegates;
 
 - (id)initWithBaseUrl:(NSString *)baseUrl sessionId:(NSString *)sessionId;
 - (HMProxyRequest *)get:(NSString *)url callback:(JsonBlock)callback;
