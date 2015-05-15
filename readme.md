@@ -49,4 +49,5 @@ Appier is currently licensed under the [Apache License, Version 2.0](http://www.
 
 ## Build Automation
 
+[![Build Status](https://travis-ci.org/hivesolutions/cameo.png?branch=master)](https://travis-ci.org/hivesolutions/cameo)
 [![CocoaPods Status](https://cocoapod-badges.herokuapp.com/v/Cameo/badge.png)](http://cocoadocs.org/docsets/Cameo)
