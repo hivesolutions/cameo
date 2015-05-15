@@ -100,6 +100,13 @@
                      callback:callback];
 }
 
+- (void)cleanup:(id)item {
+    HMProxyRequest *request = (HMProxyRequest *) item;
+    if([self.requests containsObject:request] == NO) { return; }
+    [self.requests removeObject:request];
+    if(request.delegate) { [self.delegates removeObject:request.delegate]; }
+}
+
 - (HMProxyRequest *)buildRequest:(NSString *)method
                              url:(NSString *)url
                             data:(NSData *)data

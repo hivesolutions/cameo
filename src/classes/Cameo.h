@@ -24,6 +24,8 @@
 // __license__   = Apache License, Version 2.0
 
 #import "HMBlend.h"
+#import "HMCallbackDelegate.h"
+#import "HMCleanup.h"
 #import "HMJsonRequest.h"
 #import "HMJsonRequestDelegate.h"
 #import "HMLog.h"

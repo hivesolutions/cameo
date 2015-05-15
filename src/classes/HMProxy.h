@@ -25,11 +25,12 @@
 
 #import "Dependencies.h"
 
+#import "HMCleanup.h"
 #import "HMJsonRequest.h"
 #import "HMProxyRequest.h"
 #import "HMCallbackDelegate.h"
 
-@interface HMProxy : NSObject {
+@interface HMProxy : NSObject<HMCleanup> {
 }
 
 @property (nonatomic) NSString *baseUrl;

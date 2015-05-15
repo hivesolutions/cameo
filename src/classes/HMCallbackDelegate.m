@@ -36,11 +36,13 @@
 }
 
 - (void)didReceiveData:(NSDictionary *)data {
+    if(self.owner) { [self.owner cleanup:self]; }
     if(_callback == nil) { return; }
     _callback(data, nil);
 }
 
 - (void)didReceiveError:(NSError *)error {
+    if(self.owner) { [self.owner cleanup:self]; }
     if(_callback == nil) { return; }
     _callback(nil, error);
 }

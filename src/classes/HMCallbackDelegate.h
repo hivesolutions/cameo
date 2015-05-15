@@ -25,6 +25,7 @@
 
 #include "Dependencies.h"
 
+#include "HMCleanup.h"
 #include "HMJsonRequest.h"
 #include "HMProxyRequestDelegate.h"
 
@@ -32,6 +33,8 @@
     @private
     JsonBlock _callback;
 }
+
+@property (nonatomic) NSObject<HMCleanup> *owner;
 
 - (id)initWithCallback:(JsonBlock)callback;
 
