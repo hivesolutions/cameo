@@ -18,7 +18,7 @@ platform :ios, '7.0'
 pod "Cameo"
 ```
 
-## Cocoa Pods usage
+## CocoaPods usage
 
 To publish the Cameo Framework to the trunk repo of Cocoa Pods use:
 
