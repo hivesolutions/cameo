@@ -104,9 +104,6 @@
 		C30DBA57165573F7002B678E /* HMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVersion.h; sourceTree = "<group>"; };
 		C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HMImageUtil.h"; sourceTree = "<group>"; };
 		C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HMControllerUtil.h"; sourceTree = "<group>"; };
-		C30DBA5E165573F7002B678E /* 01package-contents.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "01package-contents.xml"; sourceTree = "<group>"; };
-		C30DBA5F165573F7002B678E /* 01package.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = 01package.xml; sourceTree = "<group>"; };
-		C30DBA60165573F7002B678E /* index.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = index.xml; sourceTree = "<group>"; };
 		C30DBA62165573F7002B678E /* build_all.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_all.sh; sourceTree = "<group>"; };
 		C30DBA63165573F7002B678E /* build_distribution.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_distribution.sh; sourceTree = "<group>"; };
 		C30DBA64165573F7002B678E /* build_documentation.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_documentation.sh; sourceTree = "<group>"; };
@@ -222,25 +219,6 @@
 			path = src/classes;
 			sourceTree = SOURCE_ROOT;
 		};
-		C30DBA5C165573F7002B678E /* package */ = {
-			isa = PBXGroup;
-			children = (
-				C30DBA5D165573F7002B678E /* Cameo.pmdoc */,
-			);
-			name = package;
-			path = src/package;
-			sourceTree = SOURCE_ROOT;
-		};
-		C30DBA5D165573F7002B678E /* Cameo.pmdoc */ = {
-			isa = PBXGroup;
-			children = (
-				C30DBA5E165573F7002B678E /* 01package-contents.xml */,
-				C30DBA5F165573F7002B678E /* 01package.xml */,
-				C30DBA60165573F7002B678E /* index.xml */,
-			);
-			path = Cameo.pmdoc;
-			sourceTree = "<group>";
-		};
 		C30DBA61165573F7002B678E /* scripts */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,7 +289,6 @@
 			children = (
 				C30DBA52165573F7002B678E /* bundles */,
 				C30DBA54165573F7002B678E /* classes */,
-				C30DBA5C165573F7002B678E /* package */,
 				C30DBA61165573F7002B678E /* scripts */,
 				C30DBA6C165573F7002B678E /* static */,
 				C30DBA6F165573F7002B678E /* support */,
