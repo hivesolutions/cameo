@@ -47,7 +47,7 @@
     return self;
 }
 
-- (id)initWithUrlString:(NSString *)urlString callback:(JsonBlock) callback {
+- (id)initWithUrlString:(NSString *)urlString callback:(JsonBlock)callback {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
@@ -61,8 +61,20 @@
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
+        self.method = @"GET";
         self.parameters = parameters;
         self.callback = nil;
+    }
+    return self;
+}
+
+- (id)initWithUrlString:(NSString *)urlString method:(NSString *)method parameters:(NSArray *)parameters callback:(JsonBlock) callback {
+    self = [super init];
+    if(self) {
+        self.url = [NSURL URLWithString:urlString];
+        self.method = method;
+        self.parameters = parameters;
+        self.callback = callback;
     }
     return self;
 }
