@@ -19,6 +19,8 @@
 		C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */ = {isa = PBXBuildFile; fileRef = C2432B671B04CE0E002876D0 /* HMBlend.h */; };
 		C2A2C088187F30BD009A052B /* HMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2C086187F30BD009A052B /* HMLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A2C089187F30BD009A052B /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
+		C2C46B041B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */; };
+		C2C46B051B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */; };
 		C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
 		C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4200A1652CBB400005DC5 /* libcameo.a */; };
 		C2E4A7761B06095200603947 /* HMStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B9D321B0604A30072529A /* HMStringTest.m */; };
@@ -92,6 +94,8 @@
 		C25B9D381B0605F20072529A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C2A2C086187F30BD009A052B /* HMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLog.h; sourceTree = "<group>"; };
 		C2A2C087187F30BD009A052B /* HMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLog.m; sourceTree = "<group>"; };
+		C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HMImageViewUtil.h"; sourceTree = "<group>"; };
+		C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HMImageViewUtil.m"; sourceTree = "<group>"; };
 		C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HMImageUtil.m"; sourceTree = "<group>"; };
 		C2E1FA8C183A801C00F43959 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		C2E4A7671B06094500603947 /* cameo_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameo_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +216,8 @@
 				C30DBA57165573F7002B678E /* HMVersion.h */,
 				C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */,
 				C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */,
+				C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */,
+				C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */,
 				C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */,
 				C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */,
 			);
@@ -316,6 +322,7 @@
 				C2076A041B063DE3005B5FE4 /* HMCallbackDelegate.h in Headers */,
 				C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */,
 				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
+				C2C46B041B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h in Headers */,
 				C2A2C088187F30BD009A052B /* HMLog.h in Headers */,
 				C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */,
 				C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */,
@@ -439,6 +446,7 @@
 			files = (
 				C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */,
 				C2076A011B062500005B5FE4 /* HMProxy.m in Sources */,
+				C2C46B051B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m in Sources */,
 				C2A2C089187F30BD009A052B /* HMLog.m in Sources */,
 				C21BA6FF18801B82000ED62E /* HMString.m in Sources */,
 				C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */,

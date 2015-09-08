@@ -38,4 +38,5 @@
 #import "HMString.h"
 #import "HMVersion.h"
 #import "UIImage+HMImageUtil.h"
+#import "UIImageView+HMImageViewUtil.h"
 #import "UIViewController+HMControllerUtil.h"
