@@ -27,6 +27,7 @@
 
 #import "ImageViewController.h"
 #import "BlendViewController.h"
+#import "RequestViewController.h"
 
 @interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {
 }

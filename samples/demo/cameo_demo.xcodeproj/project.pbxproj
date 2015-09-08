@@ -17,6 +17,8 @@
 		C2432B7C1B04F8A5002876D0 /* shoe-front.png in Resources */ = {isa = PBXBuildFile; fileRef = C2432B781B04F8A5002876D0 /* shoe-front.png */; };
 		C2432B7D1B04F8A5002876D0 /* shoe-shoelace.png in Resources */ = {isa = PBXBuildFile; fileRef = C2432B791B04F8A5002876D0 /* shoe-shoelace.png */; };
 		C2432B7E1B04F8A5002876D0 /* shoe-sole.png in Resources */ = {isa = PBXBuildFile; fileRef = C2432B7A1B04F8A5002876D0 /* shoe-sole.png */; };
+		C25E96021B9F450C00A8E99C /* RequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25E96011B9F450C00A8E99C /* RequestViewController.xib */; };
+		C25E96051B9F458800A8E99C /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25E96041B9F458800A8E99C /* RequestViewController.m */; };
 		C2E1FA9B183A80DF00F43959 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */; };
 		C2E1FA9C183A80DF00F43959 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */; };
 		C2E1FA9D183A80DF00F43959 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */; };
@@ -68,6 +70,9 @@
 		C2432B781B04F8A5002876D0 /* shoe-front.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shoe-front.png"; path = "images/shoe-front.png"; sourceTree = "<group>"; };
 		C2432B791B04F8A5002876D0 /* shoe-shoelace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shoe-shoelace.png"; path = "images/shoe-shoelace.png"; sourceTree = "<group>"; };
 		C2432B7A1B04F8A5002876D0 /* shoe-sole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "shoe-sole.png"; path = "images/shoe-sole.png"; sourceTree = "<group>"; };
+		C25E96011B9F450C00A8E99C /* RequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestViewController.xib; sourceTree = "<group>"; };
+		C25E96031B9F458800A8E99C /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
+		C25E96041B9F458800A8E99C /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
 		C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
@@ -222,6 +227,8 @@
 				C2432B6F1B04EB24002876D0 /* ListViewController.h */,
 				C2432B701B04EB24002876D0 /* ListViewController.m */,
 				C3715E38165BE4D5006BB277 /* main.m */,
+				C25E96031B9F458800A8E99C /* RequestViewController.h */,
+				C25E96041B9F458800A8E99C /* RequestViewController.m */,
 			);
 			name = classes;
 			path = src/classes;
@@ -273,6 +280,7 @@
 				C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */,
 				C2432B6D1B04D967002876D0 /* ListViewController.xib */,
 				C2432B751B04F70D002876D0 /* BlendViewController.xib */,
+				C25E96011B9F450C00A8E99C /* RequestViewController.xib */,
 			);
 			name = views;
 			path = src/views;
@@ -346,6 +354,7 @@
 				C2E1FAA0183A80DF00F43959 /* AppIcon50x50@2x.png in Resources */,
 				C2E1FAA1183A80DF00F43959 /* AppIcon57x57.png in Resources */,
 				C2432B7B1B04F8A5002876D0 /* shoe-back.png in Resources */,
+				C25E96021B9F450C00A8E99C /* RequestViewController.xib in Resources */,
 				C2E1FAA4183A80DF00F43959 /* AppIcon60x60@2x.png in Resources */,
 				C3391584165E641E00DB2413 /* logo.png in Resources */,
 				C2E1FA9D183A80DF00F43959 /* AppIcon40x40.png in Resources */,
@@ -378,6 +387,7 @@
 			files = (
 				C3715E43165BE4D5006BB277 /* AppDelegate.m in Sources */,
 				C2432B741B04F3D0002876D0 /* BlendViewController.m in Sources */,
+				C25E96051B9F458800A8E99C /* RequestViewController.m in Sources */,
 				C3715E44165BE4D5006BB277 /* main.m in Sources */,
 				C2432B711B04EB24002876D0 /* ListViewController.m in Sources */,
 				C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */,

@@ -39,6 +39,10 @@
             @{
                 @"name" : @"Blend",
                 @"view" : [BlendViewController class],
+            },
+            @{
+                @"name" : @"Request",
+                @"view" : [RequestViewController class],
             }
         ];
     }
