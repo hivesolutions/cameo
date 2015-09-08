@@ -92,7 +92,7 @@
     // creates a request using the current url and then uses it
     // to create the connection to be used setting the current instace
     // as the delegate object for it, note that the request's method
-    // is changed according to the defined in the json request
+    // is changed according to the defined in the request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = self.method;
     self.connection = [[NSURLConnection alloc] initWithRequest:request
@@ -241,12 +241,12 @@
     // it must be called with the recieved and processed data
     if(self.callback) { self.callback(data, nil); }
 
-    // notifies the delegate about the receival of the json
+    // notifies the delegate about the receival of the
     // value from the remote connection
-    if(self.delegate) { [self.delegate didReceiveJson:data]; }
+    if(self.delegate) { [self.delegate didReceiveData:data]; }
 }
 
-+ (HMRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(RequestBlock) callback {
++ (HMRequest *)requestWithUrlString:(NSString *)urlString callback:(RequestBlock) callback {
     HMRequest *request = [[HMRequest alloc] initWithUrlString:urlString callback:callback];
     [request load];
     return request;

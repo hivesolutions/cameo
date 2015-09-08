@@ -26,7 +26,7 @@
 #import "Dependencies.h"
 
 #import "HMRequest.h"
-#import "HMJsonRequestDelegate.h"
+#import "HMRequestDelegate.h"
 #import "HMProxyRequestDelegate.h"
 #import "HMLoginView.h"
 #import "HMLoginViewController.h"
@@ -34,7 +34,7 @@
 /**
  Responsible for the coordination of the remote calls with the proper visual changes (loading mask settings).
  */
-@interface HMProxyRequest : NSObject<HMJsonRequestDelegate> {
+@interface HMProxyRequest : NSObject<HMRequestDelegate> {
 }
 
 @property (nonatomic, weak) NSObject<HMProxyRequestDelegate> *delegate;

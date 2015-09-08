@@ -25,7 +25,7 @@
 
 #import "Dependencies.h"
 
-@protocol HMJsonRequestDelegate<NSObject>
+@protocol HMRequestDelegate<NSObject>
 
 @optional
 
@@ -34,7 +34,7 @@
 
 @required
 
-- (void)didReceiveJson:(NSDictionary *)data;
+- (void)didReceiveData:(id)data;
 - (void)didReceiveError:(NSError *)error;
 
 @end

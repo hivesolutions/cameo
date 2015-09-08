@@ -231,7 +231,7 @@ static UIImage *_logo = nil;
     }
 }
 
-- (void)didReceiveJson:(NSDictionary *)data {
+- (void)didReceiveData:(NSDictionary *)data {
     NSDictionary *exception = [data valueForKey:@"exception"];
     if(exception && self.useSession == YES) { [self showLogin]; return; }
 

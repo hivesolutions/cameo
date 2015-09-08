@@ -26,7 +26,7 @@
 #import "Dependencies.h"
 
 #import "HMString.h"
-#import "HMJsonRequestDelegate.h"
+#import "HMRequestDelegate.h"
 
 typedef void (^RequestBlock)(id, NSError *);
 
@@ -65,7 +65,7 @@ typedef void (^RequestBlock)(id, NSError *);
 
  In case this value is set notifications will be sent for both errors and data receivals.
  */
-@property (nonatomic, weak) NSObject<HMJsonRequestDelegate> *delegate;
+@property (nonatomic, weak) NSObject<HMRequestDelegate> *delegate;
 
 /**
 The callback block that is going to be called for both the success and error situations, note that even if this callback is defined the delegate will be called the same way.
@@ -90,6 +90,6 @@ The callback block that is going to be called for both the success and error sit
  @param callback The block to be called for the various state changes (including completion).
  @return The request object that was created for the handling of this call.
  */
-+ (HMRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(RequestBlock) callback;
++ (HMRequest *)requestWithUrlString:(NSString *)urlString callback:(RequestBlock) callback;
 
 @end
