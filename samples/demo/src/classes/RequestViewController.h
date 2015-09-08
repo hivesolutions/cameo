@@ -28,6 +28,6 @@
 @interface RequestViewController : UIViewController {
 }
 
-@property (nonatomic) IBOutlet UITextField *textField;
+@property (nonatomic) IBOutlet UITextView *textView;
 
 @end

@@ -49,7 +49,7 @@
 }
 
 - (void)updateRequest {
-    HMProxy *proxy = [HMProxy init];
+    HMProxy *proxy = [[HMProxy alloc] init];
     [proxy get:@"http://httpbin.org/ip" callback:^(NSDictionary *result, NSError *error) {
         NSLog(@"JSON: %@", result);
     }];
