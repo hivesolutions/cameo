@@ -28,6 +28,7 @@
 @interface RequestViewController : UIViewController {
 }
 
+@property (nonatomic) HMProxy *proxy;
 @property (nonatomic) IBOutlet UITextView *textView;
 
 @end

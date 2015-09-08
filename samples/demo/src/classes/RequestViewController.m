@@ -49,9 +49,10 @@
 }
 
 - (void)updateRequest {
-    HMProxy *proxy = [[HMProxy alloc] init];
-    [proxy get:@"http://httpbin.org/ip" callback:^(NSDictionary *result, NSError *error) {
-        NSLog(@"JSON: %@", result);
+    self.proxy = [[HMProxy alloc] init];
+    [self.proxy get:@"http://httpbin.org/ip" callback:^(NSDictionary *result, NSError *error) {
+        NSString *label = [NSString stringWithFormat:@"%@", result];
+        self.textView.text = label;
     }];
 }
 
