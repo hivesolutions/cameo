@@ -27,8 +27,10 @@
 
 @implementation UIImageView(HMImageViewUtil)
 
-- (void)setImageWithURL:(NSURL *)url {
-    
+- (void)setImageWithURL:(NSURL *)url proxy:(HMProxy *)proxy {
+    [proxy get:url.absoluteString callback:^(NSDictionary *result, NSError *error) {
+        NSLog(@"result %@", result);
+    }];
 }
 
 @end
