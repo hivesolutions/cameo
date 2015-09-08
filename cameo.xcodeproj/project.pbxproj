@@ -34,8 +34,8 @@
 		C37910A01655417B005D3B7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D41131655411A003AA670 /* CoreGraphics.framework */; };
 		C37910A21655417F005D3B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A11655417F005D3B7B /* Foundation.framework */; };
 		C37910A416554184005D3B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A316554184005D3B7B /* UIKit.framework */; };
-		C3ED1C25165BEFD500D81B85 /* HMJsonRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */; };
+		C3ED1C25165BEFD500D81B85 /* HMRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1D165BEFD500D81B85 /* HMRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C26165BEFD500D81B85 /* HMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C1E165BEFD500D81B85 /* HMRequest.m */; };
 		C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */; };
@@ -120,8 +120,8 @@
 		C37910A316554184005D3B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C39CF94C165BEA7400AA687F /* cameo_demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cameo_demo.xcodeproj; path = samples/demo/cameo_demo.xcodeproj; sourceTree = SOURCE_ROOT; };
 		C3B4200A1652CBB400005DC5 /* libcameo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcameo.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJsonRequest.h; sourceTree = "<group>"; };
-		C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMJsonRequest.m; sourceTree = "<group>"; };
+		C3ED1C1D165BEFD500D81B85 /* HMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMRequest.h; sourceTree = "<group>"; };
+		C3ED1C1E165BEFD500D81B85 /* HMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMRequest.m; sourceTree = "<group>"; };
 		C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJsonRequestDelegate.h; sourceTree = "<group>"; };
 		C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLoginViewController.h; sourceTree = "<group>"; };
 		C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLoginViewController.m; sourceTree = "<group>"; };
@@ -195,8 +195,8 @@
 				C2076A031B063DE3005B5FE4 /* HMCallbackDelegate.h */,
 				C2076A051B063DF4005B5FE4 /* HMCallbackDelegate.m */,
 				C2076A071B0652D9005B5FE4 /* HMCleanup.h */,
-				C3ED1C1D165BEFD500D81B85 /* HMJsonRequest.h */,
-				C3ED1C1E165BEFD500D81B85 /* HMJsonRequest.m */,
+				C3ED1C1D165BEFD500D81B85 /* HMRequest.h */,
+				C3ED1C1E165BEFD500D81B85 /* HMRequest.m */,
 				C3ED1C1F165BEFD500D81B85 /* HMJsonRequestDelegate.h */,
 				C2A2C086187F30BD009A052B /* HMLog.h */,
 				C2A2C087187F30BD009A052B /* HMLog.m */,
@@ -318,7 +318,7 @@
 				C30DBA73165573F7002B678E /* HMVersion.h in Headers */,
 				C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */,
 				C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */,
-				C3ED1C25165BEFD500D81B85 /* HMJsonRequest.h in Headers */,
+				C3ED1C25165BEFD500D81B85 /* HMRequest.h in Headers */,
 				C2076A041B063DE3005B5FE4 /* HMCallbackDelegate.h in Headers */,
 				C3ED1C27165BEFD500D81B85 /* HMJsonRequestDelegate.h in Headers */,
 				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
@@ -379,6 +379,7 @@
 		C3B420011652CBB400005DC5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0640;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Hive Solutions";
 				TargetAttributes = {
@@ -450,7 +451,7 @@
 				C2A2C089187F30BD009A052B /* HMLog.m in Sources */,
 				C21BA6FF18801B82000ED62E /* HMString.m in Sources */,
 				C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */,
-				C3ED1C26165BEFD500D81B85 /* HMJsonRequest.m in Sources */,
+				C3ED1C26165BEFD500D81B85 /* HMRequest.m in Sources */,
 				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
 				C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */,
 				C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */,

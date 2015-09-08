@@ -49,11 +49,11 @@
     return self;
 }
 
-- (HMProxyRequest *)get:(NSString *)url callback:(JsonBlock)callback {
+- (HMProxyRequest *)get:(NSString *)url callback:(RequestBlock)callback {
     return [self get:url parameters:nil callback:callback];
 }
 
-- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(JsonBlock)callback {
+- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"GET"
                           url:url
@@ -61,14 +61,14 @@
                    parameters:parameters
                      callback:callback];}
 
-- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(JsonBlock)callback {
+- (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback {
     return [self post:url data:data parameters:nil callback:callback];
 }
 
 - (HMProxyRequest *)post:(NSString *)url
                     data:(NSData *)data
               parameters:(NSDictionary *)parameters
-                callback:(JsonBlock)callback {
+                callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"POST"
                           url:url
@@ -77,14 +77,14 @@
                      callback:callback];
 }
 
-- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data callback:(JsonBlock)callback {
+- (HMProxyRequest *)put:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback {
     return [self put:url data:data parameters:nil callback:callback];
 }
 
 - (HMProxyRequest *)put:(NSString *)url
                    data:(NSData *)data
              parameters:(NSDictionary *)parameters
-               callback:(JsonBlock)callback {
+               callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"PUT"
                           url:url
@@ -93,11 +93,11 @@
                      callback:callback];
 }
 
-- (HMProxyRequest *)_delete:(NSString *)url callback:(JsonBlock)callback {
+- (HMProxyRequest *)_delete:(NSString *)url callback:(RequestBlock)callback {
     return [self _delete:url parameters:nil callback:callback];
 }
 
-- (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters callback:(JsonBlock)callback {
+- (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"DELETE"
                           url:url
@@ -117,7 +117,7 @@
                              url:(NSString *)url
                             data:(NSData *)data
                       parameters:(NSDictionary *)parameters
-                        callback:(JsonBlock)callback {
+                        callback:(RequestBlock)callback {
     HMCallbackDelegate *delegate =[[HMCallbackDelegate alloc] initWithCallback:callback
                                                                          owner:self];
     HMProxyRequest *request = [[HMProxyRequest alloc] init];

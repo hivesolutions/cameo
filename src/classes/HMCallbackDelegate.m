@@ -27,7 +27,7 @@
 
 @implementation HMCallbackDelegate
 
-- (id)initWithCallback:(JsonBlock)callback {
+- (id)initWithCallback:(RequestBlock)callback {
     self = [super init];
     if(self) {
         _callback = callback;
@@ -35,7 +35,7 @@
     return self;
 }
 
-- (id)initWithCallback:(JsonBlock)callback owner:(NSObject<HMCleanup> *)owner {
+- (id)initWithCallback:(RequestBlock)callback owner:(NSObject<HMCleanup> *)owner {
     self = [super init];
     if(self) {
         _callback = callback;

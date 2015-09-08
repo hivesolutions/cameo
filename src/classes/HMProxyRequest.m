@@ -85,14 +85,14 @@ static UIImage *_logo = nil;
         [parameters addObject:[NSArray arrayWithObjects:@"session_id", sessionId, nil]];
     }
 
-    // creates a json request object and sets the currently created
+    // creates a request object and sets the currently created
     // parameters structure in it together with the setting of the
     // delegate reference and then triggers the loading of it
-    self.jsonRequest = [[HMJsonRequest alloc] initWithUrlString:urlString];
-    self.jsonRequest.method = self.method;
-    self.jsonRequest.parameters = parameters;
-    self.jsonRequest.delegate = self;
-    [self.jsonRequest load];
+    self.request = [[HMRequest alloc] initWithUrlString:urlString];
+    self.request.method = self.method;
+    self.request.parameters = parameters;
+    self.request.delegate = self;
+    [self.request load];
 }
 
 - (void)showLogin {

@@ -26,17 +26,17 @@
 #include "Dependencies.h"
 
 #include "HMCleanup.h"
-#include "HMJsonRequest.h"
+#include "HMRequest.h"
 #include "HMProxyRequestDelegate.h"
 
 @interface HMCallbackDelegate : NSObject<HMProxyRequestDelegate> {
 @private
-    JsonBlock _callback;
+    RequestBlock _callback;
 }
 
 @property (nonatomic, weak) NSObject<HMCleanup> *owner;
 
-- (id)initWithCallback:(JsonBlock)callback;
-- (id)initWithCallback:(JsonBlock)callback owner:(NSObject<HMCleanup> *)owner;
+- (id)initWithCallback:(RequestBlock)callback;
+- (id)initWithCallback:(RequestBlock)callback owner:(NSObject<HMCleanup> *)owner;
 
 @end

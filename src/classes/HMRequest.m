@@ -23,9 +23,9 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HMJsonRequest.h"
+#import "HMRequest.h"
 
-@implementation HMJsonRequest
+@implementation HMRequest
 
 - (id)initWithUrl:(NSURL *)url {
     self = [super init];
@@ -47,7 +47,7 @@
     return self;
 }
 
-- (id)initWithUrlString:(NSString *)urlString callback:(JsonBlock)callback {
+- (id)initWithUrlString:(NSString *)urlString callback:(RequestBlock)callback {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
@@ -68,7 +68,7 @@
     return self;
 }
 
-- (id)initWithUrlString:(NSString *)urlString method:(NSString *)method parameters:(NSArray *)parameters callback:(JsonBlock)callback {
+- (id)initWithUrlString:(NSString *)urlString method:(NSString *)method parameters:(NSArray *)parameters callback:(RequestBlock)callback {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
@@ -246,8 +246,8 @@
     if(self.delegate) { [self.delegate didReceiveJson:data]; }
 }
 
-+ (HMJsonRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback {
-    HMJsonRequest *request = [[HMJsonRequest alloc] initWithUrlString:urlString callback:callback];
++ (HMRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(RequestBlock) callback {
+    HMRequest *request = [[HMRequest alloc] initWithUrlString:urlString callback:callback];
     [request load];
     return request;
 }

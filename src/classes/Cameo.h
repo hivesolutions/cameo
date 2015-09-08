@@ -26,7 +26,7 @@
 #import "HMBlend.h"
 #import "HMCallbackDelegate.h"
 #import "HMCleanup.h"
-#import "HMJsonRequest.h"
+#import "HMRequest.h"
 #import "HMJsonRequestDelegate.h"
 #import "HMLog.h"
 #import "HMLoginView.h"

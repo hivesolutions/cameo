@@ -28,9 +28,9 @@
 #import "HMString.h"
 #import "HMJsonRequestDelegate.h"
 
-typedef void (^JsonBlock)(NSDictionary *, NSError *);
+typedef void (^RequestBlock)(id, NSError *);
 
-@interface HMJsonRequest : NSObject {
+@interface HMRequest : NSObject {
 }
 
 /**
@@ -70,13 +70,13 @@ typedef void (^JsonBlock)(NSDictionary *, NSError *);
 /**
 The callback block that is going to be called for both the success and error situations, note that even if this callback is defined the delegate will be called the same way.
  */
-@property (readwrite, copy) JsonBlock callback;
+@property (readwrite, copy) RequestBlock callback;
 
 - (id)initWithUrl:(NSURL *)url;
 - (id)initWithUrlString:(NSString *)urlString;
-- (id)initWithUrlString:(NSString *)urlString callback:(JsonBlock)callback;
+- (id)initWithUrlString:(NSString *)urlString callback:(RequestBlock)callback;
 - (id)initWithUrlString:(NSString *)urlString parameters:(NSArray *)parameters;
-- (id)initWithUrlString:(NSString *)urlString method:(NSString *)method parameters:(NSArray *)parameters callback:(JsonBlock)callback;
+- (id)initWithUrlString:(NSString *)urlString method:(NSString *)method parameters:(NSArray *)parameters callback:(RequestBlock)callback;
 
 /**
  Starts the loading process fot the json request from this moment on some network activity may be created and the proper/associated delegate will be called for each of the state changes (as expected).
@@ -90,6 +90,6 @@ The callback block that is going to be called for both the success and error sit
  @param callback The block to be called for the various state changes (including completion).
  @return The request object that was created for the handling of this call.
  */
-+ (HMJsonRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(JsonBlock) callback;
++ (HMRequest *)jsonRequestWithUrlString:(NSString *)urlString callback:(RequestBlock) callback;
 
 @end

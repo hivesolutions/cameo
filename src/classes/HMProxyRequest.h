@@ -25,7 +25,7 @@
 
 #import "Dependencies.h"
 
-#import "HMJsonRequest.h"
+#import "HMRequest.h"
 #import "HMJsonRequestDelegate.h"
 #import "HMProxyRequestDelegate.h"
 #import "HMLoginView.h"
@@ -46,7 +46,7 @@
 @property (nonatomic) NSArray *parameters;
 @property (nonatomic) UIView *mask;
 @property (nonatomic) UIActivityIndicatorView *maskIndicator;
-@property (nonatomic) HMJsonRequest *jsonRequest;
+@property (nonatomic) HMRequest *request;
 @property (nonatomic) NSString *loginPath;
 @property (nonatomic) bool loading;
 @property (nonatomic) bool useSession;
