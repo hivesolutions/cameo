@@ -68,7 +68,7 @@
     return self;
 }
 
-- (id)initWithUrlString:(NSString *)urlString method:(NSString *)method parameters:(NSArray *)parameters callback:(JsonBlock) callback {
+- (id)initWithUrlString:(NSString *)urlString method:(NSString *)method parameters:(NSArray *)parameters callback:(JsonBlock)callback {
     self = [super init];
     if(self) {
         self.url = [NSURL URLWithString:urlString];
