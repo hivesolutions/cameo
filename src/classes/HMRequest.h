@@ -26,6 +26,8 @@
 #import "Dependencies.h"
 
 #import "HMString.h"
+#import "HMSerializer.h"
+#import "HMJSONSerializer.h"
 #import "HMRequestDelegate.h"
 
 typedef void (^RequestBlock)(id, NSError *);
@@ -59,6 +61,11 @@ typedef void (^RequestBlock)(id, NSError *);
  The buffer to be used to store the received data while the data transfer is not complete.
  */
 @property (nonatomic) NSMutableData *receivedData;
+
+/**
+ The serializer class that is going to be used at runtime for the request.
+ */
+@property (nonatomic) Class serializer;
 
 /**
  The delegate object that will be notified about the changes in the connection from a json point of view.

@@ -27,6 +27,15 @@
 
 @implementation HMJSONSerializer
 
++ (NSData *)dumps:(id)object error:(NSError *)error{
+    return nil;
+}
 
++ (id)loads:(NSData *)data error:(NSError *)error{
+    id object = [NSJSONSerialization JSONObjectWithData:data
+                                                options:kNilOptions
+                                                  error:&error];
+    return object;
+}
 
 @end

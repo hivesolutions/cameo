@@ -43,6 +43,7 @@
         self.url = [NSURL URLWithString:urlString];
         self.method = @"GET";
         self.callback = nil;
+        self.serializer = HMJSONSerializer.class;
     }
     return self;
 }
@@ -53,6 +54,7 @@
         self.url = [NSURL URLWithString:urlString];
         self.method = @"GET";
         self.callback = callback;
+        self.serializer = HMJSONSerializer.class;
     }
     return self;
 }
@@ -64,6 +66,7 @@
         self.method = @"GET";
         self.parameters = parameters;
         self.callback = nil;
+        self.serializer = HMJSONSerializer.class;
     }
     return self;
 }
@@ -75,6 +78,7 @@
         self.method = method;
         self.parameters = parameters;
         self.callback = callback;
+        self.serializer = HMJSONSerializer.class;
     }
     return self;
 }
@@ -223,9 +227,7 @@
     // allocates space for the variable that will hold
     // the error structure for error in json deserialization
     NSError *error = nil;
-    NSDictionary *data = [NSJSONSerialization JSONObjectWithData:self.receivedData
-                                                         options:kNilOptions
-                                                           error:&error];
+    NSDictionary *data = [self.serializer loads:self.receivedData error:error];
 
     // in case there was an error handling the json must
     // handle it in the correct manner

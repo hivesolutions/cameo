@@ -29,7 +29,7 @@
 
 @required
 
-- (NSData *)dumps:(id)object;
-- (id)loads:(NSData *)data;
++ (NSData *)dumps:(id)object error:(NSError *)error;
++ (id)loads:(NSData *)data error:(NSError *)error;
 
 @end
