@@ -23,9 +23,9 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HMJSONSerializer.h"
+#import "HMDataSerializer.h"
 
-@implementation HMJSONSerializer
+@implementation HMDataSerializer
 
 + (NSData *)dumps:(id)object error:(NSError *)error{
     return nil;
