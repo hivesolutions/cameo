@@ -34,7 +34,7 @@ static UIImage *_logo = nil;
     if(self) {
         self.loading = NO;
         self.useSession = YES;
-        
+
         self.controller = nil;
         self.path = nil;
         self.method = @"GET";
