@@ -29,6 +29,21 @@
 
 static UIImage *_logo = nil;
 
+- (id)init {
+    self = [super init];
+    if(self) {
+        self.loading = NO;
+        self.useSession = YES;
+        
+        self.controller = nil;
+        self.path = nil;
+        self.method = @"GET";
+        self.loginPath = @"login.json";
+        self.serializer = HMJSONSerializer.class;
+    }
+    return self;
+}
+
 - (id)initWithPath:(UIViewController *)controller path:(NSString *)path {
     self = [super init];
     if(self) {
@@ -39,6 +54,7 @@ static UIImage *_logo = nil;
         self.path = path;
         self.method = @"GET";
         self.loginPath = @"login.json";
+        self.serializer = HMJSONSerializer.class;
     }
     return self;
 }
@@ -53,6 +69,7 @@ static UIImage *_logo = nil;
         self.path = path;
         self.method = @"GET";
         self.loginPath = loginPath;
+        self.serializer = HMJSONSerializer.class;
     }
     return self;
 }
@@ -91,6 +108,7 @@ static UIImage *_logo = nil;
     self.request = [[HMRequest alloc] initWithUrlString:urlString];
     self.request.method = self.method;
     self.request.parameters = parameters;
+    self.request.serializer = self.serializer;
     self.request.delegate = self;
     [self.request load];
 }

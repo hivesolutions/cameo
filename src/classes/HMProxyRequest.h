@@ -26,10 +26,11 @@
 #import "Dependencies.h"
 
 #import "HMRequest.h"
-#import "HMRequestDelegate.h"
-#import "HMProxyRequestDelegate.h"
 #import "HMLoginView.h"
+#import "HMJSONSerializer.h"
+#import "HMRequestDelegate.h"
 #import "HMLoginViewController.h"
+#import "HMProxyRequestDelegate.h"
 
 /**
  Responsible for the coordination of the remote calls with the proper visual changes (loading mask settings).
@@ -44,6 +45,7 @@
 @property (nonatomic) NSString *path;
 @property (nonatomic) NSString *method;
 @property (nonatomic) NSArray *parameters;
+@property (nonatomic) Class serializer;
 @property (nonatomic) UIView *mask;
 @property (nonatomic) UIActivityIndicatorView *maskIndicator;
 @property (nonatomic) HMRequest *request;

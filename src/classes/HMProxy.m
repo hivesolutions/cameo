@@ -55,10 +55,18 @@
 
 - (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
+    return [self get:url
+          parameters:parameters
+          useSession:NO
+            callback:callback];}
+
+- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters useSession:(BOOL)useSession callback:(RequestBlock)callback {
+    url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"GET"
                           url:url
                          data:nil
                    parameters:parameters
+                   useSession:useSession
                      callback:callback];}
 
 - (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback {
@@ -74,6 +82,7 @@
                           url:url
                          data:data
                    parameters:parameters
+                   useSession:NO
                      callback:callback];
 }
 
@@ -90,6 +99,7 @@
                           url:url
                          data:data
                    parameters:parameters
+                   useSession:NO
                      callback:callback];
 }
 
@@ -103,6 +113,7 @@
                           url:url
                          data:nil
                    parameters:parameters
+                   useSession:NO
                      callback:callback];
 }
 
@@ -117,6 +128,7 @@
                              url:(NSString *)url
                             data:(NSData *)data
                       parameters:(NSDictionary *)parameters
+                      useSession:(BOOL)useSession
                         callback:(RequestBlock)callback {
     HMCallbackDelegate *delegate =[[HMCallbackDelegate alloc] initWithCallback:callback
                                                                          owner:self];
@@ -126,6 +138,7 @@
     request.path = url;
     request.method = method;
     request.parameters = [self toParametersArray:parameters];
+    request.useSession = useSession;
     request.delegate = delegate;
     [self.requests addObject:request];
     [self.delegates addObject:delegate];
