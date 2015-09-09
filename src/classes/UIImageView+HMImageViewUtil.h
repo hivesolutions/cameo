@@ -26,10 +26,12 @@
 #include "Dependencies.h"
 
 #import "HMProxy.h"
+#import "HMDataSerializer.h"
 
 @interface UIImageView(HMImageViewUtil) {
 }
 
 - (void)setImageWithURL:(NSURL *)url proxy:(HMProxy *)proxy;
+- (void)setImageWithURLString:(NSString *)url proxy:(HMProxy *)proxy;
 
 @end

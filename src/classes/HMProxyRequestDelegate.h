@@ -34,7 +34,7 @@
 
 @required
 
-- (void)didReceiveData:(NSDictionary *)data;
+- (void)didReceiveData:(id)data;
 - (void)didReceiveError:(NSError *)error;
 
 @end

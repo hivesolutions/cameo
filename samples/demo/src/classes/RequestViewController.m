@@ -54,6 +54,7 @@
         NSString *label = [NSString stringWithFormat:@"%@", result];
         self.textView.text = label;
     }];
+    [self.imageView setImageWithURLString:@"http://httpbin.org/image/png" proxy:self.proxy];
 }
 
 @end

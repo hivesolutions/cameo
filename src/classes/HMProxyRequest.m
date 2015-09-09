@@ -249,8 +249,10 @@ static UIImage *_logo = nil;
     }
 }
 
-- (void)didReceiveData:(NSDictionary *)data {
-    NSDictionary *exception = [data valueForKey:@"exception"];
+- (void)didReceiveData:(id)data {
+    NSDictionary *exception = nil;
+    BOOL isDictionary = [data isKindOfClass:NSDictionary.class];
+    if(isDictionary) { exception = [data valueForKey:@"exception"]; }
     if(exception && self.useSession == YES) { [self showLogin]; return; }
 
     if(self.delegate) { [self.delegate didReceiveData:data]; }

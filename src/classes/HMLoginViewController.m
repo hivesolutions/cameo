@@ -135,7 +135,7 @@
 - (void)didReceive {
 }
 
-- (void)didReceiveData:(NSDictionary *)data {
+- (void)didReceiveData:(id)data {
     // checks if the current data contains an exception value and
     // in such case handles it and returns immediately
     NSDictionary *exception = [data valueForKey:@"exception"];

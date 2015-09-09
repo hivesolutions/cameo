@@ -227,7 +227,7 @@
     // allocates space for the variable that will hold
     // the error structure for error in load string process
     NSError *error = nil;
-    NSDictionary *data = [self.serializer loads:self.receivedData error:error];
+    id data = [self.serializer loads:self.receivedData error:error];
 
     // in case there was an error handling the data must
     // handle it in the correct manner

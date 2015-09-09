@@ -44,7 +44,7 @@
     return self;
 }
 
-- (void)didReceiveData:(NSDictionary *)data {
+- (void)didReceiveData:(id)data {
     if(_callback) { _callback(data, nil); }
     if(self.owner) { [self.owner cleanup:self]; }
 }
