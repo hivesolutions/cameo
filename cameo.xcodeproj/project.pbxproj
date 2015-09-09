@@ -20,6 +20,8 @@
 		C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D21B9F5E4B0032C4BE /* HMSerializer.h */; };
 		C29819D61B9F5ECB0032C4BE /* HMJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */; };
 		C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */; };
+		C29819DA1BA0B9A00032C4BE /* HMDataSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D81BA0B9A00032C4BE /* HMDataSerializer.h */; };
+		C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */; };
 		C2A2C088187F30BD009A052B /* HMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2C086187F30BD009A052B /* HMLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A2C089187F30BD009A052B /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
 		C2C46B041B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */; };
@@ -98,6 +100,8 @@
 		C29819D21B9F5E4B0032C4BE /* HMSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSerializer.h; sourceTree = "<group>"; };
 		C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJSONSerializer.h; sourceTree = "<group>"; };
 		C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMJSONSerializer.m; sourceTree = "<group>"; };
+		C29819D81BA0B9A00032C4BE /* HMDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDataSerializer.h; sourceTree = "<group>"; };
+		C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDataSerializer.m; sourceTree = "<group>"; };
 		C2A2C086187F30BD009A052B /* HMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLog.h; sourceTree = "<group>"; };
 		C2A2C087187F30BD009A052B /* HMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLog.m; sourceTree = "<group>"; };
 		C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HMImageViewUtil.h"; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 				C2076A031B063DE3005B5FE4 /* HMCallbackDelegate.h */,
 				C2076A051B063DF4005B5FE4 /* HMCallbackDelegate.m */,
 				C2076A071B0652D9005B5FE4 /* HMCleanup.h */,
+				C29819D81BA0B9A00032C4BE /* HMDataSerializer.h */,
+				C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */,
 				C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */,
 				C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */,
 				C2A2C086187F30BD009A052B /* HMLog.h */,
@@ -330,6 +336,7 @@
 				C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */,
 				C3ED1C25165BEFD500D81B85 /* HMRequest.h in Headers */,
 				C2076A041B063DE3005B5FE4 /* HMCallbackDelegate.h in Headers */,
+				C29819DA1BA0B9A00032C4BE /* HMDataSerializer.h in Headers */,
 				C3ED1C27165BEFD500D81B85 /* HMRequestDelegate.h in Headers */,
 				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
 				C2C46B041B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h in Headers */,
@@ -465,6 +472,7 @@
 				C3ED1C26165BEFD500D81B85 /* HMRequest.m in Sources */,
 				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
 				C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */,
+				C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */,
 				C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */,
 				C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */,
 				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
