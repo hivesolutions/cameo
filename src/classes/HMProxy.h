@@ -27,6 +27,7 @@
 
 #import "HMCleanup.h"
 #import "HMRequest.h"
+#import "HMSerializer.h"
 #import "HMProxyRequest.h"
 #import "HMCallbackDelegate.h"
 
@@ -41,7 +42,7 @@
 - (id)initWithBaseUrl:(NSString *)baseUrl sessionId:(NSString *)sessionId;
 - (HMProxyRequest *)get:(NSString *)url callback:(RequestBlock)callback;
 - (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(RequestBlock)callback;
-- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters useSession:(BOOL)useSession callback:(RequestBlock)callback;
+- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters useSession:(BOOL)useSession serializer:(Class)serializer callback:(RequestBlock)callback;
 - (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback;
 - (HMProxyRequest *)post:(NSString *)url
                     data:(NSData *)data

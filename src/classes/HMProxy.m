@@ -58,15 +58,17 @@
     return [self get:url
           parameters:parameters
           useSession:NO
+          serializer:HMJSONSerializer.class
             callback:callback];}
 
-- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters useSession:(BOOL)useSession callback:(RequestBlock)callback {
+- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters useSession:(BOOL)useSession serializer:(Class)serializer callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"GET"
                           url:url
                          data:nil
                    parameters:parameters
                    useSession:useSession
+                   serializer:serializer
                      callback:callback];}
 
 - (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback {
@@ -83,6 +85,7 @@
                          data:data
                    parameters:parameters
                    useSession:NO
+                   serializer:HMJSONSerializer.class
                      callback:callback];
 }
 
@@ -100,6 +103,7 @@
                          data:data
                    parameters:parameters
                    useSession:NO
+                   serializer:HMJSONSerializer.class
                      callback:callback];
 }
 
@@ -114,6 +118,7 @@
                          data:nil
                    parameters:parameters
                    useSession:NO
+                   serializer:HMJSONSerializer.class
                      callback:callback];
 }
 
@@ -129,6 +134,7 @@
                             data:(NSData *)data
                       parameters:(NSDictionary *)parameters
                       useSession:(BOOL)useSession
+                      serializer:(Class)serializer
                         callback:(RequestBlock)callback {
     HMCallbackDelegate *delegate =[[HMCallbackDelegate alloc] initWithCallback:callback
                                                                          owner:self];
@@ -139,6 +145,7 @@
     request.method = method;
     request.parameters = [self toParametersArray:parameters];
     request.useSession = useSession;
+    request.serializer = serializer;
     request.delegate = delegate;
     [self.requests addObject:request];
     [self.delegates addObject:delegate];
