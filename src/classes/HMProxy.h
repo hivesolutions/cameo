@@ -76,5 +76,6 @@
                  useSession:(BOOL)useSession
                  serializer:(Class)serializer
                    callback:(RequestBlock)callback;
++ (HMProxy *)singleton;
 
 @end

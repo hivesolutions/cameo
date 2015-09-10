@@ -25,8 +25,6 @@
 
 #import "HMProxy.h"
 
-HMProxy *singletonProxy = nil;
-
 @implementation HMProxy
 
 - (id)init {
@@ -227,8 +225,11 @@ HMProxy *singletonProxy = nil;
 }
 
 + (HMProxy *)singleton {
-    if(singletonProxy != nil) { return singletonProxy; }
-    singletonProxy = [[HMProxy alloc] init];
+    static dispatch_once_t onceToken;
+    static HMProxy *singletonProxy = nil;
+    dispatch_once(&onceToken, ^{
+        singletonProxy = [[HMProxy alloc] init];
+    });
     return singletonProxy;
 }
 
