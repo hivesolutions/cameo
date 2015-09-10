@@ -54,12 +54,12 @@
 }
 
 - (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(RequestBlock)callback {
-    url = [self getAbsoluteUrl:url];
     return [self get:url
           parameters:parameters
           useSession:NO
           serializer:HMJSONSerializer.class
-            callback:callback];}
+            callback:callback];
+}
 
 - (HMProxyRequest *)get:(NSString *)url
              parameters:(NSDictionary *)parameters
@@ -73,7 +73,8 @@
                    parameters:parameters
                    useSession:useSession
                    serializer:serializer
-                     callback:callback];}
+                     callback:callback];
+}
 
 - (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback {
     return [self post:url data:data parameters:nil callback:callback];
@@ -115,13 +116,27 @@
                    data:(NSData *)data
              parameters:(NSDictionary *)parameters
                callback:(RequestBlock)callback {
+    return [self put:url
+                data:data
+          parameters:parameters
+          useSession:NO
+          serializer:HMJSONSerializer.class
+            callback:callback];
+}
+
+- (HMProxyRequest *)put:(NSString *)url
+                   data:(NSData *)data
+             parameters:(NSDictionary *)parameters
+             useSession:(BOOL)useSession
+             serializer:(Class)serializer
+               callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"PUT"
                           url:url
                          data:data
                    parameters:parameters
-                   useSession:NO
-                   serializer:HMJSONSerializer.class
+                   useSession:useSession
+                   serializer:serializer
                      callback:callback];
 }
 
@@ -130,13 +145,25 @@
 }
 
 - (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters callback:(RequestBlock)callback {
+    return [self _delete:url
+             parameters:parameters
+             useSession:NO
+             serializer:HMJSONSerializer.class
+               callback:callback];
+}
+
+- (HMProxyRequest *)_delete:(NSString *)url
+                 parameters:(NSDictionary *)parameters
+                 useSession:(BOOL)useSession
+                 serializer:(Class)serializer
+                   callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"DELETE"
                           url:url
                          data:nil
                    parameters:parameters
-                   useSession:NO
-                   serializer:HMJSONSerializer.class
+                   useSession:useSession
+                   serializer:serializer
                      callback:callback];
 }
 
