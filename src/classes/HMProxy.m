@@ -61,7 +61,11 @@
           serializer:HMJSONSerializer.class
             callback:callback];}
 
-- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters useSession:(BOOL)useSession serializer:(Class)serializer callback:(RequestBlock)callback {
+- (HMProxyRequest *)get:(NSString *)url
+             parameters:(NSDictionary *)parameters
+             useSession:(BOOL)useSession
+             serializer:(Class)serializer
+               callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"GET"
                           url:url
@@ -79,13 +83,27 @@
                     data:(NSData *)data
               parameters:(NSDictionary *)parameters
                 callback:(RequestBlock)callback {
+    return [self post:url
+                 data:data
+           parameters:parameters
+           useSession:NO
+           serializer:HMJSONSerializer.class
+             callback:callback];
+}
+
+- (HMProxyRequest *)post:(NSString *)url
+                    data:(NSData *)data
+              parameters:(NSDictionary *)parameters
+              useSession:(BOOL)useSession
+              serializer:(Class)serializer
+                callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"POST"
                           url:url
                          data:data
                    parameters:parameters
-                   useSession:NO
-                   serializer:HMJSONSerializer.class
+                   useSession:useSession
+                   serializer:serializer
                      callback:callback];
 }
 

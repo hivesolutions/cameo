@@ -42,11 +42,21 @@
 - (id)initWithBaseUrl:(NSString *)baseUrl sessionId:(NSString *)sessionId;
 - (HMProxyRequest *)get:(NSString *)url callback:(RequestBlock)callback;
 - (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters callback:(RequestBlock)callback;
-- (HMProxyRequest *)get:(NSString *)url parameters:(NSDictionary *)parameters useSession:(BOOL)useSession serializer:(Class)serializer callback:(RequestBlock)callback;
+- (HMProxyRequest *)get:(NSString *)url
+             parameters:(NSDictionary *)parameters
+             useSession:(BOOL)useSession
+             serializer:(Class)serializer
+               callback:(RequestBlock)callback;
 - (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback;
 - (HMProxyRequest *)post:(NSString *)url
                     data:(NSData *)data
               parameters:(NSDictionary *)parameters
+                callback:(RequestBlock)callback;
+- (HMProxyRequest *)post:(NSString *)url
+                    data:(NSData *)data
+              parameters:(NSDictionary *)parameters
+              useSession:(BOOL)useSession
+              serializer:(Class)serializer
                 callback:(RequestBlock)callback;
 - (HMProxyRequest *)put:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback;
 - (HMProxyRequest *)put:(NSString *)url
