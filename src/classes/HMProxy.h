@@ -77,5 +77,6 @@
                  serializer:(Class)serializer
                    callback:(RequestBlock)callback;
 + (HMProxy *)singleton;
++ (HMProxy *)getSingleton;
 
 @end

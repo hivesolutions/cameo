@@ -233,4 +233,8 @@
     return singletonProxy;
 }
 
++ (HMProxy *)getSingleton {
+    return [HMProxy singleton];
+}
+
 @end
