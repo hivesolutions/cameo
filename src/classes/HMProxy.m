@@ -25,6 +25,8 @@
 
 #import "HMProxy.h"
 
+HMProxy *singletonProxy = nil;
+
 @implementation HMProxy
 
 - (id)init {
@@ -222,6 +224,12 @@
     }
 
     return [NSArray arrayWithArray:parametersArray];
+}
+
++ (HMProxy *)singleton {
+    if(singletonProxy != nil) { return singletonProxy; }
+    singletonProxy = [[HMProxy alloc] init];
+    return singletonProxy;
 }
 
 @end
