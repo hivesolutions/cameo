@@ -211,13 +211,12 @@
         NSObject *value = parameters[key];
 
         BOOL isArray = [value isKindOfClass:[NSArray class]];
-
-        if(isArray == NO) {
+        if(isArray == YES) {
+            for(NSObject *_value in (NSArray *) value) {
+                [parametersArray addObject:@[key, _value]];
+            }
+        } else {
             [parametersArray addObject:@[key, value]];
-        }
-
-        for(NSObject *_value in (NSArray *) value) {
-            [parametersArray addObject:@[key, _value]];
         }
     }
 
