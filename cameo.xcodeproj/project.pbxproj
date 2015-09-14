@@ -17,6 +17,8 @@
 		C21BA6FF18801B82000ED62E /* HMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C21BA6FD18801B82000ED62E /* HMString.m */; };
 		C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
 		C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */ = {isa = PBXBuildFile; fileRef = C2432B671B04CE0E002876D0 /* HMBlend.h */; };
+		C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */; };
+		C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */; };
 		C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D21B9F5E4B0032C4BE /* HMSerializer.h */; };
 		C29819D61B9F5ECB0032C4BE /* HMJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */; };
 		C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */; };
@@ -97,6 +99,8 @@
 		C25B9D341B0604BE0072529A /* HMStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStringTest.h; sourceTree = "<group>"; };
 		C25B9D361B0605120072529A /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 		C25B9D381B0605F20072529A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HMColorUtil.h"; sourceTree = "<group>"; };
+		C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HMColorUtil.m"; sourceTree = "<group>"; };
 		C29819D21B9F5E4B0032C4BE /* HMSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSerializer.h; sourceTree = "<group>"; };
 		C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJSONSerializer.h; sourceTree = "<group>"; };
 		C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMJSONSerializer.m; sourceTree = "<group>"; };
@@ -235,6 +239,8 @@
 				C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */,
 				C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */,
 				C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */,
+				C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */,
+				C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */,
 			);
 			name = classes;
 			path = src/classes;
@@ -347,6 +353,7 @@
 				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
 				C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */,
 				C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */,
+				C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */,
 				C30DBA78165573F7002B678E /* cameo-Prefix.pch in Headers */,
 				C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */,
 			);
@@ -473,6 +480,7 @@
 				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
 				C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */,
 				C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */,
+				C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */,
 				C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */,
 				C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */,
 				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
