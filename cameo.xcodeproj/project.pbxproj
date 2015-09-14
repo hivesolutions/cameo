@@ -233,14 +233,14 @@
 				C21BA6FC18801B82000ED62E /* HMString.h */,
 				C21BA6FD18801B82000ED62E /* HMString.m */,
 				C30DBA57165573F7002B678E /* HMVersion.h */,
+				C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */,
+				C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */,
 				C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */,
 				C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */,
 				C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */,
 				C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */,
 				C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */,
 				C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */,
-				C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */,
-				C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */,
 			);
 			name = classes;
 			path = src/classes;

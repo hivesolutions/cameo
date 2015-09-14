@@ -40,6 +40,7 @@
 #import "HMSerializer.h"
 #import "HMString.h"
 #import "HMVersion.h"
+#import "UIColor+HMColorUtil.h"
 #import "UIImage+HMImageUtil.h"
 #import "UIImageView+HMImageViewUtil.h"
 #import "UIViewController+HMControllerUtil.h"
