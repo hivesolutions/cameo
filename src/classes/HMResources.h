@@ -35,7 +35,7 @@
 + (NSString *)localizedString:(NSString *)key;
 + (NSString *)localizedString:(NSString *)key withDefault:(NSString *)value;
 
-- (NSString *) HMLocalizedString:(NSString *) key;
-- (NSString *) HMDefaultString:(NSString *) key withDefault:(NSString *)value;
-
 @end
+
+NSString *HMLocalizedString(NSString * key);
+NSString *HMDefaultString(NSString *key, NSString *value);
