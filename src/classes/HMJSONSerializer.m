@@ -27,15 +27,28 @@
 
 @implementation HMJSONSerializer
 
-+ (NSData *)dumps:(id)object error:(NSError *)error{
+- (NSData *)dumps:(id)object error:(NSError *)error{
     return nil;
 }
 
-+ (id)loads:(NSData *)data error:(NSError *)error{
+- (id)loads:(NSData *)data error:(NSError *)error{
     id object = [NSJSONSerialization JSONObjectWithData:data
                                                 options:kNilOptions
                                                   error:&error];
     return object;
+}
+
++ (HMJSONSerializer *)singleton {
+    static dispatch_once_t onceToken;
+    static HMJSONSerializer *singleton = nil;
+    dispatch_once(&onceToken, ^{
+        singleton = [[HMJSONSerializer alloc] init];
+    });
+    return singleton;
+}
+
++ (HMJSONSerializer *)getSingleton {
+    return [HMJSONSerializer singleton];
 }
 
 @end

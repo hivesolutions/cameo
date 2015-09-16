@@ -31,7 +31,7 @@
     [proxy get:url.absoluteString
     parameters:nil
     useSession:NO
-    serializer:HMDataSerializer.class
+    serializer:HMDataSerializer.singleton
       callback:^(id result, NSError *error) {
           self.image = [UIImage imageWithData:result];
       }];

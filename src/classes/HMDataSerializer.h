@@ -27,6 +27,10 @@
 
 #include "HMSerializer.h"
 
-@interface HMDataSerializer : NSObject<HMSerializer>
+@interface HMDataSerializer : NSObject<HMSerializer> {
+}
+
++ (HMDataSerializer *)singleton;
++ (HMDataSerializer *)getSingleton;
 
 @end

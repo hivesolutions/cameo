@@ -57,14 +57,14 @@
     return [self get:url
           parameters:parameters
           useSession:NO
-          serializer:HMJSONSerializer.class
+          serializer:HMJSONSerializer.singleton
             callback:callback];
 }
 
 - (HMProxyRequest *)get:(NSString *)url
              parameters:(NSDictionary *)parameters
              useSession:(BOOL)useSession
-             serializer:(Class)serializer
+             serializer:(NSObject<HMSerializer> *)serializer
                callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"GET"
@@ -88,7 +88,7 @@
                  data:data
            parameters:parameters
            useSession:NO
-           serializer:HMJSONSerializer.class
+           serializer:HMJSONSerializer.singleton
              callback:callback];
 }
 
@@ -96,7 +96,7 @@
                     data:(NSData *)data
               parameters:(NSDictionary *)parameters
               useSession:(BOOL)useSession
-              serializer:(Class)serializer
+              serializer:(NSObject<HMSerializer> *)serializer
                 callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"POST"
@@ -120,7 +120,7 @@
                 data:data
           parameters:parameters
           useSession:NO
-          serializer:HMJSONSerializer.class
+          serializer:HMJSONSerializer.singleton
             callback:callback];
 }
 
@@ -128,7 +128,7 @@
                    data:(NSData *)data
              parameters:(NSDictionary *)parameters
              useSession:(BOOL)useSession
-             serializer:(Class)serializer
+             serializer:(NSObject<HMSerializer> *)serializer
                callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"PUT"
@@ -148,14 +148,14 @@
     return [self _delete:url
              parameters:parameters
              useSession:NO
-             serializer:HMJSONSerializer.class
+             serializer:HMJSONSerializer.singleton
                callback:callback];
 }
 
 - (HMProxyRequest *)_delete:(NSString *)url
                  parameters:(NSDictionary *)parameters
                  useSession:(BOOL)useSession
-                 serializer:(Class)serializer
+                 serializer:(NSObject<HMSerializer> *)serializer
                    callback:(RequestBlock)callback {
     url = [self getAbsoluteUrl:url];
     return [self buildRequest:@"DELETE"
@@ -179,7 +179,7 @@
                             data:(NSData *)data
                       parameters:(NSDictionary *)parameters
                       useSession:(BOOL)useSession
-                      serializer:(Class)serializer
+                      serializer:(NSObject<HMSerializer> *)serializer
                         callback:(RequestBlock)callback {
     HMCallbackDelegate *delegate =[[HMCallbackDelegate alloc] initWithCallback:callback
                                                                          owner:self];
@@ -225,11 +225,11 @@
 
 + (HMProxy *)singleton {
     static dispatch_once_t onceToken;
-    static HMProxy *singletonProxy = nil;
+    static HMProxy *singleton = nil;
     dispatch_once(&onceToken, ^{
-        singletonProxy = [[HMProxy alloc] init];
+        singleton = [[HMProxy alloc] init];
     });
-    return singletonProxy;
+    return singleton;
 }
 
 + (HMProxy *)getSingleton {

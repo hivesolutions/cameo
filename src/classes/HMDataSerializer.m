@@ -27,12 +27,25 @@
 
 @implementation HMDataSerializer
 
-+ (NSData *)dumps:(id)object error:(NSError *)error{
+- (NSData *)dumps:(id)object error:(NSError *)error{
     return nil;
 }
 
-+ (id)loads:(NSData *)data error:(NSError *)error{
+- (id)loads:(NSData *)data error:(NSError *)error{
     return data;
+}
+
++ (HMDataSerializer *)singleton {
+    static dispatch_once_t onceToken;
+    static HMDataSerializer *singleton = nil;
+    dispatch_once(&onceToken, ^{
+        singleton = [[HMDataSerializer alloc] init];
+    });
+    return singleton;
+}
+
++ (HMDataSerializer *)getSingleton {
+    return [HMDataSerializer singleton];
 }
 
 @end

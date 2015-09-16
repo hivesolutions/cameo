@@ -63,9 +63,9 @@ typedef void (^RequestBlock)(id, NSError *);
 @property (nonatomic) NSMutableData *receivedData;
 
 /**
- The serializer class that is going to be used at runtime for the request.
+ The serializer serializer that is going to be used at runtime for the request.
  */
-@property (nonatomic) Class serializer;
+@property (nonatomic) NSObject<HMSerializer> *serializer;
 
 /**
  The delegate object that will be notified about the changes in the connection from a json point of view.

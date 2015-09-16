@@ -45,7 +45,7 @@
 - (HMProxyRequest *)get:(NSString *)url
              parameters:(NSDictionary *)parameters
              useSession:(BOOL)useSession
-             serializer:(Class)serializer
+             serializer:(NSObject<HMSerializer> *)serializer
                callback:(RequestBlock)callback;
 - (HMProxyRequest *)post:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback;
 - (HMProxyRequest *)post:(NSString *)url
@@ -56,7 +56,7 @@
                     data:(NSData *)data
               parameters:(NSDictionary *)parameters
               useSession:(BOOL)useSession
-              serializer:(Class)serializer
+              serializer:(NSObject<HMSerializer> *)serializer
                 callback:(RequestBlock)callback;
 - (HMProxyRequest *)put:(NSString *)url data:(NSData *)data callback:(RequestBlock)callback;
 - (HMProxyRequest *)put:(NSString *)url
@@ -67,14 +67,14 @@
                    data:(NSData *)data
              parameters:(NSDictionary *)parameters
              useSession:(BOOL)useSession
-             serializer:(Class)serializer
+             serializer:(NSObject<HMSerializer> *)serializer
                callback:(RequestBlock)callback;
 - (HMProxyRequest *)_delete:(NSString *)url callback:(RequestBlock)callback;
 - (HMProxyRequest *)_delete:(NSString *)url parameters:(NSDictionary *)parameters callback:(RequestBlock)callback;
 - (HMProxyRequest *)_delete:(NSString *)url
                  parameters:(NSDictionary *)parameters
                  useSession:(BOOL)useSession
-                 serializer:(Class)serializer
+                 serializer:(NSObject<HMSerializer> *)serializer
                    callback:(RequestBlock)callback;
 + (HMProxy *)singleton;
 + (HMProxy *)getSingleton;

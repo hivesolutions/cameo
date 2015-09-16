@@ -43,7 +43,7 @@
         self.url = [NSURL URLWithString:urlString];
         self.method = @"GET";
         self.callback = nil;
-        self.serializer = HMJSONSerializer.class;
+        self.serializer = HMJSONSerializer.singleton;
     }
     return self;
 }
@@ -54,7 +54,7 @@
         self.url = [NSURL URLWithString:urlString];
         self.method = @"GET";
         self.callback = callback;
-        self.serializer = HMJSONSerializer.class;
+        self.serializer = HMJSONSerializer.singleton;
     }
     return self;
 }
@@ -66,7 +66,7 @@
         self.method = @"GET";
         self.parameters = parameters;
         self.callback = nil;
-        self.serializer = HMJSONSerializer.class;
+        self.serializer = HMJSONSerializer.singleton;
     }
     return self;
 }
@@ -78,7 +78,7 @@
         self.method = method;
         self.parameters = parameters;
         self.callback = callback;
-        self.serializer = HMJSONSerializer.class;
+        self.serializer = HMJSONSerializer.singleton;
     }
     return self;
 }
