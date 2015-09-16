@@ -27,4 +27,16 @@
 
 @protocol HMProxyDelegate<NSObject>
 
+@optional
+
+- (void)build:(NSString *)method
+          url:(NSString *)url
+         data:(NSData *)data
+   parameters:(NSDictionary *)parameters
+   useSession:(BOOL)useSession
+   serializer:(NSObject<HMSerializer> *)serializer
+     callback:(RequestBlock)callback;
+
+@required
+
 @end

@@ -71,4 +71,12 @@ static NSBundle *bundle = nil;
     return result;
 }
 
+- (NSString *) HMLocalizedString:(NSString *) key {
+    return [HMResources localizedString:key];
+}
+
+- (NSString *) HMDefaultString:(NSString *) key withDefault:(NSString *)value {
+    return [HMResources localizedString:key withDefault:value];
+}
+
 @end
