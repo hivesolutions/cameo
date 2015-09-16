@@ -16,6 +16,8 @@
 		C21BA6FE18801B82000ED62E /* HMString.h in Headers */ = {isa = PBXBuildFile; fileRef = C21BA6FC18801B82000ED62E /* HMString.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C21BA6FF18801B82000ED62E /* HMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C21BA6FD18801B82000ED62E /* HMString.m */; };
 		C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
+		C2247DE51BA9CCE700391D7D /* UIButton+HMButtonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */; };
+		C2247DE61BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */; };
 		C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */ = {isa = PBXBuildFile; fileRef = C2432B671B04CE0E002876D0 /* HMBlend.h */; };
 		C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */; };
 		C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */; };
@@ -94,6 +96,8 @@
 		C21BA6FC18801B82000ED62E /* HMString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMString.h; sourceTree = "<group>"; };
 		C21BA6FD18801B82000ED62E /* HMString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMString.m; sourceTree = "<group>"; };
 		C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HMControllerUtil.m"; sourceTree = "<group>"; };
+		C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HMButtonUtil.h"; sourceTree = "<group>"; };
+		C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBUtton+HMButtonUtil.m"; sourceTree = "<group>"; };
 		C2432B671B04CE0E002876D0 /* HMBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMBlend.h; sourceTree = "<group>"; };
 		C25B9D321B0604A30072529A /* HMStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStringTest.m; sourceTree = "<group>"; };
 		C25B9D341B0604BE0072529A /* HMStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStringTest.h; sourceTree = "<group>"; };
@@ -233,6 +237,8 @@
 				C21BA6FC18801B82000ED62E /* HMString.h */,
 				C21BA6FD18801B82000ED62E /* HMString.m */,
 				C30DBA57165573F7002B678E /* HMVersion.h */,
+				C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */,
+				C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */,
 				C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */,
 				C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */,
 				C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */,
@@ -334,6 +340,7 @@
 			files = (
 				C30DBA71165573F7002B678E /* Cameo.h in Headers */,
 				C2076A001B062500005B5FE4 /* HMProxy.h in Headers */,
+				C2247DE51BA9CCE700391D7D /* UIButton+HMButtonUtil.h in Headers */,
 				C30DBA72165573F7002B678E /* Dependencies.h in Headers */,
 				C2076A091B0652D9005B5FE4 /* HMCleanup.h in Headers */,
 				C30DBA73165573F7002B678E /* HMVersion.h in Headers */,
@@ -486,6 +493,7 @@
 				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
 				C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */,
 				C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */,
+				C2247DE61BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

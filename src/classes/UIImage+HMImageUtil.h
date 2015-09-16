@@ -83,4 +83,12 @@
  */
 + (UIImageView *)animationFromSprite:(UIImage *)sprite width:(NSUInteger)width height:(NSUInteger)height;
 
+/**
+ Generates an image instance withthe provided color.
+ 
+ @param color The color that is going to be used for the image generation.
+ @return The image that is completly filled with the provided color.
+*/
++ (UIImage *)imageWithColor:(UIColor *)color;
+
 @end
