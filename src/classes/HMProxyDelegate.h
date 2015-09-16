@@ -25,15 +25,6 @@
 
 #import "Dependencies.h"
 
-#import "HMProxy.h"
-#import "HMProxyDelegate.h"
-
-@interface HMApi : NSObject<HMProxyDelegate> {
-}
-
-@property (nonatomic) HMProxy *proxy;
-
-- (id)init;
-- (id)initWithProxy:(HMProxy *)proxy;
+@protocol HMProxyDelegate<NSObject>
 
 @end

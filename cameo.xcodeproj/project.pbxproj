@@ -30,6 +30,7 @@
 		C2A2C089187F30BD009A052B /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
 		C2C2E3901BA9DDE000BDFDC7 /* HMApi.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E38E1BA9DDE000BDFDC7 /* HMApi.h */; };
 		C2C2E3911BA9DDE000BDFDC7 /* HMApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C2E38F1BA9DDE000BDFDC7 /* HMApi.m */; };
+		C2C2E3961BA9EF8A00BDFDC7 /* HMProxyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */; };
 		C2C46B041B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */; };
 		C2C46B051B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */; };
 		C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
@@ -116,6 +117,7 @@
 		C2A2C087187F30BD009A052B /* HMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLog.m; sourceTree = "<group>"; };
 		C2C2E38E1BA9DDE000BDFDC7 /* HMApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMApi.h; sourceTree = "<group>"; };
 		C2C2E38F1BA9DDE000BDFDC7 /* HMApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMApi.m; sourceTree = "<group>"; };
+		C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyDelegate.h; sourceTree = "<group>"; };
 		C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HMImageViewUtil.h"; sourceTree = "<group>"; };
 		C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HMImageViewUtil.m"; sourceTree = "<group>"; };
 		C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HMImageUtil.m"; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */,
 				C20769FE1B062500005B5FE4 /* HMProxy.h */,
 				C20769FF1B062500005B5FE4 /* HMProxy.m */,
+				C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */,
 				C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */,
 				C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */,
 				C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */,
@@ -362,6 +365,7 @@
 				C2C46B041B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h in Headers */,
 				C2A2C088187F30BD009A052B /* HMLog.h in Headers */,
 				C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */,
+				C2C2E3961BA9EF8A00BDFDC7 /* HMProxyDelegate.h in Headers */,
 				C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */,
 				C21BA6FE18801B82000ED62E /* HMString.h in Headers */,
 				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
