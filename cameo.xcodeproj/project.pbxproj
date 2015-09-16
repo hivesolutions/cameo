@@ -122,7 +122,7 @@
 		C2E1FA8C183A801C00F43959 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
 		C2E4A7671B06094500603947 /* cameo_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameo_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E4A7821B060B1600603947 /* Cameo.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cameo.podspec; sourceTree = "<group>"; };
-		C2E4A7831B060B1600603947 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C2E4A7831B060B1600603947 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C30D41131655411A003AA670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C30DBA53165573F7002B678E /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMBaseResources.bundle; sourceTree = "<group>"; };
 		C30DBA55165573F7002B678E /* Cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameo.h; sourceTree = "<group>"; };
