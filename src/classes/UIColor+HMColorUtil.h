@@ -28,7 +28,7 @@
 @interface UIColor(HMColorUtil) {
 }
 
-+ (UIColor *)colorWithHex:(NSInteger)hex;
 - (NSString *)hexString;
++ (UIColor *)colorWithHex:(NSInteger)hex;
 
 @end
