@@ -29,11 +29,13 @@
 #import "HMRequest.h"
 #import "HMSerializer.h"
 #import "HMProxyRequest.h"
+#import "HMProxyDelegate.h"
 #import "HMCallbackDelegate.h"
 
 @interface HMProxy : NSObject<HMCleanup> {
 }
 
+@property (nonatomic, weak) NSObject<HMProxyDelegate> *delegate;
 @property (nonatomic) NSString *baseUrl;
 @property (nonatomic) NSString *sessionId;
 @property (nonatomic) NSMutableArray *requests;

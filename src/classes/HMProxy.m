@@ -194,6 +194,18 @@
     request.delegate = delegate;
     [self.requests addObject:request];
     [self.delegates addObject:delegate];
+    if(self.delegate) {
+        bool responds = [self.delegate respondsToSelector:@selector(build:url:data:parameters:useSession:serializer:callback:)];
+        if(responds) {
+            [self.delegate build:method
+                             url:url
+                            data:data
+                      parameters:parameters
+                      useSession:useSession
+                      serializer:serializer
+                        callback:callback];
+        }
+    }
     [request load];
     return request;
 }
