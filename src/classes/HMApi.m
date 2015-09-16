@@ -27,4 +27,20 @@
 
 @implementation HMApi
 
+- (id)init {
+    self = [super init];
+    if(self) {
+        self.proxy = [[HMProxy alloc] init];
+    }
+    return self;
+}
+
+- (id)initWithProxy:(HMProxy *)proxy {
+    self = [super init];
+    if(self) {
+        self.proxy = proxy;
+    }
+    return self;
+}
+
 @end
