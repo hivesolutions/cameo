@@ -278,12 +278,12 @@
     // populated/filled with the proper color
     CGRect rect = CGRectMake(0.0, 0.0, 1.0, 1.0);
     UIGraphicsBeginImageContext(rect.size);
-    
+
     // creates the new context and fills it with the rectangle
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetFillColorWithColor(context, color.CGColor);
     CGContextFillRect(context, rect);
-    
+
     // creates the image from the context and then returns the
     // same image (contains the final color values)
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
