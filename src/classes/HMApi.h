@@ -33,6 +33,6 @@
 @property (nonatomic) HMProxy *proxy;
 
 - (id)init;
-- (id)initWithProxy;
+- (id)initWithProxy:(HMProxy *)proxy;
 
 @end

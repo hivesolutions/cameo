@@ -39,7 +39,7 @@ static UIImage *_logo = nil;
         self.path = nil;
         self.method = @"GET";
         self.loginPath = @"login.json";
-        self.serializer = HMJSONSerializer.class;
+        self.serializer = HMJSONSerializer.singleton;
     }
     return self;
 }
@@ -54,7 +54,7 @@ static UIImage *_logo = nil;
         self.path = path;
         self.method = @"GET";
         self.loginPath = @"login.json";
-        self.serializer = HMJSONSerializer.class;
+        self.serializer = HMJSONSerializer.singleton;
     }
     return self;
 }
@@ -69,7 +69,7 @@ static UIImage *_logo = nil;
         self.path = path;
         self.method = @"GET";
         self.loginPath = loginPath;
-        self.serializer = HMJSONSerializer.class;
+        self.serializer = HMJSONSerializer.singleton;
     }
     return self;
 }
