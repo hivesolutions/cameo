@@ -40,20 +40,12 @@
     [self updateRequest];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)updateRequest {
-    [HMProxy.singleton get:@"http://httpbin.org/ip" callback:^(NSDictionary *result, NSError *error) {
+    [HMProxy.singleton get:@"https://httpbin.org/ip" callback:^(NSDictionary *result, NSError *error) {
         NSString *label = [NSString stringWithFormat:@"%@", result];
         self.textView.text = label;
     }];
-    [self.imageView setImageWithURLString:@"http://httpbin.org/image/png" proxy:HMProxy.singleton];
+    [self.imageView setImageWithURLString:@"https://httpbin.org/image/png" proxy:HMProxy.singleton];
 }
 
 @end

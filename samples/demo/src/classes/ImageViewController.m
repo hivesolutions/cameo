@@ -50,14 +50,6 @@
     [self createLogout];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)createRound {
     // retrieves the width of the current view's frame
     // and divides it

@@ -48,14 +48,6 @@
     [self updateBlend];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (void)updateBlend {
     for (UIView *subView in self.mainView.subviews) {
         [subView removeFromSuperview];

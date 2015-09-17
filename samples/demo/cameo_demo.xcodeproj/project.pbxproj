@@ -34,6 +34,8 @@
 		C2E1FAA7183A80DF00F43959 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA99183A80DF00F43959 /* AppIcon76x76.png */; };
 		C2E1FAA8183A80DF00F43959 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA9A183A80DF00F43959 /* AppIcon76x76@2x.png */; };
 		C2F83D6C1BAB42A600DF40B9 /* HttpBinApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F83D6B1BAB42A600DF40B9 /* HttpBinApi.m */; settings = {ASSET_TAGS = (); }; };
+		C2F83D701BAB43EB00DF40B9 /* ApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F83D6F1BAB43EB00DF40B9 /* ApiViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C2F83D731BAB446000DF40B9 /* ApiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F83D721BAB446000DF40B9 /* ApiViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C3391584165E641E00DB2413 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391582165E641E00DB2413 /* logo.png */; };
 		C3391585165E641E00DB2413 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391583165E641E00DB2413 /* logo@2x.png */; };
 		C339159B165E697E00DB2413 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391591165E697E00DB2413 /* iTunesArtwork.png */; };
@@ -90,6 +92,9 @@
 		C2E1FA9A183A80DF00F43959 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
 		C2F83D6A1BAB42A600DF40B9 /* HttpBinApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBinApi.h; sourceTree = "<group>"; };
 		C2F83D6B1BAB42A600DF40B9 /* HttpBinApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBinApi.m; sourceTree = "<group>"; };
+		C2F83D6F1BAB43EB00DF40B9 /* ApiViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ApiViewController.xib; sourceTree = "<group>"; };
+		C2F83D711BAB446000DF40B9 /* ApiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiViewController.h; sourceTree = "<group>"; };
+		C2F83D721BAB446000DF40B9 /* ApiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiViewController.m; sourceTree = "<group>"; };
 		C3391582165E641E00DB2413 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
 		C3391583165E641E00DB2413 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "images/logo@2x.png"; sourceTree = "<group>"; };
 		C3391591165E697E00DB2413 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
@@ -234,6 +239,8 @@
 				C3715E38165BE4D5006BB277 /* main.m */,
 				C25E96031B9F458800A8E99C /* RequestViewController.h */,
 				C25E96041B9F458800A8E99C /* RequestViewController.m */,
+				C2F83D711BAB446000DF40B9 /* ApiViewController.h */,
+				C2F83D721BAB446000DF40B9 /* ApiViewController.m */,
 			);
 			name = classes;
 			path = src/classes;
@@ -286,6 +293,7 @@
 				C2432B6D1B04D967002876D0 /* ListViewController.xib */,
 				C2432B751B04F70D002876D0 /* BlendViewController.xib */,
 				C25E96011B9F450C00A8E99C /* RequestViewController.xib */,
+				C2F83D6F1BAB43EB00DF40B9 /* ApiViewController.xib */,
 			);
 			name = views;
 			path = src/views;
@@ -374,6 +382,7 @@
 				C375DF3C165E89460065B06A /* logo-square.png in Resources */,
 				C208E45C183A6D27007AB31B /* logout-button@2x.png in Resources */,
 				C2E1FAA2183A80DF00F43959 /* AppIcon57x57@2x.png in Resources */,
+				C2F83D701BAB43EB00DF40B9 /* ApiViewController.xib in Resources */,
 				C208E45B183A6D27007AB31B /* logout-button.png in Resources */,
 				C2E1FA9F183A80DF00F43959 /* AppIcon50x50.png in Resources */,
 				C375DF44165E93F00065B06A /* logo-sprite@2x.png in Resources */,
@@ -397,6 +406,7 @@
 				C3715E44165BE4D5006BB277 /* main.m in Sources */,
 				C2432B711B04EB24002876D0 /* ListViewController.m in Sources */,
 				C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */,
+				C2F83D731BAB446000DF40B9 /* ApiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

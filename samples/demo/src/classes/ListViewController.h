@@ -25,6 +25,7 @@
 
 #import "Dependencies.h"
 
+#import "ApiViewController.h"
 #import "ImageViewController.h"
 #import "BlendViewController.h"
 #import "RequestViewController.h"

@@ -43,6 +43,10 @@
             @{
                 @"name" : @"Request",
                 @"view" : [RequestViewController class],
+            },
+            @{
+                @"name" : @"Api",
+                @"view" : [ApiViewController class],
             }
         ];
     }
