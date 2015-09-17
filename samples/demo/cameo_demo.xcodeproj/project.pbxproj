@@ -33,6 +33,7 @@
 		C2E1FAA6183A80DF00F43959 /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA98183A80DF00F43959 /* AppIcon72x72@2x.png */; };
 		C2E1FAA7183A80DF00F43959 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA99183A80DF00F43959 /* AppIcon76x76.png */; };
 		C2E1FAA8183A80DF00F43959 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA9A183A80DF00F43959 /* AppIcon76x76@2x.png */; };
+		C2F83D6C1BAB42A600DF40B9 /* HttpBinApi.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F83D6B1BAB42A600DF40B9 /* HttpBinApi.m */; settings = {ASSET_TAGS = (); }; };
 		C3391584165E641E00DB2413 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391582165E641E00DB2413 /* logo.png */; };
 		C3391585165E641E00DB2413 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391583165E641E00DB2413 /* logo@2x.png */; };
 		C339159B165E697E00DB2413 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391591165E697E00DB2413 /* iTunesArtwork.png */; };
@@ -87,6 +88,8 @@
 		C2E1FA98183A80DF00F43959 /* AppIcon72x72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon72x72@2x.png"; sourceTree = "<group>"; };
 		C2E1FA99183A80DF00F43959 /* AppIcon76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon76x76.png; sourceTree = "<group>"; };
 		C2E1FA9A183A80DF00F43959 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
+		C2F83D6A1BAB42A600DF40B9 /* HttpBinApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpBinApi.h; sourceTree = "<group>"; };
+		C2F83D6B1BAB42A600DF40B9 /* HttpBinApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpBinApi.m; sourceTree = "<group>"; };
 		C3391582165E641E00DB2413 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = images/logo.png; sourceTree = "<group>"; };
 		C3391583165E641E00DB2413 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo@2x.png"; path = "images/logo@2x.png"; sourceTree = "<group>"; };
 		C3391591165E697E00DB2413 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				C2432B721B04F3D0002876D0 /* BlendViewController.h */,
 				C2432B731B04F3D0002876D0 /* BlendViewController.m */,
 				C3ED1BFB165BED0D00D81B85 /* Dependencies.h */,
+				C2F83D6A1BAB42A600DF40B9 /* HttpBinApi.h */,
+				C2F83D6B1BAB42A600DF40B9 /* HttpBinApi.m */,
 				C3ED1BF8165BECD400D81B85 /* ImageViewController.h */,
 				C3ED1BF9165BECD400D81B85 /* ImageViewController.m */,
 				C2432B6F1B04EB24002876D0 /* ListViewController.h */,
@@ -386,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3715E43165BE4D5006BB277 /* AppDelegate.m in Sources */,
+				C2F83D6C1BAB42A600DF40B9 /* HttpBinApi.m in Sources */,
 				C2432B741B04F3D0002876D0 /* BlendViewController.m in Sources */,
 				C25E96051B9F458800A8E99C /* RequestViewController.m in Sources */,
 				C3715E44165BE4D5006BB277 /* main.m in Sources */,
