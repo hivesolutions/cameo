@@ -23,20 +23,11 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HttpBinApi.h"
+#import "Dependencies.h"
 
-@implementation HttpBinApi
-
-- (id)init {
-    self = [super init];
-    if(self) {
-        self.proxy.baseUrl = @"https://http2bin.org/";
-    }
-    return self;
+@interface HttpBinAPI : HMAPI {
 }
 
-- (void)getIp:(RequestBlock)callback {
-    [self.proxy get:@"ip" callback:callback];
-}
+- (void)getIp:(RequestBlock)callback;
 
 @end

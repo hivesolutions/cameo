@@ -23,29 +23,20 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "ApiViewController.h"
+#import "HttpBinApi.h"
 
-@implementation ApiViewController
+@implementation HttpBinAPI
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+- (id)init {
+    self = [super init];
     if(self) {
-        self.navigationItem.title = @"Request";
+        self.proxy.baseUrl = @"https://httpbin.org/";
     }
     return self;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self updateRequest];
-}
-
-- (void)updateRequest {
-    self.api = [[HttpBinApi alloc] init];
-    [self.api getIp:^(NSDictionary *result, NSError *error) {
-        NSString *label = [NSString stringWithFormat:@"%@", result];
-        self.textView.text = label;
-    }];
+- (void)getIp:(RequestBlock)callback {
+    [self.proxy get:@"ip" callback:callback];
 }
 
 @end

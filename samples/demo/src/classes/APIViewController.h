@@ -30,7 +30,7 @@
 @interface ApiViewController : UIViewController {
 }
 
-@property (nonatomic) HttpBinApi *api;
+@property (nonatomic) HttpBinAPI *api;
 @property (nonatomic) IBOutlet UITextView *textView;
 
 @end

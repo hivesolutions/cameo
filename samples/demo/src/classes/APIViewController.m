@@ -23,17 +23,29 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "Dependencies.h"
+#import "ApiViewController.h"
 
-#import "HMProxy.h"
-#import "HMProxyDelegate.h"
+@implementation ApiViewController
 
-@interface HMApi : NSObject<HMProxyDelegate> {
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if(self) {
+        self.navigationItem.title = @"Request";
+    }
+    return self;
 }
 
-@property (nonatomic) HMProxy *proxy;
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self updateRequest];
+}
 
-- (id)init;
-- (id)initWithProxy:(HMProxy *)proxy;
+- (void)updateRequest {
+    self.api = [[HttpBinAPI alloc] init];
+    [self.api getIp:^(NSDictionary *result, NSError *error) {
+        NSString *label = [NSString stringWithFormat:@"%@", result];
+        self.textView.text = label;
+    }];
+}
 
 @end

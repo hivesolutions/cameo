@@ -23,24 +23,17 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HMApi.h"
+#import "Dependencies.h"
 
-@implementation HMApi
+#import "HMProxy.h"
+#import "HMProxyDelegate.h"
 
-- (id)init {
-    self = [super init];
-    if(self) {
-        self.proxy = [[HMProxy alloc] init];
-    }
-    return self;
+@interface HMAPI : NSObject<HMProxyDelegate> {
 }
 
-- (id)initWithProxy:(HMProxy *)proxy {
-    self = [super init];
-    if(self) {
-        self.proxy = proxy;
-    }
-    return self;
-}
+@property (nonatomic) HMProxy *proxy;
+
+- (id)init;
+- (id)initWithProxy:(HMProxy *)proxy;
 
 @end

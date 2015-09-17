@@ -23,11 +23,24 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "Dependencies.h"
+#import "HMApi.h"
 
-@interface HttpBinApi : HMApi {
+@implementation HMAPI
+
+- (id)init {
+    self = [super init];
+    if(self) {
+        self.proxy = [[HMProxy alloc] init];
+    }
+    return self;
 }
 
-- (void)getIp:(RequestBlock)callback;
+- (id)initWithProxy:(HMProxy *)proxy {
+    self = [super init];
+    if(self) {
+        self.proxy = proxy;
+    }
+    return self;
+}
 
 @end

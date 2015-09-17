@@ -45,7 +45,7 @@
                 @"view" : [RequestViewController class],
             },
             @{
-                @"name" : @"Api",
+                @"name" : @"API",
                 @"view" : [ApiViewController class],
             }
         ];
