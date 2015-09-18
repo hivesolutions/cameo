@@ -29,6 +29,8 @@
 }
 
 - (NSString *)hexString;
+- (UIColor *)lighterByPercentage:(CGFloat)percentage;
+- (UIColor *)darkerByPercentage:(CGFloat)percentage;
 + (UIColor *)colorWithHex:(NSInteger)hex;
 
 @end

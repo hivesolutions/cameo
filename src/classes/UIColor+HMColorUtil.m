@@ -38,6 +38,19 @@
     return hexString;
 }
 
+- (UIColor *)lighterByPercentage:(CGFloat)percentage {
+    CGFloat red, green, blue, alpha;
+    [self getRed:&red green:&green blue:&blue alpha:&alpha];
+    red = MAX(MIN(red + percentage, 1.0), 0.0);
+    green = MAX(MIN(green + percentage, 1.0), 0.0);
+    blue = MAX(MIN(blue + percentage, 1.0), 0.0);
+    return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+}
+
+- (UIColor *)darkerByPercentage:(CGFloat)percentage {
+    return [self lighterByPercentage:percentage * -1.0];
+}
+
 + (UIColor *)colorWithHex:(NSInteger)hex {
     NSInteger red = (hex & 0xFF0000) >> 16;
     NSInteger green = (hex & 0xFF00) >> 8;
