@@ -30,6 +30,7 @@
 - (id)init {
     self = [super init];
     if(self) {
+        self.name = @"BinAPI";
         self.proxy.baseUrl = @"https://httpbin.org/";
     }
     return self;

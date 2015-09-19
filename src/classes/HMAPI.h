@@ -33,6 +33,7 @@
 }
 
 @property (nonatomic) HMProxy *proxy;
+@property (nonatomic) NSString *name;
 
 - (id)init;
 - (id)initWithProxy:(HMProxy *)proxy;

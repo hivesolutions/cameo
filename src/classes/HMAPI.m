@@ -30,6 +30,7 @@
 - (id)init {
     self = [super init];
     if(self) {
+        self.name = @"API";
         self.proxy = [[HMProxy alloc] init];
         self.proxy.delegate = self;
     }
@@ -39,6 +40,7 @@
 - (id)initWithProxy:(HMProxy *)proxy {
     self = [super init];
     if(self) {
+        self.name = @"API";
         self.proxy = proxy;
         self.proxy.delegate = self;
     }
@@ -52,7 +54,7 @@
    useSession:(BOOL)useSession
    serializer:(NSObject<HMSerializer> *)serializer
      callback:(RequestBlock)callback {
-    [HMLog debug:@"build: %@ %@", method, url];
+    [HMLog debug:@"[%@] [build] %@ %@", self.name, method, url];
 }
 
 @end
