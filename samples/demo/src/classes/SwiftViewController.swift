@@ -44,7 +44,8 @@ class SwiftViewController: UIViewController {
     }
     
     func updateRequest() {
-        HMProxy.singleton().get("https://httpbin.org/ip") { (result: AnyObject!, error: NSError!) in
+        HMProxy.singleton().get("https://httpbin.org/ip") {
+            (result: AnyObject!, error: NSError!) in
             self.textView.text = result.description
         }
     }
