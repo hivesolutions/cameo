@@ -32,17 +32,17 @@ class SwiftViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-    
+
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         navigationItem.title = "Swift"
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateRequest()
     }
-    
+
     func updateRequest() {
         HMProxy.singleton().get("https://httpbin.org/ip") {
             (result: AnyObject!, error: NSError!) in
