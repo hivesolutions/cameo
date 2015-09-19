@@ -109,8 +109,8 @@
 		C3715E3B165BE4D5006BB277 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C3715E3C165BE4D5006BB277 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C3715E3D165BE4D5006BB277 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		C3715E3F165BE4D5006BB277 /* cameo_demo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cameo_demo-Info.plist"; sourceTree = "<group>"; };
-		C3715E40165BE4D5006BB277 /* cameo_demo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cameo_demo-Prefix.pch"; sourceTree = "<group>"; };
+		C3715E3F165BE4D5006BB277 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		C3715E40165BE4D5006BB277 /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
 		C3715E42165BE4D5006BB277 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C375DF39165E89460065B06A /* logo-sprite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-sprite.png"; path = "images/logo-sprite.png"; sourceTree = "<group>"; };
 		C375DF3A165E89460065B06A /* logo-square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "logo-square.png"; path = "images/logo-square.png"; sourceTree = "<group>"; };
@@ -270,8 +270,8 @@
 		C3715E3E165BE4D5006BB277 /* support */ = {
 			isa = PBXGroup;
 			children = (
-				C3715E3F165BE4D5006BB277 /* cameo_demo-Info.plist */,
-				C3715E40165BE4D5006BB277 /* cameo_demo-Prefix.pch */,
+				C3715E3F165BE4D5006BB277 /* info.plist */,
+				C3715E40165BE4D5006BB277 /* prefix.pch */,
 				C3715E41165BE4D5006BB277 /* InfoPlist.strings */,
 			);
 			name = support;
@@ -481,8 +481,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/support/cameo_demo-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/src/support/cameo_demo-Info.plist";
+				GCC_PREFIX_HEADER = src/support/prefix.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/src/support/info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -493,8 +493,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/support/cameo_demo-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/src/support/cameo_demo-Info.plist";
+				GCC_PREFIX_HEADER = src/support/prefix.pch;
+				INFOPLIST_FILE = "$(SRCROOT)/src/support/info.plist";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

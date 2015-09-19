@@ -42,7 +42,7 @@
 		C30DBA73165573F7002B678E /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA57165573F7002B678E /* HMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C30DBA78165573F7002B678E /* cameo-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA70165573F7002B678E /* cameo-Prefix.pch */; };
+		C30DBA78165573F7002B678E /* prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA70165573F7002B678E /* prefix.pch */; };
 		C37910A01655417B005D3B7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D41131655411A003AA670 /* CoreGraphics.framework */; };
 		C37910A21655417F005D3B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A11655417F005D3B7B /* Foundation.framework */; };
 		C37910A416554184005D3B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A316554184005D3B7B /* UIKit.framework */; };
@@ -139,7 +139,7 @@
 		C30DBA66165573F7002B678E /* build_samples.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_samples.sh; sourceTree = "<group>"; };
 		C30DBA68165573F7002B678E /* common.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = common.sh; sourceTree = "<group>"; };
 		C30DBA6A165573F7002B678E /* label_version_number.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = label_version_number.sh; sourceTree = "<group>"; };
-		C30DBA70165573F7002B678E /* cameo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cameo-Prefix.pch"; sourceTree = "<group>"; };
+		C30DBA70165573F7002B678E /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
 		C37910A11655417F005D3B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C37910A316554184005D3B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C39CF94C165BEA7400AA687F /* cameo_demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cameo_demo.xcodeproj; path = samples/demo/cameo_demo.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -288,7 +288,7 @@
 		C30DBA6F165573F7002B678E /* support */ = {
 			isa = PBXGroup;
 			children = (
-				C30DBA70165573F7002B678E /* cameo-Prefix.pch */,
+				C30DBA70165573F7002B678E /* prefix.pch */,
 			);
 			name = support;
 			path = src/support;
@@ -372,7 +372,7 @@
 				C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */,
 				C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */,
 				C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */,
-				C30DBA78165573F7002B678E /* cameo-Prefix.pch in Headers */,
+				C30DBA78165573F7002B678E /* prefix.pch in Headers */,
 				C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -646,7 +646,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/support/cameo-Prefix.pch";
+				GCC_PREFIX_HEADER = src/support/prefix.pch;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
@@ -663,7 +663,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "src/support/cameo-Prefix.pch";
+				GCC_PREFIX_HEADER = src/support/prefix.pch;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
