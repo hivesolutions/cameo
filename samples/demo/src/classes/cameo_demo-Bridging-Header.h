@@ -23,10 +23,5 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-// framework dependency includes
-#import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
-#import <Foundation/Foundation.h>
-
 // library dependency includes
 #import "../../../../src/classes/Cameo.h"

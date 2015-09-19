@@ -31,4 +31,5 @@
 // library dependency includes
 #import "../../../../src/classes/Cameo.h"
 
+// swift related symbol export
 #import "cameo_demo-Swift.h"
