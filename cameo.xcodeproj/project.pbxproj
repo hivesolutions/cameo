@@ -422,7 +422,7 @@
 		C3B420011652CBB400005DC5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0640;
+				LastTestingUpgradeCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Hive Solutions";
 				TargetAttributes = {
