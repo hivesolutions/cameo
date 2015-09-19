@@ -31,6 +31,7 @@
     self = [super init];
     if(self) {
         self.proxy = [[HMProxy alloc] init];
+        self.proxy.delegate = self;
     }
     return self;
 }
@@ -39,8 +40,19 @@
     self = [super init];
     if(self) {
         self.proxy = proxy;
+        self.proxy.delegate = self;
     }
     return self;
+}
+
+- (void)build:(NSString *)method
+          url:(NSString *)url
+         data:(NSData *)data
+   parameters:(NSDictionary *)parameters
+   useSession:(BOOL)useSession
+   serializer:(NSObject<HMSerializer> *)serializer
+     callback:(RequestBlock)callback {
+    [HMLog debug:@"build: %@ %@", method, url];
 }
 
 @end
