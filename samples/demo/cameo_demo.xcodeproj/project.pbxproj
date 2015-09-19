@@ -236,6 +236,7 @@
 				C3715E37165BE4D5006BB277 /* AppDelegate.m */,
 				C2432B721B04F3D0002876D0 /* BlendViewController.h */,
 				C2432B731B04F3D0002876D0 /* BlendViewController.m */,
+				C2CE77591BAD899900E2BCFA /* cameo_demo-Bridging-Header.h */,
 				C3ED1BFB165BED0D00D81B85 /* Dependencies.h */,
 				C2F83D6A1BAB42A600DF40B9 /* HTTPBinAPI.h */,
 				C2F83D6B1BAB42A600DF40B9 /* HTTPBinAPI.m */,
@@ -247,7 +248,6 @@
 				C25E96031B9F458800A8E99C /* RequestViewController.h */,
 				C25E96041B9F458800A8E99C /* RequestViewController.m */,
 				C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */,
-				C2CE77591BAD899900E2BCFA /* cameo_demo-Bridging-Header.h */,
 			);
 			name = classes;
 			path = src/classes;

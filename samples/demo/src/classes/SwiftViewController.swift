@@ -27,10 +27,25 @@ import UIKit
 
 class SwiftViewController: UIViewController {
 
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet var textView: UITextView!
 
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        navigationItem.title = "Swift"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        label.text = "Hello World"
+        updateRequest()
+    }
+    
+    func updateRequest() {
+        HMProxy.singleton().get("https://httpbin.org/ip") { (result: AnyObject!, error: NSError!) in
+            self.textView.text = result.description
+        }
     }
 }

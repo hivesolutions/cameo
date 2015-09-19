@@ -47,6 +47,10 @@
             @{
                 @"name" : @"API",
                 @"view" : [ApiViewController class],
+            },
+            @{
+                @"name" : @"Swift",
+                @"view" : [SwiftViewController class],
             }
         ];
     }

@@ -30,3 +30,5 @@
 
 // library dependency includes
 #import "../../../../src/classes/Cameo.h"
+
+#import "cameo_demo-Swift.h"
