@@ -19,6 +19,8 @@
 		C2432B7E1B04F8A5002876D0 /* shoe-sole.png in Resources */ = {isa = PBXBuildFile; fileRef = C2432B7A1B04F8A5002876D0 /* shoe-sole.png */; };
 		C25E96021B9F450C00A8E99C /* RequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25E96011B9F450C00A8E99C /* RequestViewController.xib */; };
 		C25E96051B9F458800A8E99C /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25E96041B9F458800A8E99C /* RequestViewController.m */; };
+		C2CE775B1BAD899900E2BCFA /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		C2CE778B1BAD8C8E00E2BCFA /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		C2E1FA9B183A80DF00F43959 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */; };
 		C2E1FA9C183A80DF00F43959 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */; };
 		C2E1FA9D183A80DF00F43959 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */; };
@@ -76,6 +78,9 @@
 		C25E96011B9F450C00A8E99C /* RequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestViewController.xib; sourceTree = "<group>"; };
 		C25E96031B9F458800A8E99C /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		C25E96041B9F458800A8E99C /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
+		C2CE77591BAD899900E2BCFA /* cameo_demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cameo_demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 2; path = SwiftViewController.swift; sourceTree = "<group>"; };
+		C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
 		C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
@@ -241,6 +246,8 @@
 				C3715E38165BE4D5006BB277 /* main.m */,
 				C25E96031B9F458800A8E99C /* RequestViewController.h */,
 				C25E96041B9F458800A8E99C /* RequestViewController.m */,
+				C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */,
+				C2CE77591BAD899900E2BCFA /* cameo_demo-Bridging-Header.h */,
 			);
 			name = classes;
 			path = src/classes;
@@ -294,6 +301,7 @@
 				C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */,
 				C2432B6D1B04D967002876D0 /* ListViewController.xib */,
 				C25E96011B9F450C00A8E99C /* RequestViewController.xib */,
+				C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */,
 			);
 			name = views;
 			path = src/views;
@@ -325,6 +333,7 @@
 		C3715DFD165BE390006BB277 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Hive Solutions";
 			};
@@ -356,6 +365,7 @@
 				C3715E45165BE4D5006BB277 /* Default-568h@2x.png in Resources */,
 				C2E1FAA8183A80DF00F43959 /* AppIcon76x76@2x.png in Resources */,
 				C3715E46165BE4D5006BB277 /* Default.png in Resources */,
+				C2CE778B1BAD8C8E00E2BCFA /* SwiftViewController.xib in Resources */,
 				C3715E47165BE4D5006BB277 /* Default@2x.png in Resources */,
 				C3715E49165BE4D5006BB277 /* InfoPlist.strings in Resources */,
 				C2E1FA9C183A80DF00F43959 /* AppIcon29x29@2x.png in Resources */,
@@ -402,6 +412,7 @@
 				C3715E43165BE4D5006BB277 /* AppDelegate.m in Sources */,
 				C2F83D6C1BAB42A600DF40B9 /* HTTPBinAPI.m in Sources */,
 				C2432B741B04F3D0002876D0 /* BlendViewController.m in Sources */,
+				C2CE775B1BAD899900E2BCFA /* SwiftViewController.swift in Sources */,
 				C25E96051B9F458800A8E99C /* RequestViewController.m in Sources */,
 				C3715E44165BE4D5006BB277 /* main.m in Sources */,
 				C2432B711B04EB24002876D0 /* ListViewController.m in Sources */,
@@ -447,7 +458,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,7 +480,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -480,11 +491,15 @@
 		C3715E25165BE391006BB277 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/support/prefix.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/src/support/info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "src/classes/cameo_demo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -492,11 +507,14 @@
 		C3715E26165BE391006BB277 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/support/prefix.pch;
 				INFOPLIST_FILE = "$(SRCROOT)/src/support/info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "src/classes/cameo_demo-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

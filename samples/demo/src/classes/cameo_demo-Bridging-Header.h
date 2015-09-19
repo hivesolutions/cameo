@@ -23,29 +23,10 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "ApiViewController.h"
+// framework dependency includes
+#import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
+#import <Foundation/Foundation.h>
 
-@implementation ApiViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if(self) {
-        self.navigationItem.title = @"API";
-    }
-    return self;
-}
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self updateRequest];
-}
-
-- (void)updateRequest {
-    self.api = [[HttpBinAPI alloc] init];
-    [self.api getIp:^(NSDictionary *result, NSError *error) {
-        NSString *label = [NSString stringWithFormat:@"%@", result];
-        self.textView.text = label;
-    }];
-}
-
-@end
+// library dependency includes
+#import "../../../../src/classes/Cameo.h"
