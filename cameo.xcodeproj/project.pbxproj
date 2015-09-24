@@ -28,6 +28,9 @@
 		C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */; };
 		C2A2C088187F30BD009A052B /* HMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2C086187F30BD009A052B /* HMLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A2C089187F30BD009A052B /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
+		C2ACBF021BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */; settings = {ASSET_TAGS = (); }; };
+		C2ACBF031BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF011BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m */; settings = {ASSET_TAGS = (); }; };
+		C2ACBF4B1BB423D000A69C88 /* HMDictionaryUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF061BB420CA00A69C88 /* HMDictionaryUtilTest.m */; settings = {ASSET_TAGS = (); }; };
 		C2C2E3901BA9DDE000BDFDC7 /* HMAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E38E1BA9DDE000BDFDC7 /* HMAPI.h */; };
 		C2C2E3911BA9DDE000BDFDC7 /* HMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C2E38F1BA9DDE000BDFDC7 /* HMAPI.m */; };
 		C2C2E3961BA9EF8A00BDFDC7 /* HMProxyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */; };
@@ -36,7 +39,6 @@
 		C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
 		C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4200A1652CBB400005DC5 /* libcameo.a */; };
 		C2E4A7761B06095200603947 /* HMStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B9D321B0604A30072529A /* HMStringTest.m */; };
-		C2E4A7811B0609BE00603947 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C25B9D381B0605F20072529A /* SenTestingKit.framework */; };
 		C30DBA71165573F7002B678E /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA55165573F7002B678E /* Cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA72165573F7002B678E /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA56165573F7002B678E /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA73165573F7002B678E /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA57165573F7002B678E /* HMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -105,7 +107,6 @@
 		C25B9D321B0604A30072529A /* HMStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStringTest.m; sourceTree = "<group>"; };
 		C25B9D341B0604BE0072529A /* HMStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStringTest.h; sourceTree = "<group>"; };
 		C25B9D361B0605120072529A /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
-		C25B9D381B0605F20072529A /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HMColorUtil.h"; sourceTree = "<group>"; };
 		C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HMColorUtil.m"; sourceTree = "<group>"; };
 		C29819D21B9F5E4B0032C4BE /* HMSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSerializer.h; sourceTree = "<group>"; };
@@ -115,6 +116,10 @@
 		C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDataSerializer.m; sourceTree = "<group>"; };
 		C2A2C086187F30BD009A052B /* HMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLog.h; sourceTree = "<group>"; };
 		C2A2C087187F30BD009A052B /* HMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLog.m; sourceTree = "<group>"; };
+		C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HMDictionaryUtil.h"; sourceTree = "<group>"; };
+		C2ACBF011BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+HMDictionaryUtil.m"; sourceTree = "<group>"; };
+		C2ACBF051BB420CA00A69C88 /* HMDictionaryUtilTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDictionaryUtilTest.h; sourceTree = "<group>"; };
+		C2ACBF061BB420CA00A69C88 /* HMDictionaryUtilTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDictionaryUtilTest.m; sourceTree = "<group>"; };
 		C2C2E38E1BA9DDE000BDFDC7 /* HMAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMAPI.h; sourceTree = "<group>"; };
 		C2C2E38F1BA9DDE000BDFDC7 /* HMAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMAPI.m; sourceTree = "<group>"; };
 		C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyDelegate.h; sourceTree = "<group>"; };
@@ -163,7 +168,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2E4A7811B0609BE00603947 /* SenTestingKit.framework in Frameworks */,
 				C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +191,8 @@
 				C25B9D361B0605120072529A /* Dependencies.h */,
 				C25B9D341B0604BE0072529A /* HMStringTest.h */,
 				C25B9D321B0604A30072529A /* HMStringTest.m */,
+				C2ACBF051BB420CA00A69C88 /* HMDictionaryUtilTest.h */,
+				C2ACBF061BB420CA00A69C88 /* HMDictionaryUtilTest.m */,
 			);
 			name = tests;
 			path = src/tests;
@@ -246,6 +252,8 @@
 				C21BA6FC18801B82000ED62E /* HMString.h */,
 				C21BA6FD18801B82000ED62E /* HMString.m */,
 				C30DBA57165573F7002B678E /* HMVersion.h */,
+				C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */,
+				C2ACBF011BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m */,
 				C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */,
 				C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */,
 				C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */,
@@ -320,7 +328,6 @@
 			children = (
 				C30D41131655411A003AA670 /* CoreGraphics.framework */,
 				C37910A11655417F005D3B7B /* Foundation.framework */,
-				C25B9D381B0605F20072529A /* SenTestingKit.framework */,
 				C37910A316554184005D3B7B /* UIKit.framework */,
 			);
 			name = Frameworks;
@@ -355,6 +362,7 @@
 				C30DBA73165573F7002B678E /* HMVersion.h in Headers */,
 				C29819D61B9F5ECB0032C4BE /* HMJSONSerializer.h in Headers */,
 				C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */,
+				C2ACBF021BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h in Headers */,
 				C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */,
 				C3ED1C25165BEFD500D81B85 /* HMRequest.h in Headers */,
 				C2076A041B063DE3005B5FE4 /* HMCallbackDelegate.h in Headers */,
@@ -480,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2ACBF4B1BB423D000A69C88 /* HMDictionaryUtilTest.m in Sources */,
 				C2E4A7761B06095200603947 /* HMStringTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +513,7 @@
 				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
 				C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */,
 				C2C2E3911BA9DDE000BDFDC7 /* HMAPI.m in Sources */,
+				C2ACBF031BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m in Sources */,
 				C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */,
 				C2247DE61BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m in Sources */,
 			);
@@ -646,7 +656,7 @@
 				DSTROOT = /tmp/cameo.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"@executable_path/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/support/prefix.pch;
@@ -663,7 +673,7 @@
 				DSTROOT = /tmp/cameo.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"@executable_path/Frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = src/support/prefix.pch;

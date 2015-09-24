@@ -25,7 +25,7 @@
 
 #import "HMStringTest.h"
 
-@implementation TestString
+@implementation HMStringTest
 
 - (void)testCapitalized {
     NSString *result = [HMString capitalizedString:@"joao"];

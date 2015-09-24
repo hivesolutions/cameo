@@ -25,7 +25,7 @@
 
 #import "Dependencies.h"
 
-@interface TestString : XCTestCase {
+@interface HMStringTest : XCTestCase {
 }
 
 @end
