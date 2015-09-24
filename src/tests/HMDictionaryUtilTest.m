@@ -29,6 +29,7 @@
 
 - (void)testMerget {
     NSDictionary *original = @{@"a" : @"first"};
+    XCTAssert(original[@"a"], @"first", nil);
 }
 
 @end
