@@ -32,7 +32,7 @@
     // into which the contents are going to be merged
     // (otherwise the dictionary may not be editable)
     NSMutableDictionary *target = self.mutableCopy;
-    
+
     // iterates over each of the key in the dictionary
     // that is going to be the base of merging
     for(NSString *key in other) {
@@ -40,7 +40,7 @@
         // dictionaries for the current key
         id value = other[key];
         id base = target[key];
-        
+
         // in case both dictionary values are dictionaries
         // then calls this method recursively to merge them
         BOOL isValueDict = [value isKindOfClass:NSDictionary.class];
@@ -54,7 +54,7 @@
             target[key] = value;
         }
     }
-    
+
     // returns the merged dictionary (considered the result)
     // should contain non overlapping values
     return target;

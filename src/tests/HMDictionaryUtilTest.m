@@ -32,15 +32,15 @@
     NSDictionary *other = @{@"b" : @"second"};
     NSDictionary *result = [original merged:other];
 
-    //XCTAssert([result count], 2, nil);
+    XCTAssertEqual(result.count, 2, "size must be two");
     XCTAssert(result[@"a"], @"first", nil);
     XCTAssert(result[@"b"], @"second", nil);
-    
+
     original = @{@"a" : @"first"};
     other = @{@"a" : @"second"};
     result = [original merged:other];
-    
-   // XCTAssert(result.count, 1, nil);
+
+    XCTAssertEqual(result.count, 1, "size must be one");
     XCTAssert(result[@"a"], @"first", nil);
 }
 
