@@ -27,9 +27,21 @@
 
 @implementation HMDictionaryUtilTest
 
-- (void)testMerget {
+- (void)testMerged {
     NSDictionary *original = @{@"a" : @"first"};
-    XCTAssert(original[@"a"], @"first", nil);
+    NSDictionary *other = @{@"b" : @"second"};
+    NSDictionary *result = [original merged:other];
+
+    //XCTAssert([result count], 2, nil);
+    XCTAssert(result[@"a"], @"first", nil);
+    XCTAssert(result[@"b"], @"second", nil);
+    
+    original = @{@"a" : @"first"};
+    other = @{@"a" : @"second"};
+    result = [original merged:other];
+    
+   // XCTAssert(result.count, 1, nil);
+    XCTAssert(result[@"a"], @"first", nil);
 }
 
 @end
