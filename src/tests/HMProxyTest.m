@@ -46,7 +46,7 @@
                       [secondExpectation fulfill];
                   }];
     
-    [self waitForExpectationsWithTimeout:5 handler:^(NSError * _Nullable error) {}];
+    [self waitForExpectationsWithTimeout:5 handler:^(NSError *error) {}];
 }
 
 @end
