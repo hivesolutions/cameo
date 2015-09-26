@@ -29,7 +29,7 @@
 
 - (void)testGet {
     XCTestExpectation *firstExpectation = [self expectationWithDescription:@"first"];
-    [HMProxy.singleton get:@"https://httpbin.org/ip"
+    [HMProxy.singleton get:@"http://httpbin.org/ip"
                   callback:^(NSDictionary *result, NSError *error) {
                       XCTAssertEqual(result.count, 1, "size must be one");
                       XCTAssertNil(error);
@@ -38,7 +38,7 @@
 
     XCTestExpectation *secondExpectation = [self expectationWithDescription:@"second"];
     NSDictionary *parameters = @{@"first" : @1};
-    [HMProxy.singleton get:@"https://httpbin.org/ip"
+    [HMProxy.singleton get:@"http://httpbin.org/ip"
                 parameters:parameters
                   callback:^(NSDictionary *result, NSError *error) {
                       XCTAssertEqual(result.count, 1, "size must be one");

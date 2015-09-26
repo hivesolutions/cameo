@@ -30,7 +30,7 @@
 - (void)testMap {
     XCTestExpectation *firstExpectation = [self expectationWithDescription:@"first"];
     HMJSONSerializer *serializer = [HMJSONSerializer getForClass:HMDevice.class];
-    [HMProxy.singleton get:@"https://httpbin.org/ip"
+    [HMProxy.singleton get:@"http://httpbin.org/ip"
                 parameters:nil
                 useSession:NO
                 serializer:serializer
