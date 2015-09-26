@@ -25,7 +25,7 @@
 
 #import "Dependencies.h"
 
-#include "HMSerializer.h"
+#import "HMSerializer.h"
 
 @interface HMDataSerializer : NSObject<HMSerializer> {
 }

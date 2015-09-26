@@ -23,11 +23,11 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#include "Dependencies.h"
+#import "Dependencies.h"
 
-#include "HMCleanup.h"
-#include "HMRequest.h"
-#include "HMProxyRequestDelegate.h"
+#import "HMCleanup.h"
+#import "HMRequest.h"
+#import "HMProxyRequestDelegate.h"
 
 @interface HMCallbackDelegate : NSObject<HMProxyRequestDelegate> {
 @private

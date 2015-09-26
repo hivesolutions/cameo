@@ -27,11 +27,11 @@
 
 @implementation HMDataSerializer
 
-- (NSData *)dumps:(id)object error:(NSError *)error{
+- (NSData *)dumps:(id)object error:(NSError *)error {
     return nil;
 }
 
-- (id)loads:(NSData *)data error:(NSError *)error{
+- (id)loads:(NSData *)data error:(NSError *)error {
     return data;
 }
 

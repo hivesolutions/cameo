@@ -25,12 +25,16 @@
 
 #import "Dependencies.h"
 
-#include "HMSerializer.h"
+#import "HMSerializer.h"
 
 @interface HMJSONSerializer : NSObject<HMSerializer> {
 }
 
+@property (nonatomic) Class mapper;
+
+- (id)initWithClass:(Class)mapper;
 + (HMJSONSerializer *)singleton;
 + (HMJSONSerializer *)getSingleton;
++ (HMJSONSerializer *)getForClass:(Class)mapper;
 
 @end

@@ -28,16 +28,19 @@
 @implementation HMProxyTest
 
 - (void)testGet {
-    [HMProxy.singleton get:@"https://httpbin.org/ip" callback:^(NSDictionary *result, NSError *error) {
-        XCTAssertEqual(result.count, 1, "size must be one");
-        XCTAssertNil(error);
-    }];
+    [HMProxy.singleton get:@"https://httpbin.org/ip"
+                  callback:^(NSDictionary *result, NSError *error) {
+                      XCTAssertEqual(result.count, 1, "size must be one");
+                      XCTAssertNil(error);
+                  }];
 
     NSDictionary *parameters = @{@"first" : @1};
-    [HMProxy.singleton get:@"https://httpbin.org/ip" parameters:parameters callback:^(NSDictionary *result, NSError *error) {
-        XCTAssertEqual(result.count, 1, "size must be one");
-        XCTAssertNil(error);
-    }];
+    [HMProxy.singleton get:@"https://httpbin.org/ip"
+                parameters:parameters
+                  callback:^(NSDictionary *result, NSError *error) {
+                      XCTAssertEqual(result.count, 1, "size must be one");
+                      XCTAssertNil(error);
+                  }];
 }
 
 @end

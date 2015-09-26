@@ -22,6 +22,8 @@
 		C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */; };
 		C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */; };
 		C2965DB41BB6A0F8003D408F /* HMProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB31BB6A0F8003D408F /* HMProxyTest.m */; settings = {ASSET_TAGS = (); }; };
+		C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB71BB6B8F0003D408F /* HMJSONSerializerTest.m */; settings = {ASSET_TAGS = (); }; };
+		C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DBA1BB6BBE6003D408F /* HMMocks.m */; settings = {ASSET_TAGS = (); }; };
 		C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D21B9F5E4B0032C4BE /* HMSerializer.h */; };
 		C29819D61B9F5ECB0032C4BE /* HMJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */; };
 		C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */; };
@@ -112,6 +114,10 @@
 		C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HMColorUtil.m"; sourceTree = "<group>"; };
 		C2965DB21BB6A0F8003D408F /* HMProxyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyTest.h; sourceTree = "<group>"; };
 		C2965DB31BB6A0F8003D408F /* HMProxyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMProxyTest.m; sourceTree = "<group>"; };
+		C2965DB61BB6B8F0003D408F /* HMJSONSerializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJSONSerializerTest.h; sourceTree = "<group>"; };
+		C2965DB71BB6B8F0003D408F /* HMJSONSerializerTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMJSONSerializerTest.m; sourceTree = "<group>"; };
+		C2965DB91BB6BBE6003D408F /* HMMocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMMocks.h; sourceTree = "<group>"; };
+		C2965DBA1BB6BBE6003D408F /* HMMocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMMocks.m; sourceTree = "<group>"; };
 		C29819D21B9F5E4B0032C4BE /* HMSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMSerializer.h; sourceTree = "<group>"; };
 		C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJSONSerializer.h; sourceTree = "<group>"; };
 		C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMJSONSerializer.m; sourceTree = "<group>"; };
@@ -194,6 +200,10 @@
 				C25B9D361B0605120072529A /* Dependencies.h */,
 				C2ACBF051BB420CA00A69C88 /* HMDictionaryUtilTest.h */,
 				C2ACBF061BB420CA00A69C88 /* HMDictionaryUtilTest.m */,
+				C2965DB61BB6B8F0003D408F /* HMJSONSerializerTest.h */,
+				C2965DB71BB6B8F0003D408F /* HMJSONSerializerTest.m */,
+				C2965DB91BB6BBE6003D408F /* HMMocks.h */,
+				C2965DBA1BB6BBE6003D408F /* HMMocks.m */,
 				C2965DB21BB6A0F8003D408F /* HMProxyTest.h */,
 				C2965DB31BB6A0F8003D408F /* HMProxyTest.m */,
 				C25B9D341B0604BE0072529A /* HMStringTest.h */,
@@ -495,6 +505,8 @@
 			files = (
 				C2965DB41BB6A0F8003D408F /* HMProxyTest.m in Sources */,
 				C2ACBF4B1BB423D000A69C88 /* HMDictionaryUtilTest.m in Sources */,
+				C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */,
+				C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */,
 				C2E4A7761B06095200603947 /* HMStringTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

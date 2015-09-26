@@ -23,7 +23,7 @@
 // __copyright__ = Copyright (c) 2008-2015 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#include "Dependencies.h"
+#import "Dependencies.h"
 
 #import "HMBlend.h"
 
