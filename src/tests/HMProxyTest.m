@@ -28,19 +28,25 @@
 @implementation HMProxyTest
 
 - (void)testGet {
+    XCTestExpectation *firstExpectation = [self expectationWithDescription:@"first"];
     [HMProxy.singleton get:@"https://httpbin.org/ip"
                   callback:^(NSDictionary *result, NSError *error) {
                       XCTAssertEqual(result.count, 1, "size must be one");
                       XCTAssertNil(error);
+                      [firstExpectation fulfill];
                   }];
 
+    XCTestExpectation *secondExpectation = [self expectationWithDescription:@"second"];
     NSDictionary *parameters = @{@"first" : @1};
     [HMProxy.singleton get:@"https://httpbin.org/ip"
                 parameters:parameters
                   callback:^(NSDictionary *result, NSError *error) {
                       XCTAssertEqual(result.count, 1, "size must be one");
                       XCTAssertNil(error);
+                      [secondExpectation fulfill];
                   }];
+    
+    [self waitForExpectationsWithTimeout:5 handler:^(NSError * _Nullable error) {}];
 }
 
 @end

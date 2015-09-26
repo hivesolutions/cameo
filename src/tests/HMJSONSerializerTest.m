@@ -28,14 +28,18 @@
 @implementation HMJSONSerializerTest
 
 - (void)testMap {
+    XCTestExpectation *firstExpectation = [self expectationWithDescription:@"first"];
     HMJSONSerializer *serializer = [HMJSONSerializer getForClass:HMDevice.class];
-    [HMProxy.singleton get:@""
+    [HMProxy.singleton get:@"https://httpbin.org/ip"
                 parameters:nil
                 useSession:NO
                 serializer:serializer
                   callback:^(HMDevice *result, NSError *error) {
-                      XCTAssertNotNil(result.ip);
+                      XCTAssertNotNil(result.origin);
+                      [firstExpectation fulfill];
                   }];
+
+    [self waitForExpectationsWithTimeout:5 handler:^(NSError * _Nullable error) {}];
 }
 
 @end

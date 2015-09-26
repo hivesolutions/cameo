@@ -35,7 +35,7 @@
 @interface HMDevice : NSObject {
 }
 
-@property (nonatomic) NSString *ip;
 @property (nonatomic) NSString *name;
+@property (nonatomic) NSString *origin;
 
 @end
