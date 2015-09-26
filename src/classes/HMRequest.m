@@ -156,9 +156,14 @@
         NSString *key = [tuple objectAtIndex:0];
         NSString *value = [tuple objectAtIndex:1];
 
+        // verifies if the current value in iteration is of
+        // type string, so that some conditionals may be activated
+        BOOL isString = [value isKindOfClass:[NSString class]];
+
         // in case the value is not defined or it's
         // an empty string
-        if(value == nil || (NSNull *) value == [NSNull null] || value.length < 1) {
+        if(value == nil || (NSNull *) value == [NSNull null] ||
+           (isString && value.length < 1)) {
             // sets the value as an empty string
             value = @"";
         }
