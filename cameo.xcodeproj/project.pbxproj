@@ -112,6 +112,7 @@
 		C25B9D361B0605120072529A /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 		C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HMColorUtil.h"; sourceTree = "<group>"; };
 		C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HMColorUtil.m"; sourceTree = "<group>"; };
+		C279ED7E1BB706490058D4E5 /* info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 		C2965DB21BB6A0F8003D408F /* HMProxyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyTest.h; sourceTree = "<group>"; };
 		C2965DB31BB6A0F8003D408F /* HMProxyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMProxyTest.m; sourceTree = "<group>"; };
 		C2965DB61BB6B8F0003D408F /* HMJSONSerializerTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMJSONSerializerTest.h; sourceTree = "<group>"; };
@@ -311,6 +312,7 @@
 		C30DBA6F165573F7002B678E /* support */ = {
 			isa = PBXGroup;
 			children = (
+				C279ED7E1BB706490058D4E5 /* info.plist */,
 				C30DBA70165573F7002B678E /* prefix.pch */,
 			);
 			name = support;
@@ -571,7 +573,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = src/support/Info.plist;
+				INFOPLIST_FILE = src/support/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
@@ -602,7 +604,7 @@
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
-				INFOPLIST_FILE = src/support/Info.plist;
+				INFOPLIST_FILE = src/support/info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
