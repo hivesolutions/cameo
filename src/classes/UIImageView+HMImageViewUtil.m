@@ -27,6 +27,10 @@
 
 @implementation UIImageView(HMImageViewUtil)
 
+- (void)setImageWithURL:(NSURL *)url {
+    return [self setImageWithURL:url proxy:HMProxy.singleton];
+}
+
 - (void)setImageWithURL:(NSURL *)url proxy:(HMProxy *)proxy {
     [proxy get:url.absoluteString
     parameters:nil
@@ -35,6 +39,10 @@
       callback:^(id result, NSError *error) {
           self.image = [UIImage imageWithData:result];
       }];
+}
+
+- (void)setImageWithURLString:(NSString *)url {
+    return [self setImageWithURLString:url proxy:HMProxy.singleton];
 }
 
 - (void)setImageWithURLString:(NSString *)url proxy:(HMProxy *)proxy {

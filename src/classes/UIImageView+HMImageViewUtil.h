@@ -31,7 +31,9 @@
 @interface UIImageView(HMImageViewUtil) {
 }
 
+- (void)setImageWithURL:(NSURL *)url;
 - (void)setImageWithURL:(NSURL *)url proxy:(HMProxy *)proxy;
+- (void)setImageWithURLString:(NSString *)url;
 - (void)setImageWithURLString:(NSString *)url proxy:(HMProxy *)proxy;
 
 @end
