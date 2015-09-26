@@ -170,10 +170,9 @@
         // and must add the "and" character
         else { [stringBuffer addObject:@"&"]; }
 
-        // creates the line value
+        // creates the line value and then adds the
+        // line to the string buffer for joining
         NSString *lineValue = [NSString stringWithFormat:@"%@=%@", key, value];
-
-        // adds the line value to the string buffer
         [stringBuffer addObject:lineValue];
     }
 
