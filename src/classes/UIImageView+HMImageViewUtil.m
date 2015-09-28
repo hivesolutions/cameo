@@ -32,12 +32,18 @@
 }
 
 - (void)setImageWithURL:(NSURL *)url proxy:(HMProxy *)proxy {
+    return [self setImageWithURL:url proxy:proxy callback:nil];
+}
+
+- (void)setImageWithURL:(NSURL *)url proxy:(HMProxy *)proxy callback:(RequestBlock)callback {
     [proxy get:url.absoluteString
     parameters:nil
     useSession:NO
     serializer:HMDataSerializer.singleton
       callback:^(id result, NSError *error) {
           self.image = [UIImage imageWithData:result];
+          if(callback == nil) { return; }
+          callback(result, error);
       }];
 }
 

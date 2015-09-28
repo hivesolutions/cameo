@@ -33,6 +33,7 @@
 
 - (void)setImageWithURL:(NSURL *)url;
 - (void)setImageWithURL:(NSURL *)url proxy:(HMProxy *)proxy;
+- (void)setImageWithURL:(NSURL *)url proxy:(HMProxy *)proxy callback:(RequestBlock)callback;
 - (void)setImageWithURLString:(NSString *)url;
 - (void)setImageWithURLString:(NSString *)url proxy:(HMProxy *)proxy;
 
