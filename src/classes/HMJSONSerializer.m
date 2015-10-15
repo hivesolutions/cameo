@@ -35,20 +35,21 @@
     return self;
 }
 
-- (NSData *)dumps:(id)object error:(NSError *)error {
+- (NSData *)dumps:(id)object error:(NSError **)error {
     return nil;
 }
 
-- (id)loads:(NSData *)data error:(NSError *)error {
+- (id)loads:(NSData *)data error:(NSError **)error {
     id object = [NSJSONSerialization JSONObjectWithData:data
                                                 options:kNilOptions
-                                                  error:&error];
-    if (error == nil && self.mapper) {
+                                                  error:error];
+    if(error == nil && self.mapper) {
         object = [self map:object error:error];
     }
-    return object;}
+    return object;
+}
 
-- (id)map:(id)object error:(NSError *)error {
+- (id)map:(id)object error:(NSError **)error {
     BOOL isMany = [object isKindOfClass:[NSArray class]];
     if(isMany) {
         NSMutableArray *result = [[NSMutableArray alloc] init];

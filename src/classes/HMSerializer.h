@@ -29,7 +29,7 @@
 
 @required
 
-- (NSData *)dumps:(id)object error:(NSError *)error;
-- (id)loads:(NSData *)data error:(NSError *)error;
+- (NSData *)dumps:(id)object error:(NSError **)error;
+- (id)loads:(NSData *)data error:(NSError **)error;
 
 @end
