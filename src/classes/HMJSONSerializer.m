@@ -43,7 +43,7 @@
     id object = [NSJSONSerialization JSONObjectWithData:data
                                                 options:kNilOptions
                                                   error:error];
-    if(error == nil && self.mapper) {
+    if(*error == nil && self.mapper) {
         object = [self map:object error:error];
     }
     return object;
