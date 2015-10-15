@@ -46,7 +46,7 @@
                       [secondExpectation fulfill];
                   }];
     
-    [self waitForExpectationsWithTimeout:5 handler:^(NSError *error) {}];
+    [self waitForExpectationsWithTimeout:15 handler:^(NSError *error) {}];
 }
 
 @end
