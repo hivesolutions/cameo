@@ -45,7 +45,7 @@
                       XCTAssertNil(error);
                       [secondExpectation fulfill];
                   }];
-    
+
     [self waitForExpectationsWithTimeout:15 handler:^(NSError *error) {}];
 }
 
