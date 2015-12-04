@@ -215,7 +215,7 @@
     // value in case it's not possible to measure the capacity
     NSUInteger capacity = [response expectedContentLength];
     if(capacity == NSURLResponseUnknownLength) { capacity = 1000 * 1024; }
-    
+
     // creates a new mutable data "holder" to gather
     // the data to be sent from the server
     self.receivedData = [[NSMutableData alloc] initWithCapacity:capacity];
