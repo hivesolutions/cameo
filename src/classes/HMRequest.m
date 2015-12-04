@@ -210,9 +210,15 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    // tries to determine the appropriate capacity to be used in the
+    // received data mutable data structure defaulting to the default
+    // value in case it's not possible to measure the capacity
+    NSUInteger capacity = [response expectedContentLength];
+    if(capacity == NSURLResponseUnknownLength) { capacity = 1000 * 1024; }
+    
     // creates a new mutable data "holder" to gather
     // the data to be sent from the server
-    self.receivedData = [[NSMutableData alloc] init];
+    self.receivedData = [[NSMutableData alloc] initWithCapacity:capacity];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
