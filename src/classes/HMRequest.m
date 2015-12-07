@@ -219,7 +219,7 @@
 
     // creates a new mutable data "holder" to gather
     // the data to be sent from the server
-    self.receivedData = [[NSMutableData alloc] initWithCapacity:capacity];
+    self.receivedData = [[NSMutableData alloc] initWithCapacity:(NSUInteger) capacity];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
