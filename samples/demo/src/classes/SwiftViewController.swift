@@ -34,10 +34,10 @@ class SwiftViewController: UIViewController {
     }
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        super.init(nibName: nibNameOrNil == nil ? "SwiftViewController" : nibNameOrNil, bundle: nibBundleOrNil)
         self.navigationItem.title = "Swift"
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateRequest()
@@ -46,7 +46,10 @@ class SwiftViewController: UIViewController {
     func updateRequest() {
         HMProxy.singleton().get("https://httpbin.org/ip") {
             (result: AnyObject!, error: NSError!) in
-            self.textView.text = result.description
+            let label = String(format: "%@", String(result))
+           // let textFieldText = textField.text ?? "Some Default Text"
+            self.textView?.text = label;
+            //self.textView.text = label
         }
     }
 }

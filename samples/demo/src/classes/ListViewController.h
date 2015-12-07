@@ -28,6 +28,7 @@
 #import "ApiViewController.h"
 #import "ImageViewController.h"
 #import "BlendViewController.h"
+#import "StressViewController.h"
 #import "RequestViewController.h"
 
 @interface ListViewController : UIViewController<UITableViewDelegate, UITableViewDataSource> {

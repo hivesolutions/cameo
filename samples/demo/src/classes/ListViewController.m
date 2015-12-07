@@ -34,7 +34,7 @@
         self.items = @[
             @{
                 @"name" : @"Images",
-                @"view" : [ImageViewController class],
+                @"view" : [ImageViewController class]
             },
             @{
                 @"name" : @"Blend",
@@ -46,7 +46,7 @@
             },
             @{
                 @"name" : @"API",
-                @"view" : [ApiViewController class],
+                @"view" : [APIViewController class],
             },
             @{
                 @"name" : @"Stress",
@@ -54,7 +54,7 @@
             },
             @{
                 @"name" : @"Swift",
-                @"view" : [SwiftViewController class],
+                @"view" : [SwiftViewController class]
             }
         ];
     }

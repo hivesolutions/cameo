@@ -27,7 +27,7 @@
 
 #import "HttpBinApi.h"
 
-@interface ApiViewController : UIViewController {
+@interface APIViewController : UIViewController {
 }
 
 @property (nonatomic) HttpBinAPI *api;

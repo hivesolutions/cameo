@@ -25,7 +25,7 @@
 
 #import "ApiViewController.h"
 
-@implementation ApiViewController
+@implementation APIViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
