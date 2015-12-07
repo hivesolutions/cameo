@@ -19,8 +19,10 @@
 		C2432B7E1B04F8A5002876D0 /* shoe-sole.png in Resources */ = {isa = PBXBuildFile; fileRef = C2432B7A1B04F8A5002876D0 /* shoe-sole.png */; };
 		C25E96021B9F450C00A8E99C /* RequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25E96011B9F450C00A8E99C /* RequestViewController.xib */; };
 		C25E96051B9F458800A8E99C /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25E96041B9F458800A8E99C /* RequestViewController.m */; };
-		C2CE775B1BAD899900E2BCFA /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		C2CE778B1BAD8C8E00E2BCFA /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		C28947EA1C159D04008F21FC /* StressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28947E91C159D04008F21FC /* StressViewController.m */; };
+		C28947EC1C159E06008F21FC /* StressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28947EB1C159E06008F21FC /* StressViewController.xib */; };
+		C2CE775B1BAD899900E2BCFA /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */; };
+		C2CE778B1BAD8C8E00E2BCFA /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */; };
 		C2E1FA9B183A80DF00F43959 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */; };
 		C2E1FA9C183A80DF00F43959 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8E183A80DF00F43959 /* AppIcon29x29@2x.png */; };
 		C2E1FA9D183A80DF00F43959 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8F183A80DF00F43959 /* AppIcon40x40.png */; };
@@ -35,9 +37,9 @@
 		C2E1FAA6183A80DF00F43959 /* AppIcon72x72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA98183A80DF00F43959 /* AppIcon72x72@2x.png */; };
 		C2E1FAA7183A80DF00F43959 /* AppIcon76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA99183A80DF00F43959 /* AppIcon76x76.png */; };
 		C2E1FAA8183A80DF00F43959 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA9A183A80DF00F43959 /* AppIcon76x76@2x.png */; };
-		C2F83D6C1BAB42A600DF40B9 /* HTTPBinAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F83D6B1BAB42A600DF40B9 /* HTTPBinAPI.m */; settings = {ASSET_TAGS = (); }; };
-		C2F83D701BAB43EB00DF40B9 /* ApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F83D6F1BAB43EB00DF40B9 /* ApiViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		C2F83D731BAB446000DF40B9 /* APIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F83D721BAB446000DF40B9 /* APIViewController.m */; settings = {ASSET_TAGS = (); }; };
+		C2F83D6C1BAB42A600DF40B9 /* HTTPBinAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F83D6B1BAB42A600DF40B9 /* HTTPBinAPI.m */; };
+		C2F83D701BAB43EB00DF40B9 /* ApiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2F83D6F1BAB43EB00DF40B9 /* ApiViewController.xib */; };
+		C2F83D731BAB446000DF40B9 /* APIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2F83D721BAB446000DF40B9 /* APIViewController.m */; };
 		C3391584165E641E00DB2413 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391582165E641E00DB2413 /* logo.png */; };
 		C3391585165E641E00DB2413 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391583165E641E00DB2413 /* logo@2x.png */; };
 		C339159B165E697E00DB2413 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = C3391591165E697E00DB2413 /* iTunesArtwork.png */; };
@@ -78,6 +80,9 @@
 		C25E96011B9F450C00A8E99C /* RequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RequestViewController.xib; sourceTree = "<group>"; };
 		C25E96031B9F458800A8E99C /* RequestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		C25E96041B9F458800A8E99C /* RequestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewController.m; sourceTree = "<group>"; };
+		C28947E81C159D04008F21FC /* StressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StressViewController.h; sourceTree = "<group>"; };
+		C28947E91C159D04008F21FC /* StressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StressViewController.m; sourceTree = "<group>"; };
+		C28947EB1C159E06008F21FC /* StressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StressViewController.xib; sourceTree = "<group>"; };
 		C2CE77591BAD899900E2BCFA /* cameo_demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cameo_demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 2; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
@@ -247,6 +252,8 @@
 				C3715E38165BE4D5006BB277 /* main.m */,
 				C25E96031B9F458800A8E99C /* RequestViewController.h */,
 				C25E96041B9F458800A8E99C /* RequestViewController.m */,
+				C28947E81C159D04008F21FC /* StressViewController.h */,
+				C28947E91C159D04008F21FC /* StressViewController.m */,
 				C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */,
 			);
 			name = classes;
@@ -302,6 +309,7 @@
 				C2432B6D1B04D967002876D0 /* ListViewController.xib */,
 				C25E96011B9F450C00A8E99C /* RequestViewController.xib */,
 				C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */,
+				C28947EB1C159E06008F21FC /* StressViewController.xib */,
 			);
 			name = views;
 			path = src/views;
@@ -372,6 +380,7 @@
 				C2432B761B04F70D002876D0 /* BlendViewController.xib in Resources */,
 				C2E1FAA7183A80DF00F43959 /* AppIcon76x76.png in Resources */,
 				C3ED1BF7165BECB100D81B85 /* ImageViewController.xib in Resources */,
+				C28947EC1C159E06008F21FC /* StressViewController.xib in Resources */,
 				C2E1FA9E183A80DF00F43959 /* AppIcon40x40@2x.png in Resources */,
 				C3ED1C3C165BF3B900D81B85 /* HMBaseResources.bundle in Resources */,
 				C2E1FAA0183A80DF00F43959 /* AppIcon50x50@2x.png in Resources */,
@@ -417,6 +426,7 @@
 				C3715E44165BE4D5006BB277 /* main.m in Sources */,
 				C2432B711B04EB24002876D0 /* ListViewController.m in Sources */,
 				C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */,
+				C28947EA1C159D04008F21FC /* StressViewController.m in Sources */,
 				C2F83D731BAB446000DF40B9 /* APIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

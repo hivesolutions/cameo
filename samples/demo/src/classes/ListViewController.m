@@ -49,6 +49,10 @@
                 @"view" : [ApiViewController class],
             },
             @{
+                @"name" : @"Stress",
+                @"view" : [StressViewController class],
+            },
+            @{
                 @"name" : @"Swift",
                 @"view" : [SwiftViewController class],
             }
