@@ -37,7 +37,7 @@ class SwiftViewController: UIViewController {
         super.init(nibName: nibNameOrNil == nil ? "SwiftViewController" : nibNameOrNil, bundle: nibBundleOrNil)
         self.navigationItem.title = "Swift"
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         updateRequest()
