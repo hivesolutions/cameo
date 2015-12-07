@@ -99,6 +99,7 @@
     // is changed according to the defined in the request
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = self.method;
+    request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
     self.connection = [[NSURLConnection alloc] initWithRequest:request
                                                       delegate:self];
 

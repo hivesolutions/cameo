@@ -28,6 +28,7 @@
 @interface StressViewController : UIViewController {
 }
 
+@property (nonatomic) IBOutlet UIScrollView *scrollView;
 @property (nonatomic) IBOutlet UIImageView *imageView;
 
 @end
