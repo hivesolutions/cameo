@@ -20,7 +20,7 @@ pod "Cameo"
 
 ## CocoaPods usage
 
-To publish the Cameo Framework to the trunk repo of Cocoa Pods use:
+To publish the Cameo Framework to the trunk repo of CocoaPods use:
 
     pod trunk push Cameo.podspec
 
