@@ -32,6 +32,7 @@
     if(self) {
         self.url = url;
         self.method = @"GET";
+        self.allowRedirects = TRUE;
         self.callback = nil;
     }
     return self;
@@ -42,6 +43,7 @@
     if(self) {
         self.url = [NSURL URLWithString:urlString];
         self.method = @"GET";
+        self.allowRedirects = TRUE;
         self.callback = nil;
         self.serializer = HMJSONSerializer.singleton;
     }
@@ -53,6 +55,7 @@
     if(self) {
         self.url = [NSURL URLWithString:urlString];
         self.method = @"GET";
+        self.allowRedirects = TRUE;
         self.callback = callback;
         self.serializer = HMJSONSerializer.singleton;
     }
@@ -65,6 +68,7 @@
         self.url = [NSURL URLWithString:urlString];
         self.method = @"GET";
         self.parameters = parameters;
+        self.allowRedirects = TRUE;
         self.callback = nil;
         self.serializer = HMJSONSerializer.singleton;
     }
@@ -77,6 +81,7 @@
         self.url = [NSURL URLWithString:urlString];
         self.method = method;
         self.parameters = parameters;
+        self.allowRedirects = TRUE;
         self.callback = callback;
         self.serializer = HMJSONSerializer.singleton;
     }
@@ -232,6 +237,17 @@
     // handles the eror using the current infra-structure
     // should be able to do it
     [self handleError:error];
+}
+
+- (NSURLRequest *)connection:(NSURLConnection *)connection willSendRequest:(NSURLRequest *)request redirectResponse:(NSURLResponse *)response {
+    if(response && self.allowRedirects == NO) {
+        NSURL *url = [request URL];
+        NSMutableURLRequest *redirectRequest = [request mutableCopy];
+        [redirectRequest setURL:url];
+        return redirectRequest;
+    } else {
+        return request;
+    }
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {

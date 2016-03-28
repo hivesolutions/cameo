@@ -58,6 +58,11 @@ typedef void (^RequestBlock)(id, NSError *);
 @property (nonatomic) NSURLConnection *connection;
 
 /**
+ If the request should handle redirection transparently.
+ */
+@property (nonatomic) BOOL allowRedirects;
+
+/**
  The buffer to be used to store the received data while the data transfer is not complete.
  */
 @property (nonatomic) NSMutableData *receivedData;
