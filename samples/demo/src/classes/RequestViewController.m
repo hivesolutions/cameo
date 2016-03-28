@@ -45,7 +45,7 @@
         NSString *label = [NSString stringWithFormat:@"%@", result];
         self.textView.text = label;
     }];
-    self.imageView.imageWithURLString = @"https://httpbin.org/redirect-to?url=https%3A%2F%2Fhttpbin.org%2Fimage%2Fpng";
+    self.imageView.imageWithURLString = @"https://httpbin.org/image/png";
 }
 
 @end
