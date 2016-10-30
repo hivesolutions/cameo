@@ -136,7 +136,7 @@
 		C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HMImageViewUtil.h"; sourceTree = "<group>"; };
 		C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HMImageViewUtil.m"; sourceTree = "<group>"; };
 		C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HMImageUtil.m"; sourceTree = "<group>"; };
-		C2E1FA8C183A801C00F43959 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = readme.md; sourceTree = "<group>"; };
+		C2E1FA8C183A801C00F43959 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		C2E4A7671B06094500603947 /* cameo_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameo_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E4A7821B060B1600603947 /* Cameo.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cameo.podspec; sourceTree = "<group>"; };
 		C2E4A7831B060B1600603947 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -303,7 +303,7 @@
 		C30DBA6C165573F7002B678E /* static */ = {
 			isa = PBXGroup;
 			children = (
-				C2E1FA8C183A801C00F43959 /* readme.md */,
+				C2E1FA8C183A801C00F43959 /* README.md */,
 			);
 			name = static;
 			path = src/static;
