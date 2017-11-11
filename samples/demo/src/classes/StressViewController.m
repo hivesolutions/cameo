@@ -44,7 +44,7 @@
     self.scrollView.contentSize = CGSizeMake(9000, 9000);
     for(int index = 0; index < 1000; index++) {
         int _index = index % 24;
-        NSString *url = [NSString stringWithFormat:@"http://alpha.my-swear.com/api/compose?model=vyner&p=front:suede:white&p=side:suede:black&p=eyelets:metal:silver&p=laces:cotton:white&p=lining:calf_lining:white&p=sole:rubber:white&p=shadow:default:default&frame=%d", _index];
+        NSString *url = [NSString stringWithFormat:@"https://sandbox.platforme.com/compose?model=elvis&p=buckles:metal_tp:black&p=lining:calf_lining_tp:beige&p=sole:leather_tp:black&p=rhinestones:rhinestones_tp:mix_color1&p=upper:nappa_tp:black&p=shadow:default:default&size=300&frame=%d", _index];
         self.imageView.imageWithURLString = url;
     }
 }

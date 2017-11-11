@@ -21,9 +21,9 @@
 		C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */ = {isa = PBXBuildFile; fileRef = C2432B671B04CE0E002876D0 /* HMBlend.h */; };
 		C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */; };
 		C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */; };
-		C2965DB41BB6A0F8003D408F /* HMProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB31BB6A0F8003D408F /* HMProxyTest.m */; settings = {ASSET_TAGS = (); }; };
-		C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB71BB6B8F0003D408F /* HMJSONSerializerTest.m */; settings = {ASSET_TAGS = (); }; };
-		C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DBA1BB6BBE6003D408F /* HMMocks.m */; settings = {ASSET_TAGS = (); }; };
+		C2965DB41BB6A0F8003D408F /* HMProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB31BB6A0F8003D408F /* HMProxyTest.m */; };
+		C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB71BB6B8F0003D408F /* HMJSONSerializerTest.m */; };
+		C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DBA1BB6BBE6003D408F /* HMMocks.m */; };
 		C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D21B9F5E4B0032C4BE /* HMSerializer.h */; };
 		C29819D61B9F5ECB0032C4BE /* HMJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */; };
 		C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */; };
@@ -31,9 +31,9 @@
 		C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */; };
 		C2A2C088187F30BD009A052B /* HMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2C086187F30BD009A052B /* HMLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A2C089187F30BD009A052B /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
-		C2ACBF021BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */; settings = {ASSET_TAGS = (); }; };
-		C2ACBF031BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF011BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m */; settings = {ASSET_TAGS = (); }; };
-		C2ACBF4B1BB423D000A69C88 /* HMDictionaryUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF061BB420CA00A69C88 /* HMDictionaryUtilTest.m */; settings = {ASSET_TAGS = (); }; };
+		C2ACBF021BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */; };
+		C2ACBF031BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF011BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m */; };
+		C2ACBF4B1BB423D000A69C88 /* HMDictionaryUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF061BB420CA00A69C88 /* HMDictionaryUtilTest.m */; };
 		C2C2E3901BA9DDE000BDFDC7 /* HMAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E38E1BA9DDE000BDFDC7 /* HMAPI.h */; };
 		C2C2E3911BA9DDE000BDFDC7 /* HMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C2E38F1BA9DDE000BDFDC7 /* HMAPI.m */; };
 		C2C2E3961BA9EF8A00BDFDC7 /* HMProxyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */; };
@@ -147,13 +147,6 @@
 		C30DBA57165573F7002B678E /* HMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVersion.h; sourceTree = "<group>"; };
 		C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+HMImageUtil.h"; sourceTree = "<group>"; };
 		C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+HMControllerUtil.h"; sourceTree = "<group>"; };
-		C30DBA62165573F7002B678E /* build_all.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_all.sh; sourceTree = "<group>"; };
-		C30DBA63165573F7002B678E /* build_distribution.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_distribution.sh; sourceTree = "<group>"; };
-		C30DBA64165573F7002B678E /* build_documentation.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_documentation.sh; sourceTree = "<group>"; };
-		C30DBA65165573F7002B678E /* build_framework.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_framework.sh; sourceTree = "<group>"; };
-		C30DBA66165573F7002B678E /* build_samples.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_samples.sh; sourceTree = "<group>"; };
-		C30DBA68165573F7002B678E /* common.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = common.sh; sourceTree = "<group>"; };
-		C30DBA6A165573F7002B678E /* label_version_number.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = label_version_number.sh; sourceTree = "<group>"; };
 		C30DBA70165573F7002B678E /* prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
 		C37910A11655417F005D3B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C37910A316554184005D3B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -285,21 +278,6 @@
 			path = src/classes;
 			sourceTree = SOURCE_ROOT;
 		};
-		C30DBA61165573F7002B678E /* scripts */ = {
-			isa = PBXGroup;
-			children = (
-				C30DBA62165573F7002B678E /* build_all.sh */,
-				C30DBA63165573F7002B678E /* build_distribution.sh */,
-				C30DBA64165573F7002B678E /* build_documentation.sh */,
-				C30DBA65165573F7002B678E /* build_framework.sh */,
-				C30DBA66165573F7002B678E /* build_samples.sh */,
-				C30DBA68165573F7002B678E /* common.sh */,
-				C30DBA6A165573F7002B678E /* label_version_number.sh */,
-			);
-			name = scripts;
-			path = src/scripts;
-			sourceTree = SOURCE_ROOT;
-		};
 		C30DBA6C165573F7002B678E /* static */ = {
 			isa = PBXGroup;
 			children = (
@@ -355,7 +333,6 @@
 			children = (
 				C30DBA52165573F7002B678E /* bundles */,
 				C30DBA54165573F7002B678E /* classes */,
-				C30DBA61165573F7002B678E /* scripts */,
 				C30DBA6C165573F7002B678E /* static */,
 				C30DBA6F165573F7002B678E /* support */,
 				C25B9D301B06047A0072529A /* tests */,
@@ -448,7 +425,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Hive Solutions";
 				TargetAttributes = {
 					C2E4A7661B06094500603947 = {
@@ -621,22 +598,40 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -649,14 +644,32 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

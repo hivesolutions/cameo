@@ -25,7 +25,7 @@
 
 #import "Dependencies.h"
 
-#import "HttpBinApi.h"
+#import "HTTPBinAPI.h"
 
 @interface APIViewController : UIViewController {
 }
