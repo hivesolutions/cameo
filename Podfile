@@ -6,4 +6,4 @@ podspec :path => "Cameo.podspec"
 
 workspace "cameo.xcworkspace"
 
-done
+end
