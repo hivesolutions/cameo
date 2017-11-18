@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C251A3041FC08D6C009027D2 /* tobisa.c in Sources */ = {isa = PBXBuildFile; fileRef = C251A3031FC08D6C009027D2 /* tobisa.c */; };
 		C2965DB41BB6A0F8003D408F /* HMProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB31BB6A0F8003D408F /* HMProxyTest.m */; };
 		C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB71BB6B8F0003D408F /* HMJSONSerializerTest.m */; };
 		C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DBA1BB6BBE6003D408F /* HMMocks.m */; };
@@ -59,7 +60,7 @@
 		C2CA0D2F1FC08B3D00E4DC99 /* UIViewController+HMControllerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */; };
 		C2CA0D301FC08B3D00E4DC99 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
 		C2CA0D311FC08B4100E4DC99 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C279ED7E1BB706490058D4E5 /* info.plist */; };
-		C2CA0D321FC08B4900E4DC99 /* HMBaseResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C30DBA53165573F7002B678E /* HMBaseResources.bundle */; };
+		C2CA0D321FC08B4900E4DC99 /* HMBaseResources in Resources */ = {isa = PBXBuildFile; fileRef = C30DBA53165573F7002B678E /* HMBaseResources */; };
 		C2E4A7761B06095200603947 /* HMStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B9D321B0604A30072529A /* HMStringTest.m */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +87,8 @@
 		C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HMButtonUtil.h"; sourceTree = "<group>"; };
 		C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBUtton+HMButtonUtil.m"; sourceTree = "<group>"; };
 		C2432B671B04CE0E002876D0 /* HMBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMBlend.h; sourceTree = "<group>"; };
+		C251A3021FC08D6C009027D2 /* tobisa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tobisa.h; path = src/bundles/tobisa.h; sourceTree = SOURCE_ROOT; };
+		C251A3031FC08D6C009027D2 /* tobisa.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = tobisa.c; path = src/bundles/tobisa.c; sourceTree = SOURCE_ROOT; };
 		C25B9D321B0604A30072529A /* HMStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStringTest.m; sourceTree = "<group>"; };
 		C25B9D341B0604BE0072529A /* HMStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStringTest.h; sourceTree = "<group>"; };
 		C25B9D361B0605120072529A /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
@@ -123,7 +126,7 @@
 		C2E4A7821B060B1600603947 /* Cameo.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cameo.podspec; sourceTree = "<group>"; };
 		C2E4A7831B060B1600603947 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C30D41131655411A003AA670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C30DBA53165573F7002B678E /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMBaseResources.bundle; sourceTree = "<group>"; };
+		C30DBA53165573F7002B678E /* HMBaseResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HMBaseResources; sourceTree = "<group>"; };
 		C30DBA55165573F7002B678E /* Cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameo.h; sourceTree = "<group>"; };
 		C30DBA56165573F7002B678E /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 		C30DBA57165573F7002B678E /* HMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVersion.h; sourceTree = "<group>"; };
@@ -165,6 +168,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C251A3011FC08D57009027D2 /* alter */ = {
+			isa = PBXGroup;
+			children = (
+				C251A3021FC08D6C009027D2 /* tobisa.h */,
+				C251A3031FC08D6C009027D2 /* tobisa.c */,
+			);
+			path = alter;
+			sourceTree = SOURCE_ROOT;
+		};
 		C25B9D301B06047A0072529A /* tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +216,8 @@
 		C30DBA52165573F7002B678E /* bundles */ = {
 			isa = PBXGroup;
 			children = (
-				C30DBA53165573F7002B678E /* HMBaseResources.bundle */,
+				C251A3011FC08D57009027D2 /* alter */,
+				C30DBA53165573F7002B678E /* HMBaseResources */,
 			);
 			name = bundles;
 			path = src/bundles;
@@ -463,7 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2CA0D311FC08B4100E4DC99 /* info.plist in Resources */,
-				C2CA0D321FC08B4900E4DC99 /* HMBaseResources.bundle in Resources */,
+				C2CA0D321FC08B4900E4DC99 /* HMBaseResources in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +525,7 @@
 				C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */,
 				C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */,
 				C2E4A7761B06095200603947 /* HMStringTest.m in Sources */,
+				C251A3041FC08D6C009027D2 /* tobisa.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
