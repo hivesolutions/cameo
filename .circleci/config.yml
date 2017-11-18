@@ -22,3 +22,8 @@ jobs:
       - store_artifacts:
           path: ~/Library/Logs/scan
           destination: scan-logs
+deployment:
+  release:
+    tag: /.*/
+      commands:
+        - pod trunk push
