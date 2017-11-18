@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C251A3081FC08ECB009027D2 /* tobisa.c in Sources */ = {isa = PBXBuildFile; fileRef = C251A3071FC08ECB009027D2 /* tobisa.c */; };
+		C251A30A1FC08F70009027D2 /* asd in Resources */ = {isa = PBXBuildFile; fileRef = C251A3091FC08F70009027D2 /* asd */; };
 		C2965DB41BB6A0F8003D408F /* HMProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB31BB6A0F8003D408F /* HMProxyTest.m */; };
 		C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB71BB6B8F0003D408F /* HMJSONSerializerTest.m */; };
 		C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DBA1BB6BBE6003D408F /* HMMocks.m */; };
@@ -89,6 +90,7 @@
 		C2432B671B04CE0E002876D0 /* HMBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMBlend.h; sourceTree = "<group>"; };
 		C251A3061FC08ECB009027D2 /* tobisa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tobisa.h; sourceTree = "<group>"; };
 		C251A3071FC08ECB009027D2 /* tobisa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tobisa.c; sourceTree = "<group>"; };
+		C251A3091FC08F70009027D2 /* asd */ = {isa = PBXFileReference; lastKnownFileType = folder; path = asd; sourceTree = "<group>"; };
 		C25B9D321B0604A30072529A /* HMStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStringTest.m; sourceTree = "<group>"; };
 		C25B9D341B0604BE0072529A /* HMStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStringTest.h; sourceTree = "<group>"; };
 		C25B9D361B0605120072529A /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				C251A3051FC08ECB009027D2 /* asd */,
+				C251A3091FC08F70009027D2 /* asd */,
 				C30DBA53165573F7002B678E /* HMBaseResources */,
 			);
 			name = bundles;
@@ -484,6 +487,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C251A30A1FC08F70009027D2 /* asd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
