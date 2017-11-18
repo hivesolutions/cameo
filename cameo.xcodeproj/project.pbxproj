@@ -106,6 +106,7 @@
 		C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+HMControllerUtil.m"; sourceTree = "<group>"; };
 		C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HMButtonUtil.h"; sourceTree = "<group>"; };
 		C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBUtton+HMButtonUtil.m"; sourceTree = "<group>"; };
+		C236ECEF1FC0943E009C02EC /* resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = resources; sourceTree = "<group>"; };
 		C2432B671B04CE0E002876D0 /* HMBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMBlend.h; sourceTree = "<group>"; };
 		C25B9D321B0604A30072529A /* HMStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStringTest.m; sourceTree = "<group>"; };
 		C25B9D341B0604BE0072529A /* HMStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStringTest.h; sourceTree = "<group>"; };
@@ -218,6 +219,7 @@
 		C30DBA52165573F7002B678E /* bundles */ = {
 			isa = PBXGroup;
 			children = (
+				C236ECEF1FC0943E009C02EC /* resources */,
 				C30DBA53165573F7002B678E /* HMBaseResources.bundle */,
 			);
 			name = bundles;

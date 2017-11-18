@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'src/classes'
-  s.resource_bundle = { 'HMBaseResources' => ['src/bundles/HMBaseResources.bundle/**'] }
+  s.resource_bundle = { 'HMBaseResources' => ['src/bundles/resources/**'] }
 
   s.public_header_files = 'src/classes/*.h'
 end
