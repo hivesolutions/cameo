@@ -7,64 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C251A3081FC08ECB009027D2 /* tobisa.c in Sources */ = {isa = PBXBuildFile; fileRef = C251A3071FC08ECB009027D2 /* tobisa.c */; };
-		C251A30A1FC08F70009027D2 /* asd in Resources */ = {isa = PBXBuildFile; fileRef = C251A3091FC08F70009027D2 /* asd */; };
+		C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */ = {isa = PBXBuildFile; fileRef = C202B4921B04CDAF00F4078C /* HMBlend.m */; };
+		C2076A001B062500005B5FE4 /* HMProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C20769FE1B062500005B5FE4 /* HMProxy.h */; };
+		C2076A011B062500005B5FE4 /* HMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C20769FF1B062500005B5FE4 /* HMProxy.m */; };
+		C2076A041B063DE3005B5FE4 /* HMCallbackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C2076A031B063DE3005B5FE4 /* HMCallbackDelegate.h */; };
+		C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2076A051B063DF4005B5FE4 /* HMCallbackDelegate.m */; };
+		C2076A091B0652D9005B5FE4 /* HMCleanup.h in Headers */ = {isa = PBXBuildFile; fileRef = C2076A071B0652D9005B5FE4 /* HMCleanup.h */; };
+		C21BA6FE18801B82000ED62E /* HMString.h in Headers */ = {isa = PBXBuildFile; fileRef = C21BA6FC18801B82000ED62E /* HMString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C21BA6FF18801B82000ED62E /* HMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C21BA6FD18801B82000ED62E /* HMString.m */; };
+		C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
+		C2247DE51BA9CCE700391D7D /* UIButton+HMButtonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */; };
+		C2247DE61BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */; };
+		C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */ = {isa = PBXBuildFile; fileRef = C2432B671B04CE0E002876D0 /* HMBlend.h */; };
+		C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */; };
+		C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */; };
 		C2965DB41BB6A0F8003D408F /* HMProxyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB31BB6A0F8003D408F /* HMProxyTest.m */; };
 		C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DB71BB6B8F0003D408F /* HMJSONSerializerTest.m */; };
 		C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */ = {isa = PBXBuildFile; fileRef = C2965DBA1BB6BBE6003D408F /* HMMocks.m */; };
+		C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D21B9F5E4B0032C4BE /* HMSerializer.h */; };
+		C29819D61B9F5ECB0032C4BE /* HMJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */; };
+		C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */; };
+		C29819DA1BA0B9A00032C4BE /* HMDataSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D81BA0B9A00032C4BE /* HMDataSerializer.h */; };
+		C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */; };
+		C2A2C088187F30BD009A052B /* HMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2C086187F30BD009A052B /* HMLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2A2C089187F30BD009A052B /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
+		C2ACBF021BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */; };
+		C2ACBF031BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF011BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m */; };
 		C2ACBF4B1BB423D000A69C88 /* HMDictionaryUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF061BB420CA00A69C88 /* HMDictionaryUtilTest.m */; };
-		C2CA0D031FC08B3D00E4DC99 /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA55165573F7002B678E /* Cameo.h */; };
-		C2CA0D041FC08B3D00E4DC99 /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA56165573F7002B678E /* Dependencies.h */; };
-		C2CA0D051FC08B3D00E4DC99 /* HMAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E38E1BA9DDE000BDFDC7 /* HMAPI.h */; };
-		C2CA0D061FC08B3D00E4DC99 /* HMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C2E38F1BA9DDE000BDFDC7 /* HMAPI.m */; };
-		C2CA0D071FC08B3D00E4DC99 /* HMBlend.h in Headers */ = {isa = PBXBuildFile; fileRef = C2432B671B04CE0E002876D0 /* HMBlend.h */; };
-		C2CA0D081FC08B3D00E4DC99 /* HMBlend.m in Sources */ = {isa = PBXBuildFile; fileRef = C202B4921B04CDAF00F4078C /* HMBlend.m */; };
-		C2CA0D091FC08B3D00E4DC99 /* HMCallbackDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C2076A031B063DE3005B5FE4 /* HMCallbackDelegate.h */; };
-		C2CA0D0A1FC08B3D00E4DC99 /* HMCallbackDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2076A051B063DF4005B5FE4 /* HMCallbackDelegate.m */; };
-		C2CA0D0B1FC08B3D00E4DC99 /* HMCleanup.h in Headers */ = {isa = PBXBuildFile; fileRef = C2076A071B0652D9005B5FE4 /* HMCleanup.h */; };
-		C2CA0D0C1FC08B3D00E4DC99 /* HMDataSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D81BA0B9A00032C4BE /* HMDataSerializer.h */; };
-		C2CA0D0D1FC08B3D00E4DC99 /* HMDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */; };
-		C2CA0D0E1FC08B3D00E4DC99 /* HMJSONSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */; };
-		C2CA0D0F1FC08B3D00E4DC99 /* HMJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */; };
-		C2CA0D101FC08B3D00E4DC99 /* HMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2C086187F30BD009A052B /* HMLog.h */; };
-		C2CA0D111FC08B3D00E4DC99 /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
-		C2CA0D121FC08B3D00E4DC99 /* HMLoginView.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C43165BFDB000D81B85 /* HMLoginView.h */; };
-		C2CA0D131FC08B3D00E4DC99 /* HMLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C44165BFDB100D81B85 /* HMLoginView.m */; };
-		C2CA0D141FC08B3D00E4DC99 /* HMLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */; };
-		C2CA0D151FC08B3D00E4DC99 /* HMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */; };
-		C2CA0D161FC08B3D00E4DC99 /* HMProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C20769FE1B062500005B5FE4 /* HMProxy.h */; };
-		C2CA0D171FC08B3D00E4DC99 /* HMProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C20769FF1B062500005B5FE4 /* HMProxy.m */; };
-		C2CA0D181FC08B3D00E4DC99 /* HMProxyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */; };
-		C2CA0D191FC08B3D00E4DC99 /* HMProxyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */; };
-		C2CA0D1A1FC08B3D00E4DC99 /* HMProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */; };
-		C2CA0D1B1FC08B3D00E4DC99 /* HMProxyRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */; };
-		C2CA0D1C1FC08B3D00E4DC99 /* HMRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1D165BEFD500D81B85 /* HMRequest.h */; };
-		C2CA0D1D1FC08B3D00E4DC99 /* HMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C1E165BEFD500D81B85 /* HMRequest.m */; };
-		C2CA0D1E1FC08B3D00E4DC99 /* HMRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1F165BEFD500D81B85 /* HMRequestDelegate.h */; };
-		C2CA0D1F1FC08B3D00E4DC99 /* HMResources.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C4B165BFF6500D81B85 /* HMResources.h */; };
-		C2CA0D201FC08B3D00E4DC99 /* HMResources.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C4C165BFF6500D81B85 /* HMResources.m */; };
-		C2CA0D211FC08B3D00E4DC99 /* HMSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D21B9F5E4B0032C4BE /* HMSerializer.h */; };
-		C2CA0D221FC08B3D00E4DC99 /* HMString.h in Headers */ = {isa = PBXBuildFile; fileRef = C21BA6FC18801B82000ED62E /* HMString.h */; };
-		C2CA0D231FC08B3D00E4DC99 /* HMString.m in Sources */ = {isa = PBXBuildFile; fileRef = C21BA6FD18801B82000ED62E /* HMString.m */; };
-		C2CA0D241FC08B3D00E4DC99 /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA57165573F7002B678E /* HMVersion.h */; };
-		C2CA0D251FC08B3D00E4DC99 /* NSDictionary+HMDictionaryUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */; };
-		C2CA0D261FC08B3D00E4DC99 /* NSDictionary+HMDictionaryUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2ACBF011BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m */; };
-		C2CA0D271FC08B3D00E4DC99 /* UIButton+HMButtonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */; };
-		C2CA0D281FC08B3D00E4DC99 /* UIBUtton+HMButtonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */; };
-		C2CA0D291FC08B3D00E4DC99 /* UIColor+HMColorUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C272C6C21BA723450048F4E9 /* UIColor+HMColorUtil.h */; };
-		C2CA0D2A1FC08B3D00E4DC99 /* UIColor+HMColorUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C272C6C31BA723450048F4E9 /* UIColor+HMColorUtil.m */; };
-		C2CA0D2B1FC08B3D00E4DC99 /* UIImage+HMImageUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */; };
-		C2CA0D2C1FC08B3D00E4DC99 /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
-		C2CA0D2D1FC08B3D00E4DC99 /* UIImageView+HMImageViewUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */; };
-		C2CA0D2E1FC08B3D00E4DC99 /* UIImageView+HMImageViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */; };
-		C2CA0D2F1FC08B3D00E4DC99 /* UIViewController+HMControllerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */; };
-		C2CA0D301FC08B3D00E4DC99 /* UIViewController+HMControllerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C21E6C4B1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m */; };
-		C2CA0D311FC08B4100E4DC99 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C279ED7E1BB706490058D4E5 /* info.plist */; };
-		C2CA0D321FC08B4900E4DC99 /* HMBaseResources in Resources */ = {isa = PBXBuildFile; fileRef = C30DBA53165573F7002B678E /* HMBaseResources */; };
+		C2C2E3901BA9DDE000BDFDC7 /* HMAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E38E1BA9DDE000BDFDC7 /* HMAPI.h */; };
+		C2C2E3911BA9DDE000BDFDC7 /* HMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C2E38F1BA9DDE000BDFDC7 /* HMAPI.m */; };
+		C2C2E3961BA9EF8A00BDFDC7 /* HMProxyDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */; };
+		C2C46B041B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */; };
+		C2C46B051B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */; };
+		C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
+		C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4200A1652CBB400005DC5 /* libcameo.a */; };
 		C2E4A7761B06095200603947 /* HMStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B9D321B0604A30072529A /* HMStringTest.m */; };
+		C30DBA71165573F7002B678E /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA55165573F7002B678E /* Cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30DBA72165573F7002B678E /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA56165573F7002B678E /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30DBA73165573F7002B678E /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA57165573F7002B678E /* HMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5A165573F7002B678E /* UIImage+HMImageUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA5B165573F7002B678E /* UIViewController+HMControllerUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C30DBA78165573F7002B678E /* prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA70165573F7002B678E /* prefix.pch */; };
+		C37910A01655417B005D3B7B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C30D41131655411A003AA670 /* CoreGraphics.framework */; };
+		C37910A21655417F005D3B7B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A11655417F005D3B7B /* Foundation.framework */; };
+		C37910A416554184005D3B7B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C37910A316554184005D3B7B /* UIKit.framework */; };
+		C3ED1C25165BEFD500D81B85 /* HMRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1D165BEFD500D81B85 /* HMRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C26165BEFD500D81B85 /* HMRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C1E165BEFD500D81B85 /* HMRequest.m */; };
+		C3ED1C27165BEFD500D81B85 /* HMRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C1F165BEFD500D81B85 /* HMRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C20165BEFD500D81B85 /* HMLoginViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C21165BEFD500D81B85 /* HMLoginViewController.m */; };
+		C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C22165BEFD500D81B85 /* HMProxyRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C23165BEFD500D81B85 /* HMProxyRequest.m */; };
+		C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C24165BEFD500D81B85 /* HMProxyRequestDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C43165BFDB000D81B85 /* HMLoginView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C44165BFDB100D81B85 /* HMLoginView.m */; };
+		C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */ = {isa = PBXBuildFile; fileRef = C3ED1C4B165BFF6500D81B85 /* HMResources.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1C4C165BFF6500D81B85 /* HMResources.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		C2E4A76E1B06094500603947 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C3B420011652CBB400005DC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3B420091652CBB400005DC5;
+			remoteInfo = cameo;
+		};
 		C2F73443165C5B9000E4B56A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C39CF94C165BEA7400AA687F /* cameo_demo.xcodeproj */;
@@ -73,6 +81,18 @@
 			remoteInfo = cameo_demo;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C3B420081652CBB400005DC5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C202B4921B04CDAF00F4078C /* HMBlend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMBlend.m; sourceTree = "<group>"; };
@@ -87,9 +107,6 @@
 		C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HMButtonUtil.h"; sourceTree = "<group>"; };
 		C2247DE41BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBUtton+HMButtonUtil.m"; sourceTree = "<group>"; };
 		C2432B671B04CE0E002876D0 /* HMBlend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMBlend.h; sourceTree = "<group>"; };
-		C251A3061FC08ECB009027D2 /* tobisa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tobisa.h; sourceTree = "<group>"; };
-		C251A3071FC08ECB009027D2 /* tobisa.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tobisa.c; sourceTree = "<group>"; };
-		C251A3091FC08F70009027D2 /* asd */ = {isa = PBXFileReference; lastKnownFileType = folder; path = asd; sourceTree = "<group>"; };
 		C25B9D321B0604A30072529A /* HMStringTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMStringTest.m; sourceTree = "<group>"; };
 		C25B9D341B0604BE0072529A /* HMStringTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMStringTest.h; sourceTree = "<group>"; };
 		C25B9D361B0605120072529A /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
@@ -118,14 +135,13 @@
 		C2C2E3951BA9EF8A00BDFDC7 /* HMProxyDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMProxyDelegate.h; sourceTree = "<group>"; };
 		C2C46B021B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+HMImageViewUtil.h"; sourceTree = "<group>"; };
 		C2C46B031B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+HMImageViewUtil.m"; sourceTree = "<group>"; };
-		C2CA0CEC1FC08B1E00E4DC99 /* cameo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = cameo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+HMImageUtil.m"; sourceTree = "<group>"; };
 		C2E1FA8C183A801C00F43959 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		C2E4A7671B06094500603947 /* cameo_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameo_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E4A7821B060B1600603947 /* Cameo.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cameo.podspec; sourceTree = "<group>"; };
 		C2E4A7831B060B1600603947 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C30D41131655411A003AA670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C30DBA53165573F7002B678E /* HMBaseResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HMBaseResources; sourceTree = "<group>"; };
+		C30DBA53165573F7002B678E /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMBaseResources.bundle; sourceTree = "<group>"; };
 		C30DBA55165573F7002B678E /* Cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameo.h; sourceTree = "<group>"; };
 		C30DBA56165573F7002B678E /* Dependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Dependencies.h; sourceTree = "<group>"; };
 		C30DBA57165573F7002B678E /* HMVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMVersion.h; sourceTree = "<group>"; };
@@ -135,6 +151,7 @@
 		C37910A11655417F005D3B7B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C37910A316554184005D3B7B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C39CF94C165BEA7400AA687F /* cameo_demo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cameo_demo.xcodeproj; path = samples/demo/cameo_demo.xcodeproj; sourceTree = SOURCE_ROOT; };
+		C3B4200A1652CBB400005DC5 /* libcameo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libcameo.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3ED1C1D165BEFD500D81B85 /* HMRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMRequest.h; sourceTree = "<group>"; };
 		C3ED1C1E165BEFD500D81B85 /* HMRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMRequest.m; sourceTree = "<group>"; };
 		C3ED1C1F165BEFD500D81B85 /* HMRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMRequestDelegate.h; sourceTree = "<group>"; };
@@ -150,32 +167,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C2CA0CE81FC08B1E00E4DC99 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C2E4A7641B06094500603947 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B420071652CBB400005DC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37910A416554184005D3B7B /* UIKit.framework in Frameworks */,
+				C37910A21655417F005D3B7B /* Foundation.framework in Frameworks */,
+				C37910A01655417B005D3B7B /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C251A3051FC08ECB009027D2 /* asd */ = {
-			isa = PBXGroup;
-			children = (
-				C251A3061FC08ECB009027D2 /* tobisa.h */,
-				C251A3071FC08ECB009027D2 /* tobisa.c */,
-			);
-			path = asd;
-			sourceTree = "<group>";
-		};
 		C25B9D301B06047A0072529A /* tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,9 +218,7 @@
 		C30DBA52165573F7002B678E /* bundles */ = {
 			isa = PBXGroup;
 			children = (
-				C251A3051FC08ECB009027D2 /* asd */,
-				C251A3091FC08F70009027D2 /* asd */,
-				C30DBA53165573F7002B678E /* HMBaseResources */,
+				C30DBA53165573F7002B678E /* HMBaseResources.bundle */,
 			);
 			name = bundles;
 			path = src/bundles;
@@ -302,8 +312,8 @@
 		C3B4200B1652CBB400005DC5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				C3B4200A1652CBB400005DC5 /* libcameo.a */,
 				C2E4A7671B06094500603947 /* cameo_test.xctest */,
-				C2CA0CEC1FC08B1E00E4DC99 /* cameo.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,61 +343,44 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		C2CA0CE91FC08B1E00E4DC99 /* Headers */ = {
+		C33384721655083400F64AC8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2CA0D051FC08B3D00E4DC99 /* HMAPI.h in Headers */,
-				C2CA0D271FC08B3D00E4DC99 /* UIButton+HMButtonUtil.h in Headers */,
-				C2CA0D0C1FC08B3D00E4DC99 /* HMDataSerializer.h in Headers */,
-				C2CA0D091FC08B3D00E4DC99 /* HMCallbackDelegate.h in Headers */,
-				C2CA0D2F1FC08B3D00E4DC99 /* UIViewController+HMControllerUtil.h in Headers */,
-				C2CA0D211FC08B3D00E4DC99 /* HMSerializer.h in Headers */,
-				C2CA0D0E1FC08B3D00E4DC99 /* HMJSONSerializer.h in Headers */,
-				C2CA0D071FC08B3D00E4DC99 /* HMBlend.h in Headers */,
-				C2CA0D181FC08B3D00E4DC99 /* HMProxyDelegate.h in Headers */,
-				C2CA0D2D1FC08B3D00E4DC99 /* UIImageView+HMImageViewUtil.h in Headers */,
-				C2CA0D221FC08B3D00E4DC99 /* HMString.h in Headers */,
-				C2CA0D031FC08B3D00E4DC99 /* Cameo.h in Headers */,
-				C2CA0D251FC08B3D00E4DC99 /* NSDictionary+HMDictionaryUtil.h in Headers */,
-				C2CA0D1C1FC08B3D00E4DC99 /* HMRequest.h in Headers */,
-				C2CA0D241FC08B3D00E4DC99 /* HMVersion.h in Headers */,
-				C2CA0D1E1FC08B3D00E4DC99 /* HMRequestDelegate.h in Headers */,
-				C2CA0D291FC08B3D00E4DC99 /* UIColor+HMColorUtil.h in Headers */,
-				C2CA0D141FC08B3D00E4DC99 /* HMLoginViewController.h in Headers */,
-				C2CA0D101FC08B3D00E4DC99 /* HMLog.h in Headers */,
-				C2CA0D1F1FC08B3D00E4DC99 /* HMResources.h in Headers */,
-				C2CA0D1B1FC08B3D00E4DC99 /* HMProxyRequestDelegate.h in Headers */,
-				C2CA0D0B1FC08B3D00E4DC99 /* HMCleanup.h in Headers */,
-				C2CA0D161FC08B3D00E4DC99 /* HMProxy.h in Headers */,
-				C2CA0D191FC08B3D00E4DC99 /* HMProxyRequest.h in Headers */,
-				C2CA0D121FC08B3D00E4DC99 /* HMLoginView.h in Headers */,
-				C2CA0D2B1FC08B3D00E4DC99 /* UIImage+HMImageUtil.h in Headers */,
-				C2CA0D041FC08B3D00E4DC99 /* Dependencies.h in Headers */,
+				C30DBA71165573F7002B678E /* Cameo.h in Headers */,
+				C2076A001B062500005B5FE4 /* HMProxy.h in Headers */,
+				C2247DE51BA9CCE700391D7D /* UIButton+HMButtonUtil.h in Headers */,
+				C30DBA72165573F7002B678E /* Dependencies.h in Headers */,
+				C2076A091B0652D9005B5FE4 /* HMCleanup.h in Headers */,
+				C30DBA73165573F7002B678E /* HMVersion.h in Headers */,
+				C29819D61B9F5ECB0032C4BE /* HMJSONSerializer.h in Headers */,
+				C30DBA76165573F7002B678E /* UIImage+HMImageUtil.h in Headers */,
+				C2ACBF021BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h in Headers */,
+				C30DBA77165573F7002B678E /* UIViewController+HMControllerUtil.h in Headers */,
+				C3ED1C25165BEFD500D81B85 /* HMRequest.h in Headers */,
+				C2076A041B063DE3005B5FE4 /* HMCallbackDelegate.h in Headers */,
+				C29819DA1BA0B9A00032C4BE /* HMDataSerializer.h in Headers */,
+				C3ED1C27165BEFD500D81B85 /* HMRequestDelegate.h in Headers */,
+				C3ED1C28165BEFD500D81B85 /* HMLoginViewController.h in Headers */,
+				C2C2E3901BA9DDE000BDFDC7 /* HMAPI.h in Headers */,
+				C2C46B041B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.h in Headers */,
+				C2A2C088187F30BD009A052B /* HMLog.h in Headers */,
+				C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */,
+				C2C2E3961BA9EF8A00BDFDC7 /* HMProxyDelegate.h in Headers */,
+				C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */,
+				C21BA6FE18801B82000ED62E /* HMString.h in Headers */,
+				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
+				C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */,
+				C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */,
+				C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */,
+				C30DBA78165573F7002B678E /* prefix.pch in Headers */,
+				C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		C2CA0CEB1FC08B1E00E4DC99 /* cameo */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C2CA0CFD1FC08B1E00E4DC99 /* Build configuration list for PBXNativeTarget "cameo" */;
-			buildPhases = (
-				C2CA0CE71FC08B1E00E4DC99 /* Sources */,
-				C2CA0CE81FC08B1E00E4DC99 /* Frameworks */,
-				C2CA0CE91FC08B1E00E4DC99 /* Headers */,
-				C2CA0CEA1FC08B1E00E4DC99 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = cameo;
-			productName = cameo;
-			productReference = C2CA0CEC1FC08B1E00E4DC99 /* cameo.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		C2E4A7661B06094500603947 /* cameo_test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2E4A7701B06094500603947 /* Build configuration list for PBXNativeTarget "cameo_test" */;
@@ -399,11 +392,30 @@
 			buildRules = (
 			);
 			dependencies = (
+				C2E4A76F1B06094500603947 /* PBXTargetDependency */,
 			);
 			name = cameo_test;
 			productName = cameo_test;
 			productReference = C2E4A7671B06094500603947 /* cameo_test.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C3B420091652CBB400005DC5 /* cameo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3B420181652CBB400005DC5 /* Build configuration list for PBXNativeTarget "cameo" */;
+			buildPhases = (
+				C3B420061652CBB400005DC5 /* Sources */,
+				C3B420071652CBB400005DC5 /* Frameworks */,
+				C3B420081652CBB400005DC5 /* CopyFiles */,
+				C33384721655083400F64AC8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cameo;
+			productName = cameo;
+			productReference = C3B4200A1652CBB400005DC5 /* libcameo.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -415,11 +427,6 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Hive Solutions";
 				TargetAttributes = {
-					C2CA0CEB1FC08B1E00E4DC99 = {
-						CreatedOnToolsVersion = 9.1;
-						DevelopmentTeam = EMTVKQFNNJ;
-						ProvisioningStyle = Automatic;
-					};
 					C2E4A7661B06094500603947 = {
 						CreatedOnToolsVersion = 6.3.1;
 					};
@@ -443,8 +450,8 @@
 			);
 			projectRoot = "";
 			targets = (
+				C3B420091652CBB400005DC5 /* cameo */,
 				C2E4A7661B06094500603947 /* cameo_test */,
-				C2CA0CEB1FC08B1E00E4DC99 /* cameo */,
 			);
 		};
 /* End PBXProject section */
@@ -460,52 +467,16 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C2CA0CEA1FC08B1E00E4DC99 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2CA0D311FC08B4100E4DC99 /* info.plist in Resources */,
-				C2CA0D321FC08B4900E4DC99 /* HMBaseResources in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C2E4A7651B06094500603947 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C251A30A1FC08F70009027D2 /* asd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C2CA0CE71FC08B1E00E4DC99 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C2CA0D201FC08B3D00E4DC99 /* HMResources.m in Sources */,
-				C2CA0D231FC08B3D00E4DC99 /* HMString.m in Sources */,
-				C2CA0D2E1FC08B3D00E4DC99 /* UIImageView+HMImageViewUtil.m in Sources */,
-				C2CA0D081FC08B3D00E4DC99 /* HMBlend.m in Sources */,
-				C2CA0D1A1FC08B3D00E4DC99 /* HMProxyRequest.m in Sources */,
-				C2CA0D061FC08B3D00E4DC99 /* HMAPI.m in Sources */,
-				C2CA0D1D1FC08B3D00E4DC99 /* HMRequest.m in Sources */,
-				C2CA0D0F1FC08B3D00E4DC99 /* HMJSONSerializer.m in Sources */,
-				C2CA0D111FC08B3D00E4DC99 /* HMLog.m in Sources */,
-				C2CA0D0D1FC08B3D00E4DC99 /* HMDataSerializer.m in Sources */,
-				C2CA0D261FC08B3D00E4DC99 /* NSDictionary+HMDictionaryUtil.m in Sources */,
-				C2CA0D301FC08B3D00E4DC99 /* UIViewController+HMControllerUtil.m in Sources */,
-				C2CA0D2C1FC08B3D00E4DC99 /* UIImage+HMImageUtil.m in Sources */,
-				C2CA0D2A1FC08B3D00E4DC99 /* UIColor+HMColorUtil.m in Sources */,
-				C2CA0D0A1FC08B3D00E4DC99 /* HMCallbackDelegate.m in Sources */,
-				C2CA0D171FC08B3D00E4DC99 /* HMProxy.m in Sources */,
-				C2CA0D131FC08B3D00E4DC99 /* HMLoginView.m in Sources */,
-				C2CA0D281FC08B3D00E4DC99 /* UIBUtton+HMButtonUtil.m in Sources */,
-				C2CA0D151FC08B3D00E4DC99 /* HMLoginViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C2E4A7631B06094500603947 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,89 +486,46 @@
 				C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */,
 				C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */,
 				C2E4A7761B06095200603947 /* HMStringTest.m in Sources */,
-				C251A3081FC08ECB009027D2 /* tobisa.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3B420061652CBB400005DC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */,
+				C2076A011B062500005B5FE4 /* HMProxy.m in Sources */,
+				C2C46B051B9F4EFF0048FA33 /* UIImageView+HMImageViewUtil.m in Sources */,
+				C2A2C089187F30BD009A052B /* HMLog.m in Sources */,
+				C21BA6FF18801B82000ED62E /* HMString.m in Sources */,
+				C21E6C4C1655BEBC00FDE5C8 /* UIViewController+HMControllerUtil.m in Sources */,
+				C3ED1C26165BEFD500D81B85 /* HMRequest.m in Sources */,
+				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
+				C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */,
+				C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */,
+				C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */,
+				C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */,
+				C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */,
+				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,
+				C3ED1C46165BFDB100D81B85 /* HMLoginView.m in Sources */,
+				C2C2E3911BA9DDE000BDFDC7 /* HMAPI.m in Sources */,
+				C2ACBF031BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m in Sources */,
+				C3ED1C4E165BFF6600D81B85 /* HMResources.m in Sources */,
+				C2247DE61BA9CCE700391D7D /* UIBUtton+HMButtonUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C2E4A76F1B06094500603947 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C3B420091652CBB400005DC5 /* cameo */;
+			targetProxy = C2E4A76E1B06094500603947 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		C2CA0CFE1FC08B1E00E4DC99 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = EMTVKQFNNJ;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = cameo/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = pt.hive.cameo;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C2CA0CFF1FC08B1E00E4DC99 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = EMTVKQFNNJ;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				INFOPLIST_FILE = cameo/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = pt.hive.cameo;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		C2E4A7711B06094500603947 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -746,18 +674,43 @@
 			};
 			name = Release;
 		};
+		C3B420191652CBB400005DC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/cameo.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/support/prefix.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C3B4201A1652CBB400005DC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/cameo.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = src/support/prefix.pch;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C2CA0CFD1FC08B1E00E4DC99 /* Build configuration list for PBXNativeTarget "cameo" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C2CA0CFE1FC08B1E00E4DC99 /* Debug */,
-				C2CA0CFF1FC08B1E00E4DC99 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C2E4A7701B06094500603947 /* Build configuration list for PBXNativeTarget "cameo_test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -772,6 +725,15 @@
 			buildConfigurations = (
 				C3B420161652CBB400005DC5 /* Debug */,
 				C3B420171652CBB400005DC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3B420181652CBB400005DC5 /* Build configuration list for PBXNativeTarget "cameo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3B420191652CBB400005DC5 /* Debug */,
+				C3B4201A1652CBB400005DC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

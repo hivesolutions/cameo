@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C2CA0CEB1FC08B1E00E4DC99"
-               BuildableName = "cameo.framework"
+               BlueprintIdentifier = "C3B420091652CBB400005DC5"
+               BuildableName = "libcameo.a"
                BlueprintName = "cameo"
                ReferencedContainer = "container:cameo.xcodeproj">
             </BuildableReference>
@@ -47,8 +47,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C2CA0CEB1FC08B1E00E4DC99"
-            BuildableName = "cameo.framework"
+            BlueprintIdentifier = "C3B420091652CBB400005DC5"
+            BuildableName = "libcameo.a"
             BlueprintName = "cameo"
             ReferencedContainer = "container:cameo.xcodeproj">
          </BuildableReference>
