@@ -23,4 +23,4 @@ jobs:
           path: ~/Library/Logs/scan
           destination: scan-logs
       - deploy:
-          commands: pod trunk push
+          command: pod trunk push
