@@ -21,6 +21,7 @@
 		C25E96051B9F458800A8E99C /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C25E96041B9F458800A8E99C /* RequestViewController.m */; };
 		C28947EA1C159D04008F21FC /* StressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C28947E91C159D04008F21FC /* StressViewController.m */; };
 		C28947EC1C159E06008F21FC /* StressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28947EB1C159E06008F21FC /* StressViewController.xib */; };
+		C2CA0D331FC08B9200E4DC99 /* cameo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2CA0D341FC08B9200E4DC99 /* cameo.framework */; };
 		C2CE775B1BAD899900E2BCFA /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */; };
 		C2CE778B1BAD8C8E00E2BCFA /* SwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */; };
 		C2E1FA9B183A80DF00F43959 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = C2E1FA8D183A80DF00F43959 /* AppIcon29x29.png */; };
@@ -57,7 +58,6 @@
 		C375DF3C165E89460065B06A /* logo-square.png in Resources */ = {isa = PBXBuildFile; fileRef = C375DF3A165E89460065B06A /* logo-square.png */; };
 		C375DF44165E93F00065B06A /* logo-sprite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C375DF42165E93F00065B06A /* logo-sprite@2x.png */; };
 		C375DF45165E93F00065B06A /* logo-square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C375DF43165E93F00065B06A /* logo-square@2x.png */; };
-		C3ED1BE7165BEAFA00D81B85 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3ED1BE6165BEAFA00D81B85 /* libcameo.a */; };
 		C3ED1BF7165BECB100D81B85 /* ImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3ED1BF5165BECB100D81B85 /* ImageViewController.xib */; };
 		C3ED1BFA165BECD400D81B85 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3ED1BF9165BECD400D81B85 /* ImageViewController.m */; };
 		C3ED1C3C165BF3B900D81B85 /* HMBaseResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C3ED1C3B165BF3B900D81B85 /* HMBaseResources.bundle */; };
@@ -83,6 +83,7 @@
 		C28947E81C159D04008F21FC /* StressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StressViewController.h; sourceTree = "<group>"; };
 		C28947E91C159D04008F21FC /* StressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StressViewController.m; sourceTree = "<group>"; };
 		C28947EB1C159E06008F21FC /* StressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StressViewController.xib; sourceTree = "<group>"; };
+		C2CA0D341FC08B9200E4DC99 /* cameo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = cameo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2CE77591BAD899900E2BCFA /* cameo_demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cameo_demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		C2CE775A1BAD899900E2BCFA /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 2; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		C2CE778A1BAD8C8E00E2BCFA /* SwiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SwiftViewController.xib; sourceTree = "<group>"; };
@@ -139,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3ED1BE7165BEAFA00D81B85 /* libcameo.a in Frameworks */,
+				C2CA0D331FC08B9200E4DC99 /* cameo.framework in Frameworks */,
 				C3715E0B165BE391006BB277 /* UIKit.framework in Frameworks */,
 				C3715E0D165BE391006BB277 /* Foundation.framework in Frameworks */,
 				C3715E0F165BE391006BB277 /* CoreGraphics.framework in Frameworks */,
@@ -211,6 +212,7 @@
 		C3715E09165BE391006BB277 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C2CA0D341FC08B9200E4DC99 /* cameo.framework */,
 				C3ED1BE6165BEAFA00D81B85 /* libcameo.a */,
 				C3715E0A165BE391006BB277 /* UIKit.framework */,
 				C3715E0C165BE391006BB277 /* Foundation.framework */,
