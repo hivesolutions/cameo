@@ -2,9 +2,7 @@ version: 2
 jobs:
   build:
     macos:
-      xcode:
-        - "8.3.3"
-        - "9.0"
+      xcode: "9.1"
     steps:
       - checkout
       - run:
@@ -24,3 +22,8 @@ jobs:
       - store_artifacts:
           path: ~/Library/Logs/scan
           destination: scan-logs
+  deployment:
+    release:
+      tag: /.*/
+        commands:
+          - pod trunk push
