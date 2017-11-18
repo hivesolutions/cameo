@@ -338,7 +338,6 @@
 				C25B9D301B06047A0072529A /* tests */,
 			);
 			name = Cameo;
-			path = cameo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

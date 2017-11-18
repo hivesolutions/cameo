@@ -229,7 +229,6 @@
 				C3715E3E165BE4D5006BB277 /* support */,
 			);
 			name = "Cameo Demo";
-			path = "cameo-demo";
 			sourceTree = "<group>";
 		};
 		C3715E35165BE4D5006BB277 /* classes */ = {
