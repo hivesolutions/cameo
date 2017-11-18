@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary          = "A generic framework for ios interaction that provides a series of utilities."
   s.description      = <<-DESC
                        A generic framework for ios interaction that provides a series of utilities.
-                       Use the framrwork to avoid extra repetitive work.
+                       Use the framework to avoid extra repetitive work.
                        DESC
   s.homepage         = "http://cameo.hive.pt/"
   s.license          = "Apache License, Version 2.0"
