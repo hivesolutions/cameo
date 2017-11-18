@@ -1,13 +1,8 @@
 sudo: false
 language: objective-c
-matrix:
-  include:
-    - osx_image: "xcode7.3"
-    - osx_image: "xcode8"
-    - osx_image: "xcode8.1"
 xcode_project: cameo.xcodeproj
 xcode_scheme: cameo_test
-xcode_sdk: iphoneos
+xcode_sdk: iphonesimulator
 env:
   - secure: hEQeOn4dlkbE5pGdNLxDzwRbZaMInwaXKNDTU/cw43BI4OPUocPCZyL6RSSK6tV0s82sqTF81RVEcEcSSm/hvTKBWszNhJ6UfQ3LCMp8IXU87RlyTH/LqCwgu5eCibB16cq/CtHsPV4ZqVd178VksME9RhMoolpOBZAW5ccLpeg=
 deploy:
