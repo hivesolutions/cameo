@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Cameo"
-  s.version          = "0.3.7"
+  s.version          = "0.3.8"
   s.summary          = "A generic framework for ios interaction that provides a series of utilities."
   s.description      = <<-DESC
                        A generic framework for ios interaction that provides a series of utilities.
