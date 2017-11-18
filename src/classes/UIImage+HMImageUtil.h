@@ -33,7 +33,7 @@
 /**
  Scales the current image to the provided size, note that a proper mechanism is going to be selected to determine the dimension to be used as pivot for scaling.
 
- @param size: The target size for the resulting image, a proper dimension will be selected for resizing.
+ @param size The target size for the resulting image, a proper dimension will be selected for resizing.
  @return The resulting scaled image ready to be used in raster contexts.
  */
 - (UIImage *)scaleImage:(CGSize)size;
@@ -49,8 +49,8 @@
 /**
  Creates rounded corners for the current image using a oval dimensions based approach, meaning that the proper dimensions of the round circle are provided explicitly and used accordingly.
 
- @param ovalWidth: The width of the oval/circle value for the round corners of the image.
- @param ovalHeight: The height of the oval/circle value for the round corners of the image.
+ @param ovalWidth The width of the oval/circle value for the round corners of the image.
+ @param ovalHeight The height of the oval/circle value for the round corners of the image.
  @return The resulting "rounded" imager eady to be used in raster contexts.
  */
 - (UIImage *)roundWithWidth:(NSUInteger)ovalWidth height:(NSUInteger)ovalHeight;
