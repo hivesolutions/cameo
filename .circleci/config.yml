@@ -24,4 +24,3 @@ jobs:
           destination: scan-logs
       - deploy:
           command: pod trunk push
- 
