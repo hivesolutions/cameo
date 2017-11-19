@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/bash
+# -*- coding: utf-8 -*-
 
 source ~/.rvm/scripts/rvm
 rvm use default
