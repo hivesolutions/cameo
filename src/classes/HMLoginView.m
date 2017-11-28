@@ -69,6 +69,10 @@
         padding = 20;
     }
 
+    // increments the padding with the top margin that is imposed
+    // by the current screen/device
+    padding += [HMScreen getTopMargin];
+
     // updates the basic values for the login view so that the
     // autoresizing mask enables it to be flexible in the width
     self.contentMode = UIViewContentModeCenter;

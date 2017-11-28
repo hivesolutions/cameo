@@ -25,6 +25,7 @@
 
 #import "Dependencies.h"
 
+#import "HMScreen.h"
 #import "HMResources.h"
 
 @interface HMLoginView : UIView {
