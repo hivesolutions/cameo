@@ -23,29 +23,16 @@
 // __copyright__ = Copyright (c) 2008-2017 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HMAPI.h"
-#import "HMBlend.h"
-#import "HMCallbackDelegate.h"
-#import "HMCleanup.h"
-#import "HMDataSerializer.h"
+#import "Dependencies.h"
+
 #import "HMDevice.h"
-#import "HMJSONSerializer.h"
-#import "HMLog.h"
-#import "HMLoginView.h"
-#import "HMLoginViewController.h"
-#import "HMProxy.h"
-#import "HMProxyRequest.h"
-#import "HMProxyRequestDelegate.h"
-#import "HMRequest.h"
-#import "HMRequestDelegate.h"
-#import "HMResources.h"
-#import "HMScreen.h"
-#import "HMSerializer.h"
-#import "HMString.h"
-#import "HMVersion.h"
-#import "NSDictionary+HMDictionaryUtil.h"
-#import "UIButton+HMButtonUtil.h"
-#import "UIColor+HMColorUtil.h"
-#import "UIImage+HMImageUtil.h"
-#import "UIImageView+HMImageViewUtil.h"
-#import "UIViewController+HMControllerUtil.h"
+
+@interface HMScreen : NSObject {
+}
+
++ (CGFloat)getTopMargin;
++ (CGFloat)getBottomMargin;
++ (CGFloat)getLeftMargin;
++ (CGFloat)getRightMargin;
+
+@end

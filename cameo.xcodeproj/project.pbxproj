@@ -42,6 +42,10 @@
 		C2CB34261655BB5B00F6969D /* UIImage+HMImageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CB34251655BB5B00F6969D /* UIImage+HMImageUtil.m */; };
 		C2E4A76D1B06094500603947 /* libcameo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B4200A1652CBB400005DC5 /* libcameo.a */; };
 		C2E4A7761B06095200603947 /* HMStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C25B9D321B0604A30072529A /* HMStringTest.m */; };
+		C2EBD6621FCDD92200688FA1 /* HMScreen.h in Headers */ = {isa = PBXBuildFile; fileRef = C2EBD6601FCDD92200688FA1 /* HMScreen.h */; };
+		C2EBD6631FCDD92200688FA1 /* HMScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EBD6611FCDD92200688FA1 /* HMScreen.m */; };
+		C2EBD6671FCDD97400688FA1 /* HMDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = C2EBD6651FCDD97400688FA1 /* HMDevice.h */; };
+		C2EBD6681FCDD97400688FA1 /* HMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = C2EBD6661FCDD97400688FA1 /* HMDevice.m */; };
 		C30DBA71165573F7002B678E /* Cameo.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA55165573F7002B678E /* Cameo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA72165573F7002B678E /* Dependencies.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA56165573F7002B678E /* Dependencies.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C30DBA73165573F7002B678E /* HMVersion.h in Headers */ = {isa = PBXBuildFile; fileRef = C30DBA57165573F7002B678E /* HMVersion.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -140,6 +144,10 @@
 		C2E4A7671B06094500603947 /* cameo_test.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cameo_test.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2E4A7821B060B1600603947 /* Cameo.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Cameo.podspec; sourceTree = "<group>"; };
 		C2E4A7831B060B1600603947 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C2EBD6601FCDD92200688FA1 /* HMScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMScreen.h; sourceTree = "<group>"; };
+		C2EBD6611FCDD92200688FA1 /* HMScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMScreen.m; sourceTree = "<group>"; };
+		C2EBD6651FCDD97400688FA1 /* HMDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMDevice.h; sourceTree = "<group>"; };
+		C2EBD6661FCDD97400688FA1 /* HMDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMDevice.m; sourceTree = "<group>"; };
 		C30D41131655411A003AA670 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C30DBA53165573F7002B678E /* HMBaseResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMBaseResources.bundle; sourceTree = "<group>"; };
 		C30DBA55165573F7002B678E /* Cameo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cameo.h; sourceTree = "<group>"; };
@@ -238,6 +246,8 @@
 				C2076A071B0652D9005B5FE4 /* HMCleanup.h */,
 				C29819D81BA0B9A00032C4BE /* HMDataSerializer.h */,
 				C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */,
+				C2EBD6651FCDD97400688FA1 /* HMDevice.h */,
+				C2EBD6661FCDD97400688FA1 /* HMDevice.m */,
 				C29819D41B9F5ECB0032C4BE /* HMJSONSerializer.h */,
 				C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */,
 				C2A2C086187F30BD009A052B /* HMLog.h */,
@@ -257,6 +267,8 @@
 				C3ED1C1F165BEFD500D81B85 /* HMRequestDelegate.h */,
 				C3ED1C4B165BFF6500D81B85 /* HMResources.h */,
 				C3ED1C4C165BFF6500D81B85 /* HMResources.m */,
+				C2EBD6601FCDD92200688FA1 /* HMScreen.h */,
+				C2EBD6611FCDD92200688FA1 /* HMScreen.m */,
 				C29819D21B9F5E4B0032C4BE /* HMSerializer.h */,
 				C21BA6FC18801B82000ED62E /* HMString.h */,
 				C21BA6FD18801B82000ED62E /* HMString.m */,
@@ -368,6 +380,7 @@
 				C2432B681B04CE0E002876D0 /* HMBlend.h in Headers */,
 				C2C2E3961BA9EF8A00BDFDC7 /* HMProxyDelegate.h in Headers */,
 				C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */,
+				C2EBD6671FCDD97400688FA1 /* HMDevice.h in Headers */,
 				C21BA6FE18801B82000ED62E /* HMString.h in Headers */,
 				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
 				C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */,
@@ -375,6 +388,7 @@
 				C272C6C41BA723450048F4E9 /* UIColor+HMColorUtil.h in Headers */,
 				C30DBA78165573F7002B678E /* prefix.pch in Headers */,
 				C29819D31B9F5E4B0032C4BE /* HMSerializer.h in Headers */,
+				C2EBD6621FCDD92200688FA1 /* HMScreen.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,6 +517,8 @@
 				C3ED1C29165BEFD500D81B85 /* HMLoginViewController.m in Sources */,
 				C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */,
 				C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */,
+				C2EBD6681FCDD97400688FA1 /* HMDevice.m in Sources */,
+				C2EBD6631FCDD92200688FA1 /* HMScreen.m in Sources */,
 				C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */,
 				C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */,
 				C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */,

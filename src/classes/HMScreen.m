@@ -23,29 +23,30 @@
 // __copyright__ = Copyright (c) 2008-2017 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HMAPI.h"
-#import "HMBlend.h"
-#import "HMCallbackDelegate.h"
-#import "HMCleanup.h"
-#import "HMDataSerializer.h"
-#import "HMDevice.h"
-#import "HMJSONSerializer.h"
-#import "HMLog.h"
-#import "HMLoginView.h"
-#import "HMLoginViewController.h"
-#import "HMProxy.h"
-#import "HMProxyRequest.h"
-#import "HMProxyRequestDelegate.h"
-#import "HMRequest.h"
-#import "HMRequestDelegate.h"
-#import "HMResources.h"
 #import "HMScreen.h"
-#import "HMSerializer.h"
-#import "HMString.h"
-#import "HMVersion.h"
-#import "NSDictionary+HMDictionaryUtil.h"
-#import "UIButton+HMButtonUtil.h"
-#import "UIColor+HMColorUtil.h"
-#import "UIImage+HMImageUtil.h"
-#import "UIImageView+HMImageViewUtil.h"
-#import "UIViewController+HMControllerUtil.h"
+
+@implementation HMScreen
+
++ (CGFloat)getTopMargin {
+    if([HMDevice isIPhoneX]) {
+        return 16.0;
+    }
+    return 0.0;
+}
+
++ (CGFloat)getBottomMargin {
+    if([HMDevice isIPhoneX]) {
+        return 4.0;
+    }
+    return 0.0;
+}
+
++ (CGFloat)getLeftMargin {
+    return 0.0;
+}
+
++ (CGFloat)getRightMargin {
+    return 0.0;
+}
+
+@end
