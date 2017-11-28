@@ -25,10 +25,10 @@
 
 #import "HMMocks.h"
 
-@implementation HMPerson
+@implementation HMDataPerson
 
 @end
 
-@implementation HMDevice
+@implementation HMDataDevice
 
 @end

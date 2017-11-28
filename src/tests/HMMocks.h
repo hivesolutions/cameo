@@ -25,14 +25,14 @@
 
 #import "Dependencies.h"
 
-@interface HMPerson : NSObject {
+@interface HMDataPerson : NSObject {
 }
 
 @property (nonatomic) NSString *name;
 
 @end
 
-@interface HMDevice : NSObject {
+@interface HMDataDevice : NSObject {
 }
 
 @property (nonatomic) NSString *name;

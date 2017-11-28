@@ -29,12 +29,12 @@
 
 - (void)testMap {
     XCTestExpectation *firstExpectation = [self expectationWithDescription:@"first"];
-    HMJSONSerializer *serializer = [HMJSONSerializer getForClass:HMDevice.class];
+    HMJSONSerializer *serializer = [HMJSONSerializer getForClass:HMDataDevice.class];
     [HMProxy.singleton get:@"http://httpbin.org/ip"
                 parameters:nil
                 useSession:NO
                 serializer:serializer
-                  callback:^(HMDevice *result, NSError *error) {
+                  callback:^(HMDataDevice *result, NSError *error) {
                       XCTAssertNotNil(result.origin);
                       [firstExpectation fulfill];
                   }];
