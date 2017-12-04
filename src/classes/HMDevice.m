@@ -36,8 +36,8 @@
 }
 
 + (BOOL)isIPhoneX {
-    if([HMDevice isPhone] == FALSE) {
-        return FALSE;
+    if([HMDevice isPhone] == NO) {
+        return NO;
     }
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
     return screenSize.height == 812;
