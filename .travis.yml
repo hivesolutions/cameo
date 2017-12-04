@@ -3,6 +3,7 @@ language: objective-c
 xcode_project: cameo.xcodeproj
 xcode_scheme: cameo_test
 xcode_sdk: iphonesimulator
+osx_image: "xcode7.3"
 env:
   - secure: NGnfTYtju59ByjKDBFKqZPWs77pcIIxbSQ2DAjnkZPbgMoKtjpKQH8D1tGrSXLSqreL13JuTF03iR5mcF/kpsDyoexeGjNsk5yAFjUguKrbiyMR1IWqhfiKMmXmrmVpsxKQiy8Pwoh8yYhYWrDiAg0YslaxoCgwiXqn+69eYPuk=
 deploy:
