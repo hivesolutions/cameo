@@ -149,7 +149,7 @@
     copyrightLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
     copyrightLabel.shadowOffset = CGSizeMake(1, 1);
     copyrightLabel.text = [HMResources localizedString:@"Copyright Hive Solutions 2008-2017" withDefault:@"Copyright Hive Solutions 2008-2017"];
-    copyrightLabel.textAlignment = NSTextAlignmentCenter ;
+    copyrightLabel.textAlignment = NSTextAlignmentCenter;
     copyrightLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 
     [self addSubview:logoView];
