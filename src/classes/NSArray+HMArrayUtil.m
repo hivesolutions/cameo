@@ -40,4 +40,17 @@
     return result;
 }
 
+- (NSArray *)mapWithIndex:(id (^)(id obj, NSUInteger idx))block {
+    NSParameterAssert(block != nil);
+
+    NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
+
+    [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        id value = block(obj, idx) ?: [NSNull null];
+        [result addObject:value];
+    }];
+
+    return result;
+}
+
 @end

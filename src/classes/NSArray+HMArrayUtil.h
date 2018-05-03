@@ -29,5 +29,6 @@
 }
 
 - (NSArray *)map:(id (^)(id obj))block;
+- (NSArray *)mapWithIndex:(id (^)(id obj, NSUInteger idx))block;
 
 @end
