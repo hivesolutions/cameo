@@ -32,7 +32,7 @@ If the "private" Hive Solutions repo is the target use instead:
 
 To be able to publish the package directly to CocoPods one must use register first with the trunk
 
-    pod trunk register development@hive.pt "hivesolutions"
+    pod trunk register joamag@hive.pt "João Magalhães"
 
 And then use the token located at `~/.netrc` to create the `COCOAPODS_TRUNK_TOKEN` environment variable in `.travis.yml`.
 
