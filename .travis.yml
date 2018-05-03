@@ -5,7 +5,7 @@ xcode_scheme: cameo_test
 xcode_sdk: iphonesimulator
 osx_image: "xcode7.3"
 env:
-  - secure: lQSVvXFPeI3MessmO++QeFsheoApH5UwjF02bWOhPEQLdlw7POMn/UV3AptpSfyGeiDZzf+xSjg3JU6jRNR+qh2HzNYBBmM2B9mOvxM3rVjw7lwU3bUBAPsVEpfM4U2S+VPpTFQ4pdtE7TqJuzfbKGej6Jcdk7BSHscNwCD+x60=
+  - secure: "d+gB0SQfz2FRzg/Gk7OmgQl+z+R9aTjpZCFWGydZsuQQdVQFIoQH/Kas7vGXBjIInuBIKqaCChQCe7PxB5qoSUsXKLReCpS5/gh8fjnYDVzWjVTg9bIOS4etYCsImCZAnqdC1GmwLtpiOioRdoc9KKaYkDulNdDpqGHKGWO21D8=
 deploy:
   provider: script
   script: ./scripts/push.sh
