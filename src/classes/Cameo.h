@@ -43,6 +43,7 @@
 #import "HMSerializer.h"
 #import "HMString.h"
 #import "HMVersion.h"
+#import "NSArray+HMArrayUtil.h"
 #import "NSDictionary+HMDictionaryUtil.h"
 #import "UIButton+HMButtonUtil.h"
 #import "UIColor+HMColorUtil.h"

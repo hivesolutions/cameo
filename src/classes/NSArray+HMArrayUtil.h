@@ -23,25 +23,11 @@
 // __copyright__ = Copyright (c) 2008-2018 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HMDictionaryUtilTest.h"
+#import "Dependencies.h"
 
-@implementation HMDictionaryUtilTest
-
-- (void)testMerged {
-    NSDictionary *original = @{@"a" : @"first"};
-    NSDictionary *other = @{@"b" : @"second"};
-    NSDictionary *result = [original merged:other];
-
-    XCTAssertEqual(result.count, 2, "size must be two");
-    XCTAssert([result[@"a"] isEqualToString:@"first"], "first value is invalid");
-    XCTAssert([result[@"b"] isEqualToString:@"second"], "second value is invalid");
-
-    original = @{@"a" : @"first"};
-    other = @{@"a" : @"second"};
-    result = [original merged:other];
-
-    XCTAssertEqual(result.count, 1, "size must be one");
-    XCTAssert([result[@"a"] isEqualToString:@"second"], "first value is invalid");
+@interface NSArray(HMArrayUtil) {
 }
+
+- (NSArray *)map:(id (^)(id obj))block;
 
 @end

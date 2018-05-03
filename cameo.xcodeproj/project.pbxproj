@@ -29,6 +29,9 @@
 		C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */; };
 		C29819DA1BA0B9A00032C4BE /* HMDataSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = C29819D81BA0B9A00032C4BE /* HMDataSerializer.h */; };
 		C29819DB1BA0B9A00032C4BE /* HMDataSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */; };
+		C29D94A1209B079B00F47B1F /* NSArray+HMArrayUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C29D949F209B079B00F47B1F /* NSArray+HMArrayUtil.h */; };
+		C29D94A2209B079B00F47B1F /* NSArray+HMArrayUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D94A0209B079B00F47B1F /* NSArray+HMArrayUtil.m */; };
+		C29D94A5209B087600F47B1F /* HMArrayUtilTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C29D94A4209B087600F47B1F /* HMArrayUtilTest.m */; };
 		C2A2C088187F30BD009A052B /* HMLog.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A2C086187F30BD009A052B /* HMLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A2C089187F30BD009A052B /* HMLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A2C087187F30BD009A052B /* HMLog.m */; };
 		C2ACBF021BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */; };
@@ -128,6 +131,10 @@
 		C29819D51B9F5ECB0032C4BE /* HMJSONSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMJSONSerializer.m; sourceTree = "<group>"; };
 		C29819D81BA0B9A00032C4BE /* HMDataSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMDataSerializer.h; sourceTree = "<group>"; };
 		C29819D91BA0B9A00032C4BE /* HMDataSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMDataSerializer.m; sourceTree = "<group>"; };
+		C29D949F209B079B00F47B1F /* NSArray+HMArrayUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+HMArrayUtil.h"; sourceTree = "<group>"; };
+		C29D94A0209B079B00F47B1F /* NSArray+HMArrayUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+HMArrayUtil.m"; sourceTree = "<group>"; };
+		C29D94A4209B087600F47B1F /* HMArrayUtilTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMArrayUtilTest.m; sourceTree = "<group>"; };
+		C29D94A6209B092800F47B1F /* HMArrayUtilTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMArrayUtilTest.h; sourceTree = "<group>"; };
 		C2A2C086187F30BD009A052B /* HMLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMLog.h; sourceTree = "<group>"; };
 		C2A2C087187F30BD009A052B /* HMLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMLog.m; sourceTree = "<group>"; };
 		C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+HMDictionaryUtil.h"; sourceTree = "<group>"; };
@@ -210,6 +217,8 @@
 				C2965DB31BB6A0F8003D408F /* HMProxyTest.m */,
 				C25B9D341B0604BE0072529A /* HMStringTest.h */,
 				C25B9D321B0604A30072529A /* HMStringTest.m */,
+				C29D94A4209B087600F47B1F /* HMArrayUtilTest.m */,
+				C29D94A6209B092800F47B1F /* HMArrayUtilTest.h */,
 			);
 			name = tests;
 			path = src/tests;
@@ -273,6 +282,8 @@
 				C21BA6FC18801B82000ED62E /* HMString.h */,
 				C21BA6FD18801B82000ED62E /* HMString.m */,
 				C30DBA57165573F7002B678E /* HMVersion.h */,
+				C29D949F209B079B00F47B1F /* NSArray+HMArrayUtil.h */,
+				C29D94A0209B079B00F47B1F /* NSArray+HMArrayUtil.m */,
 				C2ACBF001BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.h */,
 				C2ACBF011BB41CFD00A69C88 /* NSDictionary+HMDictionaryUtil.m */,
 				C2247DE31BA9CCE700391D7D /* UIButton+HMButtonUtil.h */,
@@ -382,6 +393,7 @@
 				C3ED1C2A165BEFD500D81B85 /* HMProxyRequest.h in Headers */,
 				C2EBD6671FCDD97400688FA1 /* HMDevice.h in Headers */,
 				C21BA6FE18801B82000ED62E /* HMString.h in Headers */,
+				C29D94A1209B079B00F47B1F /* NSArray+HMArrayUtil.h in Headers */,
 				C3ED1C2C165BEFD500D81B85 /* HMProxyRequestDelegate.h in Headers */,
 				C3ED1C45165BFDB100D81B85 /* HMLoginView.h in Headers */,
 				C3ED1C4D165BFF6600D81B85 /* HMResources.h in Headers */,
@@ -495,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29D94A5209B087600F47B1F /* HMArrayUtilTest.m in Sources */,
 				C2965DB41BB6A0F8003D408F /* HMProxyTest.m in Sources */,
 				C2ACBF4B1BB423D000A69C88 /* HMDictionaryUtilTest.m in Sources */,
 				C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */,
@@ -520,6 +533,7 @@
 				C2EBD6681FCDD97400688FA1 /* HMDevice.m in Sources */,
 				C2EBD6631FCDD92200688FA1 /* HMScreen.m in Sources */,
 				C272C6C51BA723450048F4E9 /* UIColor+HMColorUtil.m in Sources */,
+				C29D94A2209B079B00F47B1F /* NSArray+HMArrayUtil.m in Sources */,
 				C2076A061B063DF4005B5FE4 /* HMCallbackDelegate.m in Sources */,
 				C29819D71B9F5ECB0032C4BE /* HMJSONSerializer.m in Sources */,
 				C3ED1C2B165BEFD500D81B85 /* HMProxyRequest.m in Sources */,

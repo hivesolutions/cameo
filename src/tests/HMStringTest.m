@@ -29,13 +29,13 @@
 
 - (void)testCapitalized {
     NSString *result = [HMString capitalizedString:@"joao"];
-    XCTAssert(result, @"Joao", nil);
+    XCTAssert([result isEqualToString:@"Joao"], "result is invalid");
 
     result = [HMString capitalizedString:@"joao magalhaes"];
-    XCTAssert(result, @"Joao Magalhaes", nil);
+    XCTAssert([result isEqualToString:@"Joao magalhaes"], "result is invalid");
 
     result = [HMString capitalizedString:@"joão magalhães"];
-    XCTAssert(result, @"João Magalhães", nil);
+    XCTAssert([result isEqualToString:@"João magalhães"], "result is invalid");
 }
 
 @end

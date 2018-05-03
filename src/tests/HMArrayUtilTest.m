@@ -23,25 +23,20 @@
 // __copyright__ = Copyright (c) 2008-2018 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
-#import "HMDictionaryUtilTest.h"
+#import "HMArrayUtilTest.h"
 
-@implementation HMDictionaryUtilTest
+@implementation HMArrayUtilTest
 
-- (void)testMerged {
-    NSDictionary *original = @{@"a" : @"first"};
-    NSDictionary *other = @{@"b" : @"second"};
-    NSDictionary *result = [original merged:other];
+- (void)testMap {
+    NSArray *array = @[@1, @2, @3];
 
-    XCTAssertEqual(result.count, 2, "size must be two");
-    XCTAssert([result[@"a"] isEqualToString:@"first"], "first value is invalid");
-    XCTAssert([result[@"b"] isEqualToString:@"second"], "second value is invalid");
+    NSArray *result = [array map:^id(NSNumber *obj) {
+        return [NSNumber numberWithInt:[obj intValue] * 2];
+    }];
 
-    original = @{@"a" : @"first"};
-    other = @{@"a" : @"second"};
-    result = [original merged:other];
-
-    XCTAssertEqual(result.count, 1, "size must be one");
-    XCTAssert([result[@"a"] isEqualToString:@"second"], "first value is invalid");
+    XCTAssert([result[0] isEqualToNumber:@2], "first result is invalid");
+    XCTAssert([result[1] isEqual:@4], "second result is invalid");
+    XCTAssert([result[2] isEqual:@6], "third result is invalid");
 }
 
 @end
