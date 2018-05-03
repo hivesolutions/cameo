@@ -28,6 +28,18 @@ If the "private" Hive Solutions repo is the target use instead:
 
     pod repo push hive Cameo.podspec
 
+## Travis automation
+
+To be able to publish the package directly to CocoPods one must use register first with the trunk
+
+    pod trunk register development@hive "hivesolutions"
+
+And then use the token located at `~/.netrc` to create the `COCOAPODS_TRUNK_TOKEN` environment variable in `.travis.yml`.
+
+Then this same environment setting must be encrypted using the tavis strartegy:
+
+    travis encrypt COCOAPODS_TRUNK_TOKEN=your_cocoapods_token
+
 ## License
 
 Appier is currently licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/).
