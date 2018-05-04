@@ -36,7 +36,7 @@
 
 + (CGFloat)getBottomMargin {
     if([HMDevice isIPhoneX]) {
-        return 4.0;
+        return 16.0;
     }
     return 0.0;
 }
