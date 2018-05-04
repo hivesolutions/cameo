@@ -79,10 +79,13 @@
     return NO;
 }
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-implementations"
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) { return YES; }
     return NO;
 }
+#pragma GCC diagnostic pop
 
 - (IBAction)textFieldFinished:(id)sender {
     // retrieves the current view, casting it as a login view
