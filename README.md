@@ -1,6 +1,6 @@
 # [![Cameo Framework](res/logo.png)](http://cameo.hive.pt)
 
-A generic framework for ios interaction that provides a series of utilities.
+A generic framework for iOS interaction that provides a series of utilities.
 
 ## Adding header file
 
