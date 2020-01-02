@@ -1,5 +1,5 @@
 // Hive Cameo Framework
-// Copyright (C) 2008-2019 Hive Solutions Lda.
+// Copyright (C) 2008-2020 Hive Solutions Lda.
 //
 // This file is part of Hive Cameo Framework.
 //
@@ -20,7 +20,7 @@
 // __version__   = 1.0.0
 // __revision__  = $LastChangedRevision$
 // __date__      = $LastChangedDate$
-// __copyright__ = Copyright (c) 2008-2019 Hive Solutions Lda.
+// __copyright__ = Copyright (c) 2008-2020 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
 #import "HMLoginView.h"
@@ -148,7 +148,7 @@
     copyrightLabel.backgroundColor = [UIColor clearColor];
     copyrightLabel.shadowColor = [UIColor colorWithRed:0.20 green:0.20 blue:0.20 alpha:1.0];
     copyrightLabel.shadowOffset = CGSizeMake(1, 1);
-    copyrightLabel.text = [HMResources localizedString:@"Copyright Hive Solutions 2008-2019" withDefault:@"Copyright Hive Solutions 2008-2019"];
+    copyrightLabel.text = [HMResources localizedString:@"Copyright Hive Solutions 2008-2020" withDefault:@"Copyright Hive Solutions 2008-2020"];
     copyrightLabel.textAlignment = NSTextAlignmentCenter;
     copyrightLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth;
 
