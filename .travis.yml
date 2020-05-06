@@ -11,4 +11,3 @@ deploy:
   script: ./scripts/push.sh
   on:
     tags: true
-    osx_image: "xcode7.3"
