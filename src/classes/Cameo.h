@@ -42,6 +42,7 @@
 #import "HMScreen.h"
 #import "HMSerializer.h"
 #import "HMString.h"
+#import "HMTextField.h"
 #import "HMVersion.h"
 #import "NSArray+HMArrayUtil.h"
 #import "NSDictionary+HMDictionaryUtil.h"

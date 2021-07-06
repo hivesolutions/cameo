@@ -27,6 +27,7 @@
 
 #import "HMScreen.h"
 #import "HMResources.h"
+#import "HMTextField.h"
 
 @interface HMLoginView : UIView {
     @private

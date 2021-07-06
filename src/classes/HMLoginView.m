@@ -98,7 +98,7 @@
     textFieldsView.image = [[HMResources imageNamed:@"text-fields.png"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 20)];
     textFieldsView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
 
-    UITextField *usernameField = [[UITextField alloc] initWithFrame:CGRectMake(20, 105 + padding, width - 40, 30)];
+    HMTextField *usernameField = [[HMTextField alloc] initWithFrame:CGRectMake(20, 105 + padding, width - 40, 30)];
     usernameField.font = [UIFont fontWithName:@"Helvetica" size:14];
     usernameField.textColor = [UIColor whiteColor];
     usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
@@ -108,9 +108,8 @@
     usernameField.autocorrectionType = UITextAutocorrectionTypeNo;
     usernameField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     usernameField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
-    [usernameField setValue:[UIColor lightTextColor] forKeyPath:@"_placeholderLabel.textColor"];
 
-    UITextField *passwordField = [[UITextField alloc] initWithFrame:CGRectMake(20, 145 + padding, width - 40, 30)];
+    HMTextField *passwordField = [[HMTextField alloc] initWithFrame:CGRectMake(20, 145 + padding, width - 40, 30)];
     passwordField.secureTextEntry = YES;
     passwordField.font = [UIFont fontWithName:@"Helvetica" size:14];
     passwordField.textColor = [UIColor whiteColor];
@@ -121,7 +120,6 @@
     passwordField.autocorrectionType = UITextAutocorrectionTypeNo;
     passwordField.autocapitalizationType = UITextAutocapitalizationTypeNone;
     passwordField.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
-    [passwordField setValue:[UIColor lightTextColor] forKeyPath:@"_placeholderLabel.textColor"];
 
     UIButton *signinButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 192 + padding, 81, 42)];
     signinButton.titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14];
