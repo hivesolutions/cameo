@@ -343,6 +343,11 @@
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Hive Solutions";
+				TargetAttributes = {
+					C3715E05165BE391006BB277 = {
+						LastSwiftMigration = 1250;
+					};
+				};
 			};
 			buildConfigurationList = C3715E00165BE390006BB277 /* Build configuration list for PBXProject "cameo_demo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -559,6 +564,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "src/classes/cameo_demo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -575,6 +581,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.hive.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "src/classes/cameo_demo-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
