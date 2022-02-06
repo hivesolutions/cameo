@@ -12,7 +12,7 @@ scripts correctly one must set the target membership of the header file as **pub
 [CocoaPods](http://cocoapods.org) is a dependency manager for Objective-C, which automates and simplifies the process of using 3rd-party libraries like Cameo in your projects.
 
 #### Podfile
- 
+
 ```ruby
 platform :ios, '7.0'
 pod "Cameo"
