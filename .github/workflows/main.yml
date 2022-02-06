@@ -13,7 +13,7 @@ jobs:
           - { scheme: "cameo_test", destination: "platform=iOS Simulator,name=iPad Pro (9.7-inch)" }
     steps:
       - uses: actions/checkout@v1
-      - name: Install CocoaPods
+      - name: Install Pods
         run: pod install
       - name: Show information
         run: |
