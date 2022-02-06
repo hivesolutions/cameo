@@ -19,7 +19,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 *
 
-## [0.5.1] - 2022-02-05
+## [0.5.2] - 2022-02-06
+
+### Fixed
+
+* Issue related with double deployment to CocoaPods
+
+## [0.5.1] - 2022-02-06
 
 ### Fixed
 
