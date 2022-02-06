@@ -11,9 +11,6 @@ jobs:
       matrix:
         run-config:
           - { scheme: "cameo_test", destination: "platform=iOS Simulator,name=iPhone 8" }
-          - { scheme: "cameo_test", destination: "platform=iOS Simulator,name=iPhone 12" }
-          - { scheme: "cameo_test", destination: "platform=iOS Simulator,name=iPhone 13" }
-          - { scheme: "cameo_test", destination: "platform=iOS Simulator,name=iPad Pro (9.7-inch)" }
     steps:
       - uses: actions/checkout@v1
       - name: Install CocoaPods
