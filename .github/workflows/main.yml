@@ -1,8 +1,5 @@
-name: Build Workflow
-on:
-  push:
-    branches:
-      - master
+name: Main Workflow
+on: [push]
 jobs:
   build:
     name: Build
