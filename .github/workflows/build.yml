@@ -24,6 +24,6 @@ jobs:
           xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showBuildSettings
           xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showsdks
           xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showdestinations
-      - name: Build packages
+      - name: Test packages
         run: |
           xcodebuild clean test -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -destination "${{ matrix.run-config['destination'] }}" -showBuildTimingSummary
