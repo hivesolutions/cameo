@@ -17,9 +17,9 @@ jobs:
       - name: Show information
         run: |
           xcode-select -p
-          xcodebuild -workspace MPCF-TestBench.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showBuildSettings
-          xcodebuild -workspace MPCF-TestBench.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showsdks
-          xcodebuild -workspace MPCF-TestBench.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showdestinations
+          xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showBuildSettings
+          xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showsdks
+          xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showdestinations
       - name: Build packages
         run: |
           xcodebuild clean test -scheme "${{ matrix.run-config['scheme'] }}"" -destination "${{ matrix.run-config['destination'] }}" -showBuildTimingSummary
