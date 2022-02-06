@@ -1,5 +1,8 @@
-name: Main Workflow
-on: [push]
+name: Deploy Workflow
+on:
+  push:
+    tags:
+      - "*"
 jobs:
   build:
     name: Build
@@ -23,3 +26,7 @@ jobs:
           xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showdestinations
       - name: Test packages
         run: xcodebuild clean test -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -destination "${{ matrix.run-config['destination'] }}" -showBuildTimingSummary
+      - name: Deploy to CocoaPods
+        run: ./scripts/push.sh
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
