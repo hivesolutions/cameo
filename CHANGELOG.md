@@ -9,15 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-*
+* Apps can provide their own login screen
 
 ### Changed
 
-*
+* Requires iOS 15 or later
+* Error messages use the modern iOS alert style
 
 ### Fixed
 
-*
+* Login screen can no longer be swiped away, and the screen behind it reloads after signing in
+* Layout no longer sits under the notch or Dynamic Island on recent iPhones
+* Passwords containing characters such as & or + now sign in correctly
+* Crash when an error message or store name is empty
+* Login no longer opens twice when several requests need a session
 
 ## [0.5.2] - 2022-02-06
 

@@ -31,4 +31,10 @@
 + (NSString *)capitalizedString:(NSString *)value;
 + (NSString *)quoteString:(NSString *)value;
 
+/**
+ Percent-encodes a single query value, escaping the characters that
+ would otherwise split or end the query (`&`, `=`, `+`, `#`, `?`, `/`).
+ */
++ (NSString *)quoteComponent:(NSString *)value;
+
 @end

@@ -6,23 +6,21 @@ on:
 jobs:
   build:
     name: Build
-    runs-on: macOS-latest
-    strategy:
-      matrix:
-        run-config:
-          - { scheme: "cameo_test", destination: "platform=iOS Simulator,name=iPhone 8" }
+    runs-on: macos-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v4
       - name: Install Pods
         run: pod install
+      - name: Select simulator
+        id: simulator
+        run: echo "udid=$(./scripts/simulator.sh iPhone)" >> "$GITHUB_OUTPUT"
       - name: Show information
         run: |
           xcode-select -p
-          xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showBuildSettings
-          xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showsdks
-          xcodebuild -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -showdestinations
+          xcodebuild -version
+          xcrun simctl list devices available | grep "${{ steps.simulator.outputs.udid }}"
       - name: Test packages
-        run: xcodebuild clean test -workspace cameo.xcworkspace -scheme "${{ matrix.run-config['scheme'] }}" -destination "${{ matrix.run-config['destination'] }}" -showBuildTimingSummary
+        run: xcodebuild clean test -workspace cameo.xcworkspace -scheme cameo_test -destination "id=${{ steps.simulator.outputs.udid }}" -showBuildTimingSummary
       - name: Deploy to CocoaPods
         run: ./scripts/push.sh
         env:

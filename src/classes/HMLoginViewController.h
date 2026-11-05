@@ -38,6 +38,14 @@
 @property (nonatomic) NSString *loginPath;
 
 - (IBAction)textFieldFinished:(id)sender;
+
+/**
+ Starts the authentication with the given credentials, storing the
+ session in the preferences and dismissing the controller on success.
+ Custom login screens (see `+[HMProxyRequest setLoginViewControllerClass:]`)
+ call this from their own sign in action.
+ */
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password;
 - (void)handleException:(NSDictionary *)exception;
 
 @end

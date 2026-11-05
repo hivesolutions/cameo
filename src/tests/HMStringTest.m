@@ -36,6 +36,27 @@
 
     result = [HMString capitalizedString:@"joão magalhães"];
     XCTAssert([result isEqualToString:@"João magalhães"], "result is invalid");
+
+    result = [HMString capitalizedString:@""];
+    XCTAssert([result isEqualToString:@""], "result is invalid");
+
+    result = [HMString capitalizedString:nil];
+    XCTAssertNil(result, "result is invalid");
+}
+
+- (void)testQuoteComponent {
+    NSString *result = [HMString quoteComponent:@"p&ss=w+rd#1?/"];
+    XCTAssert([result isEqualToString:@"p%26ss%3Dw%2Brd%231%3F%2F"], "result is invalid");
+
+    result = [HMString quoteComponent:@"joão magalhães"];
+    XCTAssert([result isEqualToString:@"jo%C3%A3o%20magalh%C3%A3es"], "result is invalid");
+
+    result = [HMString quoteComponent:nil];
+    XCTAssert([result isEqualToString:@""], "result is invalid");
+
+    NSString *url = [@"https://hive.pt/login.json?password=" stringByAppendingString:[HMString quoteComponent:@"a&b=c+d"]];
+    NSURLComponents *components = [NSURLComponents componentsWithString:url];
+    XCTAssert([components.queryItems.firstObject.value isEqualToString:@"a&b=c+d"], "result is invalid");
 }
 
 @end
