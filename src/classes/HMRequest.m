@@ -100,8 +100,11 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = self.method;
     request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
     self.connection = [[NSURLConnection alloc] initWithRequest:request
                                                       delegate:self];
+#pragma GCC diagnostic pop
 
     // notifies the delegate about the sending of data to the remote
     // connection (initial communication)
