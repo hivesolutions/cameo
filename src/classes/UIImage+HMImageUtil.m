@@ -155,7 +155,7 @@
         bottomPixels,
         bottomW, bottomH,
         bitsPerComponents, bottomBytesPerRow, colorSpace,
-        kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
+        (CGBitmapInfo) kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
     );
     CGContextDrawImage(context, CGRectMake(0, 0, bottomW, bottomH), bottomImageCG);
 
@@ -169,7 +169,7 @@
          topPixels,
          topSize.width, topSize.height,
          bitsPerComponents, topBytesPerRow, colorSpace,
-         kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
+         (CGBitmapInfo) kCGImageAlphaPremultipliedLast | kCGBitmapByteOrder32Big
     );
     CGContextDrawImage(topContext, CGRectMake(0, 0, topSize.width, topSize.height), topImageCG);
 

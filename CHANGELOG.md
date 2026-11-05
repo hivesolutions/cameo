@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-*
+* Release to CocoaPods failing validation because of compiler warnings
 
 ## [0.6.0] - 2026-11-05
 
