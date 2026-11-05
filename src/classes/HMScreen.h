@@ -30,6 +30,13 @@
 @interface HMScreen : NSObject {
 }
 
+/**
+ Retrieves the key window of the foreground active window scene,
+ falling back to the first window of any connected scene.
+ Replaces the deprecated `[UIApplication keyWindow]`.
+ */
++ (UIWindow *)keyWindow;
++ (UIEdgeInsets)safeAreaInsets;
 + (CGFloat)getTopMargin;
 + (CGFloat)getBottomMargin;
 + (CGFloat)getLeftMargin;

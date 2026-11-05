@@ -26,6 +26,7 @@
 #import "Dependencies.h"
 
 #import "HMRequest.h"
+#import "HMScreen.h"
 #import "HMLoginView.h"
 #import "HMJSONSerializer.h"
 #import "HMRequestDelegate.h"
@@ -58,5 +59,14 @@
 - (void)load;
 - (void)showLogin;
 + (void)setLogo:(UIImage *)logo;
+
+/**
+ Registers the login view controller class presented when a session is
+ required, so that an application can provide its own login screen. The
+ class must be a subclass of `HMLoginViewController` that builds its own
+ view and calls `loginWithUsername:password:`. Pass `nil` to restore the
+ default login screen.
+ */
++ (void)setLoginViewControllerClass:(Class)loginViewControllerClass;
 
 @end

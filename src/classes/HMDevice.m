@@ -39,8 +39,16 @@
     if([HMDevice isPhone] == NO) {
         return NO;
     }
+    // any phone with a home indicator (bottom safe area) belongs to the
+    // "iPhone X" family (notch or Dynamic Island), not only the 812pt one
+    for(UIScene *scene in [[UIApplication sharedApplication] connectedScenes]) {
+        if(![scene isKindOfClass:UIWindowScene.class]) { continue; }
+        for(UIWindow *window in ((UIWindowScene *) scene).windows) {
+            return window.safeAreaInsets.bottom > 0.0;
+        }
+    }
     CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    return screenSize.height == 812;
+    return MAX(screenSize.width, screenSize.height) >= 812;
 }
 
 @end

@@ -28,6 +28,7 @@
 @implementation HMString
 
 + (NSString *)capitalizedString:(NSString *)value {
+    if(value == nil || value.length == 0) { return value; }
     NSString *first = [[value substringToIndex:1] uppercaseString];
     NSString *capitalized = [value stringByReplacingCharactersInRange:NSMakeRange(0,1)
                                                            withString:first];
@@ -35,9 +36,16 @@
 }
 
 + (NSString *)quoteString:(NSString *)value {
-    NSString *quoted = [value stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *quoted = [value stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     quoted = [quoted stringByReplacingOccurrencesOfString:@"+" withString:@"%2B"];
     return quoted;
+}
+
++ (NSString *)quoteComponent:(NSString *)value {
+    if(value == nil) { return @""; }
+    NSMutableCharacterSet *allowed = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
+    [allowed removeCharactersInString:@"&=+#?/"];
+    return [value stringByAddingPercentEncodingWithAllowedCharacters:allowed];
 }
 
 @end

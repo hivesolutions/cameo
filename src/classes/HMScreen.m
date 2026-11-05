@@ -27,26 +27,48 @@
 
 @implementation HMScreen
 
-+ (CGFloat)getTopMargin {
-    if([HMDevice isIPhoneX]) {
-        return 16.0;
++ (UIWindow *)keyWindow {
+    UIWindow *fallback = nil;
+    for(UIScene *scene in [[UIApplication sharedApplication] connectedScenes]) {
+        if(![scene isKindOfClass:UIWindowScene.class]) { continue; }
+        UIWindowScene *windowScene = (UIWindowScene *) scene;
+        for(UIWindow *window in windowScene.windows) {
+            if(window.isKeyWindow && scene.activationState == UISceneActivationStateForegroundActive) {
+                return window;
+            }
+            if(fallback == nil) { fallback = window; }
+        }
     }
-    return 0.0;
+    return fallback;
+}
+
++ (UIEdgeInsets)safeAreaInsets {
+    UIWindow *window = [HMScreen keyWindow];
+    if(window == nil) { return UIEdgeInsetsZero; }
+    return window.safeAreaInsets;
+}
+
++ (CGFloat)getTopMargin {
+    // the margins are relative to the legacy layout, which already
+    // reserves 20pt for the status bar, and are calibrated so that the
+    // iPhone X (44pt safe area) keeps its historical 16pt value
+    CGFloat top = [HMScreen safeAreaInsets].top - 28.0;
+    return top > 0.0 ? top : 0.0;
 }
 
 + (CGFloat)getBottomMargin {
-    if([HMDevice isIPhoneX]) {
-        return 16.0;
-    }
-    return 0.0;
+    // calibrated so that devices with a home indicator (34pt safe
+    // area) keep their historical 16pt value
+    CGFloat bottom = [HMScreen safeAreaInsets].bottom - 18.0;
+    return bottom > 0.0 ? bottom : 0.0;
 }
 
 + (CGFloat)getLeftMargin {
-    return 0.0;
+    return [HMScreen safeAreaInsets].left;
 }
 
 + (CGFloat)getRightMargin {
-    return 0.0;
+    return [HMScreen safeAreaInsets].right;
 }
 
 @end

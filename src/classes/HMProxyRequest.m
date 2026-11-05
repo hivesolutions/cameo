@@ -28,6 +28,7 @@
 @implementation HMProxyRequest
 
 static UIImage *_logo = nil;
+static Class _loginViewControllerClass = nil;
 
 - (id)init {
     self = [super init];
@@ -113,17 +114,41 @@ static UIImage *_logo = nil;
     [self.request load];
 }
 
+- (UIViewController *)presenter {
+    // uses the controller associated with the request and falls back to
+    // the root controller of the key window, then walks up to the top
+    // most presented controller so that presenting never fails silently
+    UIViewController *controller = self.controller ? self.controller : [[HMScreen keyWindow] rootViewController];
+    while(controller.presentedViewController && !controller.presentedViewController.isBeingDismissed) {
+        controller = controller.presentedViewController;
+    }
+    return controller;
+}
+
 - (void)showLogin {
-    // presents the login view controller in a modal fashion
-    // this should slide the view from bottom to the top
-    HMLoginViewController *loginViewController = [[HMLoginViewController alloc] init];
+    // avoids presenting a second login on top of one that is already
+    // visible (eg: several requests failing with an expired session)
+    UIViewController *presenter = [self presenter];
+    if([presenter isKindOfClass:HMLoginViewController.class]) { return; }
+
+    // creates the login view controller, using the custom class registered
+    // by the application when there's one, and the default login view only
+    // for the default controller (custom controllers provide their own view)
+    Class loginClass = _loginViewControllerClass ? _loginViewControllerClass : HMLoginViewController.class;
+    HMLoginViewController *loginViewController = [[loginClass alloc] init];
     loginViewController.loginPath = self.loginPath;
-    loginViewController.view = [[HMLoginView alloc] init];
-    HMLoginView *loginView = (HMLoginView *) loginViewController.view;
-    loginView.logo = _logo;
-    UIViewController *rootViewController = [[[UIApplication sharedApplication] keyWindow] rootViewController];
-    UIViewController *controller = self.controller ? self.controller : rootViewController;
-    [controller presentViewController:loginViewController animated:YES completion:nil];
+    if(loginClass == HMLoginViewController.class) {
+        loginViewController.view = [[HMLoginView alloc] init];
+        HMLoginView *loginView = (HMLoginView *) loginViewController.view;
+        loginView.logo = _logo;
+    }
+
+    // presents the login full screen and not dismissable by a swipe, as a
+    // sheet would let the user dismiss it and leave the presenting controller
+    // without a session (and a sheet dismissal does not call viewDidAppear:)
+    loginViewController.modalPresentationStyle = UIModalPresentationFullScreen;
+    loginViewController.modalInPresentation = YES;
+    [presenter presentViewController:loginViewController animated:YES completion:nil];
 }
 
 - (void)showLightMask {
@@ -150,11 +175,10 @@ static UIImage *_logo = nil;
     // shows the mask view (display) and starts the animation
     // in the indicator object, note that the color of the
     // mask is changed to black (visible)
-    [UIView beginAnimations:@"fadeIn" context: nil];
-    [UIView setAnimationDuration:0.35];
-    self.mask.backgroundColor = [UIColor blackColor];
-    self.mask.hidden = NO;
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.35 animations:^{
+        self.mask.backgroundColor = [UIColor blackColor];
+        self.mask.hidden = NO;
+    }];
     [self.maskIndicator startAnimating];
 }
 
@@ -165,10 +189,9 @@ static UIImage *_logo = nil;
 
     // creates the fade out animation for the mask view
     // so that it hides using an animation
-    [UIView beginAnimations:@"fadeOut" context: nil];
-    [UIView setAnimationDuration:0.25];
-    self.mask.alpha = 0.0;
-    [UIView commitAnimations];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.mask.alpha = 0.0;
+    }];
 
     // stops animating the mask (activity) indicator
     // this should stop the animation
@@ -197,7 +220,8 @@ static UIImage *_logo = nil;
     // an animation
     CGRect maskIndicatorFrame = CGRectMake(view.bounds.size.width / 2 - 12, view.bounds.size.height / 2 - 12, 24, 24);
     UIActivityIndicatorView *maskIndicator = [[UIActivityIndicatorView alloc] initWithFrame:maskIndicatorFrame];
-    maskIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhite;
+    maskIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleMedium;
+    maskIndicator.color = [UIColor whiteColor];
     maskIndicator.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin;
     maskIndicator.hidden = YES;
 
@@ -268,18 +292,25 @@ static UIImage *_logo = nil;
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[HMResources localizedString:@"ConnectionError" withDefault:@"Connection Error"]
-                                                    message:message
-                                                   delegate:nil
-                                          cancelButtonTitle:[HMResources localizedString:@"Confirm" withDefault:@"Confirm"]
-                                          otherButtonTitles:nil];
-    [alert show];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[HMResources localizedString:@"ConnectionError" withDefault:@"Connection Error"]
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:[HMResources localizedString:@"Confirm" withDefault:@"Confirm"]
+                                              style:UIAlertActionStyleCancel
+                                            handler:nil]];
+    [[self presenter] presentViewController:alert animated:YES completion:nil];
 
     if(self.delegate) { [self.delegate didReceiveError:error]; }
 }
 
 + (void)setLogo:(UIImage *)logo {
     _logo = logo;
+}
+
++ (void)setLoginViewControllerClass:(Class)loginViewControllerClass {
+    NSAssert(loginViewControllerClass == nil || [loginViewControllerClass isSubclassOfClass:HMLoginViewController.class],
+             @"The login view controller class must be a subclass of HMLoginViewController");
+    _loginViewControllerClass = loginViewControllerClass;
 }
 
 @end

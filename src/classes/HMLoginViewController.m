@@ -41,8 +41,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
 
-    // retrieves the current view, casting it as a login view
-    // this is an unsafe operation
+    // only the default login view is wired here, custom login
+    // controllers (subclasses) set up their own view and actions
+    if(![self.view isKindOfClass:HMLoginView.class]) { return; }
     HMLoginView *loginView = (HMLoginView *) self.view;
 
     // forces the username field to become the first
@@ -88,19 +89,21 @@
 #pragma GCC diagnostic pop
 
 - (IBAction)textFieldFinished:(id)sender {
-    // retrieves the current view, casting it as a login view
-    // this is an unsafe operation
+    // retrieves both the username and the password from the default
+    // login view and starts the authentication with them
+    if(![self.view isKindOfClass:HMLoginView.class]) { return; }
     HMLoginView *loginView = (HMLoginView *) self.view;
+    [self loginWithUsername:loginView.usernameField.text password:loginView.passwordField.text];
+}
 
-    // retrieves both the username and the password text field and uses
-    // them to retrieve these values to be used in the authentication
-    NSString *username = loginView.usernameField.text;
-    NSString *password = loginView.passwordField.text;
-
+- (void)loginWithUsername:(NSString *)username password:(NSString *)password {
     // creates the base path template containing both the username and
-    // the password values than formats the value using these values
+    // the password values than formats the value using these values, each
+    // value is encoded on its own so that characters like "&" or "+" in a
+    // password do not break the query string
     NSString *basePath = @"%@?username=%@&password=%@";
-    NSString *path = [NSString stringWithFormat:basePath, self.loginPath, username, password];
+    NSString *path = [NSString stringWithFormat:basePath, self.loginPath,
+                      [HMString quoteComponent:username], [HMString quoteComponent:password]];
 
     // creates a new proxy request to be used in the authentication procedure
     // note that this is an asynchronous call and may take some time
@@ -127,12 +130,13 @@
     // creates the alert window that will be used to display the error
     // associated with the current authentication failure and then shows
     // it in a modal fashion, then returns immediately to the caller method
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[HMResources localizedString:@"LoginError" withDefault:@"Login Error"]
-                                                    message:message
-                                                   delegate:nil
-                                          cancelButtonTitle:[HMResources localizedString:@"Confirm" withDefault:@"Confirm"]
-                                          otherButtonTitles:nil];
-    [alert show];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:[HMResources localizedString:@"LoginError" withDefault:@"Login Error"]
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    [alert addAction:[UIAlertAction actionWithTitle:[HMResources localizedString:@"Confirm" withDefault:@"Confirm"]
+                                              style:UIAlertActionStyleCancel
+                                            handler:nil]];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (void)didReceive {
