@@ -17,9 +17,6 @@
 // Hive Cameo Framework. If not, see <http://www.apache.org/licenses/>.
 
 // __author__    = João Magalhães <joamag@hive.pt>
-// __version__   = 1.0.0
-// __revision__  = $LastChangedRevision$
-// __date__      = $LastChangedDate$
 // __copyright__ = Copyright (c) 2008-2022 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
@@ -28,7 +25,9 @@
 @implementation HMTextField
 
 - (void) drawPlaceholderInRect:(CGRect)rect {
-    UIColor *color = [UIColor lightTextColor];
+    // uses the value of the light text color (white at 0.6 alpha) directly,
+    // as the named color is not available on tvOS
+    UIColor *color = [UIColor colorWithWhite:1.0 alpha:0.6];
     [self.placeholder drawInRect:rect withAttributes:@{NSFontAttributeName:self.font, NSForegroundColorAttributeName:color}];
 }
 @end

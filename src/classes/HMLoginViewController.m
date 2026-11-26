@@ -17,9 +17,6 @@
 // Hive Cameo Framework. If not, see <http://www.apache.org/licenses/>.
 
 // __author__    = João Magalhães <joamag@hive.pt>
-// __version__   = 1.0.0
-// __revision__  = $LastChangedRevision$
-// __date__      = $LastChangedDate$
 // __copyright__ = Copyright (c) 2008-2022 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
@@ -75,6 +72,9 @@
     [super didReceiveMemoryWarning];
 }
 
+// the autorotation methods only apply to iOS, as tvOS has no device
+// orientation to follow (the apple tv is always in landscape)
+#if TARGET_OS_IOS
 - (BOOL)shouldAutorotate {
     if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) { return YES; }
     return NO;
@@ -87,6 +87,7 @@
     return NO;
 }
 #pragma GCC diagnostic pop
+#endif
 
 - (IBAction)textFieldFinished:(id)sender {
     // retrieves both the username and the password from the default
@@ -120,6 +121,21 @@
                                          forEvent:nil];
 }
 
+- (void)loginWithSession:(NSString *)sessionId username:(NSString *)username objectId:(NSString *)objectId {
+    // retrieves the preferences object and uses it to set the session
+    // identifier (together with the username and the object id) obtained
+    // some other way than the username and password login
+    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
+    [preferences setValue:username forKey:@"username"];
+    [preferences setValue:objectId forKey:@"objectId"];
+    [preferences setValue:sessionId forKey:@"sessionId"];
+    [preferences synchronize];
+
+    // closes the current modal window triggering the pop of the
+    // previous panel (will show it again)
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)handleException:(NSDictionary *)exception {
     // retrieves the message contained in the exception structure
     // to be able to display it in a window
@@ -148,24 +164,11 @@
     NSDictionary *exception = [data valueForKey:@"exception"];
     if(exception) { [self handleException:exception]; return; }
 
-    // retrieves the username, the object id and the session id
-    // values from the authentication structure to be used in the
-    // current persistent storage
-    NSString *username = [data valueForKey:@"username"];
-    NSString *objectId = [data valueForKey:@"object_id"];
-    NSString *sessionId = [data valueForKey:@"session_id"];
-
-    // retrieves the preferences object and uses it to set the "new"
-    // session identifier value in it
-    NSUserDefaults *preferences = [NSUserDefaults standardUserDefaults];
-    [preferences setValue:username forKey:@"username"];
-    [preferences setValue:objectId forKey:@"objectId"];
-    [preferences setValue:sessionId forKey:@"sessionId"];
-    [preferences synchronize];
-
-    // closes the current modal window triggering the pop of the
-    // previous panel (will show it again)
-    [self dismissViewControllerAnimated:YES completion:nil];
+    // retrieves the username, the object id and the session id values
+    // from the authentication structure and finishes the login with them
+    [self loginWithSession:[data valueForKey:@"session_id"]
+                  username:[data valueForKey:@"username"]
+                  objectId:[data valueForKey:@"object_id"]];
 }
 
 - (void)didReceiveError:(NSError *)error {

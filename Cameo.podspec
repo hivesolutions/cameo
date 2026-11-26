@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "Cameo"
-  s.version          = "0.6.1"
+  s.version          = "0.7.0"
   s.summary          = "A generic framework for ios interaction that provides a series of utilities."
   s.description      = <<-DESC
                        A generic framework for ios interaction that provides a series of utilities.
@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/hivesolutions/cameo.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/hivesolutions'
 
-  s.platform     = :ios, '15.0'
+  s.ios.deployment_target = '15.0'
+  s.tvos.deployment_target = '15.0'
   s.requires_arc = true
 
   s.source_files = 'src/classes'

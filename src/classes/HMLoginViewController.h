@@ -17,9 +17,6 @@
 // Hive Cameo Framework. If not, see <http://www.apache.org/licenses/>.
 
 // __author__    = João Magalhães <joamag@hive.pt>
-// __version__   = 1.0.0
-// __revision__  = $LastChangedRevision$
-// __date__      = $LastChangedDate$
 // __copyright__ = Copyright (c) 2008-2022 Hive Solutions Lda.
 // __license__   = Apache License, Version 2.0
 
@@ -46,6 +43,13 @@
  call this from their own sign in action.
  */
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password;
+
+/**
+ Finishes the authentication with a session obtained some other way
+ (eg: a device token on the Apple TV), storing it in the preferences and
+ dismissing the controller, without a username and a password.
+ */
+- (void)loginWithSession:(NSString *)sessionId username:(NSString *)username objectId:(NSString *)objectId;
 - (void)handleException:(NSDictionary *)exception;
 
 @end
