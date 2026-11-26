@@ -28,7 +28,9 @@
 @implementation HMTextField
 
 - (void) drawPlaceholderInRect:(CGRect)rect {
-    UIColor *color = [UIColor lightTextColor];
+    // uses the value of the light text color (white at 0.6 alpha) directly,
+    // as the named color is not available on tvOS
+    UIColor *color = [UIColor colorWithWhite:1.0 alpha:0.6];
     [self.placeholder drawInRect:rect withAttributes:@{NSFontAttributeName:self.font, NSForegroundColorAttributeName:color}];
 }
 @end

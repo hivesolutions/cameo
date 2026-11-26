@@ -12,7 +12,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => "https://github.com/hivesolutions/cameo.git", :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/hivesolutions'
 
-  s.platform     = :ios, '15.0'
+  s.ios.deployment_target = '15.0'
+  s.tvos.deployment_target = '15.0'
   s.requires_arc = true
 
   s.source_files = 'src/classes'

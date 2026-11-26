@@ -46,6 +46,13 @@
  call this from their own sign in action.
  */
 - (void)loginWithUsername:(NSString *)username password:(NSString *)password;
+
+/**
+ Finishes the authentication with a session obtained some other way
+ (eg: a device token on the Apple TV), storing it in the preferences and
+ dismissing the controller, without a username and a password.
+ */
+- (void)loginWithSession:(NSString *)sessionId username:(NSString *)username objectId:(NSString *)objectId;
 - (void)handleException:(NSDictionary *)exception;
 
 @end

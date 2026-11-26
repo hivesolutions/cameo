@@ -9,7 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-*
+* Support for Apple TV (tvOS) - [#7](https://github.com/hivesolutions/omni-dashboard/issues/7)
+* Apps can finish signing in with a session obtained elsewhere, without a password - [#7](https://github.com/hivesolutions/omni-dashboard/issues/7)
 
 ### Changed
 

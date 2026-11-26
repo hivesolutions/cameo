@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47B3C6DB87E85ECA9BFB452D /* HMLoginViewControllerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 66AF45148C45C1BC5D5CD987 /* HMLoginViewControllerTest.m */; };
 		C20129ED2695175500215BFF /* HMTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = C20129EC2695175500215BFF /* HMTextField.h */; };
 		C20129EF2695179800215BFF /* HMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C20129EE2695179800215BFF /* HMTextField.m */; };
 		C202B4931B04CDAF00F4078C /* HMBlend.m in Sources */ = {isa = PBXBuildFile; fileRef = C202B4921B04CDAF00F4078C /* HMBlend.m */; };
@@ -104,6 +105,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		66AF45148C45C1BC5D5CD987 /* HMLoginViewControllerTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = HMLoginViewControllerTest.m; sourceTree = "<group>"; };
+		9AD943B26ED55E339FAD15FF /* HMLoginViewControllerTest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = HMLoginViewControllerTest.h; sourceTree = "<group>"; };
 		C20129EC2695175500215BFF /* HMTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMTextField.h; sourceTree = "<group>"; };
 		C20129EE2695179800215BFF /* HMTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMTextField.m; sourceTree = "<group>"; };
 		C202B4921B04CDAF00F4078C /* HMBlend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMBlend.m; sourceTree = "<group>"; };
@@ -223,6 +226,8 @@
 				C25B9D321B0604A30072529A /* HMStringTest.m */,
 				C29D94A4209B087600F47B1F /* HMArrayUtilTest.m */,
 				C29D94A6209B092800F47B1F /* HMArrayUtilTest.h */,
+				66AF45148C45C1BC5D5CD987 /* HMLoginViewControllerTest.m */,
+				9AD943B26ED55E339FAD15FF /* HMLoginViewControllerTest.h */,
 			);
 			name = tests;
 			path = src/tests;
@@ -521,6 +526,7 @@
 				C2965DB81BB6B8F0003D408F /* HMJSONSerializerTest.m in Sources */,
 				C2965DBB1BB6BBE6003D408F /* HMMocks.m in Sources */,
 				C2E4A7761B06095200603947 /* HMStringTest.m in Sources */,
+				47B3C6DB87E85ECA9BFB452D /* HMLoginViewControllerTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
